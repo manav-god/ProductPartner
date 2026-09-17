@@ -2,25 +2,215 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #111111;
+  --grey: #6b6b6b;
+  --grey-muted: #9a9a9a;
+  --grey-border: #e6e6e6;
+  --grey-surface: #f5f5f5;
+  /* Accent: buttons, arrows, and similar marks only */
+  --accent: #ff5900;
+  --accent-hover: #e65000;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-white: #ffffff;
+  --color-black: #111111;
+  --color-grey: var(--grey);
+  --color-grey-muted: var(--grey-muted);
+  --color-grey-border: var(--grey-border);
+  --color-grey-surface: var(--grey-surface);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  color-scheme: light;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* All interactive controls use pointer */
+a,
+button,
+[role="button"],
+[type="button"],
+[type="submit"],
+[type="reset"],
+summary,
+label[for],
+select,
+input[type="checkbox"],
+input[type="radio"],
+input[type="file"],
+input[type="image"] {
+  cursor: pointer;
+}
+
+button:disabled,
+a[aria-disabled="true"],
+[aria-disabled="true"] {
+  cursor: not-allowed;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 22%, white);
+  color: var(--foreground);
+}
+
+@keyframes hero-progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Collapsed hero strip title — matches Future Processing */
+.hero-strip-title {
+  position: absolute;
+  top: 2.25rem;
+  left: 2.15rem;
+  z-index: 10;
+  margin: 0;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  transform: rotate(90deg) translateY(-50%);
+  transform-origin: 0 0;
+  pointer-events: none;
+  /* Never animate typography / transform — only the card width moves */
+  transition: none !important;
+}
+
+@media (min-width: 1280px) {
+  .hero-strip-title {
+    top: 2.5rem;
+    left: 2.5rem;
+    font-size: 16px;
+  }
+}
+
+.group\/slide:hover .hero-strip-title {
+  left: 3.1rem;
+}
+
+@media (min-width: 1280px) {
+  .group\/slide:hover .hero-strip-title {
+    left: 3.4rem;
+  }
+}
+
+.hero-slide-copy {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 2rem 2rem;
+  /* Fixed copy width so text does not reflow/animate while the card expands */
+  transition: none !important;
+}
+
+@media (min-width: 1280px) {
+  .hero-slide-copy {
+    padding: 3rem 3rem 2.5rem;
+  }
+}
+
+.hero-slide-copy__inner {
+  width: 580px;
+  max-width: 580px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.hero-slide-copy__footer {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: auto;
+  padding-top: 2.5rem;
+  width: 580px;
+  max-width: 580px;
+}
+
+/* Start-here premium slider */
+.start-slide-track {
+  -webkit-overflow-scrolling: touch;
+}
+
+.start-slide-card {
+  animation: start-card-in 520ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes start-card-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .start-slide-card {
+    animation: none;
+  }
+}
+
+/* Technologies marquee */
+.tech-marquee__track--left {
+  animation: tech-marquee-left 55s linear infinite;
+}
+
+.tech-marquee__track--right {
+  animation: tech-marquee-right 55s linear infinite;
+}
+
+.group\/marquee:hover .tech-marquee__track--left,
+.group\/marquee:hover .tech-marquee__track--right {
+  animation-play-state: paused;
+}
+
+@keyframes tech-marquee-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes tech-marquee-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tech-marquee__track--left,
+  .tech-marquee__track--right {
+    animation: none;
+  }
 }

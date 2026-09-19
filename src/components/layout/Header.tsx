@@ -39,7 +39,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-black">
       <div className="mx-auto flex h-[68px] w-full max-w-[1300px] items-center justify-between px-5 md:px-8 lg:px-[40px]">
-        <SiteLogo />
+        <SiteLogo className="h-full" />
 
         <div className="hidden h-full items-center gap-1 lg:flex">
           <nav className="flex h-full items-center" aria-label="Primary">

@@ -20,10 +20,10 @@ const socialIconMap = {
 
 export function Footer() {
   return (
-    <footer className="mt-auto">
+    <footer className="mt-auto bg-black text-white">
       <section
         id="contact"
-        className="scroll-mt-[68px] bg-black text-white"
+        className="scroll-mt-[68px] border-t border-white/20"
         aria-labelledby="footer-contact-heading"
       >
         <div className="mx-auto grid max-w-[1300px] gap-10 px-5 py-16 md:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 lg:px-[40px] lg:py-20">
@@ -150,11 +150,11 @@ export function Footer() {
         </div>
       </section>
 
-      <div className="bg-black text-white">
-        <div className="mx-auto grid max-w-[1300px] gap-12 px-5 py-14 md:px-8 lg:grid-cols-[1.1fr_1fr_1fr] lg:px-[40px]">
+      <div className="border-t border-white/20">
+        <div className="mx-auto grid max-w-[1300px] gap-10 px-5 py-12 md:px-8 lg:grid-cols-[1.1fr_1fr_1fr] lg:gap-12 lg:px-[40px]">
           <div>
             <SiteLogo />
-            <div className="mt-8 flex items-center gap-4">
+            <div className="mt-6 flex items-center gap-5">
               {socialLinks.map((social) => {
                 const Icon = socialIconMap[social.label as keyof typeof socialIconMap];
                 return (
@@ -164,7 +164,7 @@ export function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={social.label}
-                    className="inline-flex h-10 w-10 items-center justify-center rounded-full text-white transition-colors hover:text-accent"
+                    className="inline-flex shrink-0 items-center justify-center text-white/80 transition-colors hover:text-accent"
                   >
                     <Icon className="h-5 w-5" />
                   </a>
@@ -216,8 +216,8 @@ export function Footer() {
           </nav>
         </div>
 
-        <div className="border-t border-white/10">
-          <div className="mx-auto flex max-w-[1300px] flex-col gap-2 px-5 py-5 text-[13px] text-white/50 md:flex-row md:items-center md:justify-between md:px-8 lg:px-[40px]">
+        <div className="border-t border-white/15">
+          <div className="mx-auto flex max-w-[1300px] flex-col gap-3 px-5 py-6 text-[13px] text-white/50 md:flex-row md:items-center md:justify-between md:px-8 lg:px-[40px]">
             <p>© {new Date().getFullYear()} Product Partner. All rights reserved.</p>
             <div className="flex gap-5">
               <Link href="/privacy" className="hover:text-white">

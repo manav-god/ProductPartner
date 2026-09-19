@@ -9,7 +9,7 @@ export function SiteLogo({ className = "" }: SiteLogoProps) {
   return (
     <Link
       href="/"
-      className={`inline-flex h-full shrink-0 items-center ${className}`}
+      className={`inline-flex shrink-0 items-center ${className}`}
       aria-label="Product Partner home"
     >
       <Image

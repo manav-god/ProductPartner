@@ -87,7 +87,7 @@ export function HeroBanner() {
         aria-hidden
       />
 
-      <div className="relative mx-auto w-full max-w-[1300px] px-5 pb-14 pt-12 md:px-8 md:pb-20 md:pt-16 lg:px-[40px] lg:pb-[150px] lg:pt-[70px]">
+      <div className="relative mx-auto w-full max-w-[1300px] px-5 pb-16 pt-20 md:px-8 md:pb-24 md:pt-28 lg:px-[40px] lg:pb-[120px] lg:pt-[120px]">
         <p className="text-[14px] font-semibold uppercase tracking-[0.14em] text-accent sm:text-[16px] sm:tracking-[0.14em]">
           {eyebrow}
         </p>

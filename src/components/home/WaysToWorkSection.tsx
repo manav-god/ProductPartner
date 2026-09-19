@@ -4,7 +4,7 @@ export function WaysToWorkSection() {
   return (
     <section
       id="services"
-      className="scroll-mt-[91px] bg-white py-16 md:py-20 lg:py-24"
+      className="scroll-mt-[68px] bg-white py-16 md:py-20 lg:py-24"
       aria-labelledby="ways-to-work-heading"
     >
       <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">

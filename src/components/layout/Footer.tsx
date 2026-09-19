@@ -23,7 +23,7 @@ export function Footer() {
     <footer className="mt-auto">
       <section
         id="contact"
-        className="scroll-mt-[91px] bg-black text-white"
+        className="scroll-mt-[68px] bg-black text-white"
         aria-labelledby="footer-contact-heading"
       >
         <div className="mx-auto grid max-w-[1300px] gap-10 px-5 py-16 md:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 lg:px-[40px] lg:py-20">
@@ -150,7 +150,7 @@ export function Footer() {
         </div>
       </section>
 
-      <div className="bg-[#f2f2f2]">
+      <div className="bg-black text-white">
         <div className="mx-auto grid max-w-[1300px] gap-12 px-5 py-14 md:px-8 lg:grid-cols-[1.1fr_1fr_1fr] lg:px-[40px]">
           <div>
             <SiteLogo />
@@ -164,7 +164,7 @@ export function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={social.label}
-                    className="inline-flex h-10 w-10 items-center justify-center rounded-full text-black transition-colors hover:text-accent"
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-full text-white transition-colors hover:text-accent"
                   >
                     <Icon className="h-5 w-5" />
                   </a>
@@ -176,7 +176,7 @@ export function Footer() {
           <nav aria-labelledby="footer-services-heading">
             <h2
               id="footer-services-heading"
-              className="text-[15px] font-bold text-black"
+              className="text-[15px] font-bold text-white"
             >
               Services
             </h2>
@@ -185,7 +185,7 @@ export function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-[14px] text-grey transition-colors hover:text-black"
+                    className="text-[14px] text-white/60 transition-colors hover:text-white"
                   >
                     {link.label}
                   </Link>
@@ -197,7 +197,7 @@ export function Footer() {
           <nav aria-labelledby="footer-company-heading">
             <h2
               id="footer-company-heading"
-              className="text-[15px] font-bold text-black"
+              className="text-[15px] font-bold text-white"
             >
               Company
             </h2>
@@ -206,7 +206,7 @@ export function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-[14px] text-grey transition-colors hover:text-black"
+                    className="text-[14px] text-white/60 transition-colors hover:text-white"
                   >
                     {link.label}
                   </Link>
@@ -216,14 +216,14 @@ export function Footer() {
           </nav>
         </div>
 
-        <div className="border-t border-black/10">
-          <div className="mx-auto flex max-w-[1300px] flex-col gap-2 px-5 py-5 text-[13px] text-grey md:flex-row md:items-center md:justify-between md:px-8 lg:px-[40px]">
+        <div className="border-t border-white/10">
+          <div className="mx-auto flex max-w-[1300px] flex-col gap-2 px-5 py-5 text-[13px] text-white/50 md:flex-row md:items-center md:justify-between md:px-8 lg:px-[40px]">
             <p>© {new Date().getFullYear()} Product Partner. All rights reserved.</p>
             <div className="flex gap-5">
-              <Link href="/privacy" className="hover:text-black">
+              <Link href="/privacy" className="hover:text-white">
                 Privacy
               </Link>
-              <Link href="/terms" className="hover:text-black">
+              <Link href="/terms" className="hover:text-white">
                 Terms
               </Link>
             </div>

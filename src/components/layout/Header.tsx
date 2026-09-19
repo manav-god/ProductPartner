@@ -17,7 +17,7 @@ function GetInTouchButton({
     <Link
       href="/#contact"
       onClick={onClick}
-      className={`inline-flex h-[45px] items-center gap-2 rounded-[10px] bg-accent px-[28px] text-[14px] font-semibold text-white transition-colors hover:bg-accent-hover ${className}`}
+      className={`inline-flex h-10 items-center gap-2 rounded-[10px] bg-accent px-6 text-[14px] font-semibold text-white transition-colors hover:bg-accent-hover ${className}`}
     >
       Get in touch
       <ArrowRight className="h-3.5 w-3.5" />
@@ -37,8 +37,8 @@ export function Header() {
   }, [mobileOpen]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[#eaeaea] bg-white">
-      <div className="mx-auto flex h-[91px] w-full max-w-[1300px] items-center justify-between px-5 md:px-8 lg:px-[40px]">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-black">
+      <div className="mx-auto flex h-[68px] w-full max-w-[1300px] items-center justify-between px-5 md:px-8 lg:px-[40px]">
         <SiteLogo />
 
         <div className="hidden h-full items-center gap-1 lg:flex">
@@ -47,7 +47,7 @@ export function Header() {
               <Link
                 key={item.label}
                 href={item.href || "/"}
-                className="inline-flex h-full items-center px-4 text-[16px] font-semibold text-black transition-colors hover:text-black/70"
+                className="inline-flex h-full items-center px-3.5 text-[15px] font-semibold text-white transition-colors hover:text-white/70"
               >
                 {item.label}
               </Link>
@@ -61,7 +61,7 @@ export function Header() {
 
         <button
           type="button"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-md text-black lg:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-md text-white lg:hidden"
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileOpen}
           aria-controls={panelId}
@@ -74,7 +74,7 @@ export function Header() {
       {mobileOpen ? (
         <div
           id={panelId}
-          className="fixed inset-x-0 bottom-0 top-[91px] z-40 overflow-y-auto border-t border-[#eaeaea] bg-white lg:hidden"
+          className="fixed inset-x-0 bottom-0 top-[68px] z-40 overflow-y-auto border-t border-white/10 bg-black lg:hidden"
         >
           <nav
             className="mx-auto flex max-w-[1300px] flex-col px-5 py-4 md:px-8 lg:px-[40px]"
@@ -85,7 +85,7 @@ export function Header() {
                 key={item.label}
                 href={item.href || "/"}
                 onClick={() => setMobileOpen(false)}
-                className="border-b border-grey-border py-4 text-[17px] font-semibold text-black"
+                className="border-b border-white/10 py-4 text-[17px] font-semibold text-white"
               >
                 {item.label}
               </Link>

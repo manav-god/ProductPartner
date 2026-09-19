@@ -60,14 +60,10 @@ export function HeroBanner() {
 
   return (
     <section
-      className="relative overflow-hidden"
+      className="relative overflow-hidden bg-black"
       aria-label="Highlights"
-      style={{
-        background:
-          "linear-gradient(112deg, #141414 0%, #1a1614 48%, #0f0f0f 100%)",
-      }}
     >
-      {/* Soft brand glow — atmosphere, not the main visual */}
+      {/* Soft brand glow — disabled for solid black preview
       <div
         className="pointer-events-none absolute inset-0 opacity-50"
         style={{
@@ -76,6 +72,8 @@ export function HeroBanner() {
         }}
         aria-hidden
       />
+      */}
+      {/* Stretch / diagonal stripe lines — disabled for solid black preview
       <div
         className="pointer-events-none absolute -right-16 bottom-0 h-[70%] w-[55%] opacity-[0.14]"
         style={{
@@ -86,6 +84,7 @@ export function HeroBanner() {
         }}
         aria-hidden
       />
+      */}
 
       <div className="relative mx-auto w-full max-w-[1300px] px-5 pb-16 pt-20 md:px-8 md:pb-24 md:pt-28 lg:px-[40px] lg:pb-[120px] lg:pt-[120px]">
         <p className="text-[14px] font-semibold uppercase tracking-[0.14em] text-accent sm:text-[16px] sm:tracking-[0.14em]">

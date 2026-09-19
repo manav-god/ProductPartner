@@ -70,16 +70,23 @@ export const testimonials: Testimonial[] = [
     id: "five",
     quote: (
       <p>
-        “At vero eos et accusamus et iusto odio dignissimos ducimus qui
-        blanditiis praesentium.{" "}
-        <strong>
-          Voluptatum deleniti atque corrupti quos dolores et quas molestias
-        </strong>
-        . Et harum quidem rerum facilis est et expedita distinctio nam libero
-        tempore.”
+        “I&apos;ve worked with product leaders twice Manav&apos;s age. He catches
+        things most of them miss. Age stopped being relevant about ten minutes
+        into our first call.”
       </p>
     ),
-    name: "Marcus Chen",
-    role: "CTO, Harbor Digital",
+    name: "Vraj D",
+    role: "Founder | Club Duelz",
+  },
+  {
+    id: "six",
+    quote: (
+      <p>
+        “I like you Manav (and I don&apos;t say that often) your enthusiasm is
+        infectious.”
+      </p>
+    ),
+    name: "Andrew Hicks",
+    role: "CEO | Hix advisory",
   },
 ];

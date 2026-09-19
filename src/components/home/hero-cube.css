@@ -5,15 +5,24 @@
   --cube-depth: 120px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  width: 100%;
+  width: fit-content;
+  margin-left: auto;
   min-height: calc(var(--cube-size) + 48px);
   perspective: 1000px;
   perspective-origin: 50% 45%;
   overflow: visible;
   user-select: none;
   -webkit-user-select: none;
+}
+
+@media (max-width: 1023px) {
+  .hero-cube {
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media (min-width: 1024px) {

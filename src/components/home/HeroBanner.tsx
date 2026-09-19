@@ -65,7 +65,7 @@ export function HeroBanner() {
       aria-label="Highlights"
     >
       <div className="relative mx-auto w-full max-w-[1300px] px-5 pb-16 pt-20 md:px-8 md:pb-24 md:pt-28 lg:px-[40px] lg:pb-[120px] lg:pt-[120px]">
-        <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(280px,0.95fr)] lg:gap-10 xl:gap-16">
+        <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-8 xl:gap-10">
           <div className="min-w-0">
             <p className="text-[14px] font-semibold uppercase tracking-[0.14em] text-accent sm:text-[16px] sm:tracking-[0.14em]">
               {eyebrow}
@@ -103,7 +103,7 @@ export function HeroBanner() {
             </div>
           </div>
 
-          <div className="flex justify-center lg:justify-end">
+          <div className="flex w-full justify-center lg:w-auto lg:justify-self-end lg:justify-end">
             <HeroServiceCube />
           </div>
         </div>

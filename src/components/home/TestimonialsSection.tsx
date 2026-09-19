@@ -37,7 +37,7 @@ function QuoteTile({ item }: { item: Testimonial }) {
 export function TestimonialsSection() {
   const [first, ...rest] = testimonials;
   const col2 = rest.slice(0, 2);
-  const col3 = rest.slice(2, 4);
+  const col3 = rest.slice(2);
 
   return (
     <section

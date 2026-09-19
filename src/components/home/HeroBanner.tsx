@@ -146,7 +146,8 @@ export function HeroBanner() {
                   alt={client.alt}
                   fill
                   sizes="100px"
-                  className="object-contain"
+                  unoptimized
+                  className="object-contain bg-transparent"
                   style={{
                     transform: `scale(${client.scale ?? 1})`,
                   }}

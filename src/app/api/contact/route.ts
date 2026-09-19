@@ -188,7 +188,7 @@ export async function POST(request: Request) {
     const toEmail = process.env.CONTACT_TO_EMAIL;
     const fromEmail =
       process.env.RESEND_FROM_EMAIL ?? "Product Partner <onboarding@resend.dev>";
-    const replyToTeam = process.env.CONTACT_REPLY_TO_EMAIL ?? toEmail;
+    // const replyToTeam = process.env.CONTACT_REPLY_TO_EMAIL ?? toEmail;
 
     if (!apiKey || !toEmail) {
       return NextResponse.json(
@@ -260,31 +260,32 @@ export async function POST(request: Request) {
       );
     }
 
-    const { error: thankYouError } = await resend.emails.send({
-      from: fromEmail,
-      to: [email],
-      replyTo: replyToTeam || undefined,
-      subject: "Thanks for contacting Product Partner",
-      text: [
-        `Hi ${firstName},`,
-        "",
-        "Thanks for reaching out to Product Partner — we’ve received your message and will get back to you shortly.",
-        "",
-        "What happens next:",
-        "1. We review your inquiry",
-        "2. A product partner follows up by email",
-        "3. We schedule a quick intro call if it’s a fit",
-        "",
-        "Talk soon,",
-        "The Product Partner team",
-      ].join("\n"),
-      html: buildThankYouEmailHtml({ firstName, fullName }),
-    });
-
-    if (thankYouError) {
-      // Lead already delivered — don't fail the form on auto-reply issues
-      console.error("Resend thank-you error:", thankYouError);
-    }
+    // Thank-you auto-reply disabled for now
+    // const { error: thankYouError } = await resend.emails.send({
+    //   from: fromEmail,
+    //   to: [email],
+    //   replyTo: replyToTeam || undefined,
+    //   subject: "Thanks for contacting Product Partner",
+    //   text: [
+    //     `Hi ${firstName},`,
+    //     "",
+    //     "Thanks for reaching out to Product Partner — we’ve received your message and will get back to you shortly.",
+    //     "",
+    //     "What happens next:",
+    //     "1. We review your inquiry",
+    //     "2. A product partner follows up by email",
+    //     "3. We schedule a quick intro call if it’s a fit",
+    //     "",
+    //     "Talk soon,",
+    //     "The Product Partner team",
+    //   ].join("\n"),
+    //   html: buildThankYouEmailHtml({ firstName, fullName }),
+    // });
+    //
+    // if (thankYouError) {
+    //   // Lead already delivered — don't fail the form on auto-reply issues
+    //   console.error("Resend thank-you error:", thankYouError);
+    // }
 
     return NextResponse.json({ ok: true });
   } catch (error) {

@@ -120,7 +120,7 @@ export function ContactForm() {
           disabled={status === "loading"}
           className="inline-flex h-[48px] items-center gap-2 rounded-[10px] bg-accent px-7 text-[14px] font-semibold text-white transition-colors hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-60"
         >
-          {status === "loading" ? "Sending..." : "Book a free consultation"}
+          {status === "loading" ? "Sending..." : "Submit"}
           <ArrowRight className="h-3.5 w-3.5" />
         </button>
 

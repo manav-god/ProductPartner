@@ -21,7 +21,7 @@ export const heroContent = {
     label: "View Our Work",
     href: "/#work",
   },
-  trustedLabel: "Trusted by",
+  trustedLabel: "Our partner",
   trustedHighlight: "",
   trustedClients: [
     {
@@ -51,6 +51,13 @@ export const heroContent = {
       src: "/images/clientlogo/logo4.png",
       href: "/#work",
       scale: 1.25,
+    },
+    {
+      id: "clientlogo5",
+      alt: "clientlogo5",
+      src: "/images/clientlogo/logo5-clear.png",
+      href: "/#work",
+      scale: 1.15,
     },
   ] satisfies TrustedClient[],
 };

@@ -26,17 +26,20 @@ export const primaryNav: NavItem[] = [
       {
         label: "Product Development",
         href: "/product-development",
-        description: "MVPs, custom apps, and web platforms from idea to launch.",
+        description:
+          "MVPs, custom apps and web platforms, built to survive the next stage.",
       },
       {
         label: "Fractional Product Leadership",
         href: "/product-management",
-        description: "Product thinking on the inside — roadmap, retention, delivery.",
+        description:
+          "Roadmap, retention and delivery, owned by someone accountable for shipping.",
       },
       {
         label: "Product Marketing",
         href: "/product-marketing",
-        description: "Positioning and content that gets you found by buyers.",
+        description:
+          "B2B search, content and positioning, built on how buyers actually search now.",
       },
     ],
   },

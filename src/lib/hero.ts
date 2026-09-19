@@ -1,8 +1,10 @@
 export type TrustedClient = {
   id: string;
-  name: string;
+  alt: string;
+  src: string;
   href: string;
-  linkLabel: string;
+  /** Optical scale so mixed logo art reads at a similar size */
+  scale?: number;
 };
 
 export const heroContent = {
@@ -23,28 +25,32 @@ export const heroContent = {
   trustedHighlight: "",
   trustedClients: [
     {
-      id: "fintech",
-      name: "Northwind",
-      href: "/case-studies/fintech-growth",
-      linkLabel: "Read Case Study",
+      id: "clientlogo1",
+      alt: "clientlogo1",
+      src: "/images/clientlogo/clubeduelz.png",
+      href: "/#work",
+      scale: 1,
     },
     {
-      id: "saas",
-      name: "Atlas",
-      href: "/case-studies/saas-retention",
-      linkLabel: "Read Case Study",
+      id: "clientlogo2",
+      alt: "clientlogo2",
+      src: "/images/clientlogo/mediawise.png",
+      href: "/#work",
+      scale: 1,
     },
     {
-      id: "marketplace",
-      name: "Harbor",
-      href: "/case-studies/marketplace-mvp",
-      linkLabel: "Read Case Study",
+      id: "clientlogo3",
+      alt: "clientlogo3",
+      src: "/images/clientlogo/statepharm.png",
+      href: "/#work",
+      scale: 1.55,
     },
     {
-      id: "beacon",
-      name: "Beacon",
-      href: "/case-studies",
-      linkLabel: "Read Case Study",
+      id: "clientlogo4",
+      alt: "clientlogo4",
+      src: "/images/clientlogo/logo4.png",
+      href: "/#work",
+      scale: 1.25,
     },
   ] satisfies TrustedClient[],
 };

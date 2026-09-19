@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useId, useState } from "react";
 import { SiteLogo } from "@/components/SiteLogo";
 import {
@@ -31,23 +32,46 @@ function GetInTouchButton({
 }
 
 function DesktopDropdown({ item }: { item: NavItem }) {
+  const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
   return (
-    <div className="group relative flex h-full items-center">
+    <div
+      className="relative flex h-full items-center"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
       <button
         type="button"
         className="inline-flex h-full items-center gap-1.5 px-3.5 text-[15px] font-semibold text-white transition-colors hover:text-white/70"
         aria-haspopup="true"
+        aria-expanded={open}
+        onClick={() => setOpen((value) => !value)}
       >
         {item.label}
-        <ChevronDown className="h-2.5 w-2.5 text-accent transition-transform duration-200 group-hover:rotate-180" />
+        <ChevronDown
+          className={`h-2.5 w-2.5 text-accent transition-transform duration-200 ${
+            open ? "rotate-180" : ""
+          }`}
+        />
       </button>
 
-      <div className="pointer-events-none invisible absolute left-0 top-[calc(50%+18px)] z-50 w-[320px] opacity-0 transition-[opacity,visibility] duration-150 group-hover:pointer-events-auto group-hover:visible group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:visible group-focus-within:opacity-100">
+      <div
+        className={`absolute left-0 top-[calc(50%+18px)] z-50 w-[320px] transition-[opacity,visibility] duration-150 ${
+          open
+            ? "pointer-events-auto visible opacity-100"
+            : "pointer-events-none invisible opacity-0"
+        }`}
+      >
         <div className="overflow-hidden rounded-[14px] border border-white/10 bg-[#111] shadow-[0_12px_40px_rgba(0,0,0,0.45)]">
           <ul className="py-2">
             {item.children?.map((child) => (
               <li key={child.href + child.label}>
-                <DropdownLink child={child} />
+                <DropdownLink child={child} onClick={() => setOpen(false)} />
               </li>
             ))}
           </ul>
@@ -67,7 +91,10 @@ function DropdownLink({
   return (
     <Link
       href={child.href}
-      onClick={onClick}
+      onClick={() => {
+        onClick?.();
+        (document.activeElement as HTMLElement | null)?.blur();
+      }}
       className="group/item block px-5 py-3 transition-colors hover:bg-white/5"
     >
       <span className="block text-[15px] font-semibold text-white">
@@ -86,6 +113,12 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openSection, setOpenSection] = useState<string | null>(null);
   const panelId = useId();
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setMobileOpen(false);
+    setOpenSection(null);
+  }, [pathname]);
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
@@ -93,6 +126,11 @@ export function Header() {
       document.body.style.overflow = "";
     };
   }, [mobileOpen]);
+
+  function closeMobile() {
+    setMobileOpen(false);
+    setOpenSection(null);
+  }
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-[#111111]">
@@ -148,7 +186,7 @@ export function Header() {
                   <Link
                     key={item.label}
                     href={item.href || "/"}
-                    onClick={() => setMobileOpen(false)}
+                    onClick={closeMobile}
                     className="border-b border-white/10 py-4 text-[17px] font-semibold text-white"
                   >
                     {item.label}
@@ -182,10 +220,7 @@ export function Header() {
                     <ul className="pb-4">
                       {item.children.map((child) => (
                         <li key={child.href + child.label}>
-                          <DropdownLink
-                            child={child}
-                            onClick={() => setMobileOpen(false)}
-                          />
+                          <DropdownLink child={child} onClick={closeMobile} />
                         </li>
                       ))}
                     </ul>
@@ -197,7 +232,7 @@ export function Header() {
             <div className="pt-6 pb-10">
               <GetInTouchButton
                 className="w-full justify-center"
-                onClick={() => setMobileOpen(false)}
+                onClick={closeMobile}
               />
             </div>
           </nav>

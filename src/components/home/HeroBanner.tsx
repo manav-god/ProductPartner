@@ -1,5 +1,5 @@
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "@/components/icons";
 import { heroContent } from "@/lib/hero";
 
 function ArrowUpRight({ className = "" }: { className?: string }) {
@@ -134,19 +134,24 @@ export function HeroBanner() {
             ) : null}
           </p>
 
-          <div className="grid min-w-0 flex-1 grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-4 lg:gap-0 lg:pl-[30px]">
+          <div className="grid min-w-0 flex-1 grid-cols-2 gap-x-4 gap-y-5 sm:grid-cols-4 lg:gap-0 lg:pl-[30px]">
             {trustedClients.map((client) => (
               <Link
                 key={client.id}
                 href={client.href}
-                className="group flex flex-col items-start gap-2 lg:items-center lg:px-3"
+                className="group flex h-14 items-center justify-center opacity-90 transition-opacity hover:opacity-100 lg:px-3"
               >
-                <span className="text-[18px] font-semibold tracking-tight text-white transition-colors group-hover:text-accent sm:text-[20px]">
-                  {client.name}
-                </span>
-                <span className="inline-flex items-center gap-1.5 text-[12px] font-medium text-white/75 transition-colors group-hover:text-white sm:text-[13px]">
-                  {client.linkLabel}
-                  <ArrowRight className="h-3 w-3 text-accent" />
+                <span className="relative flex h-12 w-full max-w-[130px] items-center justify-center">
+                  <Image
+                    src={client.src}
+                    alt={client.alt}
+                    fill
+                    sizes="130px"
+                    className="object-contain"
+                    style={{
+                      transform: `scale(${client.scale ?? 1})`,
+                    }}
+                  />
                 </span>
               </Link>
             ))}

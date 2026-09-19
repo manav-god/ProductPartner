@@ -54,7 +54,7 @@ export function WhyDifferentSection() {
 
               <div className="flex min-h-[91px] items-center gap-3 bg-[#020202] px-6">
                 <Image
-                  src="/images/logo/product-partner.svg"
+                  src="/images/icons/dynamic_red_ribbon_p_logo.svg"
                   alt=""
                   width={36}
                   height={36}

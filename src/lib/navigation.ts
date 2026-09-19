@@ -21,61 +21,28 @@ export type NavItem = {
 export const primaryNav: NavItem[] = [
   {
     label: "Services",
-    children: [
-      {
-        label: "Product Development",
-        href: "/services/product-development",
-        icon: "/images/icons/productdevelopment.svg",
-      },
-      {
-        label: "Product Management",
-        href: "/services/product-management",
-        icon: "/images/icons/productmanagement.svg",
-      },
-      {
-        label: "Product Marketing",
-        href: "/services/product-marketing",
-        icon: "/images/icons/productmarketing.svg",
-      },
-      {
-        label: "Product Testing",
-        href: "/services/product-testing",
-        icon: "/images/icons/producttesting.svg",
-      },
-      {
-        label: "Product Consulting",
-        href: "/services/product-consulting",
-        icon: "/images/icons/Productconsulting.svg",
-      },
-    ],
+    href: "/#services",
   },
   {
     label: "Our work",
-    href: "/case-studies",
+    href: "/#work",
   },
   {
     label: "About",
-    href: "/about",
-  },
-  {
-    label: "Careers",
-    href: "/careers",
+    href: "/#about",
   },
 ];
 
 export const footerServices = [
-  { label: "Product Development", href: "/services/product-development" },
-  { label: "Product Management", href: "/services/product-management" },
-  { label: "Product Marketing", href: "/services/product-marketing" },
-  { label: "Product Testing", href: "/services/product-testing" },
-  { label: "Product Consulting", href: "/services/product-consulting" },
+  { label: "Product Development", href: "/#services" },
+  { label: "Fractional Product Leadership", href: "/#services" },
+  { label: "Product Marketing", href: "/#services" },
 ];
 
 export const footerCompany = [
-  { label: "About Product Partner", href: "/about" },
-  { label: "Our work", href: "/case-studies" },
-  { label: "Careers", href: "/careers" },
-  { label: "Contact", href: "/contact" },
+  { label: "About Product Partner", href: "/#about" },
+  { label: "Our work", href: "/#work" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export const socialLinks = [

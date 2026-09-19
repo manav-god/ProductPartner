@@ -13,7 +13,7 @@ export function SiteLogo({ className = "" }: SiteLogoProps) {
       aria-label="Product Partner home"
     >
       <Image
-        src="/images/logo/product-partner.svg"
+        src="/images/icons/dynamic_red_ribbon_p_logo.svg"
         alt="Product Partner"
         width={48}
         height={48}

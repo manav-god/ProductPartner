@@ -23,7 +23,7 @@ export function Footer() {
     <footer className="mt-auto">
       <section
         id="contact"
-        className="bg-black text-white"
+        className="scroll-mt-[91px] bg-black text-white"
         aria-labelledby="footer-contact-heading"
       >
         <div className="mx-auto grid max-w-[1300px] gap-10 px-5 py-16 md:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 lg:px-[40px] lg:py-20">
@@ -182,7 +182,7 @@ export function Footer() {
             </h2>
             <ul className="mt-5 space-y-3">
               {footerServices.map((link) => (
-                <li key={link.href}>
+                <li key={link.label}>
                   <Link
                     href={link.href}
                     className="text-[14px] text-grey transition-colors hover:text-black"
@@ -203,7 +203,7 @@ export function Footer() {
             </h2>
             <ul className="mt-5 space-y-3">
               {footerCompany.map((link) => (
-                <li key={link.href}>
+                <li key={link.label}>
                   <Link
                     href={link.href}
                     className="text-[14px] text-grey transition-colors hover:text-black"

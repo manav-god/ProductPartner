@@ -55,8 +55,8 @@ function CaseStudyCard({ study }: { study: CaseStudy }) {
 export function PortfolioSection() {
   return (
     <section
-      id="portfolio"
-      className="bg-white py-[70px] md:py-[100px]"
+      id="work"
+      className="scroll-mt-[91px] bg-white py-[70px] md:py-[100px]"
       aria-labelledby="portfolio-heading"
     >
       <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
@@ -89,10 +89,10 @@ export function PortfolioSection() {
             </p>
           </div>
           <Link
-            href="/case-studies"
+            href="/#contact"
             className="inline-flex h-[48px] cursor-pointer items-center gap-2 rounded-[10px] bg-accent px-7 text-[14px] font-semibold text-white transition-colors hover:bg-accent-hover"
           >
-            View Case Studies
+            Start a project
             <ArrowRight className="h-3.5 w-3.5" />
           </Link>
         </div>

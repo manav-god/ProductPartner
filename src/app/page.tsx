@@ -1,21 +1,17 @@
+import { AboutSection } from "@/components/home/AboutSection";
 import { HeroBanner } from "@/components/home/HeroBanner";
 import { PortfolioSection } from "@/components/home/PortfolioSection";
-import { StartHereSection } from "@/components/home/StartHereSection";
-import { TeamSection } from "@/components/home/TeamSection";
-import { TechnologiesSection } from "@/components/home/TechnologiesSection";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
-import { WhyDifferentSection } from "@/components/home/WhyDifferentSection";
+import { WaysToWorkSection } from "@/components/home/WaysToWorkSection";
 
 export default function Home() {
   return (
     <>
       <HeroBanner />
-      <StartHereSection />
+      <WaysToWorkSection />
       <PortfolioSection />
-      <TechnologiesSection />
-      <WhyDifferentSection />
+      <AboutSection />
       <TestimonialsSection />
-      <TeamSection />
     </>
   );
 }

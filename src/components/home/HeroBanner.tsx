@@ -1,331 +1,151 @@
-"use client";
-
 import Link from "next/link";
-import { useCallback, useEffect, useState } from "react";
 import { ArrowRight } from "@/components/icons";
-import { heroSlides } from "@/lib/hero";
+import { heroContent } from "@/lib/hero";
 
-const AUTO_MS = 8000;
-const EASE = "cubic-bezier(0.4, 0.2, 0.4, 1)";
-
-function PlusIcon({ className = "" }: { className?: string }) {
+function ArrowUpRight({ className = "" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" className={className}>
+    <svg
+      viewBox="0 0 16 16"
+      fill="none"
+      aria-hidden="true"
+      className={className}
+    >
       <path
-        d="M12 5V19M5 12H19"
+        d="M4 12L12 4M12 4H6.5M12 4V9.5"
         stroke="currentColor"
-        strokeWidth="1.8"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function BriefcaseIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 20 20"
+      fill="none"
+      aria-hidden="true"
+      className={className}
+    >
+      <path
+        d="M6.5 6V4.75A1.75 1.75 0 0 1 8.25 3h3.5A1.75 1.75 0 0 1 13.5 4.75V6M3.5 6.5h13v8.25A1.75 1.75 0 0 1 14.75 16.5h-9.5A1.75 1.75 0 0 1 3.5 14.75V6.5Z"
+        stroke="currentColor"
+        strokeWidth="1.4"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M3.5 9.5h13"
+        stroke="currentColor"
+        strokeWidth="1.4"
         strokeLinecap="round"
       />
     </svg>
   );
 }
 
-function CircleArrow({
-  direction,
-  onClick,
-  label,
-}: {
-  direction: "prev" | "next";
-  onClick: () => void;
-  label: string;
-}) {
-  return (
-    <button
-      type="button"
-      aria-label={label}
-      onClick={(event) => {
-        event.stopPropagation();
-        onClick();
-      }}
-      className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/80 text-white transition-colors hover:border-accent hover:text-accent"
-    >
-      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" className="h-4 w-4">
-        {direction === "prev" ? (
-          <path
-            d="M15 6L9 12L15 18"
-            stroke="currentColor"
-            strokeWidth="1.6"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        ) : (
-          <path
-            d="M9 6L15 12L9 18"
-            stroke="currentColor"
-            strokeWidth="1.6"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        )}
-      </svg>
-    </button>
-  );
-}
-
 export function HeroBanner() {
-  const [active, setActive] = useState(0);
-  const [progressKey, setProgressKey] = useState(0);
-
-  const goTo = useCallback((index: number) => {
-    setActive((index + heroSlides.length) % heroSlides.length);
-    setProgressKey((key) => key + 1);
-  }, []);
-
-  const goPrev = useCallback(() => {
-    goTo(active - 1);
-  }, [active, goTo]);
-
-  const goNext = useCallback(() => {
-    goTo(active + 1);
-  }, [active, goTo]);
-
-  useEffect(() => {
-    const timer = window.setInterval(() => {
-      setActive((current) => (current + 1) % heroSlides.length);
-      setProgressKey((key) => key + 1);
-    }, AUTO_MS);
-    return () => window.clearInterval(timer);
-  }, [active, progressKey]);
+  const {
+    eyebrow,
+    titleLine1,
+    titleLine2,
+    description,
+    primaryCta,
+    secondaryCta,
+    trustedLabel,
+    trustedHighlight,
+    trustedClients,
+  } = heroContent;
 
   return (
-    <section className="bg-white" aria-label="Highlights">
-      <div className="mx-auto w-full max-w-[1300px] px-5 pb-10 pt-5 md:px-8 md:pb-14 md:pt-6 lg:px-[40px]">
-        {/* Desktop accordion */}
-        <div
-          className="hidden h-[560px] gap-2.5 lg:flex xl:h-[640px]"
-          role="list"
-        >
-          {heroSlides.map((slide, index) => {
-            const isActive = index === active;
+    <section
+      className="relative overflow-hidden"
+      aria-label="Highlights"
+      style={{
+        background:
+          "linear-gradient(112deg, #141414 0%, #1a1614 48%, #0f0f0f 100%)",
+      }}
+    >
+      {/* Soft brand glow — atmosphere, not the main visual */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-50"
+        style={{
+          background:
+            "radial-gradient(ellipse at 78% 35%, rgba(255,89,0,0.16), transparent 55%)",
+        }}
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute -right-16 bottom-0 h-[70%] w-[55%] opacity-[0.14]"
+        style={{
+          background:
+            "repeating-linear-gradient(-28deg, transparent 0 28px, rgba(255,255,255,0.35) 28px 56px)",
+          maskImage:
+            "linear-gradient(90deg, transparent 0%, black 35%, black 100%)",
+        }}
+        aria-hidden
+      />
 
-            return (
-              <article
-                key={slide.id}
-                role="listitem"
-                aria-current={isActive ? "true" : undefined}
-                tabIndex={isActive ? -1 : 0}
-                onClick={() => {
-                  if (!isActive) goTo(index);
-                }}
-                onKeyDown={(event) => {
-                  if (!isActive && (event.key === "Enter" || event.key === " ")) {
-                    event.preventDefault();
-                    goTo(index);
-                  }
-                }}
-                className={`group/slide relative min-h-0 overflow-hidden ${
-                  isActive
-                    ? "z-[1] flex-[1_1_0%] cursor-default"
-                    : "flex-[0_0_90px] cursor-pointer hover:flex-[0_0_120px] xl:flex-[0_0_100px] xl:hover:flex-[0_0_130px]"
-                }`}
-                style={{
-                  background: slide.gradient,
-                  transition: `flex 0.85s ${EASE}`,
-                }}
-              >
-                <div
-                  className={`absolute inset-0 ${
-                    isActive
-                      ? "bg-black/25"
-                      : "bg-black/40 backdrop-blur-[20px] group-hover/slide:bg-black/25 group-hover/slide:backdrop-blur-0"
-                  }`}
-                />
-                <div
-                  className="pointer-events-none absolute inset-0 opacity-40"
-                  style={{
-                    background:
-                      "radial-gradient(ellipse at 70% 20%, rgba(255,89,0,0.18), transparent 55%)",
-                  }}
-                />
+      <div className="relative mx-auto w-full max-w-[1300px] px-5 pb-14 pt-12 md:px-8 md:pb-20 md:pt-16 lg:px-[40px] lg:pb-[150px] lg:pt-[70px]">
+        <p className="text-[14px] font-semibold uppercase tracking-[0.14em] text-accent sm:text-[16px] sm:tracking-[0.14em]">
+          {eyebrow}
+        </p>
 
-                {/* Collapsed strip label — instant swap, never tweened */}
-                <p
-                  className="hero-strip-title"
-                  style={{
-                    visibility: isActive ? "hidden" : "visible",
-                    opacity: isActive ? 0 : 1,
-                  }}
-                  aria-hidden={isActive}
-                >
-                  {slide.number}. {slide.label}
-                </p>
+        <h1 className="relative mt-4 max-w-[857px] pb-4 text-[34px] font-semibold leading-[1.15] tracking-[-0.03em] text-white sm:mt-5 sm:text-[44px] sm:leading-[1.15] md:text-[54px] md:leading-[62px] md:tracking-[-2px]">
+          {titleLine1}
+          <br />
+          {titleLine2}
+          <span
+            className="absolute bottom-0 left-0 block h-[4px] w-[106px] bg-accent"
+            aria-hidden
+          />
+        </h1>
 
-                {!isActive ? (
-                  <span className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 text-white/80 group-hover/slide:text-accent">
-                    <PlusIcon className="h-5 w-5" />
-                  </span>
-                ) : null}
+        <p className="mt-5 max-w-[640px] text-[15px] leading-7 text-white sm:mt-6 sm:text-[16px] sm:leading-7">
+          {description}
+        </p>
 
-                {/*
-                  Expanded copy stays fixed-width and clipped by overflow:hidden.
-                  That way fonts don't reflow/animate while the card width transitions.
-                */}
-                <div
-                  className="hero-slide-copy"
-                  style={{
-                    visibility: isActive ? "visible" : "hidden",
-                    opacity: isActive ? 1 : 0,
-                    pointerEvents: isActive ? "auto" : "none",
-                  }}
-                  aria-hidden={!isActive}
-                >
-                  <div className="hero-slide-copy__inner">
-                    <p className="text-[15px] font-bold tracking-tight text-white xl:text-[16px]">
-                      {slide.number}. {slide.label}
-                    </p>
-
-                    {isActive ? (
-                      <h1 className="mt-6 max-w-[620px] text-[34px] font-bold leading-[1.12] tracking-tight text-white xl:mt-8 xl:text-[46px]">
-                        {slide.title}
-                        <em className="not-italic text-accent">{slide.accent}</em>
-                        {slide.titleAfter}
-                      </h1>
-                    ) : (
-                      <p className="mt-6 max-w-[620px] text-[34px] font-bold leading-[1.12] tracking-tight text-white xl:mt-8 xl:text-[46px]">
-                        {slide.title}
-                        <em className="not-italic text-accent">{slide.accent}</em>
-                        {slide.titleAfter}
-                      </p>
-                    )}
-
-                    <p className="mt-5 max-w-[540px] text-[16px] leading-relaxed text-white/85 xl:text-[17px]">
-                      {slide.description}
-                    </p>
-
-                    {slide.cta ? (
-                      <Link
-                        href={slide.cta.href}
-                        className="mt-7 inline-flex w-fit items-center gap-2 text-[15px] font-semibold text-white hover:text-accent"
-                        tabIndex={isActive ? 0 : -1}
-                        onClick={(event) => event.stopPropagation()}
-                      >
-                        {slide.cta.label}
-                        <ArrowRight className="h-3.5 w-3.5 text-accent" />
-                      </Link>
-                    ) : null}
-
-                    <div className="hero-slide-copy__footer">
-                      <div className="relative h-[2px] min-w-0 flex-1 overflow-hidden bg-white/35">
-                        {isActive ? (
-                          <div
-                            key={progressKey}
-                            className="absolute inset-y-0 left-0 bg-accent"
-                            style={{
-                              animation: `hero-progress ${AUTO_MS}ms linear forwards`,
-                            }}
-                          />
-                        ) : null}
-                      </div>
-                      <div className="flex shrink-0 items-center gap-3">
-                        <CircleArrow
-                          direction="prev"
-                          label="Previous slide"
-                          onClick={goPrev}
-                        />
-                        <CircleArrow
-                          direction="next"
-                          label="Next slide"
-                          onClick={goNext}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            );
-          })}
+        <div className="mt-7 flex flex-col items-start gap-4 sm:mt-8 sm:flex-row sm:items-center sm:gap-4">
+          <Link
+            href={primaryCta.href}
+            className="inline-flex h-[48px] items-center gap-3.5 rounded-lg border border-white/90 bg-[#1a1a1a]/80 px-4 text-[14px] font-semibold text-white transition-colors hover:border-accent hover:text-accent"
+          >
+            {primaryCta.label}
+            <ArrowUpRight className="h-4 w-4" />
+          </Link>
+          <Link
+            href={secondaryCta.href}
+            className="inline-flex h-[48px] items-center gap-3.5 px-1 text-[14px] font-semibold text-white transition-colors hover:text-accent sm:px-3"
+          >
+            {secondaryCta.label}
+            <BriefcaseIcon className="h-5 w-5" />
+          </Link>
         </div>
 
-        {/* Mobile / tablet */}
-        <div className="lg:hidden">
-          <div
-            className="relative flex min-h-[460px] flex-col overflow-hidden px-6 pb-6 pt-8 sm:min-h-[520px] sm:px-10 sm:pb-8 sm:pt-10"
-            style={{ background: heroSlides[active].gradient }}
-          >
-            <div className="absolute inset-0 bg-black/30" />
-            <div
-              className="pointer-events-none absolute inset-0 opacity-40"
-              style={{
-                background:
-                  "radial-gradient(ellipse at 70% 20%, rgba(255,89,0,0.18), transparent 55%)",
-              }}
-            />
+        {/* Trusted-by bar */}
+        <div className="mt-10 flex w-full flex-col gap-5 rounded-[14px] border border-white bg-white/[0.035] p-[18px] md:mt-12 lg:mt-14 lg:flex-row lg:items-center lg:gap-0">
+          <p className="max-w-[270px] shrink-0 border-white/25 pr-0 text-[15px] leading-[1.35] text-white lg:border-r lg:pr-6 lg:text-[16px]">
+            {trustedLabel}{" "}
+            <strong className="font-semibold">{trustedHighlight}</strong>
+          </p>
 
-            <div className="relative z-10 flex flex-1 flex-col">
-              <p className="text-[14px] font-bold text-white">
-                {heroSlides[active].number}. {heroSlides[active].label}
-              </p>
-              <h1 className="mt-5 max-w-[620px] text-[32px] font-bold leading-[1.12] tracking-tight text-white sm:text-[40px]">
-                {heroSlides[active].title}
-                <em className="not-italic text-accent">
-                  {heroSlides[active].accent}
-                </em>
-              </h1>
-              <p className="mt-5 max-w-[560px] text-[15px] leading-relaxed text-white/85 sm:text-[16px]">
-                {heroSlides[active].description}
-              </p>
-              {heroSlides[active].cta ? (
-                <Link
-                  href={heroSlides[active].cta!.href}
-                  className="mt-7 inline-flex items-center gap-2 text-[15px] font-semibold text-white"
-                >
-                  {heroSlides[active].cta!.label}
-                  <ArrowRight className="h-3.5 w-3.5 text-accent" />
-                </Link>
-              ) : null}
-
-              <div className="mt-auto flex items-center gap-4 pt-10">
-                <div className="relative h-[2px] min-w-0 flex-1 overflow-hidden bg-white/35">
-                  <div
-                    key={`m-${progressKey}`}
-                    className="absolute inset-y-0 left-0 bg-accent"
-                    style={{
-                      animation: `hero-progress ${AUTO_MS}ms linear forwards`,
-                    }}
-                  />
-                </div>
-                <div className="flex shrink-0 items-center gap-3">
-                  <CircleArrow
-                    direction="prev"
-                    label="Previous slide"
-                    onClick={goPrev}
-                  />
-                  <CircleArrow
-                    direction="next"
-                    label="Next slide"
-                    onClick={goNext}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-2.5 flex gap-2">
-            {heroSlides.map((slide, index) => {
-              const isActive = index === active;
-              return (
-                <button
-                  key={slide.id}
-                  type="button"
-                  aria-label={`Show ${slide.label}`}
-                  aria-current={isActive ? "true" : undefined}
-                  onClick={() => goTo(index)}
-                  className={`relative h-[72px] flex-1 overflow-hidden ${
-                    isActive ? "flex-[1.4]" : "flex-1"
-                  }`}
-                  style={{
-                    background: slide.gradient,
-                    transition: `flex 0.85s ${EASE}`,
-                  }}
-                >
-                  <span className="absolute inset-0 bg-black/35" />
-                  <span className="relative z-10 flex h-full items-center justify-center px-2 text-center text-[11px] font-bold leading-tight text-white sm:text-[12px]">
-                    {slide.number}. {slide.label}
-                  </span>
-                </button>
-              );
-            })}
+          <div className="grid min-w-0 flex-1 grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-4 lg:gap-0 lg:pl-[30px]">
+            {trustedClients.map((client) => (
+              <Link
+                key={client.id}
+                href={client.href}
+                className="group flex flex-col items-start gap-2 lg:items-center lg:px-3"
+              >
+                <span className="text-[18px] font-semibold tracking-tight text-white transition-colors group-hover:text-accent sm:text-[20px]">
+                  {client.name}
+                </span>
+                <span className="inline-flex items-center gap-1.5 text-[12px] font-medium text-white/75 transition-colors group-hover:text-white sm:text-[13px]">
+                  {client.linkLabel}
+                  <ArrowRight className="h-3 w-3 text-accent" />
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
       </div>

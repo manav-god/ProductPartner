@@ -6,7 +6,7 @@ export type TrustedClient = {
 };
 
 export const heroContent = {
-  eyebrow: "Product Partnership",
+  eyebrow: "Your Product Partners",
   titleLine1: "Build, Ship & Scale",
   titleLine2: "Products With Confidence.",
   description:
@@ -16,7 +16,7 @@ export const heroContent = {
     href: "/#contact",
   },
   secondaryCta: {
-    label: "View Case Studies",
+    label: "View Our Work",
     href: "/#work",
   },
   trustedLabel: "Trusted by Product Teams at",

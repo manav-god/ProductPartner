@@ -358,21 +358,25 @@
 }
 
 .pd-service-card__tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
   margin-top: auto;
 }
 
 .pd-service-card__tag {
   display: inline-flex;
   align-items: center;
-  padding: 8px 12px;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 7px 8px;
   border: 1px solid #ff5900;
   border-radius: 8px;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.25;
+  text-align: center;
   color: #ff5900;
   background: transparent;
 }
@@ -677,9 +681,9 @@
   box-sizing: border-box;
   margin: 0;
   padding: 20px;
-  border: 1px solid #e5e7eb;
-  background: #ffffff;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: none;
 }
 
 .pd-fp-card__label {
@@ -687,7 +691,7 @@
   font-size: 15px !important;
   font-weight: 400 !important;
   line-height: 1.4 !important;
-  color: #6b7280 !important;
+  color: rgba(255, 255, 255, 0.55) !important;
 }
 
 .pd-fp-card__question {
@@ -696,7 +700,7 @@
   font-weight: 400 !important;
   line-height: 1.35 !important;
   letter-spacing: -0.02em !important;
-  color: #252425 !important;
+  color: #ffffff !important;
 }
 
 .pd-fp-card__question::after {
@@ -711,7 +715,7 @@
   margin: 0 0 20px !important;
   font-size: 15px !important;
   line-height: 1.65 !important;
-  color: #4b5563 !important;
+  color: rgba(255, 255, 255, 0.65) !important;
 }
 
 .pd-fp-card__tags {
@@ -742,7 +746,7 @@
   width: fit-content;
   font-size: 16px;
   font-weight: 600;
-  color: #252425;
+  color: #ffffff;
   text-decoration: none;
   transition: color 0.2s ease;
 }

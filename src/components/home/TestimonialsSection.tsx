@@ -22,8 +22,12 @@ function QuoteTile({ item }: { item: Testimonial }) {
         {item.quote}
       </div>
       <p className="border-t border-white/15 pt-5 text-[16px] font-medium leading-[28px] text-white">
-        <strong className="font-bold">{item.name}</strong>
-        {" | "}
+        {item.name ? (
+          <>
+            <strong className="font-bold">{item.name}</strong>
+            {" | "}
+          </>
+        ) : null}
         {item.role}
       </p>
     </article>

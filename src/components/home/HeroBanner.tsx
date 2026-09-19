@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { heroContent } from "@/lib/hero";
+import { HeroServiceCube } from "@/components/home/HeroServiceCube";
 
 function ArrowUpRight({ className = "" }: { className?: string }) {
   return (
@@ -60,66 +61,51 @@ export function HeroBanner() {
 
   return (
     <section
-      className="relative overflow-hidden bg-[#111111]"
+      className="relative overflow-x-clip overflow-y-visible bg-[#111111]"
       aria-label="Highlights"
     >
-      {/* Soft brand glow, disabled for solid black preview
-      <div
-        className="pointer-events-none absolute inset-0 opacity-50"
-        style={{
-          background:
-            "radial-gradient(ellipse at 78% 35%, rgba(255,89,0,0.16), transparent 55%)",
-        }}
-        aria-hidden
-      />
-      */}
-      {/* Stretch / diagonal stripe lines, disabled for solid black preview
-      <div
-        className="pointer-events-none absolute -right-16 bottom-0 h-[70%] w-[55%] opacity-[0.14]"
-        style={{
-          background:
-            "repeating-linear-gradient(-28deg, transparent 0 28px, rgba(255,255,255,0.35) 28px 56px)",
-          maskImage:
-            "linear-gradient(90deg, transparent 0%, black 35%, black 100%)",
-        }}
-        aria-hidden
-      />
-      */}
-
       <div className="relative mx-auto w-full max-w-[1300px] px-5 pb-16 pt-20 md:px-8 md:pb-24 md:pt-28 lg:px-[40px] lg:pb-[120px] lg:pt-[120px]">
-        <p className="text-[14px] font-semibold uppercase tracking-[0.14em] text-accent sm:text-[16px] sm:tracking-[0.14em]">
-          {eyebrow}
-        </p>
+        <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(280px,0.95fr)] lg:gap-10 xl:gap-16">
+          <div className="min-w-0">
+            <p className="text-[14px] font-semibold uppercase tracking-[0.14em] text-accent sm:text-[16px] sm:tracking-[0.14em]">
+              {eyebrow}
+            </p>
 
-        <h1 className="relative mt-4 max-w-[857px] pb-4 text-[34px] font-semibold leading-[1.15] tracking-[-0.03em] text-white sm:mt-5 sm:text-[44px] sm:leading-[1.15] md:text-[54px] md:leading-[62px] md:tracking-[-2px]">
-          {titleLine1}
-          <br />
-          {titleLine2}
-          <span
-            className="absolute bottom-0 left-0 block h-[4px] w-[106px] bg-accent"
-            aria-hidden
-          />
-        </h1>
+            <h1 className="relative mt-4 max-w-[857px] pb-4 text-[34px] font-semibold leading-[1.15] tracking-[-0.03em] text-white sm:mt-5 sm:text-[44px] sm:leading-[1.15] md:text-[54px] md:leading-[62px] md:tracking-[-2px]">
+              {titleLine1}
+              <br />
+              {titleLine2}
+              <span
+                className="absolute bottom-0 left-0 block h-[4px] w-[106px] bg-accent"
+                aria-hidden
+              />
+            </h1>
 
-        <p className="mt-5 max-w-[640px] text-[15px] leading-7 text-white sm:mt-6 sm:text-[16px] sm:leading-7">
-          {description}
-        </p>
+            <p className="mt-5 max-w-[640px] text-[15px] leading-7 text-white sm:mt-6 sm:text-[16px] sm:leading-7">
+              {description}
+            </p>
 
-        <div className="mt-7 flex flex-col items-start gap-4 sm:mt-8 sm:flex-row sm:items-center sm:gap-4">
-          <Link
-            href={primaryCta.href}
-            className="inline-flex h-[48px] items-center gap-3.5 rounded-lg border border-white/90 bg-[#1a1a1a]/80 px-4 text-[14px] font-semibold text-white transition-colors hover:border-accent hover:text-accent"
-          >
-            {primaryCta.label}
-            <ArrowUpRight className="h-4 w-4" />
-          </Link>
-          <Link
-            href={secondaryCta.href}
-            className="inline-flex h-[48px] items-center gap-3.5 px-1 text-[14px] font-semibold text-white transition-colors hover:text-accent sm:px-3"
-          >
-            {secondaryCta.label}
-            <BriefcaseIcon className="h-5 w-5" />
-          </Link>
+            <div className="mt-7 flex flex-col items-start gap-4 sm:mt-8 sm:flex-row sm:items-center sm:gap-4">
+              <Link
+                href={primaryCta.href}
+                className="inline-flex h-[48px] items-center gap-3.5 rounded-lg border border-white/90 bg-[#1a1a1a]/80 px-4 text-[14px] font-semibold text-white transition-colors hover:border-accent hover:text-accent"
+              >
+                {primaryCta.label}
+                <ArrowUpRight className="h-4 w-4" />
+              </Link>
+              <Link
+                href={secondaryCta.href}
+                className="inline-flex h-[48px] items-center gap-3.5 px-1 text-[14px] font-semibold text-white transition-colors hover:text-accent sm:px-3"
+              >
+                {secondaryCta.label}
+                <BriefcaseIcon className="h-5 w-5" />
+              </Link>
+            </div>
+          </div>
+
+          <div className="flex justify-center lg:justify-end">
+            <HeroServiceCube />
+          </div>
         </div>
 
         {/* Trusted-by bar */}

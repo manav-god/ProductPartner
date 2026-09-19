@@ -95,7 +95,7 @@ export function Header() {
   }, [mobileOpen]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-black">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#111111]">
       <div className="mx-auto flex h-[68px] w-full max-w-[1300px] items-center justify-between px-5 md:px-8 lg:px-[40px]">
         <SiteLogo className="h-full" withWordmark />
 
@@ -136,7 +136,7 @@ export function Header() {
       {mobileOpen ? (
         <div
           id={panelId}
-          className="fixed inset-x-0 bottom-0 top-[68px] z-40 overflow-y-auto border-t border-white/10 bg-black lg:hidden"
+          className="fixed inset-x-0 bottom-0 top-[68px] z-40 overflow-y-auto border-t border-white/10 bg-[#111111] lg:hidden"
         >
           <nav
             className="mx-auto flex max-w-[1300px] flex-col px-5 py-4 md:px-8 lg:px-[40px]"

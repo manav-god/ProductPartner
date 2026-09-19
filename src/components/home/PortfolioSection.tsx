@@ -56,7 +56,7 @@ export function PortfolioSection() {
   return (
     <section
       id="work"
-      className="scroll-mt-[68px] bg-black py-[70px] md:py-[100px]"
+      className="scroll-mt-[68px] bg-[#111111] py-[70px] md:py-[100px]"
       aria-labelledby="portfolio-heading"
     >
       <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">

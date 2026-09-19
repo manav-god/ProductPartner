@@ -38,7 +38,7 @@ export function TestimonialsSection() {
   return (
     <section
       id="testimonials"
-      className="bg-black"
+      className="bg-[#111111]"
       aria-labelledby="testimonials-heading"
     >
       <div className="mx-auto flex w-full max-w-[1300px] flex-col justify-between gap-0 px-5 py-[90px] md:px-8 lg:flex-row lg:px-5">

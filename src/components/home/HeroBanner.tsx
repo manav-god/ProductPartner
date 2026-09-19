@@ -60,7 +60,7 @@ export function HeroBanner() {
 
   return (
     <section
-      className="relative overflow-hidden bg-black"
+      className="relative overflow-hidden bg-[#111111]"
       aria-label="Highlights"
     >
       {/* Soft brand glow — disabled for solid black preview

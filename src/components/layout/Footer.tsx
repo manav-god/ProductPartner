@@ -20,7 +20,7 @@ const socialIconMap = {
 
 export function Footer() {
   return (
-    <footer className="mt-auto bg-black text-white">
+    <footer className="mt-auto bg-[#111111] text-white">
       <section
         id="contact"
         className="scroll-mt-[68px] border-t border-white/20"

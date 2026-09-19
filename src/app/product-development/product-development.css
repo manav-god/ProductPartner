@@ -512,8 +512,8 @@
 }
 
 .pd-fp-section {
-  background: linear-gradient(180deg, #ffffff 0%, #edf0f3 100%);
-  color: #252425;
+  background: #111111;
+  color: #ffffff;
 }
 
 .pd-fp-layout {
@@ -552,7 +552,7 @@
   font-weight: 700 !important;
   line-height: 1.15 !important;
   letter-spacing: -0.02em !important;
-  color: #252425 !important;
+  color: #ffffff !important;
 }
 
 @media (min-width: 1024px) {
@@ -594,14 +594,14 @@
   gap: 12px;
   padding: 20px 12px 20px 0;
   border: 0;
-  border-bottom: 1px solid #dadada;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   background: transparent;
   cursor: pointer;
   text-align: left;
   font-size: 22px;
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: #252425;
+  color: #ffffff;
   transition: color 0.2s ease;
 }
 
@@ -612,7 +612,7 @@
 }
 
 .pd-fp-section nav li:first-child .pd-fp-nav-item {
-  border-top: 1px solid #dadada;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .pd-fp-nav-item:hover,
@@ -627,6 +627,7 @@
 }
 
 .pd-fp-nav-item svg {
+  color: #ffffff;
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
@@ -637,7 +638,7 @@
   justify-content: space-between;
   padding: 16px 0;
   border: 0;
-  border-bottom: 1px solid #dadada;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   background: transparent;
   cursor: pointer;
   text-align: left;
@@ -653,15 +654,16 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  border: 1px solid #dadada;
-  background: #ffffff;
-  box-shadow: 0 12px 40px rgba(37, 36, 37, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #1a1a1a;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
 }
 
 .pd-fp-mobile-menu .pd-fp-nav-item {
   border-top: 0;
-  border-bottom: 1px solid #dadada;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   padding: 16px;
+  color: #ffffff;
 }
 
 .pd-fp-mobile-menu li:last-child .pd-fp-nav-item {
@@ -675,8 +677,9 @@
   box-sizing: border-box;
   margin: 0;
   padding: 20px;
-  border: 1px solid #dadada;
+  border: 1px solid #e5e7eb;
   background: #ffffff;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
 }
 
 .pd-fp-card__label {

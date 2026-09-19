@@ -72,7 +72,7 @@ export function ProductDevelopmentContent() {
         </section>
 
         {/* SERVICES */}
-        <section className="pd-section pd-section--light" id="services">
+        <section className="pd-section" id="services">
           <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
             <span className="pd-eyebrow">Our Services</span>
             <h2>Product Development Services From Idea to Launch</h2>
@@ -477,7 +477,7 @@ export function ProductDevelopmentContent() {
         </section>
 
         {/* FRAMEWORK */}
-        <section className="pd-section pd-section--light">
+        <section className="pd-section">
           <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
             <span className="pd-eyebrow">Product Partner Framework</span>
             <h2>Our Product Development Framework</h2>
@@ -574,7 +574,7 @@ export function ProductDevelopmentContent() {
         </section>
 
         {/* FAQ */}
-        <section className="pd-section pd-section--light">
+        <section className="pd-section">
           <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
             <span className="pd-eyebrow">Frequently Asked Questions</span>
             <h2>Frequently Asked Questions About Product Development</h2>

@@ -22,14 +22,18 @@ export const testimonials: Testimonial[] = [
         partner.”
       </p>
     ),
-    name: "",
+    name: "Steve",
     role: "CEO Of PD",
   },
   {
     id: "two",
     quote: (
       <p>
-        “Amazing experience working with Arjun! He helped us build a multiplayer mobile game MVP from scratch and did an outstanding job. His expertise in SwiftUI and Firebase is top-notch, and he handled complex real-time features perfectly. What I really appreciated was his communication he was always available to discuss feedback and implemented changes incredibly fast. He is not just a great coder but also a true professional who cares about the project. We are already planning future updates with him. If you need a reliable and talented iOS developer, Arjun is your guy. 10/10!”
+        “Amazing experience working with Arjun. He built our multiplayer mobile
+        game MVP from scratch, handling complex real-time features perfectly
+        with SwiftUI and Firebase. Always available for feedback, and fast to
+        implement changes. A great developer and a true professional. If you
+        need a reliable iOS developer, Arjun is your guy.”
       </p>
     ),
     name: "Nikodem Rafal",
@@ -52,21 +56,15 @@ export const testimonials: Testimonial[] = [
   {
     id: "four",
     quote: (
-      <>
-        <p>
-          “<strong>Nemo enim ipsam voluptatem</strong> quia voluptas sit
-          aspernatur aut odit aut fugit. Sed quia consequuntur magni dolores eos
-          qui ratione{" "}
-          <strong>voluptatem sequi nesciunt.</strong>
-        </p>
-        <p>
-          Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-          consectetur, adipisci velit.”
-        </p>
-      </>
+      <p>
+        “Arjun did a fantastic job integrating our voice recognition from Bubble
+        into Swift. His communication was clear throughout, and he adapted
+        quickly whenever we needed changes. It was a pleasure working with him,
+        and I&apos;d definitely recommend him for future projects.”
+      </p>
     ),
-    name: "Priya Nair",
-    role: "COO, Cascade Systems",
+    name: "Freddy",
+    role: "Project Manager | Krox",
   },
   {
     id: "five",

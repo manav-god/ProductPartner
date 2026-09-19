@@ -1,12 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import "./hero-cube.css";
 
 type CubeFace = {
   id: string;
-  face: "front" | "back" | "right" | "left" | "top" | "bottom";
+  face: "front" | "back" | "right" | "left";
   href: string;
   number: string;
   muted: string;
@@ -35,7 +36,7 @@ const cubeFaces: CubeFace[] = [
   },
   {
     id: "marketing",
-    face: "top",
+    face: "back",
     href: "/product-marketing",
     number: "03",
     muted: "Product",
@@ -43,36 +44,51 @@ const cubeFaces: CubeFace[] = [
     tagline: "Found by the people who are looking for you",
   },
   {
-    id: "about",
-    face: "back",
-    href: "/about",
-    number: "04",
-    muted: "Our",
-    bold: "Story",
-    tagline: "Two journeys, one realization, one product partner",
-  },
-  {
-    id: "work",
-    face: "left",
-    href: "/#work",
-    number: "05",
-    muted: "Our",
-    bold: "Work",
-    tagline: "Products shipped with teams who needed a real partner",
-  },
-  {
     id: "contact",
-    face: "bottom",
+    face: "left",
     href: "/contact",
-    number: "06",
+    number: "04",
     muted: "Get in",
     bold: "Touch",
     tagline: "Tell us what you're building. We'll help shape the plan",
   },
 ];
 
-const INITIAL_X = -22;
-const INITIAL_Y = -32;
+const BASE_X = -18;
+const BASE_Y = 0;
+const CYCLE_MS = 22000;
+
+type Pose = { t: number; y: number };
+
+/** Side faces only — pause on each of the 4 walls, then turn */
+const IDLE_KEYFRAMES: Pose[] = [
+  { t: 0, y: 0 }, // front
+  { t: 0.18, y: 0 },
+  { t: 0.26, y: -90 }, // right
+  { t: 0.44, y: -90 },
+  { t: 0.52, y: -180 }, // back
+  { t: 0.7, y: -180 },
+  { t: 0.78, y: -270 }, // left
+  { t: 0.96, y: -270 },
+  { t: 1, y: -360 }, // back to front
+];
+
+function easeInOut(t: number) {
+  return t < 0.5 ? 2 * t * t : 1 - (-2 * t + 2) ** 2 / 2;
+}
+
+function sampleIdleY(progress: number) {
+  const p = ((progress % 1) + 1) % 1;
+  let i = 0;
+  while (i < IDLE_KEYFRAMES.length - 1 && IDLE_KEYFRAMES[i + 1].t < p) i += 1;
+
+  const a = IDLE_KEYFRAMES[i];
+  const b = IDLE_KEYFRAMES[i + 1] ?? a;
+  const span = Math.max(0.0001, b.t - a.t);
+  const local = easeInOut((p - a.t) / span);
+
+  return a.y + (b.y - a.y) * local;
+}
 
 export function HeroServiceCube() {
   const sceneRef = useRef<HTMLDivElement>(null);
@@ -86,32 +102,27 @@ export function HeroServiceCube() {
     const media = window.matchMedia("(prefers-reduced-motion: reduce)");
     let reduced = media.matches;
 
-    let rotX = INITIAL_X;
-    let rotY = INITIAL_Y;
-    let velX = 0;
-    let velY = 0;
+    let rotX = BASE_X;
+    let rotY = BASE_Y;
     let dragging = false;
     let moved = false;
     let lastX = 0;
-    let lastY = 0;
     let raf = 0;
+    let idleOffset = 0;
+    let resumeAt = 0;
 
     const setTransform = () => {
-      spinner.style.transform = `rotateX(${rotX}deg) rotateY(${rotY}deg)`;
+      spinner.style.transform = `rotateX(${BASE_X}deg) rotateY(${rotY}deg)`;
     };
 
     setTransform();
 
-    const tick = () => {
+    const tick = (now: number) => {
       if (!dragging && !reduced) {
-        rotX += velX;
-        rotY += velY;
-        velX *= 0.94;
-        velY *= 0.94;
-
-        if (Math.abs(velX) < 0.01) velX = 0;
-        if (Math.abs(velY) < 0.01) velY = 0;
-
+        if (resumeAt === 0) resumeAt = now;
+        const elapsed = now - resumeAt + idleOffset;
+        rotY = sampleIdleY(elapsed / CYCLE_MS);
+        rotX = BASE_X;
         setTransform();
       }
 
@@ -123,10 +134,11 @@ export function HeroServiceCube() {
     const onPointerDown = (event: PointerEvent) => {
       dragging = true;
       moved = false;
-      velX = 0;
-      velY = 0;
+      if (resumeAt !== 0) {
+        idleOffset += performance.now() - resumeAt;
+        resumeAt = 0;
+      }
       lastX = event.clientX;
-      lastY = event.clientY;
       scene.setPointerCapture(event.pointerId);
       scene.classList.add("is-dragging");
     };
@@ -135,18 +147,11 @@ export function HeroServiceCube() {
       if (!dragging) return;
 
       const dx = event.clientX - lastX;
-      const dy = event.clientY - lastY;
-      if (Math.abs(dx) > 1 || Math.abs(dy) > 1) moved = true;
+      if (Math.abs(dx) > 1) moved = true;
 
-      const sensitivity = 0.38;
-      rotY += dx * sensitivity;
-      rotX -= dy * sensitivity;
-
-      velY = dx * sensitivity * 0.55;
-      velX = -dy * sensitivity * 0.55;
-
+      // Horizontal drag only — side faces
+      rotY += dx * 0.38;
       lastX = event.clientX;
-      lastY = event.clientY;
       setTransform();
     };
 
@@ -154,6 +159,7 @@ export function HeroServiceCube() {
       if (!dragging) return;
       dragging = false;
       scene.classList.remove("is-dragging");
+      resumeAt = performance.now();
       try {
         scene.releasePointerCapture(event.pointerId);
       } catch {
@@ -172,10 +178,8 @@ export function HeroServiceCube() {
     const onMedia = () => {
       reduced = media.matches;
       if (reduced) {
-        velX = 0;
-        velY = 0;
-        rotX = INITIAL_X;
-        rotY = INITIAL_Y;
+        rotY = BASE_Y;
+        rotX = BASE_X;
         setTransform();
       }
     };
@@ -199,7 +203,7 @@ export function HeroServiceCube() {
   }, []);
 
   return (
-    <div className="hero-cube" aria-label="Interactive 3D services cube">
+    <div className="hero-cube" aria-label="3D services cube">
       <div ref={sceneRef} className="hero-cube__scene" role="presentation">
         <div ref={spinnerRef} className="hero-cube__spinner">
           {cubeFaces.map((face) => (
@@ -217,9 +221,24 @@ export function HeroServiceCube() {
               <span className="hero-cube__tagline">{face.tagline}</span>
             </Link>
           ))}
+          <Link
+            href="/"
+            className="hero-cube__face hero-cube__face--top hero-cube__face--logo"
+            aria-label="Product Partner home"
+            draggable={false}
+          >
+            <Image
+              src="/images/icons/pp-logo-nav.png"
+              alt="Product Partner"
+              width={320}
+              height={320}
+              className="hero-cube__logo"
+              priority
+            />
+          </Link>
+          <div className="hero-cube__face hero-cube__face--bottom" aria-hidden />
         </div>
       </div>
-      <p className="hero-cube__hint">Drag to explore all sides</p>
     </div>
   );
 }

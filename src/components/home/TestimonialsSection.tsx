@@ -16,12 +16,12 @@ function Stars() {
 
 function QuoteTile({ item }: { item: Testimonial }) {
   return (
-    <article className="mb-5 rounded-[10px] bg-white p-5">
+    <article className="mb-5 rounded-[10px] border border-white/10 bg-white/[0.04] p-5">
       <Stars />
-      <div className="mb-[1.6em] text-[16px] font-medium leading-[28px] text-black [&_p]:mb-[1.6em] [&_p:last-child]:mb-0 [&_strong]:font-bold">
+      <div className="mb-[1.6em] text-[16px] font-medium leading-[28px] text-white [&_p]:mb-[1.6em] [&_p:last-child]:mb-0 [&_strong]:font-bold">
         {item.quote}
       </div>
-      <p className="border-t border-[#e7e7e7] pt-5 text-[16px] font-medium leading-[28px] text-black">
+      <p className="border-t border-white/15 pt-5 text-[16px] font-medium leading-[28px] text-white">
         <strong className="font-bold">{item.name}</strong>
         {" | "}
         {item.role}
@@ -38,19 +38,18 @@ export function TestimonialsSection() {
   return (
     <section
       id="testimonials"
-      className="bg-[#f2f2f2]"
+      className="bg-black"
       aria-labelledby="testimonials-heading"
     >
       <div className="mx-auto flex w-full max-w-[1300px] flex-col justify-between gap-0 px-5 py-[90px] md:px-8 lg:flex-row lg:px-5">
-        {/* Column 1 — intro + first quote */}
         <div className="w-full lg:w-[32%]">
           <div className="mb-5 flex flex-col items-center rounded-[10px] p-5 text-center">
-            <p className="mb-[30px] rounded-lg border border-[rgba(194,194,194,0.2)] px-[15px] py-[5px] text-[12px] font-semibold leading-[28px] text-[#5d5d5d]">
+            <p className="mb-[30px] rounded-lg border border-white/15 px-[15px] py-[5px] text-[12px] font-semibold leading-[28px] text-white/60">
               Testimonials
             </p>
             <h3
               id="testimonials-heading"
-              className="text-[28px] font-extrabold leading-[1.25] tracking-tight text-black md:text-[30px] md:leading-[34px]"
+              className="text-[28px] font-extrabold leading-[1.25] tracking-tight text-white md:text-[30px] md:leading-[34px]"
             >
               What our clients say about us
             </h3>
@@ -58,14 +57,12 @@ export function TestimonialsSection() {
           {first ? <QuoteTile item={first} /> : null}
         </div>
 
-        {/* Column 2 */}
         <div className="w-full lg:w-[32%]">
           {col2.map((item) => (
             <QuoteTile key={item.id} item={item} />
           ))}
         </div>
 
-        {/* Column 3 */}
         <div className="w-full lg:w-[32%]">
           {col3.map((item) => (
             <QuoteTile key={item.id} item={item} />

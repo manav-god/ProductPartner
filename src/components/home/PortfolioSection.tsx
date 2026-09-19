@@ -4,14 +4,14 @@ import { caseStudies, type CaseStudy } from "@/lib/case-studies";
 
 function CaseStudyCard({ study }: { study: CaseStudy }) {
   return (
-    <article className="group relative flex flex-col overflow-hidden rounded-[16px] border border-[#dadada] bg-white transition-all duration-300 ease-out hover:-translate-y-[5px] hover:border-accent hover:shadow-[0_20px_25px_-5px_rgba(0,0,0,0.1),0_10px_10px_-5px_rgba(0,0,0,0.04)]">
+    <article className="group relative flex flex-col overflow-hidden rounded-[16px] border border-white/15 bg-white/[0.04] transition-all duration-300 ease-out hover:-translate-y-[5px] hover:border-accent hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)]">
       <Link
         href={study.href}
         className="absolute inset-0 z-10 cursor-pointer"
         aria-label={`Read case study: ${study.titleBefore}${study.titleHighlight}${study.titleAfter}`}
       />
 
-      <div className="h-[224px] w-full overflow-hidden bg-[#edf0f3]">
+      <div className="h-[224px] w-full overflow-hidden bg-[#1a1a1a]">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={study.image}
@@ -25,25 +25,25 @@ function CaseStudyCard({ study }: { study: CaseStudy }) {
           {study.tags.map((tag) => (
             <span
               key={tag}
-              className="rounded-[3px] bg-[#fff0e8] px-[9px] py-1 text-[12px] leading-[16px] text-accent"
+              className="rounded-[3px] bg-accent/15 px-[9px] py-1 text-[12px] leading-[16px] text-accent"
             >
               {tag}
             </span>
           ))}
         </div>
 
-        <h3 className="mb-[15px] text-[20px] font-semibold leading-8 tracking-tight text-[#1e293b] md:text-[22px]">
+        <h3 className="mb-[15px] text-[20px] font-semibold leading-8 tracking-tight text-white md:text-[22px]">
           {study.titleBefore}
           <span className="text-accent">{study.titleHighlight}</span>
           {study.titleAfter}
         </h3>
 
-        <p className="mb-5 line-clamp-2 text-[16px] leading-7 text-[#1e293b]">
+        <p className="mb-5 line-clamp-2 text-[16px] leading-7 text-white/75">
           {study.description}
         </p>
 
-        <div className="mt-auto border-t border-[#dadada] pt-5">
-          <p className="text-[16px] font-medium text-[#1e293b]">
+        <div className="mt-auto border-t border-white/15 pt-5">
+          <p className="text-[16px] font-medium text-white">
             {study.slogan}
           </p>
         </div>
@@ -56,14 +56,14 @@ export function PortfolioSection() {
   return (
     <section
       id="work"
-      className="scroll-mt-[68px] bg-white py-[70px] md:py-[100px]"
+      className="scroll-mt-[68px] bg-black py-[70px] md:py-[100px]"
       aria-labelledby="portfolio-heading"
     >
       <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
         <div className="mb-10 max-w-3xl md:mb-12">
           <h2
             id="portfolio-heading"
-            className="text-[28px] font-semibold leading-tight tracking-tight text-[#1e293b] md:text-[36px]"
+            className="text-[28px] font-semibold leading-tight tracking-tight text-white md:text-[36px]"
           >
             Product Partnerships That Deliver Results
             <span
@@ -79,12 +79,12 @@ export function PortfolioSection() {
           ))}
         </div>
 
-        <div className="mt-12 flex flex-col items-start justify-between gap-6 border-t border-[#dadada] pt-10 md:flex-row md:items-center">
+        <div className="mt-12 flex flex-col items-start justify-between gap-6 border-t border-white/15 pt-10 md:flex-row md:items-center">
           <div>
-            <p className="text-[18px] font-semibold text-[#1e293b]">
+            <p className="text-[18px] font-semibold text-white">
               Proven work. Measurable outcomes.
             </p>
-            <p className="mt-1 text-[16px] text-[#1e293b]/80">
+            <p className="mt-1 text-[16px] text-white/70">
               See how we deliver on complex, high-impact initiatives.
             </p>
           </div>

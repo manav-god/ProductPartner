@@ -37,7 +37,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-white text-black">
+      <body className="flex min-h-full flex-col bg-black text-white">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

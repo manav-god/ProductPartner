@@ -22,6 +22,23 @@ export const primaryNav: NavItem[] = [
   {
     label: "Services",
     href: "/#services",
+    children: [
+      {
+        label: "Product Development",
+        href: "/product-development",
+        description: "MVPs, custom apps, and web platforms from idea to launch.",
+      },
+      {
+        label: "Fractional Product Leadership",
+        href: "/#services",
+        description: "Product thinking on the inside — roadmap, retention, delivery.",
+      },
+      {
+        label: "Product Marketing",
+        href: "/#services",
+        description: "Positioning and content that gets you found by buyers.",
+      },
+    ],
   },
   {
     label: "Our work",
@@ -34,7 +51,7 @@ export const primaryNav: NavItem[] = [
 ];
 
 export const footerServices = [
-  { label: "Product Development", href: "/#services" },
+  { label: "Product Development", href: "/product-development" },
   { label: "Fractional Product Leadership", href: "/#services" },
   { label: "Product Marketing", href: "/#services" },
 ];

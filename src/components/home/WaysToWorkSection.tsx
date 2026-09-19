@@ -1,4 +1,11 @@
+import Link from "next/link";
 import { waysToWork } from "@/lib/ways-to-work";
+
+const serviceHrefs: Record<string, string> = {
+  development: "/product-development",
+  leadership: "/#services",
+  marketing: "/#services",
+};
 
 export function WaysToWorkSection() {
   return (
@@ -28,25 +35,29 @@ export function WaysToWorkSection() {
         </div>
 
         <div className="mt-10 grid gap-4 md:mt-14 md:grid-cols-3">
-          {waysToWork.map((way) => (
-            <article
-              key={way.id}
-              className="group flex flex-col rounded-2xl border border-white/15 bg-white/[0.04] p-6 transition duration-300 hover:-translate-y-1 hover:border-accent md:p-8"
-            >
-              <p className="font-mono text-[12px] tracking-[0.2em] text-white/45 transition-colors group-hover:text-accent">
-                {way.number}
-              </p>
-              <h3 className="mt-8 text-[26px] font-semibold leading-none tracking-tight text-white sm:text-[30px]">
-                {way.title}
-              </h3>
-              <p className="mt-4 text-[15px] italic leading-6 text-white/55">
-                {way.tagline}
-              </p>
-              <p className="mt-5 text-[14px] leading-7 text-white/75">
-                {way.description}
-              </p>
-            </article>
-          ))}
+          {waysToWork.map((way) => {
+            const href = serviceHrefs[way.id] ?? "/#services";
+            return (
+              <Link
+                key={way.id}
+                href={href}
+                className="group flex flex-col rounded-2xl border border-white/15 bg-white/[0.04] p-6 transition duration-300 hover:-translate-y-1 hover:border-accent md:p-8"
+              >
+                <p className="font-mono text-[12px] tracking-[0.2em] text-white/45 transition-colors group-hover:text-accent">
+                  {way.number}
+                </p>
+                <h3 className="mt-8 text-[26px] font-semibold leading-none tracking-tight text-white sm:text-[30px]">
+                  {way.title}
+                </h3>
+                <p className="mt-4 text-[15px] italic leading-6 text-white/55">
+                  {way.tagline}
+                </p>
+                <p className="mt-5 text-[14px] leading-7 text-white/75">
+                  {way.description}
+                </p>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>

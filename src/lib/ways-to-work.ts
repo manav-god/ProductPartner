@@ -27,7 +27,7 @@ export const waysToWork: WayToWork[] = [
     id: "marketing",
     number: "03",
     title: "Product Marketing Development",
-    tagline: "Found by the people who are looking for you",
+    tagline: "Found by the people who are looking for product",
     description:
       "Search has changed. Buyers now ask AI before they ask Google, and both need something real to point at. We build the content, the positioning and the technical foundation that gets you into those answers. B2B only. Everything above is built on how business buyers actually search.",
   },

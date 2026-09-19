@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { ArrowRight } from "@/components/icons";
+import { PdIndustrySection } from "@/components/services/PdIndustrySection";
 import "@/app/product-development/product-development.css";
 
 export function ProductDevelopmentContent() {
@@ -30,10 +32,6 @@ export function ProductDevelopmentContent() {
                 Explore Product Development Services
               </a>
             </div>
-
-            <p className="pd-meta-line">
-              Reviewed by the Product Partner team · Last updated September 2026
-            </p>
           </div>
         </section>
 
@@ -43,50 +41,38 @@ export function ProductDevelopmentContent() {
             <span className="pd-eyebrow">Product Development Explained</span>
             <h2>What Is Product Development?</h2>
 
-            <div className="pd-answer-box" id="definition">
-              <p>
-                <dfn>
-                  <strong>Product development</strong>
-                </dfn>{" "}
-                <strong>
-                  is the process of turning a product opportunity or idea into a
-                  usable, tested, launched, and continuously improved product.
-                </strong>
-              </p>
-            </div>
-
-            <p>
-              It can involve product discovery, validation, UX/UI design,
-              prototyping, MVP development, software engineering, testing,
-              deployment, analytics, and post-launch iteration.
-            </p>
-
-            <p>
-              Effective product development connects business goals, customer
-              needs, design, technology, and execution so teams can build
-              products with a clear purpose instead of simply building more
-              features.
-            </p>
-
-            <div className="pd-grid">
-              <div className="pd-card">
-                <h3>The Problem</h3>
-                <p>What customer or business problem are we solving?</p>
-              </div>
-              <div className="pd-card">
-                <h3>The Product</h3>
-                <p>What experience and functionality will solve it?</p>
-              </div>
-              <div className="pd-card">
-                <h3>The Outcome</h3>
-                <p>How will we know the product is creating value?</p>
-              </div>
-            </div>
+            <ul className="pd-points" id="definition">
+              <li>
+                <ArrowRight className="pd-points__icon" />
+                <span>
+                  Product development is the process of turning a product
+                  opportunity or idea into a usable, tested, launched, and
+                  continuously improved product.
+                </span>
+              </li>
+              <li>
+                <ArrowRight className="pd-points__icon" />
+                <span>
+                  It can involve product discovery, validation, UX/UI design,
+                  prototyping, MVP development, software engineering, testing,
+                  deployment, analytics, and post-launch iteration.
+                </span>
+              </li>
+              <li>
+                <ArrowRight className="pd-points__icon" />
+                <span>
+                  Effective product development connects business goals,
+                  customer needs, design, technology, and execution so teams can
+                  build products with a clear purpose instead of simply building
+                  more features.
+                </span>
+              </li>
+            </ul>
           </div>
         </section>
 
         {/* SERVICES */}
-        <section className="pd-section" id="services">
+        <section className="pd-section pd-section--light" id="services">
           <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
             <span className="pd-eyebrow">Our Services</span>
             <h2>Product Development Services From Idea to Launch</h2>
@@ -97,121 +83,263 @@ export function ProductDevelopmentContent() {
               to build.
             </p>
 
-            <div className="pd-grid">
-              <div className="pd-card">
-                <h3>Product Discovery &amp; Validation</h3>
-                <p>
-                  Start with the problem, users, business objectives, and
-                  technical realities before committing to a large build.
-                </p>
-                <ul>
-                  <li>Product discovery</li>
-                  <li>Customer problem validation</li>
-                  <li>Market research</li>
-                  <li>Technical feasibility</li>
-                  <li>Product requirements</li>
-                  <li>MVP scope definition</li>
-                </ul>
-                <p>
-                  The goal is simple: create enough clarity to know what should
-                  be built before significant development resources are
-                  committed.
-                </p>
-              </div>
-
-              <div className="pd-card">
-                <h3>MVP Product Development</h3>
-                <p>
-                  Build a focused first version that tests the core product value
-                  without unnecessarily expanding scope.
-                </p>
-                <ul>
-                  <li>MVP strategy</li>
-                  <li>Feature prioritization</li>
-                  <li>Prototype development</li>
-                  <li>Web MVP development</li>
-                  <li>Mobile MVP development</li>
-                  <li>SaaS MVP development</li>
-                </ul>
-                <p>
-                  A strong MVP should be small enough to validate, but useful
-                  enough to generate meaningful feedback from real users.
-                </p>
-              </div>
-
-              <div className="pd-card">
-                <h3>Product Design &amp; Prototyping</h3>
-                <p>
-                  Translate product requirements into user journeys, interfaces,
-                  prototypes, and experiences that can be tested before full
-                  development.
-                </p>
-                <ul>
-                  <li>User journeys</li>
-                  <li>Information architecture</li>
-                  <li>Wireframes</li>
-                  <li>Interactive prototypes</li>
-                  <li>UI design</li>
-                  <li>Design systems</li>
-                </ul>
-                <p>
-                  Design is not decoration added after development. It is part of
-                  deciding how the product should work.
-                </p>
-              </div>
-
-              <div className="pd-card">
-                <h3>Product Engineering &amp; Development</h3>
-                <p>
-                  Turn validated product requirements and designs into reliable
-                  digital products through structured engineering.
-                </p>
-                <ul>
-                  <li>Frontend development</li>
-                  <li>Backend development</li>
-                  <li>API development</li>
-                  <li>Cloud infrastructure</li>
-                  <li>Third-party integrations</li>
-                  <li>Quality assurance</li>
-                </ul>
-                <p>
-                  We focus on building a technical foundation that can support
-                  the product beyond its first release.
-                </p>
-              </div>
-
-              <div className="pd-card">
-                <h3>Product Launch &amp; Deployment</h3>
-                <p>
-                  Prepare the product for real users with deployment, analytics,
-                  monitoring, and launch readiness.
-                </p>
-                <ul>
-                  <li>Production deployment</li>
-                  <li>Cloud configuration</li>
-                  <li>Analytics implementation</li>
-                  <li>Performance testing</li>
-                  <li>Launch readiness</li>
-                  <li>Monitoring</li>
-                </ul>
-              </div>
-
-              <div className="pd-card">
-                <h3>Post-Launch Product Development</h3>
-                <p>
-                  Product development does not stop when the product launches.
-                  Real usage creates new information about what should happen
-                  next.
-                </p>
-                <ul>
-                  <li>User feedback analysis</li>
-                  <li>Feature iteration</li>
-                  <li>Performance improvements</li>
-                  <li>Product analytics</li>
-                  <li>Architecture improvements</li>
-                  <li>Product scaling</li>
-                </ul>
-              </div>
+            <div className="pd-service-grid">
+              {[
+                {
+                  label: "Discovery",
+                  title: "Product Discovery & Validation",
+                  description:
+                    "Start with the problem, users, business objectives, and technical realities before committing to a large build. The goal is simple: create enough clarity to know what should be built before significant development resources are committed.",
+                  tags: [
+                    "Product discovery",
+                    "Customer problem validation",
+                    "Market research",
+                    "Technical feasibility",
+                    "Product requirements",
+                    "MVP scope definition",
+                  ],
+                  icon: (
+                    <svg viewBox="0 0 24 24" fill="none">
+                      <circle
+                        cx="11"
+                        cy="11"
+                        r="6.5"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                      />
+                      <path
+                        d="M16.5 16.5 20 20"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                      />
+                      <circle cx="9" cy="10" r="1" fill="#FF5900" />
+                      <circle cx="12.5" cy="9.5" r="1" fill="#FF5900" />
+                      <circle cx="11" cy="13" r="1" fill="#FF5900" />
+                      <path
+                        d="M9 10l3.5-.5M12.5 9.5l-1.5 3.5"
+                        stroke="#FF5900"
+                        strokeWidth="1.2"
+                      />
+                    </svg>
+                  ),
+                },
+                {
+                  label: "MVP",
+                  title: "MVP Product Development",
+                  description:
+                    "Build a focused first version that tests the core product value without unnecessarily expanding scope. A strong MVP should be small enough to validate, but useful enough to generate meaningful feedback from real users.",
+                  tags: [
+                    "MVP strategy",
+                    "Feature prioritization",
+                    "Prototype development",
+                    "Web MVP development",
+                    "Mobile MVP development",
+                    "SaaS MVP development",
+                  ],
+                  icon: (
+                    <svg viewBox="0 0 24 24" fill="none">
+                      <rect
+                        x="4"
+                        y="5"
+                        width="16"
+                        height="14"
+                        rx="2"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                      />
+                      <path
+                        d="M8 15h8M8 11h5"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                      />
+                      <circle cx="16.5" cy="8.5" r="1" fill="#FF5900" />
+                      <circle cx="18.2" cy="10.5" r="1" fill="#FF5900" />
+                      <circle cx="15.8" cy="11.5" r="1" fill="#FF5900" />
+                      <path
+                        d="M16.5 8.5l1.7 2M16.5 8.5l-.7 3"
+                        stroke="#FF5900"
+                        strokeWidth="1.2"
+                      />
+                    </svg>
+                  ),
+                },
+                {
+                  label: "Design",
+                  title: "Product Design & Prototyping",
+                  description:
+                    "Translate product requirements into user journeys, interfaces, prototypes, and experiences that can be tested before full development. Design is not decoration added after development — it is part of deciding how the product should work.",
+                  tags: [
+                    "User journeys",
+                    "Information architecture",
+                    "Wireframes",
+                    "Interactive prototypes",
+                    "UI design",
+                    "Design systems",
+                  ],
+                  icon: (
+                    <svg viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M4 18.5 14.5 8l2.5 2.5L6.5 21H4v-2.5Z"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="m13.5 9 2.5 2.5"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                      />
+                      <circle cx="17.5" cy="6.5" r="1" fill="#FF5900" />
+                      <circle cx="19.2" cy="8.5" r="1" fill="#FF5900" />
+                      <circle cx="16.8" cy="9.5" r="1" fill="#FF5900" />
+                      <path
+                        d="M17.5 6.5l1.7 2M17.5 6.5l-.7 3"
+                        stroke="#FF5900"
+                        strokeWidth="1.2"
+                      />
+                    </svg>
+                  ),
+                },
+                {
+                  label: "Engineering",
+                  title: "Product Engineering & Development",
+                  description:
+                    "Turn validated product requirements and designs into reliable digital products through structured engineering. We focus on building a technical foundation that can support the product beyond its first release.",
+                  tags: [
+                    "Frontend development",
+                    "Backend development",
+                    "API development",
+                    "Cloud infrastructure",
+                    "Third-party integrations",
+                    "Quality assurance",
+                  ],
+                  icon: (
+                    <svg viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M8 8 4.5 12 8 16M16 8l3.5 4L16 16"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="m13.5 7-3 10"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                      />
+                      <circle cx="17.5" cy="7" r="1" fill="#FF5900" />
+                      <circle cx="19.2" cy="9" r="1" fill="#FF5900" />
+                      <circle cx="16.8" cy="10" r="1" fill="#FF5900" />
+                      <path
+                        d="M17.5 7l1.7 2M17.5 7l-.7 3"
+                        stroke="#FF5900"
+                        strokeWidth="1.2"
+                      />
+                    </svg>
+                  ),
+                },
+                {
+                  label: "Launch",
+                  title: "Product Launch & Deployment",
+                  description:
+                    "Prepare the product for real users with deployment, analytics, monitoring, and launch readiness.",
+                  tags: [
+                    "Production deployment",
+                    "Cloud configuration",
+                    "Analytics implementation",
+                    "Performance testing",
+                    "Launch readiness",
+                    "Monitoring",
+                  ],
+                  icon: (
+                    <svg viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M5 15.5c2.5-1 5-1.5 7-1.5s4.5.5 7 1.5"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                      />
+                      <path
+                        d="M12 4v10M12 4l3.5 3.5M12 4 8.5 7.5"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <circle cx="16.5" cy="7" r="1" fill="#FF5900" />
+                      <circle cx="18.2" cy="9" r="1" fill="#FF5900" />
+                      <circle cx="15.8" cy="10" r="1" fill="#FF5900" />
+                      <path
+                        d="M16.5 7l1.7 2M16.5 7l-.7 3"
+                        stroke="#FF5900"
+                        strokeWidth="1.2"
+                      />
+                    </svg>
+                  ),
+                },
+                {
+                  label: "Growth",
+                  title: "Post-Launch Product Development",
+                  description:
+                    "Product development does not stop when the product launches. Real usage creates new information about what should happen next.",
+                  tags: [
+                    "User feedback analysis",
+                    "Feature iteration",
+                    "Performance improvements",
+                    "Product analytics",
+                    "Architecture improvements",
+                    "Product scaling",
+                  ],
+                  icon: (
+                    <svg viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M4 16.5 9 11l3.5 3.5L20 7"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M15 7h5v5"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <circle cx="10.5" cy="9" r="1" fill="#FF5900" />
+                      <circle cx="12.2" cy="7" r="1" fill="#FF5900" />
+                      <circle cx="9.8" cy="6.5" r="1" fill="#FF5900" />
+                      <path
+                        d="M10.5 9l1.7-2M10.5 9l-.7-2.5"
+                        stroke="#FF5900"
+                        strokeWidth="1.2"
+                      />
+                    </svg>
+                  ),
+                },
+              ].map((service) => (
+                <article key={service.title} className="pd-service-card">
+                  <div className="pd-service-card__header">
+                    <span className="pd-service-card__icon" aria-hidden>
+                      {service.icon}
+                    </span>
+                    <span className="pd-service-card__divider" aria-hidden />
+                    <span className="pd-service-card__label">{service.label}</span>
+                  </div>
+                  <h3 className="pd-service-card__title">{service.title}</h3>
+                  <p className="pd-service-card__desc">{service.description}</p>
+                  <div className="pd-service-card__tags">
+                    {service.tags.map((tag) => (
+                      <span key={tag} className="pd-service-card__tag">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </article>
+              ))}
             </div>
           </div>
         </section>
@@ -256,50 +384,7 @@ export function ProductDevelopmentContent() {
           </div>
         </section>
 
-        {/* INDUSTRIES */}
-        <section className="pd-section" id="sports-ecommerce">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
-            <span className="pd-eyebrow">Industry Applications</span>
-            <h2>Product Development for Sports &amp; Ecommerce</h2>
-
-            <div className="pd-industry">
-              <h3>Sports Technology Product Development</h3>
-              <p>
-                Sports technology products often bring together athletes,
-                coaches, teams, leagues, organizations, fans, and data. Product
-                development needs to translate those different workflows into a
-                product experience that remains clear and useful.
-              </p>
-              <ul>
-                <li>Sports technology platforms</li>
-                <li>Athlete applications</li>
-                <li>Team management platforms</li>
-                <li>Sports analytics products</li>
-                <li>Fan engagement platforms</li>
-                <li>Performance technology</li>
-                <li>Sports data products</li>
-              </ul>
-            </div>
-
-            <div className="pd-industry">
-              <h3>Ecommerce Product Development</h3>
-              <p>
-                Ecommerce product development focuses on the complete customer
-                experience—from discovering products to purchasing, receiving,
-                and returning them.
-              </p>
-              <ul>
-                <li>Ecommerce platforms</li>
-                <li>Product discovery</li>
-                <li>Shopping experiences</li>
-                <li>Checkout workflows</li>
-                <li>Personalization</li>
-                <li>Customer accounts</li>
-                <li>Retention experiences</li>
-              </ul>
-            </div>
-          </div>
-        </section>
+        <PdIndustrySection />
 
         {/* DIFFERENTIATION */}
         <section className="pd-section pd-missing">
@@ -392,7 +477,7 @@ export function ProductDevelopmentContent() {
         </section>
 
         {/* FRAMEWORK */}
-        <section className="pd-section pd-dark">
+        <section className="pd-section pd-section--light">
           <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
             <span className="pd-eyebrow">Product Partner Framework</span>
             <h2>Our Product Development Framework</h2>
@@ -489,7 +574,7 @@ export function ProductDevelopmentContent() {
         </section>
 
         {/* FAQ */}
-        <section className="pd-section">
+        <section className="pd-section pd-section--light">
           <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
             <span className="pd-eyebrow">Frequently Asked Questions</span>
             <h2>Frequently Asked Questions About Product Development</h2>
@@ -560,20 +645,6 @@ export function ProductDevelopmentContent() {
                 </p>
               </details>
             </div>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="pd-cta">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
-            <h2>Have a Product Idea Worth Building?</h2>
-            <p>
-              Let&apos;s turn your product idea, customer problem, or existing
-              product challenge into a clearer development path.
-            </p>
-            <Link href="/#contact" className="pd-btn pd-btn-secondary">
-              Talk to Product Partner
-            </Link>
           </div>
         </section>
       </main>

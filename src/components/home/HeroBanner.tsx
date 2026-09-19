@@ -125,8 +125,13 @@ export function HeroBanner() {
         {/* Trusted-by bar */}
         <div className="mt-10 flex w-full flex-col gap-5 rounded-[14px] border border-white bg-white/[0.035] p-[18px] md:mt-12 lg:mt-14 lg:flex-row lg:items-center lg:gap-0">
           <p className="max-w-[270px] shrink-0 border-white/25 pr-0 text-[15px] leading-[1.35] text-white lg:border-r lg:pr-6 lg:text-[16px]">
-            {trustedLabel}{" "}
-            <strong className="font-semibold">{trustedHighlight}</strong>
+            {trustedLabel}
+            {trustedHighlight ? (
+              <>
+                {" "}
+                <strong className="font-semibold">{trustedHighlight}</strong>
+              </>
+            ) : null}
           </p>
 
           <div className="grid min-w-0 flex-1 grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-4 lg:gap-0 lg:pl-[30px]">

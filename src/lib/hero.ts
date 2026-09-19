@@ -19,8 +19,8 @@ export const heroContent = {
     label: "View Our Work",
     href: "/#work",
   },
-  trustedLabel: "Trusted by Product Teams at",
-  trustedHighlight: "50+ Companies",
+  trustedLabel: "Trusted by",
+  trustedHighlight: "",
   trustedClients: [
     {
       id: "fintech",

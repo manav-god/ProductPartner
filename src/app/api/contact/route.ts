@@ -44,7 +44,7 @@ function fieldRow(label: string, value: string, href?: string) {
   `;
 }
 
-function buildEmailHtml(input: {
+function buildLeadEmailHtml(input: {
   fullName: string;
   email: string;
   company: string;
@@ -118,12 +118,77 @@ function buildEmailHtml(input: {
   `.trim();
 }
 
+function buildThankYouEmailHtml(input: {
+  firstName: string;
+  fullName: string;
+}) {
+  const firstName = escapeHtml(input.firstName);
+
+  return `
+<!DOCTYPE html>
+<html>
+  <body style="margin:0;padding:0;background:#f4f4f5;font-family:Arial,Helvetica,sans-serif">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f5;padding:32px 16px">
+      <tr>
+        <td align="center">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:640px;background:#ffffff;border-radius:16px;overflow:hidden;border:1px solid #e8e8e8">
+            <tr>
+              <td style="background:#0a0a0a;padding:28px 32px">
+                <p style="margin:0;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#ff5900;font-weight:700">
+                  Product Partner
+                </p>
+                <h1 style="margin:10px 0 0;font-size:24px;line-height:1.3;color:#ffffff;font-weight:700">
+                  Thanks for reaching out, ${firstName}
+                </h1>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:28px 32px">
+                <p style="margin:0 0 16px;font-size:15px;line-height:1.7;color:#444">
+                  We’ve received your message and our team will get back to you shortly.
+                </p>
+                <p style="margin:0 0 16px;font-size:15px;line-height:1.7;color:#444">
+                  In the meantime, feel free to reply to this email if you want to share more context about your product, timeline, or goals.
+                </p>
+                <div style="margin:24px 0;padding:18px 20px;background:#fafafa;border:1px solid #ececec;border-radius:12px">
+                  <p style="margin:0 0 8px;font-size:13px;font-weight:600;color:#6b6b6b;text-transform:uppercase;letter-spacing:0.04em">
+                    What happens next
+                  </p>
+                  <p style="margin:0;font-size:15px;line-height:1.7;color:#111111">
+                    1. We review your inquiry<br />
+                    2. A product partner follows up by email<br />
+                    3. We schedule a quick intro call if it’s a fit
+                  </p>
+                </div>
+                <p style="margin:0;font-size:15px;line-height:1.7;color:#444">
+                  Talk soon,<br />
+                  <strong style="color:#111">The Product Partner team</strong>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:18px 32px 28px;border-top:1px solid #ececec">
+                <p style="margin:0;font-size:12px;line-height:1.6;color:#8a8a8a">
+                  You’re receiving this because you submitted the contact form on productpartner.net.
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+  `.trim();
+}
+
 export async function POST(request: Request) {
   try {
     const apiKey = process.env.RESEND_API_KEY;
     const toEmail = process.env.CONTACT_TO_EMAIL;
     const fromEmail =
       process.env.RESEND_FROM_EMAIL ?? "Product Partner <onboarding@resend.dev>";
+    const replyToTeam = process.env.CONTACT_REPLY_TO_EMAIL ?? toEmail;
 
     if (!apiKey || !toEmail) {
       return NextResponse.json(
@@ -160,7 +225,7 @@ export async function POST(request: Request) {
 
     const resend = new Resend(apiKey);
 
-    const { error } = await resend.emails.send({
+    const { error: leadError } = await resend.emails.send({
       from: fromEmail,
       to: [toEmail],
       replyTo: email,
@@ -177,7 +242,7 @@ export async function POST(request: Request) {
         "Message:",
         message || "No message provided.",
       ].join("\n"),
-      html: buildEmailHtml({
+      html: buildLeadEmailHtml({
         fullName,
         email,
         company,
@@ -187,12 +252,38 @@ export async function POST(request: Request) {
       }),
     });
 
-    if (error) {
-      console.error("Resend error:", error);
+    if (leadError) {
+      console.error("Resend lead error:", leadError);
       return NextResponse.json(
         { error: "Could not send your message. Try again." },
         { status: 502 },
       );
+    }
+
+    const { error: thankYouError } = await resend.emails.send({
+      from: fromEmail,
+      to: [email],
+      replyTo: replyToTeam || undefined,
+      subject: "Thanks for contacting Product Partner",
+      text: [
+        `Hi ${firstName},`,
+        "",
+        "Thanks for reaching out to Product Partner — we’ve received your message and will get back to you shortly.",
+        "",
+        "What happens next:",
+        "1. We review your inquiry",
+        "2. A product partner follows up by email",
+        "3. We schedule a quick intro call if it’s a fit",
+        "",
+        "Talk soon,",
+        "The Product Partner team",
+      ].join("\n"),
+      html: buildThankYouEmailHtml({ firstName, fullName }),
+    });
+
+    if (thankYouError) {
+      // Lead already delivered — don't fail the form on auto-reply issues
+      console.error("Resend thank-you error:", thankYouError);
     }
 
     return NextResponse.json({ ok: true });

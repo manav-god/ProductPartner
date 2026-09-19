@@ -225,3 +225,71 @@ a[aria-disabled="true"],
     animation: none;
   }
 }
+
+/* Country phone input (footer contact form) */
+.phone-field {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 3rem;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0 0.75rem 0 0.5rem;
+  transition: border-color 0.15s ease;
+}
+
+.phone-field:focus-within {
+  border-color: var(--accent);
+}
+
+.phone-field .PhoneInputCountry {
+  margin-right: 0.25rem;
+  padding-right: 0.5rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.phone-field .PhoneInputCountryIcon {
+  width: 1.5rem;
+  height: 1.1rem;
+  box-shadow: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.phone-field .PhoneInputCountryIcon--border {
+  box-shadow: none;
+  background: transparent;
+}
+
+.phone-field .PhoneInputCountrySelect {
+  color: #fff;
+}
+
+.phone-field .PhoneInputCountrySelectArrow {
+  color: rgba(255, 255, 255, 0.55);
+  opacity: 1;
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+.phone-field .PhoneInputInput {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  border: none !important;
+  background: transparent !important;
+  color: #fff !important;
+  font-size: 15px;
+  outline: none;
+}
+
+.phone-field .PhoneInputInput::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.phone-field .PhoneInputCountrySelect option {
+  color: #111;
+  background: #fff;
+}

@@ -156,7 +156,7 @@ export function PmIndustrySection() {
                   </span>
                 ))}
               </div>
-              <Link href="/#contact" className="pd-fp-card__cta">
+              <Link href="/contact" className="pd-fp-card__cta">
                 Talk to us
                 <ArrowRight className="h-3.5 w-3.5 text-accent" />
               </Link>

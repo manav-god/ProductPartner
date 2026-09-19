@@ -115,7 +115,7 @@ export function ProductManagementContent() {
               create measurable value.
             </p>
             <div className="pd-buttons">
-              <Link href="/#contact" className="pd-btn pd-btn-primary">
+              <Link href="/contact" className="pd-btn pd-btn-primary">
                 Talk to Product Partner
               </Link>
               <a href="#services" className="pd-btn pd-btn-secondary">

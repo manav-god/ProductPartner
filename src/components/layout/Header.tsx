@@ -21,7 +21,7 @@ function GetInTouchButton({
 }) {
   return (
     <Link
-      href="/#contact"
+      href="/contact"
       onClick={onClick}
       className={`inline-flex h-10 items-center gap-2 rounded-[10px] bg-accent px-6 text-[14px] font-semibold text-white transition-colors hover:bg-accent-hover ${className}`}
     >

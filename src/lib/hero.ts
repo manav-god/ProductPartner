@@ -15,13 +15,13 @@ export const heroContent = {
     "From product strategy to delivery and go-to-market, we help startups and enterprises extend their product capacity and ship secure, scalable software faster.",
   primaryCta: {
     label: "Talk to a Product Expert",
-    href: "/#contact",
+    href: "/contact",
   },
   secondaryCta: {
     label: "View Our Work",
     href: "/#work",
   },
-  trustedLabel: "Our partner",
+  trustedLabel: "Our partners",
   trustedHighlight: "",
   trustedClients: [
     {

@@ -49,7 +49,7 @@ export const primaryNav: NavItem[] = [
   },
   {
     label: "About",
-    href: "/#about",
+    href: "/about",
   },
 ];
 
@@ -60,9 +60,9 @@ export const footerServices = [
 ];
 
 export const footerCompany = [
-  { label: "About Product Partner", href: "/#about" },
+  { label: "About Product Partner", href: "/about" },
   { label: "Our work", href: "/#work" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const socialLinks = [

@@ -89,7 +89,7 @@ export function PortfolioSection() {
             </p>
           </div>
           <Link
-            href="/#contact"
+            href="/contact"
             className="inline-flex h-[48px] cursor-pointer items-center gap-2 rounded-[10px] bg-accent px-7 text-[14px] font-semibold text-white transition-colors hover:bg-accent-hover"
           >
             Start a project

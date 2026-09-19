@@ -123,8 +123,8 @@ export function HeroBanner() {
         </div>
 
         {/* Trusted-by bar */}
-        <div className="mt-10 flex w-full flex-col gap-5 rounded-[14px] border border-white bg-white/[0.035] p-[18px] md:mt-12 lg:mt-14 lg:flex-row lg:items-center lg:gap-0">
-          <p className="max-w-[270px] shrink-0 border-white/25 pr-0 text-[15px] leading-[1.35] text-white lg:border-r lg:pr-6 lg:text-[16px]">
+        <div className="mt-10 flex w-fit max-w-full flex-col gap-4 rounded-[14px] border border-white bg-white/[0.035] px-5 py-4 md:mt-12 lg:mt-14 lg:flex-row lg:items-center lg:gap-5 lg:px-6 lg:py-[14px]">
+          <p className="shrink-0 border-white/25 pr-0 text-[15px] leading-[1.35] text-white lg:border-r lg:pr-5 lg:text-[16px]">
             {trustedLabel}
             {trustedHighlight ? (
               <>
@@ -134,25 +134,23 @@ export function HeroBanner() {
             ) : null}
           </p>
 
-          <div className="grid min-w-0 flex-1 grid-cols-2 gap-x-4 gap-y-5 sm:grid-cols-4 lg:gap-0 lg:pl-[30px]">
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-3 sm:gap-x-6 lg:flex-nowrap lg:gap-x-7">
             {trustedClients.map((client) => (
               <Link
                 key={client.id}
                 href={client.href}
-                className="group flex h-14 items-center justify-center opacity-90 transition-opacity hover:opacity-100 lg:px-3"
+                className="group relative flex h-11 w-[88px] shrink-0 items-center justify-center opacity-90 transition-opacity hover:opacity-100 sm:h-12 sm:w-[100px]"
               >
-                <span className="relative flex h-12 w-full max-w-[130px] items-center justify-center">
-                  <Image
-                    src={client.src}
-                    alt={client.alt}
-                    fill
-                    sizes="130px"
-                    className="object-contain"
-                    style={{
-                      transform: `scale(${client.scale ?? 1})`,
-                    }}
-                  />
-                </span>
+                <Image
+                  src={client.src}
+                  alt={client.alt}
+                  fill
+                  sizes="100px"
+                  className="object-contain"
+                  style={{
+                    transform: `scale(${client.scale ?? 1})`,
+                  }}
+                />
               </Link>
             ))}
           </div>

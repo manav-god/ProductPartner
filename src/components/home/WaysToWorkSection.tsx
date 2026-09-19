@@ -3,8 +3,8 @@ import { waysToWork } from "@/lib/ways-to-work";
 
 const serviceHrefs: Record<string, string> = {
   development: "/product-development",
-  leadership: "/#services",
-  marketing: "/#services",
+  leadership: "/product-management",
+  marketing: "/product-marketing",
 };
 
 export function WaysToWorkSection() {

@@ -30,12 +30,12 @@ export const primaryNav: NavItem[] = [
       },
       {
         label: "Fractional Product Leadership",
-        href: "/#services",
+        href: "/product-management",
         description: "Product thinking on the inside — roadmap, retention, delivery.",
       },
       {
         label: "Product Marketing",
-        href: "/#services",
+        href: "/product-marketing",
         description: "Positioning and content that gets you found by buyers.",
       },
     ],
@@ -52,8 +52,8 @@ export const primaryNav: NavItem[] = [
 
 export const footerServices = [
   { label: "Product Development", href: "/product-development" },
-  { label: "Fractional Product Leadership", href: "/#services" },
-  { label: "Product Marketing", href: "/#services" },
+  { label: "Fractional Product Leadership", href: "/product-management" },
+  { label: "Product Marketing", href: "/product-marketing" },
 ];
 
 export const footerCompany = [

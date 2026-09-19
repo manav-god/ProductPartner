@@ -226,7 +226,7 @@ const jsonLd = {
           name: "When should a startup invest in product management?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Startups can benefit from product management before an MVP, during MVP development, while searching for product-market fit, and as the product scales. The focus changes with each stage—from validating the problem and defining the MVP to prioritizing growth opportunities and managing a larger product portfolio.",
+            text: "Startups can benefit from product management before an MVP, during MVP development, while searching for product-market fit, and as the product scales. The focus changes with each stage, from validating the problem and defining the MVP to prioritizing growth opportunities and managing a larger product portfolio.",
           },
         },
       ],

@@ -63,7 +63,7 @@ export function HeroBanner() {
       className="relative overflow-hidden bg-[#111111]"
       aria-label="Highlights"
     >
-      {/* Soft brand glow — disabled for solid black preview
+      {/* Soft brand glow, disabled for solid black preview
       <div
         className="pointer-events-none absolute inset-0 opacity-50"
         style={{
@@ -73,7 +73,7 @@ export function HeroBanner() {
         aria-hidden
       />
       */}
-      {/* Stretch / diagonal stripe lines — disabled for solid black preview
+      {/* Stretch / diagonal stripe lines, disabled for solid black preview
       <div
         className="pointer-events-none absolute -right-16 bottom-0 h-[70%] w-[55%] opacity-[0.14]"
         style={{

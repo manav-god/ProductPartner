@@ -48,7 +48,7 @@ export function WhyDifferentSection() {
 
         <div className="overflow-x-auto">
           <div className="min-w-[1000px]">
-            {/* Header — no tick above Strategy */}
+            {/* Header, no tick above Strategy */}
             <div className="grid" style={{ gridTemplateColumns: GRID_COLS }}>
               <div aria-hidden className="border-b border-[rgba(2,2,2,0.14)]" />
 
@@ -115,7 +115,7 @@ export function WhyDifferentSection() {
               </div>
             ))}
 
-            {/* Discovery CTA — full width of Product Partner column */}
+            {/* Discovery CTA, full width of Product Partner column */}
             <div className="grid" style={{ gridTemplateColumns: GRID_COLS }}>
               <div aria-hidden />
               <Link

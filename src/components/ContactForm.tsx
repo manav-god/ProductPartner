@@ -126,7 +126,7 @@ export function ContactForm() {
 
         {status === "success" ? (
           <p className="mt-3 text-[14px] text-emerald-400">
-            Thanks — your message was sent. We&apos;ll get back to you soon.
+            Thanks, your message was sent. We&apos;ll get back to you soon.
           </p>
         ) : null}
         {status === "error" ? (

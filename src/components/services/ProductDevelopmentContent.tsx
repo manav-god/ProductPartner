@@ -169,7 +169,7 @@ export function ProductDevelopmentContent() {
                   label: "Design",
                   title: "Product Design & Prototyping",
                   description:
-                    "Translate product requirements into user journeys, interfaces, prototypes, and experiences that can be tested before full development. Design is not decoration added after development — it is part of deciding how the product should work.",
+                    "Translate product requirements into user journeys, interfaces, prototypes, and experiences that can be tested before full development. Design is not decoration added after development. It is part of deciding how the product should work.",
                   tags: [
                     "User journeys",
                     "Information architecture",
@@ -489,7 +489,7 @@ export function ProductDevelopmentContent() {
 
             <div className="pd-framework">
               <div className="pd-step">
-                <div className="pd-step-number">01 — DISCOVER</div>
+                <div className="pd-step-number">01 DISCOVER</div>
                 <h3>Understand</h3>
                 <p>
                   Understand the customer problem, users, market, business
@@ -497,7 +497,7 @@ export function ProductDevelopmentContent() {
                 </p>
               </div>
               <div className="pd-step">
-                <div className="pd-step-number">02 — DEFINE</div>
+                <div className="pd-step-number">02 DEFINE</div>
                 <h3>Scope</h3>
                 <p>
                   Define product requirements, core workflows, success criteria,
@@ -505,7 +505,7 @@ export function ProductDevelopmentContent() {
                 </p>
               </div>
               <div className="pd-step">
-                <div className="pd-step-number">03 — DESIGN</div>
+                <div className="pd-step-number">03 DESIGN</div>
                 <h3>Experience</h3>
                 <p>
                   Translate requirements into user journeys, wireframes,
@@ -513,7 +513,7 @@ export function ProductDevelopmentContent() {
                 </p>
               </div>
               <div className="pd-step">
-                <div className="pd-step-number">04 — DEVELOP</div>
+                <div className="pd-step-number">04 DEVELOP</div>
                 <h3>Build</h3>
                 <p>
                   Engineer the product through frontend, backend, APIs,
@@ -521,7 +521,7 @@ export function ProductDevelopmentContent() {
                 </p>
               </div>
               <div className="pd-step">
-                <div className="pd-step-number">05 — LAUNCH</div>
+                <div className="pd-step-number">05 LAUNCH</div>
                 <h3>Release</h3>
                 <p>
                   Deploy the product, establish analytics and monitoring, and put
@@ -529,7 +529,7 @@ export function ProductDevelopmentContent() {
                 </p>
               </div>
               <div className="pd-step">
-                <div className="pd-step-number">06 — LEARN &amp; SCALE</div>
+                <div className="pd-step-number">06 LEARN &amp; SCALE</div>
                 <h3>Improve</h3>
                 <p>
                   Use product data and user feedback to prioritize improvements,
@@ -557,7 +557,7 @@ export function ProductDevelopmentContent() {
               release, and learning required to create a product that can evolve.
               That same discipline carries through our{" "}
               <Link href="/#services">product management</Link> and{" "}
-              <Link href="/#services">product marketing</Link> work — deciding
+              <Link href="/#services">product marketing</Link> work, deciding
               what to build, then how it&apos;s positioned once it ships.
             </p>
             <ul>

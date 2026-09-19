@@ -5,7 +5,7 @@ const aboutPoints = [
   },
   {
     title: "Builders, not just advisors",
-    body: "From discovery through delivery and go-to-market, we stay accountable for outcomes—not slide decks.",
+    body: "From discovery through delivery and go-to-market, we stay accountable for outcomes, not slide decks.",
   },
   {
     title: "Startup speed, enterprise rigor",
@@ -23,7 +23,7 @@ export function AboutSection() {
       <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
         <div className="max-w-2xl">
           <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-white/55">
-            About
+            Why Product Partner
           </p>
           <h2
             id="about-heading"
@@ -37,7 +37,7 @@ export function AboutSection() {
           </h2>
           <p className="mt-5 max-w-xl text-[16px] leading-7 text-white/65">
             Product Partner helps startups and enterprises design, build, and
-            scale software products—with a team that owns the roadmap and the
+            scale software products, with a team that owns the roadmap and the
             release.
           </p>
         </div>

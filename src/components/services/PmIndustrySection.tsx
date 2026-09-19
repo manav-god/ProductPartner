@@ -20,12 +20,12 @@ const industries: IndustryTab[] = [
     cardLabel: "Sports Technology Product Marketing",
     question: (
       <>
-        Communicating value to teams, athletes, sponsors, and buyers — but the{" "}
+        Communicating value to teams, athletes, sponsors, and buyers, but the{" "}
         <strong>audiences keep fragmenting</strong>?
       </>
     ),
     description:
-      "Sports businesses need to communicate value to a diverse audience — from teams and leagues to athletes, organizations, sponsors, and technology buyers. Product marketing needs to translate those different audiences into a message that stays clear and credible.",
+      "Sports businesses need to communicate value to a diverse audience, from teams and leagues to athletes, organizations, sponsors, and technology buyers. Product marketing needs to translate those different audiences into a message that stays clear and credible.",
     tags: [
       "Sports technology positioning",
       "Team and league messaging",
@@ -47,7 +47,7 @@ const industries: IndustryTab[] = [
       </>
     ),
     description:
-      "Ecommerce product marketing focuses on the complete buying decision — from first discovering a product to comparing alternatives, purchasing, and coming back.",
+      "Ecommerce product marketing focuses on the complete buying decision, from first discovering a product to comparing alternatives, purchasing, and coming back.",
     tags: [
       "Ecommerce positioning",
       "Product discovery content",

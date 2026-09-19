@@ -15,7 +15,7 @@ export function ContactContent() {
             </h1>
             <p className="pd-lead">
               Tell us what you&apos;re working on. We&apos;ll help you shape the
-              roadmap, team, and delivery plan — and get back to you soon.
+              roadmap, team, and delivery plan, and get back to you soon.
             </p>
           </div>
         </section>
@@ -29,7 +29,7 @@ export function ContactContent() {
                 <p>
                   Share a bit about your product, timeline, and what you need
                   help with. Whether it&apos;s product development, fractional
-                  leadership, or marketing — we&apos;ll point you in the right
+                  leadership, or marketing, we&apos;ll point you in the right
                   direction.
                 </p>
                 <ul className="contact-points">

@@ -29,7 +29,7 @@ export const startTabs: StartTab[] = [
           </>
         ),
         answer:
-          "We assess opportunity, risk, and readiness — then hand you a clear GO / NO-GO product roadmap.",
+          "We assess opportunity, risk, and readiness, then hand you a clear GO / NO-GO product roadmap.",
         href: "/services/product-consulting",
       },
       {
@@ -68,7 +68,7 @@ export const startTabs: StartTab[] = [
           </>
         ),
         answer:
-          "We deliver in focused milestones — production-ready product with a clear decision point after each phase.",
+          "We deliver in focused milestones, production-ready product with a clear decision point after each phase.",
         href: "/services/product-development",
       },
       {
@@ -107,7 +107,7 @@ export const startTabs: StartTab[] = [
         subtitle: "Software Integration",
         question: (
           <>
-            Your tools and systems don&apos;t talk — and{" "}
+            Your tools and systems don&apos;t talk, and{" "}
             <strong>data keeps getting stuck</strong>?
           </>
         ),
@@ -151,7 +151,7 @@ export const startTabs: StartTab[] = [
           </>
         ),
         answer:
-          "We take accountability for scoped outcomes — from discovery through build, launch, and iterate.",
+          "We take accountability for scoped outcomes, from discovery through build, launch, and iterate.",
         href: "/services/software-outsourcing",
       },
       {
@@ -164,7 +164,7 @@ export const startTabs: StartTab[] = [
           </>
         ),
         answer:
-          "We ship multi-tenant SaaS foundations — auth, billing-ready flows, and architecture built to grow.",
+          "We ship multi-tenant SaaS foundations, auth, billing-ready flows, and architecture built to grow.",
         href: "/services/saas-development",
       },
       {

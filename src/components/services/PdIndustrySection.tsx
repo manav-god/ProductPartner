@@ -20,7 +20,7 @@ const industries: IndustryTab[] = [
     cardLabel: "Sports Technology Product Development",
     question: (
       <>
-        Building for athletes, coaches, teams, and fans — but the{" "}
+        Building for athletes, coaches, teams, and fans, but the{" "}
         <strong>workflows keep colliding</strong>?
       </>
     ),
@@ -47,7 +47,7 @@ const industries: IndustryTab[] = [
       </>
     ),
     description:
-      "Ecommerce product development focuses on the complete customer experience—from discovering products to purchasing, receiving, and returning them.",
+      "Ecommerce product development focuses on the complete customer experience, from discovering products to purchasing, receiving, and returning them.",
     tags: [
       "Ecommerce platforms",
       "Product discovery",

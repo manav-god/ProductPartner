@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { ContactContent } from "@/components/contact/ContactContent";
 
-const title = "Contact — Product Partner";
+const title = "Contact | Product Partner";
 const description =
-  "Get in touch with Product Partner. Tell us what you're building — we'll help shape the roadmap, team, and delivery plan.";
+  "Get in touch with Product Partner. Tell us what you're building, we'll help shape the roadmap, team, and delivery plan.";
 const url = "https://productpartner.net/contact/";
 
 export const metadata: Metadata = {

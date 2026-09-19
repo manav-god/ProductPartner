@@ -20,7 +20,7 @@ export const differenceRows: DiffRow[] = [
   },
   {
     label: "Expertise",
-    us: "Full product lifecycle ownership — from discovery to scale.",
+    us: "Full product lifecycle ownership, from discovery to scale.",
     agencies: "Narrow execution with slow handoffs.",
     freelancers: "Limited depth and little long-term ownership.",
   },

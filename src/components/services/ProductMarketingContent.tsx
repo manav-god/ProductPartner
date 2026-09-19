@@ -22,7 +22,7 @@ const services = [
     label: "GTM",
     title: "Go-to-Market Strategy",
     description:
-      "A successful launch needs more than a launch date. Go-to-market strategy connects research, positioning, and messaging into a clear direction — market research, channels, content, and launch sequencing in one coherent plan.",
+      "A successful launch needs more than a launch date. Go-to-market strategy connects research, positioning, and messaging into a clear direction, market research, channels, content, and launch sequencing in one coherent plan.",
     tags: [
       "Launch planning",
       "Market research",
@@ -187,7 +187,7 @@ export function ProductMarketingContent() {
             <p className="pd-lead">
               Great products do not always sell themselves. Buyers need to
               understand what your product does, why it matters, and why they
-              should choose it now — that is where product marketing comes in.
+              should choose it now. That is where product marketing comes in.
             </p>
             <div className="pd-buttons">
               <Link href="/contact" className="pd-btn pd-btn-primary">
@@ -404,32 +404,32 @@ export function ProductMarketingContent() {
             <div className="pd-framework">
               {[
                 {
-                  num: "01 — RESEARCH",
+                  num: "01 RESEARCH",
                   title: "Understand",
                   desc: "Understand the customer problem, buyer, market, and competitive landscape.",
                 },
                 {
-                  num: "02 — POSITION",
+                  num: "02 POSITION",
                   title: "Define",
                   desc: "Define positioning, value proposition, ICP, and category context.",
                 },
                 {
-                  num: "03 — MESSAGE",
+                  num: "03 MESSAGE",
                   title: "Translate",
                   desc: "Translate positioning into messaging, content, and sales enablement language.",
                 },
                 {
-                  num: "04 — LAUNCH",
+                  num: "04 LAUNCH",
                   title: "Activate",
                   desc: "Activate go-to-market channels, content, and campaigns around the message.",
                 },
                 {
-                  num: "05 — OPTIMIZE",
+                  num: "05 OPTIMIZE",
                   title: "Discover",
                   desc: "Optimize content for SEO, AEO, and GEO so it performs across search and AI systems.",
                 },
                 {
-                  num: "06 — LEARN & SCALE",
+                  num: "06 LEARN & SCALE",
                   title: "Improve",
                   desc: "Use performance data and buyer feedback to refresh positioning and scale what works.",
                 },
@@ -459,8 +459,8 @@ export function ProductMarketingContent() {
               connect the product story with the research, content, and search
               performance required to help it grow. That same discipline carries
               through our{" "}
-              <Link href="/product-development">product development</Link> work
-              — building the right product, then telling its story well.
+              <Link href="/product-development">product development</Link> work,
+              building the right product, then telling its story well.
             </p>
             <ul className="pd-points">
               {[

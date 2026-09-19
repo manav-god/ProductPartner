@@ -8,7 +8,7 @@ const services = [
     label: "Strategy",
     title: "Product Strategy & Roadmapping",
     description:
-      "Build a clear direction for your product and connect your roadmap to customer needs and business outcomes. A roadmap should not be a list of everything people have asked for — it should show where the product is going and why those priorities matter.",
+      "Build a clear direction for your product and connect your roadmap to customer needs and business outcomes. A roadmap should not be a list of everything people have asked for. It should show where the product is going and why those priorities matter.",
     tags: [
       "Product vision",
       "Product strategy",
@@ -328,32 +328,32 @@ export function ProductManagementContent() {
             <div className="pd-framework">
               {[
                 {
-                  num: "01 — DISCOVER",
+                  num: "01 DISCOVER",
                   title: "Understand",
                   desc: "Understand customers, problems, market context, and business objectives.",
                 },
                 {
-                  num: "02 — DEFINE",
+                  num: "02 DEFINE",
                   title: "Clarify",
                   desc: "Turn research into clear product opportunities, problems, and desired outcomes.",
                 },
                 {
-                  num: "03 — PRIORITIZE",
+                  num: "03 PRIORITIZE",
                   title: "Focus",
                   desc: "Evaluate opportunities using customer value, business impact, effort, risk, and strategic fit.",
                 },
                 {
-                  num: "04 — BUILD",
+                  num: "04 BUILD",
                   title: "Execute",
                   desc: "Translate priorities into clear requirements and aligned product execution.",
                 },
                 {
-                  num: "05 — MEASURE",
+                  num: "05 MEASURE",
                   title: "Track",
                   desc: "Monitor adoption, engagement, retention, revenue, or other relevant product outcomes.",
                 },
                 {
-                  num: "06 — LEARN",
+                  num: "06 LEARN",
                   title: "Improve",
                   desc: "Use evidence and customer feedback to improve product strategy and determine what should happen next.",
                 },
@@ -427,7 +427,7 @@ export function ProductManagementContent() {
                 },
                 {
                   q: "When should a startup invest in product management?",
-                  a: "Startups can benefit from product management before an MVP, during MVP development, while searching for product-market fit, and as the product scales. The focus changes with each stage—from validating the problem and defining the MVP to prioritizing growth opportunities and managing a larger product portfolio.",
+                  a: "Startups can benefit from product management before an MVP, during MVP development, while searching for product-market fit, and as the product scales. The focus changes with each stage, from validating the problem and defining the MVP to prioritizing growth opportunities and managing a larger product portfolio.",
                 },
               ].map((faq) => (
                 <details key={faq.q}>

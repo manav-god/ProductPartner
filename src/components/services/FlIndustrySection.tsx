@@ -20,12 +20,12 @@ const industries: IndustryTab[] = [
     cardLabel: "Sports Technology Product Management",
     question: (
       <>
-        Serving athletes, coaches, teams, and fans — but the{" "}
+        Serving athletes, coaches, teams, and fans, but the{" "}
         <strong>jobs keep pulling the product apart</strong>?
       </>
     ),
     description:
-      "Sports technology products often serve very different users—from athletes and coaches to teams, leagues, organizations, and fans. Product management needs to understand each user's job without losing the core product direction.",
+      "Sports technology products often serve very different users, from athletes and coaches to teams, leagues, organizations, and fans. Product management needs to understand each user's job without losing the core product direction.",
     tags: [
       "SportsTech products",
       "Athlete technology",
@@ -47,7 +47,7 @@ const industries: IndustryTab[] = [
       </>
     ),
     description:
-      "Ecommerce product management is not simply about adding more features. It is about removing friction from the moments that matter—from product discovery to checkout, personalization, retention, and repeat purchase.",
+      "Ecommerce product management is not simply about adding more features. It is about removing friction from the moments that matter, from product discovery to checkout, personalization, retention, and repeat purchase.",
     tags: [
       "Ecommerce product strategy",
       "Customer journey optimization",

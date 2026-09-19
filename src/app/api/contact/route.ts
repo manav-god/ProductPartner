@@ -231,7 +231,7 @@ export async function POST(request: Request) {
       replyTo: email,
       subject: `New lead: ${fullName}${company ? ` · ${company}` : ""}`,
       text: [
-        "New contact form inquiry — Product Partner",
+        "New contact form inquiry | Product Partner",
         `Submitted: ${submittedAt}`,
         "",
         `Name: ${fullName}`,
@@ -269,7 +269,7 @@ export async function POST(request: Request) {
     //   text: [
     //     `Hi ${firstName},`,
     //     "",
-    //     "Thanks for reaching out to Product Partner — we’ve received your message and will get back to you shortly.",
+    //     "Thanks for reaching out to Product Partner, we’ve received your message and will get back to you shortly.",
     //     "",
     //     "What happens next:",
     //     "1. We review your inquiry",
@@ -283,7 +283,7 @@ export async function POST(request: Request) {
     // });
     //
     // if (thankYouError) {
-    //   // Lead already delivered — don't fail the form on auto-reply issues
+    //   // Lead already delivered, don't fail the form on auto-reply issues
     //   console.error("Resend thank-you error:", thankYouError);
     // }
 

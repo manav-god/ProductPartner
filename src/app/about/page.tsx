@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { AboutContent } from "@/components/about/AboutContent";
 
-const title = "About — Product Partner";
+const title = "About | Product Partner";
 const description =
-  "The story behind Product Partner — how Manav Shah and Arjun Gautami built a company that owns both product decisions and delivery.";
+  "The story behind Product Partner, how Manav Shah and Arjun Gautami built a company that owns both product decisions and delivery.";
 const url = "https://productpartner.net/about/";
 
 export const metadata: Metadata = {

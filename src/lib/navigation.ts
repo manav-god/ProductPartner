@@ -45,7 +45,7 @@ export const primaryNav: NavItem[] = [
   },
   {
     label: "Our work",
-    href: "/#work",
+    href: "/work",
   },
   {
     label: "About",
@@ -61,7 +61,7 @@ export const footerServices = [
 
 export const footerCompany = [
   { label: "About Product Partner", href: "/about" },
-  { label: "Our work", href: "/#work" },
+  { label: "Our work", href: "/work" },
   { label: "Contact", href: "/contact" },
 ];
 

@@ -1,149 +1,431 @@
-/* About page — builds on shared product-development visual system */
+/* About page — dark Product Partner system */
 
-.about-chapter {
+.about-hero h1 span {
+  display: block;
+}
+
+.about-hero__grid {
   display: grid;
-  gap: 28px;
-  width: 100%;
-  align-items: start;
+  gap: 48px;
+  align-items: center;
 }
 
 @media (min-width: 1024px) {
-  .about-chapter,
-  .about-chapter--reverse {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 56px;
-    align-items: center;
+  .about-hero__grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 64px;
   }
 }
 
-.about-chapter__photo {
+.about-portraits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+  padding-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .about-portraits {
+    gap: 20px;
+  }
+}
+
+.about-portrait {
   position: relative;
   margin: 0;
-  width: 100%;
-  max-width: 480px;
-  aspect-ratio: 4 / 5;
   overflow: hidden;
   border-radius: 16px;
+  aspect-ratio: 4 / 5;
   border: 1px solid rgba(255, 255, 255, 0.12);
   background: rgba(255, 255, 255, 0.04);
 }
 
-@media (min-width: 1024px) {
-  .about-chapter__photo {
-    width: 100%;
-    max-width: none;
-  }
+.about-portrait--offset {
+  margin-top: 36px;
+}
 
-  .about-chapter:not(.about-chapter--reverse) .about-chapter__photo {
-    justify-self: start;
-  }
-
-  .about-chapter--reverse .about-chapter__photo {
-    justify-self: end;
+@media (min-width: 768px) {
+  .about-portrait--offset {
+    margin-top: 48px;
   }
 }
 
-.about-chapter__img {
+.about-portrait__img {
   object-fit: cover;
   object-position: center top;
 }
 
-.about-chapter__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.about-portrait figcaption {
+  position: absolute;
+  z-index: 2;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: rgba(17, 17, 17, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  line-height: 1.3;
 }
 
-.about-chapter__content h2 {
-  max-width: 14ch;
-}
-
-.about-chapter__person {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  margin: 18px 0 22px !important;
-  color: rgba(255, 255, 255, 0.65) !important;
-}
-
-.about-chapter__person strong {
-  font-size: 18px;
+.about-portrait__name {
+  display: block;
+  font-size: 16px;
   font-weight: 600;
   color: #ffffff;
 }
 
-.about-chapter__person span {
-  font-size: 14px;
+.about-portrait__role {
+  display: block;
+  margin-top: 2px;
+  font-size: 13px;
   color: rgba(255, 255, 255, 0.5);
 }
 
-.about-chapter__body p,
-.about-measure p {
-  max-width: 680px;
-  font-size: 16px !important;
-  line-height: 1.75 !important;
-  color: rgba(255, 255, 255, 0.7) !important;
+/* Proof strip */
+.about-proof {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
 }
 
-.about-pull {
-  margin-top: 28px !important;
-  font-size: 20px !important;
-  font-weight: 600 !important;
-  line-height: 1.4 !important;
-  letter-spacing: -0.02em !important;
-  color: #ffffff !important;
-}
-
-.about-measure {
-  margin-top: 8px;
-}
-
-.about-measure--follow {
-  margin-top: 36px !important;
-}
-
-.about-milestones {
+.about-proof__grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-  margin-top: 40px;
-  width: 100%;
-}
-
-@media (min-width: 768px) {
-  .about-milestones {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-  }
+  grid-template-columns: 1fr 1fr;
 }
 
 @media (min-width: 1024px) {
-  .about-milestones {
+  .about-proof__grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-.about-stat {
-  box-sizing: border-box;
-  min-height: 100%;
-  padding: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.04);
+.about-proof__item {
+  padding: 28px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.about-stat__value {
-  margin: 0 0 12px !important;
-  font-size: clamp(36px, 5vw, 48px) !important;
+.about-proof__item:nth-child(-n + 2) {
+  border-top: none;
+}
+
+.about-proof__item:nth-child(even) {
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 1024px) {
+  .about-proof__item {
+    padding: 36px 28px;
+    border-top: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .about-proof__item:first-child {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .about-proof__item:nth-child(even) {
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+.about-proof__num {
+  margin: 0 !important;
+  font-size: clamp(36px, 4vw, 52px) !important;
   font-weight: 700 !important;
   line-height: 1 !important;
   letter-spacing: -0.04em !important;
   color: #ff5900 !important;
 }
 
-.about-stat__label {
-  margin: 0 !important;
+.about-proof__cap {
+  margin: 10px 0 0 !important;
+  max-width: 22ch;
   font-size: 14px !important;
-  line-height: 1.55 !important;
+  line-height: 1.5 !important;
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Chapter marker */
+.about-chapter-mark {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 20px !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: #ff5900 !important;
+}
+
+.about-chapter-mark__no {
+  display: inline-grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 89, 0, 0.14);
+  color: #ff5900;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* Story chapters */
+.about-story {
+  display: grid;
+  gap: 40px;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .about-story {
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+  }
+
+  .about-story--flip .about-story__art {
+    order: -1;
+  }
+}
+
+.about-story h2 {
+  max-width: 20ch;
+  margin-bottom: 24px !important;
+}
+
+.about-prose p {
+  max-width: 58ch;
+  font-size: 16px !important;
+  line-height: 1.75 !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.about-prose p + p {
+  margin-top: 16px !important;
+}
+
+.about-prose strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.about-art {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+/* Tags */
+.about-tags {
+  margin-top: 32px;
+}
+
+.about-tags__group + .about-tags__group {
+  margin-top: 20px;
+}
+
+.about-tags__label {
+  margin: 0 0 10px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #ffffff !important;
+}
+
+.about-tags ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.about-tags li {
+  padding: 7px 16px !important;
+  margin: 0 !important;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.05);
+  font-size: 14px !important;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* How we close it */
+.about-how-head {
+  max-width: 640px;
+  margin-bottom: 48px;
+}
+
+.about-how-head .pd-lead {
+  margin-top: 16px;
+}
+
+.about-steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  .about-steps {
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-steps {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.about-step {
+  box-sizing: border-box;
+  padding: 28px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.about-step__no {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  background: #ff5900;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.about-step h3 {
+  margin: 0 0 12px !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  line-height: 1.25 !important;
+  color: #ffffff !important;
+}
+
+.about-step p {
+  margin: 0 !important;
+  font-size: 15px !important;
+  line-height: 1.65 !important;
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+
+/* Terms */
+.about-terms {
+  display: grid;
+  gap: 28px;
+  align-items: center;
+  padding: 36px 28px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 89, 0, 0.28);
+  background: rgba(255, 89, 0, 0.08);
+}
+
+@media (min-width: 768px) {
+  .about-terms {
+    grid-template-columns: auto 1fr;
+    gap: 40px;
+    padding: 48px 44px;
+  }
+}
+
+.about-terms__icon {
+  width: 96px;
+  height: 96px;
+}
+
+@media (min-width: 768px) {
+  .about-terms__icon {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.about-terms h2 {
+  max-width: none;
+  margin: 0 0 14px !important;
+}
+
+@media (min-width: 480px) {
+  .about-terms h2 {
+    white-space: nowrap;
+  }
+}
+
+.about-terms p {
+  margin: 0 !important;
+  max-width: 60ch;
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* CTA */
+.about-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+  padding: 40px 28px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+@media (min-width: 768px) {
+  .about-cta {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 56px 48px;
+  }
+}
+
+.about-cta__status {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 18px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #8fd3a5 !important;
+}
+
+.about-cta__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #3fb765;
+  box-shadow: 0 0 0 5px rgba(63, 183, 101, 0.18);
+}
+
+.about-cta h2 {
+  max-width: none;
+  margin: 0 !important;
+}
+
+@media (min-width: 480px) {
+  .about-cta h2 {
+    white-space: nowrap;
+  }
+}
+
+.about-cta p {
+  margin: 14px 0 0 !important;
+  max-width: 44ch;
+  font-size: 16px !important;
+  line-height: 1.65 !important;
   color: rgba(255, 255, 255, 0.65) !important;
 }

@@ -3,7 +3,7 @@ import { AboutContent } from "@/components/about/AboutContent";
 
 const title = "About | Product Partner";
 const description =
-  "The story behind Product Partner, how Manav Shah and Arjun Gautami built a company that owns both product decisions and delivery.";
+  "Two co-founders kept watching well-built products fail. Product Partner is the team they built to close that gap: we shape the product, build it, and stay for growth.";
 const url = "https://productpartner.net/about/";
 
 export const metadata: Metadata = {
@@ -24,7 +24,8 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "Product Partner",
     title,
-    description,
+    description:
+      "Two founders. One recurring failure. One partner. The story behind Product Partner.",
     url,
   },
   twitter: {
@@ -42,36 +43,34 @@ const jsonLd = {
       "@id": "https://productpartner.net/#organization",
       name: "Product Partner",
       url: "https://productpartner.net/",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://productpartner.net/logo.png",
-      },
-      founder: [
+      founders: [
         {
           "@type": "Person",
           name: "Manav Shah",
-          jobTitle: "Co-founder & CEO",
+          jobTitle: "Co-founder and CEO",
         },
         {
           "@type": "Person",
           name: "Arjun Gautami",
-          jobTitle: "Co-founder & CTO",
+          jobTitle: "Co-founder and CTO",
         },
       ],
-      sameAs: [
-        "https://www.linkedin.com/company/productpartner",
-        "https://twitter.com/productpartner",
-      ],
+      email: "manav@productpartner.net",
+      telephone: "+91-7383857958",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Ahmedabad",
+        addressCountry: "India",
+      },
     },
     {
-      "@type": "WebPage",
-      "@id": "https://productpartner.net/about/#webpage",
+      "@type": "AboutPage",
+      "@id": "https://productpartner.net/about#webpage",
       url,
       name: title,
-      description,
-      isPartOf: { "@id": "https://productpartner.net/#website" },
-      about: { "@id": "https://productpartner.net/#organization" },
-      dateModified: "2026-09-19",
+      description:
+        "Two co-founders kept watching well-built products fail. Product Partner is the team they built to close that gap.",
+      dateModified: "2026-09-20",
       inLanguage: "en-US",
     },
     {

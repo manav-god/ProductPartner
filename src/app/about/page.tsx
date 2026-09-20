@@ -1,3 +1,6 @@
+import { notFound } from "next/navigation";
+
+/* Temporarily hidden — About page (kept for later)
 import type { Metadata } from "next";
 import { AboutContent } from "@/components/about/AboutContent";
 
@@ -104,4 +107,9 @@ export default function AboutPage() {
       <AboutContent />
     </>
   );
+}
+*/
+
+export default function AboutPage() {
+  notFound();
 }

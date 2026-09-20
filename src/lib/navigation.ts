@@ -47,10 +47,11 @@ export const primaryNav: NavItem[] = [
     label: "Our work",
     href: "/work",
   },
-  {
-    label: "About",
-    href: "/about",
-  },
+  // Temporarily hidden — About page
+  // {
+  //   label: "About",
+  //   href: "/about",
+  // },
 ];
 
 export const footerServices = [
@@ -60,7 +61,8 @@ export const footerServices = [
 ];
 
 export const footerCompany = [
-  { label: "About Product Partner", href: "/about" },
+  // Temporarily hidden — About page
+  // { label: "About Product Partner", href: "/about" },
   { label: "Our work", href: "/work" },
   { label: "Contact", href: "/contact" },
 ];

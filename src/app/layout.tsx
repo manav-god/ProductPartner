@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://productpartner.net"),
   title: {
     default: "Product Partner",
     template: "%s | Product Partner",
@@ -26,8 +27,39 @@ export const metadata: Metadata = {
       { url: "/favicon.ico", sizes: "any" },
       { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
       { url: "/favicon-16.png", sizes: "16x16", type: "image/png" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
     ],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+  },
+  openGraph: {
+    type: "website",
+    siteName: "Product Partner",
+    title: "Product Partner",
+    description:
+      "Product Partner helps teams design, build, and ship software products people love.",
+    url: "https://productpartner.net/",
+    images: [
+      {
+        url: "/og/share-icon.png",
+        width: 512,
+        height: 512,
+        alt: "Product Partner",
+      },
+      {
+        url: "/og/default.png",
+        width: 1200,
+        height: 630,
+        alt: "Product Partner",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "Product Partner",
+    description:
+      "Product Partner helps teams design, build, and ship software products people love.",
+    images: ["/og/share-icon.png"],
   },
 };
 

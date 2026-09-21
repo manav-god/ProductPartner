@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 /**
- * Soft right-side brand mark — large watermark, no motion / light beams.
+ * Soft right-side hero graphic — runner mark on desktop only.
  */
 export function HeroLogoMark() {
   return (
@@ -10,12 +10,12 @@ export function HeroLogoMark() {
       aria-hidden
     >
       <Image
-        src="/images/icons/pp-logo-nav.png"
+        src="/images/hero/runner1.png"
         alt=""
         fill
         priority
         sizes="(max-width: 768px) 70vw, 600px"
-        className="object-contain opacity-[0.38] sm:opacity-[0.42] lg:opacity-[0.48]"
+        className="object-contain object-right opacity-90 mix-blend-lighten lg:opacity-95"
       />
     </div>
   );

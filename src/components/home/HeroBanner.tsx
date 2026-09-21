@@ -69,8 +69,10 @@ export function HeroBanner() {
         className="pointer-events-none absolute inset-y-0 right-0 z-0 hidden select-none lg:block"
         aria-hidden
       >
-        <div className="absolute inset-y-0 right-[-2%] flex items-center justify-end lg:right-[1%] xl:right-[3%]">
-          <HeroLogoMark />
+        <div className="absolute inset-y-0 right-[-6%] flex items-center justify-end lg:right-[-4%] xl:right-[-2%]">
+          <div className="-translate-y-6 xl:-translate-y-8">
+            <HeroLogoMark />
+          </div>
         </div>
       </div>
 

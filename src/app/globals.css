@@ -219,9 +219,29 @@ a[aria-disabled="true"],
   }
 }
 
+/* Partner logos — mobile-only slider */
+.partner-marquee__track {
+  animation: partner-marquee 18s linear infinite;
+}
+
+.group\/partner:active .partner-marquee__track,
+.group\/partner:hover .partner-marquee__track {
+  animation-play-state: paused;
+}
+
+@keyframes partner-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .tech-marquee__track--left,
-  .tech-marquee__track--right {
+  .tech-marquee__track--right,
+  .partner-marquee__track {
     animation: none;
   }
 }

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { heroContent } from "@/lib/hero";
-import { HeroServiceCube } from "@/components/home/HeroServiceCube";
+import { HeroLogoMark } from "@/components/home/HeroLogoMark";
 
 function ArrowUpRight({ className = "" }: { className?: string }) {
   return (
@@ -61,55 +61,59 @@ export function HeroBanner() {
 
   return (
     <section
-      className="relative overflow-x-clip overflow-y-visible bg-[#111111]"
+      className="relative overflow-x-clip overflow-y-hidden bg-[#111111]"
       aria-label="Highlights"
     >
-      <div className="relative mx-auto w-full max-w-[1300px] px-5 pb-16 pt-20 md:px-8 md:pb-24 md:pt-28 lg:px-[40px] lg:pb-[120px] lg:pt-[120px]">
-        <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-8 xl:gap-10">
-          <div className="min-w-0">
-            <p className="text-[14px] font-semibold uppercase tracking-[0.14em] text-accent sm:text-[16px] sm:tracking-[0.14em]">
-              {eyebrow}
-            </p>
+      {/* Right-side brand mark — soft watermark */}
+      <div
+        className="pointer-events-none absolute inset-y-0 right-0 z-0 hidden select-none lg:block"
+        aria-hidden
+      >
+        <div className="absolute inset-y-0 right-[-2%] flex items-center justify-end lg:right-[1%] xl:right-[3%]">
+          <HeroLogoMark />
+        </div>
+      </div>
 
-            <h1 className="relative mt-4 max-w-[857px] pb-4 text-[34px] font-semibold leading-[1.15] tracking-[-0.03em] text-white sm:mt-5 sm:text-[44px] sm:leading-[1.15] md:text-[54px] md:leading-[62px] md:tracking-[-2px]">
-              {titleLine1}
-              <br />
-              {titleLine2}
-              <span
-                className="absolute bottom-0 left-0 block h-[4px] w-[106px] bg-accent"
-                aria-hidden
-              />
-            </h1>
+      <div className="relative z-10 mx-auto w-full max-w-[1300px] px-5 pb-16 pt-20 md:px-8 md:pb-24 md:pt-28 lg:px-[40px] lg:pb-[120px] lg:pt-[120px]">
+        <div className="max-w-[720px] lg:max-w-[760px]">
+          <p className="text-[14px] font-semibold uppercase tracking-[0.14em] text-accent sm:text-[16px] sm:tracking-[0.14em]">
+            {eyebrow}
+          </p>
 
-            <p className="mt-5 max-w-[640px] text-[15px] leading-7 text-white sm:mt-6 sm:text-[16px] sm:leading-7">
-              {description}
-            </p>
+          <h1 className="relative mt-4 pb-4 text-[34px] font-semibold leading-[1.15] tracking-[-0.03em] text-white sm:mt-5 sm:text-[44px] sm:leading-[1.15] md:text-[54px] md:leading-[62px] md:tracking-[-2px]">
+            {titleLine1}
+            <br />
+            {titleLine2}
+            <span
+              className="absolute bottom-0 left-0 block h-[4px] w-[106px] bg-accent"
+              aria-hidden
+            />
+          </h1>
 
-            <div className="mt-7 flex flex-col items-start gap-4 sm:mt-8 sm:flex-row sm:items-center sm:gap-4">
-              <Link
-                href={primaryCta.href}
-                className="inline-flex h-[48px] items-center gap-3.5 rounded-lg border border-white/90 bg-[#1a1a1a]/80 px-4 text-[14px] font-semibold text-white transition-colors hover:border-accent hover:text-accent"
-              >
-                {primaryCta.label}
-                <ArrowUpRight className="h-4 w-4" />
-              </Link>
-              <Link
-                href={secondaryCta.href}
-                className="inline-flex h-[48px] items-center gap-3.5 px-1 text-[14px] font-semibold text-white transition-colors hover:text-accent sm:px-3"
-              >
-                {secondaryCta.label}
-                <BriefcaseIcon className="h-5 w-5" />
-              </Link>
-            </div>
-          </div>
+          <p className="mt-5 max-w-[640px] text-[15px] leading-7 text-white/90 sm:mt-6 sm:text-[16px] sm:leading-7">
+            {description}
+          </p>
 
-          <div className="flex w-full justify-center lg:w-auto lg:justify-self-end lg:justify-end">
-            <HeroServiceCube />
+          <div className="mt-7 flex flex-col items-start gap-4 sm:mt-8 sm:flex-row sm:items-center sm:gap-4">
+            <Link
+              href={primaryCta.href}
+              className="inline-flex h-[48px] items-center gap-3.5 rounded-lg border border-white/90 bg-[#1a1a1a]/80 px-4 text-[14px] font-semibold text-white transition-colors hover:border-accent hover:text-accent"
+            >
+              {primaryCta.label}
+              <ArrowUpRight className="h-4 w-4" />
+            </Link>
+            <Link
+              href={secondaryCta.href}
+              className="inline-flex h-[48px] items-center gap-3.5 px-1 text-[14px] font-semibold text-white transition-colors hover:text-accent sm:px-3"
+            >
+              {secondaryCta.label}
+              <BriefcaseIcon className="h-5 w-5" />
+            </Link>
           </div>
         </div>
 
         {/* Trusted-by bar */}
-        <div className="mt-10 flex w-fit max-w-full flex-col gap-4 rounded-[14px] border border-white bg-white/[0.035] px-5 py-4 md:mt-12 lg:mt-14 lg:flex-row lg:items-center lg:gap-5 lg:px-6 lg:py-[14px]">
+        <div className="mt-10 w-full max-w-full overflow-hidden rounded-[14px] border border-white bg-white/[0.035] px-5 py-4 md:mt-12 lg:mt-14 lg:flex lg:w-fit lg:items-center lg:gap-5 lg:px-6 lg:py-[14px]">
           <p className="shrink-0 border-white/25 pr-0 text-[15px] leading-[1.35] text-white lg:border-r lg:pr-5 lg:text-[16px]">
             {trustedLabel}
             {trustedHighlight ? (
@@ -120,7 +124,8 @@ export function HeroBanner() {
             ) : null}
           </p>
 
-          <div className="flex flex-wrap items-center gap-x-5 gap-y-3 sm:gap-x-6 lg:flex-nowrap lg:gap-x-7">
+          {/* Tablet + desktop: static logos */}
+          <div className="mt-4 hidden flex-wrap items-center gap-x-5 gap-y-3 sm:gap-x-6 md:flex lg:mt-0 lg:flex-nowrap lg:gap-x-7">
             {trustedClients.map((client) => (
               <Link
                 key={client.id}
@@ -140,6 +145,33 @@ export function HeroBanner() {
                 />
               </Link>
             ))}
+          </div>
+
+          {/* Mobile only: auto logo slider */}
+          <div className="partner-marquee group/partner mt-4 -mx-5 overflow-hidden md:hidden">
+            <div className="partner-marquee__track flex w-max items-center gap-8 px-5">
+              {[...trustedClients, ...trustedClients].map((client, index) => (
+                <Link
+                  key={`${client.id}-${index}`}
+                  href={client.href}
+                  className="relative flex h-11 w-[88px] shrink-0 items-center justify-center opacity-90"
+                  tabIndex={index >= trustedClients.length ? -1 : undefined}
+                  aria-hidden={index >= trustedClients.length ? true : undefined}
+                >
+                  <Image
+                    src={client.src}
+                    alt={index >= trustedClients.length ? "" : client.alt}
+                    fill
+                    sizes="88px"
+                    unoptimized
+                    className="object-contain bg-transparent"
+                    style={{
+                      transform: `scale(${client.scale ?? 1})`,
+                    }}
+                  />
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </div>

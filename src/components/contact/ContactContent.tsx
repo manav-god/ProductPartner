@@ -6,20 +6,6 @@ export function ContactContent() {
   return (
     <div className="pd-page contact-page">
       <main id="main-content">
-        <section className="pd-hero">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
-            <span className="pd-eyebrow">Get in touch</span>
-            <h1>
-              Let&apos;s talk about what you&apos;re{" "}
-              <span>building next</span>
-            </h1>
-            <p className="pd-lead">
-              Tell us what you&apos;re working on. We&apos;ll help you shape the
-              roadmap, team, and delivery plan, and get back to you soon.
-            </p>
-          </div>
-        </section>
-
         <section className="pd-section" id="contact-form">
           <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
             <div className="contact-layout">

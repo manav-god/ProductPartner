@@ -59,5 +59,12 @@ export const heroContent = {
       href: "/work",
       scale: 1.15,
     },
+    {
+      id: "dared",
+      alt: "Dared",
+      src: "/images/clientlogo/Dared.webp",
+      href: "/work",
+      scale: 1,
+    },
   ] satisfies TrustedClient[],
 };

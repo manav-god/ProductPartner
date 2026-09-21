@@ -126,8 +126,8 @@ export function HeroBanner() {
             ) : null}
           </p>
 
-          {/* Tablet + desktop: static logos */}
-          <div className="mt-4 hidden flex-wrap items-center gap-x-5 gap-y-3 sm:gap-x-6 md:flex lg:mt-0 lg:flex-nowrap lg:gap-x-7">
+          {/* Desktop only: static logos */}
+          <div className="mt-4 hidden flex-wrap items-center gap-x-5 gap-y-3 sm:gap-x-6 lg:mt-0 lg:flex lg:flex-nowrap lg:gap-x-7">
             {trustedClients.map((client) => (
               <Link
                 key={client.id}
@@ -149,8 +149,8 @@ export function HeroBanner() {
             ))}
           </div>
 
-          {/* Mobile only: auto logo slider */}
-          <div className="partner-marquee group/partner mt-4 -mx-5 overflow-hidden md:hidden">
+          {/* Mobile + tablet: auto logo slider */}
+          <div className="partner-marquee group/partner mt-4 -mx-5 overflow-hidden lg:hidden">
             <div className="partner-marquee__track flex w-max items-center gap-8 px-5">
               {[...trustedClients, ...trustedClients].map((client, index) => (
                 <Link

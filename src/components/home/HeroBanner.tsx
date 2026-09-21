@@ -70,7 +70,7 @@ export function HeroBanner() {
         aria-hidden
       >
         <div className="absolute inset-y-0 right-[-6%] flex items-center justify-end lg:right-[-4%] xl:right-[-2%]">
-          <div className="-translate-y-6 xl:-translate-y-8">
+          <div className="-translate-x-[20px] -translate-y-6 xl:-translate-y-8">
             <HeroLogoMark />
           </div>
         </div>
@@ -92,11 +92,11 @@ export function HeroBanner() {
             />
           </h1>
 
-          <p className="mt-5 max-w-[640px] text-[15px] leading-7 text-white/90 sm:mt-6 sm:text-[16px] sm:leading-7">
+          <p className="mt-5 max-w-[640px] text-[18px] leading-7 text-white/90 sm:mt-6 sm:text-[19px] sm:leading-7">
             {description}
           </p>
 
-          <div className="mt-7 flex flex-col items-start gap-4 sm:mt-8 sm:flex-row sm:items-center sm:gap-4">
+          <div className="mt-7 flex translate-y-[3px] flex-col items-start gap-4 sm:mt-8 sm:flex-row sm:items-center sm:gap-4">
             <Link
               href={primaryCta.href}
               className="inline-flex h-[48px] items-center gap-3.5 rounded-lg border border-white/90 bg-[#1a1a1a]/80 px-4 text-[14px] font-semibold text-white transition-colors hover:border-accent hover:text-accent"
@@ -115,7 +115,7 @@ export function HeroBanner() {
         </div>
 
         {/* Trusted-by bar */}
-        <div className="mt-10 w-full max-w-full overflow-hidden rounded-[14px] border border-white bg-white/[0.035] px-5 py-4 md:mt-12 lg:mt-14 lg:flex lg:w-fit lg:items-center lg:gap-5 lg:px-6 lg:py-[14px]">
+        <div className="mt-10 w-full max-w-full translate-y-[6px] overflow-hidden rounded-[14px] border border-white bg-white/[0.035] px-5 py-4 md:mt-12 lg:mt-14 lg:flex lg:w-fit lg:items-center lg:gap-5 lg:px-6 lg:py-[14px]">
           <p className="shrink-0 border-white/25 pr-0 text-[15px] leading-[1.35] text-white lg:border-r lg:pr-5 lg:text-[16px]">
             {trustedLabel}
             {trustedHighlight ? (

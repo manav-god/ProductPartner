@@ -64,20 +64,18 @@ export function HeroBanner() {
       className="relative overflow-x-clip overflow-y-hidden bg-[#111111]"
       aria-label="Highlights"
     >
-      {/* Right-side brand mark — soft watermark */}
-      <div
-        className="pointer-events-none absolute inset-y-0 right-0 z-0 hidden select-none lg:block"
-        aria-hidden
-      >
-        <div className="absolute inset-y-0 right-[-6%] flex items-center justify-end lg:right-[-4%] xl:right-[-2%]">
-          <div className="-translate-x-[20px] -translate-y-6 xl:-translate-y-8">
+      <div className="relative z-10 mx-auto w-full max-w-[1300px] px-5 pb-16 pt-20 md:px-8 md:pb-24 md:pt-28 lg:px-[40px] lg:pb-[120px] lg:pt-[120px]">
+        {/* Runner sits inside the 1300px content width */}
+        <div
+          className="pointer-events-none absolute inset-y-0 right-5 z-0 hidden select-none lg:block md:right-8 lg:right-[40px]"
+          aria-hidden
+        >
+          <div className="absolute top-1/2 right-0 -translate-y-[calc(50%+1.5rem)] xl:-translate-y-[calc(50%+2rem)]">
             <HeroLogoMark />
           </div>
         </div>
-      </div>
 
-      <div className="relative z-10 mx-auto w-full max-w-[1300px] px-5 pb-16 pt-20 md:px-8 md:pb-24 md:pt-28 lg:px-[40px] lg:pb-[120px] lg:pt-[120px]">
-        <div className="max-w-[720px] lg:max-w-[760px]">
+        <div className="relative z-10 max-w-[720px] lg:max-w-[760px]">
           <p className="text-[14px] font-semibold uppercase tracking-[0.14em] text-accent sm:text-[16px] sm:tracking-[0.14em]">
             {eyebrow}
           </p>

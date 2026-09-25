@@ -16,7 +16,7 @@ export function HeroLogoMark() {
         priority
         unoptimized
         sizes="420px"
-        className="object-contain object-right opacity-90 lg:opacity-95"
+        className="object-contain object-center opacity-90 lg:opacity-95"
       />
     </div>
   );

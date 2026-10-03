@@ -1,43 +1,52 @@
+import { unstable_cache } from "next/cache";
 import { getCms } from "@/lib/cms";
 
-export async function getPublishedPosts() {
-  const payload = await getCms();
-  const result = await payload.find({
-    collection: "posts",
-    where: {
-      status: {
-        equals: "published",
+export const getPublishedPosts = unstable_cache(
+  async () => {
+    const payload = await getCms();
+    const result = await payload.find({
+      collection: "posts",
+      where: {
+        status: {
+          equals: "published",
+        },
       },
-    },
-    sort: "-createdAt",
-    depth: 1,
-    limit: 50,
-  });
+      sort: "-createdAt",
+      depth: 1,
+      limit: 50,
+    });
 
-  return result.docs;
-}
+    return result.docs;
+  },
+  ["published-posts"],
+  { revalidate: 60 },
+);
 
-export async function getPublishedPost(slug: string) {
-  const payload = await getCms();
-  const result = await payload.find({
-    collection: "posts",
-    where: {
-      and: [
-        {
-          slug: {
-            equals: slug,
+export const getPublishedPost = unstable_cache(
+  async (slug: string) => {
+    const payload = await getCms();
+    const result = await payload.find({
+      collection: "posts",
+      where: {
+        and: [
+          {
+            slug: {
+              equals: slug,
+            },
           },
-        },
-        {
-          status: {
-            equals: "published",
+          {
+            status: {
+              equals: "published",
+            },
           },
-        },
-      ],
-    },
-    depth: 1,
-    limit: 1,
-  });
+        ],
+      },
+      depth: 1,
+      limit: 1,
+    });
 
-  return result.docs[0] ?? null;
-}
+    return result.docs[0] ?? null;
+  },
+  ["published-post"],
+  { revalidate: 60 },
+);

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { unstable_cache } from "next/cache";
 import { getCms } from "@/lib/cms";
 import {
   pageSeoDefaults,
@@ -9,7 +10,8 @@ import {
 export type { FaqItem, PageSeoEntry };
 export { pageSeoDefaults };
 
-export async function resolvePageSeo(path: string): Promise<PageSeoEntry> {
+export const resolvePageSeo = unstable_cache(
+  async (path: string): Promise<PageSeoEntry> => {
   const fallback =
     pageSeoDefaults.find((entry) => entry.path === path) ?? pageSeoDefaults[0];
 
@@ -53,7 +55,10 @@ export async function resolvePageSeo(path: string): Promise<PageSeoEntry> {
   }
 
   return { ...fallback, faqs: fallback.faqs ?? [] };
-}
+  },
+  ["page-seo"],
+  { revalidate: 60 },
+);
 
 export function withAdminSeo(
   metadata: Metadata,

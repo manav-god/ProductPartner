@@ -1,3 +1,4 @@
+import { unstable_cache } from "next/cache";
 import { caseStudies, type CaseStudy } from "@/lib/case-studies";
 import { getCms } from "@/lib/cms";
 
@@ -83,8 +84,8 @@ export function mapCaseStudy(doc: Row): CaseStudy {
   };
 }
 
-export async function getPublishedCaseStudies(): Promise<CaseStudy[]> {
-  try {
+const loadPublishedCaseStudies = unstable_cache(
+  async (): Promise<CaseStudy[]> => {
     const payload = await getCms();
     const result = await payload.find({
       collection: "case-studies",
@@ -93,18 +94,23 @@ export async function getPublishedCaseStudies(): Promise<CaseStudy[]> {
       depth: 2,
       limit: 50,
     });
+    return result.docs.map((doc) => mapCaseStudy(doc as Row));
+  },
+  ["published-case-studies"],
+  { revalidate: 60 },
+);
 
-    const studies = result.docs.map((doc) => mapCaseStudy(doc as Row));
+export async function getPublishedCaseStudies(): Promise<CaseStudy[]> {
+  try {
+    const studies = await loadPublishedCaseStudies();
     return studies.length > 0 ? studies : caseStudies;
   } catch {
     return caseStudies;
   }
 }
 
-export async function getPublishedCaseStudy(
-  slug: string,
-): Promise<CaseStudy | null> {
-  try {
+const loadPublishedCaseStudy = unstable_cache(
+  async (slug: string): Promise<CaseStudy | null> => {
     const payload = await getCms();
     const result = await payload.find({
       collection: "case-studies",
@@ -118,10 +124,22 @@ export async function getPublishedCaseStudy(
       limit: 1,
     });
     const doc = result.docs[0];
-    if (doc) return mapCaseStudy(doc as Row);
+    return doc ? mapCaseStudy(doc as Row) : null;
+  },
+  ["published-case-study"],
+  { revalidate: 60 },
+);
+
+export async function getPublishedCaseStudy(
+  slug: string,
+): Promise<CaseStudy | null> {
+  try {
+    return (
+      (await loadPublishedCaseStudy(slug)) ??
+      caseStudies.find((study) => study.slug === slug) ??
+      null
+    );
   } catch {
     return caseStudies.find((study) => study.slug === slug) ?? null;
   }
-
-  return caseStudies.find((study) => study.slug === slug) ?? null;
 }

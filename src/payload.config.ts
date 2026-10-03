@@ -58,8 +58,8 @@ export default buildConfig({
   db: postgresAdapter({
     pool: {
       connectionString: databaseUri(),
-      max: 1,
-      connectionTimeoutMillis: 4000,
+      max: process.env.VERCEL ? 1 : 4,
+      connectionTimeoutMillis: 20000,
       ssl: { rejectUnauthorized: false },
     },
   }),

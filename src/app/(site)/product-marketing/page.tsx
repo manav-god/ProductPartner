@@ -10,7 +10,7 @@ const description =
   "Product marketing services for B2B, SportsTech and ecommerce brands. From positioning and messaging to go-to-market strategy, SEO, AEO, GEO, and demand generation.";
 const url = "https://productpartner.net/product-marketing/";
 
-export const metadata: Metadata = {
+const pageMetadata: Metadata = {
   title,
   description,
   authors: [{ name: "Product Partner" }],

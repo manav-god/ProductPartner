@@ -1,4 +1,4 @@
-import dns from "node:dns";
+import { setDefaultResultOrder } from "node:dns";
 import { postgresAdapter } from "@payloadcms/db-postgres";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { s3Storage } from "@payloadcms/storage-s3";
@@ -18,24 +18,7 @@ import { databaseUri } from "./lib/database-uri";
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
 
-const lookup = dns.lookup.bind(dns) as (
-  hostname: string,
-  options: dns.LookupOneOptions,
-  callback: (
-    err: NodeJS.ErrnoException | null,
-    address: string,
-    family: number,
-  ) => void,
-) => void;
-
-dns.lookup = ((hostname: string, options: unknown, callback?: unknown) => {
-  const done = (typeof options === "function" ? options : callback) as (
-    err: NodeJS.ErrnoException | null,
-    address: string,
-    family: number,
-  ) => void;
-  return lookup(hostname, { family: 4 }, done);
-}) as unknown as typeof dns.lookup;
+setDefaultResultOrder("ipv4first");
 
 const s3Enabled = Boolean(
   process.env.S3_BUCKET &&

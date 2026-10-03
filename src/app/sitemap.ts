@@ -74,7 +74,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   let posts: { slug: string }[] = [];
   try {
-    posts = await getPublishedPosts();
+    const docs = await getPublishedPosts();
+    posts = docs.flatMap((post) => {
+      const slug = (post as { slug?: unknown }).slug;
+      return typeof slug === "string" && slug ? [{ slug }] : [];
+    });
   } catch {
     posts = [];
   }

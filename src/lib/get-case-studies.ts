@@ -1,6 +1,5 @@
-import config from "@payload-config";
-import { getPayload } from "payload";
-import type { CaseStudy } from "@/lib/case-studies";
+import { caseStudies, type CaseStudy } from "@/lib/case-studies";
+import { getCms } from "@/lib/cms";
 
 type UploadDoc = {
   url?: string | null;
@@ -86,7 +85,7 @@ export function mapCaseStudy(doc: Row): CaseStudy {
 
 export async function getPublishedCaseStudies(): Promise<CaseStudy[]> {
   try {
-    const payload = await getPayload({ config });
+    const payload = await getCms();
     const result = await payload.find({
       collection: "case-studies",
       where: { status: { equals: "published" } },
@@ -95,9 +94,10 @@ export async function getPublishedCaseStudies(): Promise<CaseStudy[]> {
       limit: 50,
     });
 
-    return result.docs.map((doc) => mapCaseStudy(doc as Row));
+    const studies = result.docs.map((doc) => mapCaseStudy(doc as Row));
+    return studies.length > 0 ? studies : caseStudies;
   } catch {
-    return [];
+    return caseStudies;
   }
 }
 
@@ -105,7 +105,7 @@ export async function getPublishedCaseStudy(
   slug: string,
 ): Promise<CaseStudy | null> {
   try {
-    const payload = await getPayload({ config });
+    const payload = await getCms();
     const result = await payload.find({
       collection: "case-studies",
       where: {
@@ -118,8 +118,10 @@ export async function getPublishedCaseStudy(
       limit: 1,
     });
     const doc = result.docs[0];
-    return doc ? mapCaseStudy(doc as Row) : null;
+    if (doc) return mapCaseStudy(doc as Row);
   } catch {
-    return null;
+    return caseStudies.find((study) => study.slug === slug) ?? null;
   }
+
+  return caseStudies.find((study) => study.slug === slug) ?? null;
 }

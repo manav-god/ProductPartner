@@ -1,6 +1,5 @@
-import config from "@payload-config";
 import type { Metadata } from "next";
-import { getPayload } from "payload";
+import { getCms } from "@/lib/cms";
 import {
   pageSeoDefaults,
   type FaqItem,
@@ -15,7 +14,7 @@ export async function resolvePageSeo(path: string): Promise<PageSeoEntry> {
     pageSeoDefaults.find((entry) => entry.path === path) ?? pageSeoDefaults[0];
 
   try {
-    const payload = await getPayload({ config });
+    const payload = await getCms();
     const result = await payload.find({
       collection: "page-seo",
       where: { path: { equals: path } },

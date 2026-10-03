@@ -1,4 +1,4 @@
-import { setDefaultResultOrder } from "node:dns";
+import dns from "node:dns";
 import { postgresAdapter } from "@payloadcms/db-postgres";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { s3Storage } from "@payloadcms/storage-s3";
@@ -13,13 +13,29 @@ import { Media } from "./collections/Media";
 import { PageSeo } from "./collections/PageSeo";
 import { Posts } from "./collections/Posts";
 import { Users } from "./collections/Users";
+import { databaseUri } from "./lib/database-uri";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
 
-// The pooler publishes an IPv6 address that Vercel cannot use. Prefer IPv4 or
-// every database call waits until it times out and the page renders empty.
-setDefaultResultOrder("ipv4first");
+const lookup = dns.lookup.bind(dns) as (
+  hostname: string,
+  options: dns.LookupOneOptions,
+  callback: (
+    err: NodeJS.ErrnoException | null,
+    address: string,
+    family: number,
+  ) => void,
+) => void;
+
+dns.lookup = ((hostname: string, options: unknown, callback?: unknown) => {
+  const done = (typeof options === "function" ? options : callback) as (
+    err: NodeJS.ErrnoException | null,
+    address: string,
+    family: number,
+  ) => void;
+  return lookup(hostname, { family: 4 }, done);
+}) as unknown as typeof dns.lookup;
 
 const s3Enabled = Boolean(
   process.env.S3_BUCKET &&
@@ -38,20 +54,6 @@ function mediaFileURL({
   const base = (process.env.S3_PUBLIC_URL || "").replace(/\/$/, "");
   const key = prefix ? `${prefix}/${filename}` : filename;
   return `${base}/${key}`;
-}
-
-function databaseUri() {
-  const raw = process.env.DATABASE_URI || "";
-  if (!raw) return "";
-
-  try {
-    const url = new URL(raw);
-    // Supabase's pooler cert is not in Node's trust store.
-    url.searchParams.set("sslmode", "no-verify");
-    return url.toString();
-  } catch {
-    return raw;
-  }
 }
 
 export default buildConfig({
@@ -73,9 +75,9 @@ export default buildConfig({
   db: postgresAdapter({
     pool: {
       connectionString: databaseUri(),
-      // Session pooler allows 15 clients. Serverless functions must not open a large pool.
       max: 1,
-      connectionTimeoutMillis: 8000,
+      connectionTimeoutMillis: 4000,
+      ssl: { rejectUnauthorized: false },
     },
   }),
   plugins: [

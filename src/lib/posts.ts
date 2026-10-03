@@ -1,8 +1,7 @@
-import config from "@payload-config";
-import { getPayload } from "payload";
+import { getCms } from "@/lib/cms";
 
 export async function getPublishedPosts() {
-  const payload = await getPayload({ config });
+  const payload = await getCms();
   const result = await payload.find({
     collection: "posts",
     where: {
@@ -19,7 +18,7 @@ export async function getPublishedPosts() {
 }
 
 export async function getPublishedPost(slug: string) {
-  const payload = await getPayload({ config });
+  const payload = await getCms();
   const result = await payload.find({
     collection: "posts",
     where: {

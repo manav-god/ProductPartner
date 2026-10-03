@@ -1,3 +1,4 @@
+import { setDefaultResultOrder } from "node:dns";
 import { postgresAdapter } from "@payloadcms/db-postgres";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { s3Storage } from "@payloadcms/storage-s3";
@@ -15,6 +16,10 @@ import { Users } from "./collections/Users";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
+
+// The pooler publishes an IPv6 address that Vercel cannot use. Prefer IPv4 or
+// every database call waits until it times out and the page renders empty.
+setDefaultResultOrder("ipv4first");
 
 const s3Enabled = Boolean(
   process.env.S3_BUCKET &&

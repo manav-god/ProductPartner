@@ -47,6 +47,10 @@ export const primaryNav: NavItem[] = [
     label: "Our work",
     href: "/work",
   },
+  {
+    label: "Blog",
+    href: "/blog",
+  },
   // Temporarily hidden — About page
   // {
   //   label: "About",
@@ -64,6 +68,7 @@ export const footerCompany = [
   // Temporarily hidden — About page
   // { label: "About Product Partner", href: "/about" },
   { label: "Our work", href: "/work" },
+  { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
 

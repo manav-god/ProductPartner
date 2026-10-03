@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { ArrowRight } from "@/components/icons";
 import { CaseStudyCard } from "@/components/work/CaseStudyCard";
-import { caseStudies } from "@/lib/case-studies";
+import { getPublishedCaseStudies } from "@/lib/get-case-studies";
 
-export function PortfolioSection() {
+export async function PortfolioSection() {
+  const caseStudies = await getPublishedCaseStudies();
   return (
     <section
       id="work"

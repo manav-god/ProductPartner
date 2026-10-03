@@ -44,6 +44,8 @@ export type CaseStudy = CaseStudyCardData & {
   solutions: CaseStudySection[];
   features: CaseStudySection[];
   results: CaseStudyResult[];
+  metaTitle: string;
+  metaDescription: string;
 };
 
 export const caseStudies: CaseStudy[] = [
@@ -180,6 +182,9 @@ export const caseStudies: CaseStudy[] = [
         body: "Session drop-off from heat and battery drain fell by 45% by downsampling the camera feed and running detection at a sustainable frame rate.",
       },
     ],
+    metaTitle: "Case Study: On-Device Rep Counting for iOS | Product Partner",
+    metaDescription:
+      "Product Partner helped a fitness team run live camera challenges on the phone, lifting engagement by 40% without wearables or uploaded video.",
   },
   {
     id: "ai-image-video-generation-platform",
@@ -319,6 +324,9 @@ export const caseStudies: CaseStudy[] = [
         body: "Paid APIs are protected by server-side quotas and entitlements, so free-tier abuse does not hit the generation bill unchecked.",
       },
     ],
+    metaTitle: "Case Study: Shipping a Consumer AI Studio | Product Partner",
+    metaDescription:
+      "Product Partner took a consumer AI product from model demos to App Store launch, with job queues, credit checks, and an operations console.",
   },
 ];
 

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import "@/app/product-development/product-development.css";
-import "@/app/about/about.css";
+import "@/app/(site)/product-development/product-development.css";
+import "@/app/(site)/about/about.css";
 
 const proof = [
   { value: "8+", label: "Startups taken from idea to first product" },

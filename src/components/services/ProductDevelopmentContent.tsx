@@ -1,9 +1,11 @@
 import Link from "next/link";
 import { ArrowRight } from "@/components/icons";
+import { ServiceFaqs } from "@/components/services/ServiceFaqs";
+import type { FaqItem } from "@/lib/page-faqs";
 import { PdIndustrySection } from "@/components/services/PdIndustrySection";
-import "@/app/product-development/product-development.css";
+import "@/app/(site)/product-development/product-development.css";
 
-export function ProductDevelopmentContent() {
+export function ProductDevelopmentContent({ faqs }: { faqs: FaqItem[] }) {
   return (
     <div className="pd-page">
       <main id="main-content">
@@ -573,80 +575,10 @@ export function ProductDevelopmentContent() {
           </div>
         </section>
 
-        {/* FAQ */}
-        <section className="pd-section">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
-            <span className="pd-eyebrow">Frequently Asked Questions</span>
-            <h2>Frequently Asked Questions About Product Development</h2>
-
-            <div className="pd-faq">
-              <details>
-                <summary>What is product development?</summary>
-                <p>
-                  Product development is the process of turning a product
-                  opportunity or idea into a usable, tested, launched, and
-                  continuously improved product. It can include discovery,
-                  validation, UX/UI design, prototyping, MVP development,
-                  engineering, testing, deployment, analytics, and post-launch
-                  iteration.
-                </p>
-              </details>
-
-              <details>
-                <summary>
-                  What is the difference between product development and software
-                  development?
-                </summary>
-                <p>
-                  Software development primarily focuses on designing, coding,
-                  testing, and maintaining software. Product development is
-                  broader: it connects customer problems, product strategy, user
-                  experience, technology, engineering, launch, and ongoing
-                  product improvement. Software development can therefore be one
-                  important part of the larger product development process.
-                </p>
-              </details>
-
-              <details>
-                <summary>
-                  What is included in product development services?
-                </summary>
-                <p>
-                  Product development services can include product discovery,
-                  validation, MVP strategy, UX/UI design, prototyping, software
-                  engineering, API integrations, quality assurance, deployment,
-                  analytics, product launch, and post-launch improvements. The
-                  exact scope depends on the product stage and business
-                  objectives.
-                </p>
-              </details>
-
-              <details>
-                <summary>How long does product development take?</summary>
-                <p>
-                  Product development timelines vary based on product complexity,
-                  scope, platform requirements, integrations, design needs,
-                  technical dependencies, and validation requirements. A focused
-                  MVP generally requires less time than a full-scale product with
-                  multiple workflows, integrations, and user groups.
-                </p>
-              </details>
-
-              <details>
-                <summary>
-                  Can you develop an MVP before building the full product?
-                </summary>
-                <p>
-                  Yes. An MVP can help teams test the core product experience and
-                  important assumptions before investing in a larger product. The
-                  goal is to identify the smallest useful version that can
-                  provide meaningful feedback from real users while creating a
-                  foundation for future development.
-                </p>
-              </details>
-            </div>
-          </div>
-        </section>
+        <ServiceFaqs
+          heading="Frequently Asked Questions About Product Development"
+          faqs={faqs}
+        />
       </main>
     </div>
   );

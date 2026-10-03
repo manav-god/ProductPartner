@@ -1,9 +1,10 @@
 import type { MetadataRoute } from "next";
-import { caseStudies } from "@/lib/case-studies";
+import { getPublishedCaseStudies } from "@/lib/get-case-studies";
+import { getPublishedPosts } from "@/lib/posts";
 
 const siteUrl = "https://productpartner.net";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const lastModified = new Date();
 
   const pages: MetadataRoute.Sitemap = [
@@ -38,6 +39,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${siteUrl}/blog/`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
       url: `${siteUrl}/contact/`,
       lastModified,
       changeFrequency: "monthly",
@@ -57,6 +64,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
+  const caseStudies = await getPublishedCaseStudies();
   const caseStudyPages: MetadataRoute.Sitemap = caseStudies.map((study) => ({
     url: `${siteUrl}/work/${study.slug}/`,
     lastModified,
@@ -64,5 +72,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...pages, ...caseStudyPages];
+  let posts: { slug: string }[] = [];
+  try {
+    posts = await getPublishedPosts();
+  } catch {
+    posts = [];
+  }
+
+  const postPages: MetadataRoute.Sitemap = posts.map((post) => ({
+    url: `${siteUrl}/blog/${post.slug}/`,
+    lastModified,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  return [...pages, ...caseStudyPages, ...postPages];
 }

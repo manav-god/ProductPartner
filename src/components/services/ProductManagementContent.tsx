@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { ArrowRight } from "@/components/icons";
+import { ServiceFaqs } from "@/components/services/ServiceFaqs";
 import { FlIndustrySection } from "@/components/services/FlIndustrySection";
-import "@/app/product-development/product-development.css";
+import type { FaqItem } from "@/lib/page-faqs";
+import "@/app/(site)/product-development/product-development.css";
 
 const services = [
   {
@@ -97,7 +99,7 @@ function ServiceIcon({ index }: { index: number }) {
   return icons[index] ?? icons[0];
 }
 
-export function ProductManagementContent() {
+export function ProductManagementContent({ faqs }: { faqs: FaqItem[] }) {
   return (
     <div className="pd-page">
       <main id="main-content">
@@ -403,41 +405,10 @@ export function ProductManagementContent() {
           </div>
         </section>
 
-        <section className="pd-section">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
-            <span className="pd-eyebrow">Frequently Asked Questions</span>
-            <h2>Frequently Asked Questions About Product Management</h2>
-            <div className="pd-faq">
-              {[
-                {
-                  q: "What does a product management consultant do?",
-                  a: "A product management consultant helps organizations make better product decisions across areas such as product strategy, discovery, roadmapping, prioritization, requirements, and product growth. Depending on the need, the engagement can support a specific product challenge or a broader product management function.",
-                },
-                {
-                  q: "What are product management services?",
-                  a: "Product management services can include product strategy, customer discovery, user research, product roadmapping, prioritization, MVP definition, product requirements, analytics, and product growth. The exact scope depends on the product's stage, goals, customers, and internal team capabilities.",
-                },
-                {
-                  q: "What is the difference between product management and project management?",
-                  a: "Product management primarily focuses on what should be built, why it matters, who it serves, and what outcome the product should create. Project management focuses more on how and when work is planned, coordinated, delivered, and managed. The two functions can work closely together during product development.",
-                },
-                {
-                  q: "Why is product discovery important?",
-                  a: "Product discovery helps teams understand customer problems, validate assumptions, identify opportunities, and reduce uncertainty before committing significant development resources. It can help teams avoid building features that solve problems customers do not consider important.",
-                },
-                {
-                  q: "When should a startup invest in product management?",
-                  a: "Startups can benefit from product management before an MVP, during MVP development, while searching for product-market fit, and as the product scales. The focus changes with each stage, from validating the problem and defining the MVP to prioritizing growth opportunities and managing a larger product portfolio.",
-                },
-              ].map((faq) => (
-                <details key={faq.q}>
-                  <summary>{faq.q}</summary>
-                  <p>{faq.a}</p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <ServiceFaqs
+          heading="Frequently Asked Questions About Product Management"
+          faqs={faqs}
+        />
       </main>
     </div>
   );

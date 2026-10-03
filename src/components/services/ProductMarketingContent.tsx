@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { ArrowRight } from "@/components/icons";
+import { ServiceFaqs } from "@/components/services/ServiceFaqs";
 import { PmIndustrySection } from "@/components/services/PmIndustrySection";
-import "@/app/product-development/product-development.css";
+import type { FaqItem } from "@/lib/page-faqs";
+import "@/app/(site)/product-development/product-development.css";
 
 const services = [
   {
@@ -173,7 +175,7 @@ function ServiceIcon({ index }: { index: number }) {
   return icons[index] ?? icons[0];
 }
 
-export function ProductMarketingContent() {
+export function ProductMarketingContent({ faqs }: { faqs: FaqItem[] }) {
   return (
     <div className="pd-page">
       <main id="main-content">
@@ -480,41 +482,10 @@ export function ProductMarketingContent() {
           </div>
         </section>
 
-        <section className="pd-section">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
-            <span className="pd-eyebrow">Frequently Asked Questions</span>
-            <h2>Frequently Asked Questions About Product Marketing</h2>
-            <div className="pd-faq">
-              {[
-                {
-                  q: "What does a product marketing agency do?",
-                  a: "A product marketing agency helps a business research its market, define product positioning, develop messaging, plan go-to-market activity, support demand generation, and improve how the product is discovered and understood.",
-                },
-                {
-                  q: "What's the difference between product marketing and digital marketing?",
-                  a: "Digital marketing primarily describes channels and tactics such as search, social, email, and paid media. Product marketing starts with the product, customer, market, and competitive landscape, then connects that understanding to messaging and channels.",
-                },
-                {
-                  q: "Why do B2B companies need product marketing?",
-                  a: "B2B products often involve longer buying cycles, multiple stakeholders, technical requirements, and higher consideration. Product marketing helps translate product capabilities into business value and gives sales and marketing teams consistent positioning.",
-                },
-                {
-                  q: "Can product marketing improve SEO and AI search visibility?",
-                  a: "Yes. Product marketing supplies the customer language, product context, questions, positioning, and evidence that can make content more useful for traditional search, answer engines, and generative AI search experiences.",
-                },
-                {
-                  q: "When should a startup invest in product marketing?",
-                  a: "Startups can use product marketing before launch, during go-to-market, and after launch. The scope can begin with positioning and buyer research, then expand into messaging, content, sales enablement, search, and product growth.",
-                },
-              ].map((faq) => (
-                <details key={faq.q}>
-                  <summary>{faq.q}</summary>
-                  <p>{faq.a}</p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
+        <ServiceFaqs
+          heading="Frequently Asked Questions About Product Marketing"
+          faqs={faqs}
+        />
       </main>
     </div>
   );

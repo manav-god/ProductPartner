@@ -1,5 +1,5 @@
 import Link from "next/link";
-import "@/app/product-development/product-development.css";
+import "@/app/(site)/product-development/product-development.css";
 import "./legal.css";
 
 export type LegalSection = {

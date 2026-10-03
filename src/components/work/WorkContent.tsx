@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { CaseStudyCard } from "@/components/work/CaseStudyCard";
-import { caseStudies } from "@/lib/case-studies";
-import "@/app/product-development/product-development.css";
+import { getPublishedCaseStudies } from "@/lib/get-case-studies";
+import "@/app/(site)/product-development/product-development.css";
 
-export function WorkContent() {
+export async function WorkContent() {
+  const caseStudies = await getPublishedCaseStudies();
   return (
     <div className="pd-page">
       <main id="main-content">

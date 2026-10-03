@@ -1,0 +1,98 @@
+import { postgresAdapter } from "@payloadcms/db-postgres";
+import { lexicalEditor } from "@payloadcms/richtext-lexical";
+import { s3Storage } from "@payloadcms/storage-s3";
+import path from "path";
+import { buildConfig } from "payload";
+import { fileURLToPath } from "url";
+import sharp from "sharp";
+import { CaseStudies } from "./collections/CaseStudies";
+import { Faqs } from "./collections/Faqs";
+import { Inquiries } from "./collections/Inquiries";
+import { Media } from "./collections/Media";
+import { PageSeo } from "./collections/PageSeo";
+import { Posts } from "./collections/Posts";
+import { Users } from "./collections/Users";
+
+const filename = fileURLToPath(import.meta.url);
+const dirname = path.dirname(filename);
+
+const s3Enabled = Boolean(
+  process.env.S3_BUCKET &&
+    process.env.S3_ACCESS_KEY_ID &&
+    process.env.S3_SECRET_ACCESS_KEY &&
+    process.env.S3_ENDPOINT,
+);
+
+function mediaFileURL({
+  filename,
+  prefix,
+}: {
+  filename: string;
+  prefix?: string;
+}) {
+  const base = (process.env.S3_PUBLIC_URL || "").replace(/\/$/, "");
+  const key = prefix ? `${prefix}/${filename}` : filename;
+  return `${base}/${key}`;
+}
+
+function databaseUri() {
+  const raw = process.env.DATABASE_URI || "";
+  if (!raw) return "";
+
+  try {
+    const url = new URL(raw);
+    // Supabase's pooler cert is not in Node's trust store.
+    url.searchParams.set("sslmode", "no-verify");
+    return url.toString();
+  } catch {
+    return raw;
+  }
+}
+
+export default buildConfig({
+  admin: {
+    user: Users.slug,
+    importMap: {
+      baseDir: path.resolve(dirname),
+    },
+    meta: {
+      titleSuffix: " — Product Partner",
+    },
+  },
+  collections: [Users, Media, Posts, CaseStudies, PageSeo, Faqs, Inquiries],
+  editor: lexicalEditor(),
+  secret: process.env.PAYLOAD_SECRET || "",
+  typescript: {
+    outputFile: path.resolve(dirname, "payload-types.ts"),
+  },
+  db: postgresAdapter({
+    pool: {
+      connectionString: databaseUri(),
+      // Session pooler allows 15 clients. Serverless functions must not open a large pool.
+      max: 1,
+    },
+  }),
+  plugins: [
+    s3Storage({
+      enabled: s3Enabled,
+      collections: {
+        media: {
+          prefix: "",
+          disablePayloadAccessControl: true,
+          generateFileURL: mediaFileURL,
+        },
+      },
+      bucket: process.env.S3_BUCKET || "",
+      config: {
+        credentials: {
+          accessKeyId: process.env.S3_ACCESS_KEY_ID || "",
+          secretAccessKey: process.env.S3_SECRET_ACCESS_KEY || "",
+        },
+        region: process.env.S3_REGION || "ap-south-1",
+        endpoint: process.env.S3_ENDPOINT,
+        forcePathStyle: true,
+      },
+    }),
+  ],
+  sharp,
+});

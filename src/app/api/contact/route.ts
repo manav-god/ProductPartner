@@ -260,6 +260,25 @@ export async function POST(request: Request) {
       );
     }
 
+    try {
+      const { getPayload } = await import("payload");
+      const config = (await import("@payload-config")).default;
+      const payload = await getPayload({ config });
+      await payload.create({
+        collection: "inquiries",
+        data: {
+          firstName,
+          lastName,
+          email,
+          company,
+          phone,
+          message,
+        },
+      });
+    } catch (saveError) {
+      console.error("Could not save contact submission:", saveError);
+    }
+
     // Thank-you auto-reply disabled for now
     // const { error: thankYouError } = await resend.emails.send({
     //   from: fromEmail,

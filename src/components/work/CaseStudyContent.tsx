@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { CaseStudyToc } from "@/components/work/CaseStudyToc";
 import { type CaseStudy } from "@/lib/case-studies";
-import "@/app/product-development/product-development.css";
+import "@/app/(site)/product-development/product-development.css";
 import "./case-study.css";
 
 function MetaIcon({ name }: { name: "location" | "type" | "year" }) {

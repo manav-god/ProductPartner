@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ContactContent } from "@/components/contact/ContactContent";
 import { resolvePageSeo, withAdminSeo } from "@/lib/page-seo";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 const title = "Contact | Product Partner";
 const description =

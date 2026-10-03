@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { WorkContent } from "@/components/work/WorkContent";
 import { resolvePageSeo, withAdminSeo } from "@/lib/page-seo";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 const title = "Our Work | Product Partner";
 const description =

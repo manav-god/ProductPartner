@@ -8,7 +8,7 @@ import { WaysToWorkSection } from "@/components/home/WaysToWorkSection";
 import { resolvePageSeo, withAdminSeo } from "@/lib/page-seo";
 import { pageGraph } from "@/lib/schema";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 export async function generateMetadata(): Promise<Metadata> {
   const seo = await resolvePageSeo("/");

@@ -5,7 +5,7 @@ import { resolvePageSeo, withAdminSeo } from "@/lib/page-seo";
 import { pageGraph } from "@/lib/schema";
 import "./blog.css";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 export async function generateMetadata(): Promise<Metadata> {
   return withAdminSeo({}, await resolvePageSeo("/blog"));

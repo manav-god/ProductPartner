@@ -4,7 +4,7 @@ import { LegalContent } from "@/components/legal/LegalContent";
 import { resolvePageSeo, withAdminSeo } from "@/lib/page-seo";
 import { pageGraph } from "@/lib/schema";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 const title = "Terms of Use | Product Partner";
 const description =

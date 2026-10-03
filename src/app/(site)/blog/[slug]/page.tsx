@@ -7,7 +7,7 @@ import { getPublishedPost } from "@/lib/posts";
 import { pageUrl } from "@/lib/schema";
 import "../blog.css";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 type Args = {
   params: Promise<{

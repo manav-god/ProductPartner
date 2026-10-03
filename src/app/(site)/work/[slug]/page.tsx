@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { CaseStudyContent } from "@/components/work/CaseStudyContent";
 import { getPublishedCaseStudy } from "@/lib/get-case-studies";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 type PageProps = {
   params: Promise<{ slug: string }>;

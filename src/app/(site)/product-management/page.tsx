@@ -4,7 +4,7 @@ import { ProductManagementContent } from "@/components/services/ProductManagemen
 import { resolvePageSeo, withAdminSeo } from "@/lib/page-seo";
 import { applyAdminSchema } from "@/lib/schema";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 const title =
   "Product Management Services | Product Strategy & Growth | Product Partner";

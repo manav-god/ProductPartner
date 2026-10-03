@@ -70,6 +70,7 @@ export default buildConfig({
       connectionString: databaseUri(),
       // Session pooler allows 15 clients. Serverless functions must not open a large pool.
       max: 1,
+      connectionTimeoutMillis: 8000,
     },
   }),
   plugins: [

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { ContactContent } from "@/components/contact/ContactContent";
 import { resolvePageSeo, withAdminSeo } from "@/lib/page-seo";
 
+export const dynamic = "force-dynamic";
+
 const title = "Contact | Product Partner";
 const description =
   "Get in touch with Product Partner. Tell us what you're building, we'll help shape the roadmap, team, and delivery plan.";

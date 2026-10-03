@@ -4,6 +4,8 @@ import { getPublishedPosts } from "@/lib/posts";
 
 const siteUrl = "https://productpartner.net";
 
+export const dynamic = "force-dynamic";
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const lastModified = new Date();
 

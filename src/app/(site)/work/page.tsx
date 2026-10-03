@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { WorkContent } from "@/components/work/WorkContent";
 import { resolvePageSeo, withAdminSeo } from "@/lib/page-seo";
 
+export const dynamic = "force-dynamic";
+
 const title = "Our Work | Product Partner";
 const description =
   "Product partnerships that deliver results. Selected engagements across product development, fractional leadership, and go-to-market.";

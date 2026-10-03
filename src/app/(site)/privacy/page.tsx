@@ -4,6 +4,8 @@ import { LegalContent } from "@/components/legal/LegalContent";
 import { resolvePageSeo, withAdminSeo } from "@/lib/page-seo";
 import { pageGraph } from "@/lib/schema";
 
+export const dynamic = "force-dynamic";
+
 const title = "Privacy Policy | Product Partner";
 const description =
   "How Product Partner collects, uses, and protects personal information when you use our website and services.";

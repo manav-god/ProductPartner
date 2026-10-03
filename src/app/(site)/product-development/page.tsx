@@ -4,6 +4,8 @@ import { ProductDevelopmentContent } from "@/components/services/ProductDevelopm
 import { resolvePageSeo, withAdminSeo } from "@/lib/page-seo";
 import { applyAdminSchema } from "@/lib/schema";
 
+export const dynamic = "force-dynamic";
+
 const title =
   "Product Development Services | MVP & Product Engineering | Product Partner";
 const description =

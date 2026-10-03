@@ -4,6 +4,8 @@ import { ProductMarketingContent } from "@/components/services/ProductMarketingC
 import { resolvePageSeo, withAdminSeo } from "@/lib/page-seo";
 import { applyAdminSchema } from "@/lib/schema";
 
+export const dynamic = "force-dynamic";
+
 const title =
   "Product Marketing Services | Positioning, GTM & SEO/AEO/GEO | Product Partner";
 const description =

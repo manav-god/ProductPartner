@@ -23,9 +23,6 @@ export async function WorkContent() {
               <Link href="/contact" className="pd-btn pd-btn-primary">
                 Start a project
               </Link>
-              <a href="#case-studies" className="pd-btn pd-btn-secondary">
-                Browse case studies
-              </a>
             </div>
           </div>
         </section>

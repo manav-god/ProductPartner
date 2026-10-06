@@ -30,9 +30,6 @@ export function ProductDevelopmentContent({ faqs }: { faqs: FaqItem[] }) {
               <Link href="/contact" className="pd-btn pd-btn-primary">
                 Talk to Product Partner
               </Link>
-              <a href="#services" className="pd-btn pd-btn-secondary">
-                Explore Product Development Services
-              </a>
             </div>
           </div>
         </section>

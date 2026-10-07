@@ -181,20 +181,29 @@ export function ProductMarketingContent({ faqs }: { faqs: FaqItem[] }) {
       <main id="main-content">
         <section className="pd-hero">
           <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
-            <span className="pd-eyebrow">Product Marketing Services</span>
-            <h1>
-              Product Marketing That Turns{" "}
-              <span>Products Into Growth Stories</span>
-            </h1>
-            <p className="pd-lead">
-              Great products do not always sell themselves. Buyers need to
-              understand what your product does, why it matters, and why they
-              should choose it now. That is where product marketing comes in.
-            </p>
-            <div className="pd-buttons">
-              <Link href="/contact" className="pd-btn pd-btn-primary">
-                Talk to Product Partner
-              </Link>
+            <div className="pd-hero__layout">
+              <div>
+                <span className="pd-eyebrow">Product Marketing Services</span>
+                <h1>
+                  Product Marketing That Turns{" "}
+                  <span>Products Into Growth Stories</span>
+                </h1>
+                <p className="pd-lead">
+                  Great products do not always sell themselves. Buyers need to
+                  understand what your product does, why it matters, and why they
+                  should choose it now. That is where product marketing comes in.
+                </p>
+                <div className="pd-buttons">
+                  <Link href="/contact" className="pd-btn pd-btn-primary">
+                    Talk to Product Partner
+                  </Link>
+                </div>
+              </div>
+              <img
+                src="/images/hero/product_marketing.png"
+                alt="Product Marketing"
+                className="pd-hero__art"
+              />
             </div>
           </div>
         </section>

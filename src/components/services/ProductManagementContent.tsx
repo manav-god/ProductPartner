@@ -105,21 +105,30 @@ export function ProductManagementContent({ faqs }: { faqs: FaqItem[] }) {
       <main id="main-content">
         <section className="pd-hero">
           <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
-            <span className="pd-eyebrow">Product Management Services</span>
-            <h1>
-              Product Management That Turns{" "}
-              <span>Customer Problems Into Products People Want</span>
-            </h1>
-            <p className="pd-lead">
-              Great product management is not about filling a roadmap with
-              features. It is about understanding customer problems, making
-              better product decisions, and helping teams build products that
-              create measurable value.
-            </p>
-            <div className="pd-buttons">
-              <Link href="/contact" className="pd-btn pd-btn-primary">
-                Talk to Product Partner
-              </Link>
+            <div className="pd-hero__layout">
+              <div>
+                <span className="pd-eyebrow">Product Management Services</span>
+                <h1>
+                  Product Management That Turns{" "}
+                  <span>Customer Problems Into Products People Want</span>
+                </h1>
+                <p className="pd-lead">
+                  Great product management is not about filling a roadmap with
+                  features. It is about understanding customer problems, making
+                  better product decisions, and helping teams build products that
+                  create measurable value.
+                </p>
+                <div className="pd-buttons">
+                  <Link href="/contact" className="pd-btn pd-btn-primary">
+                    Talk to Product Partner
+                  </Link>
+                </div>
+              </div>
+              <img
+                src="/images/hero/fractiondevelopment.png"
+                alt="Fractional Product Leadership"
+                className="pd-hero__art"
+              />
             </div>
           </div>
         </section>

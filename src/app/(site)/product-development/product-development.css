@@ -151,6 +151,33 @@
   background: #111111;
 }
 
+.pd-hero__layout {
+  display: grid;
+  align-items: center;
+  gap: 28px;
+}
+
+.pd-hero__art {
+  display: block;
+  width: min(100%, 400px);
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+@media (min-width: 1024px) {
+  .pd-hero__layout {
+    grid-template-columns: minmax(0, 1fr) 480px;
+    gap: 40px;
+  }
+
+  .pd-hero__art {
+    width: 100%;
+    max-width: 480px;
+    margin: 0;
+  }
+}
+
 @media (min-width: 768px) {
   .pd-hero {
     padding: 112px 0 96px;

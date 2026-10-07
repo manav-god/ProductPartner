@@ -12,24 +12,33 @@ export function ProductDevelopmentContent({ faqs }: { faqs: FaqItem[] }) {
         {/* HERO */}
         <section className="pd-hero">
           <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
-            <span className="pd-eyebrow">Product Development Services</span>
+            <div className="pd-hero__layout">
+              <div>
+                <span className="pd-eyebrow">Product Development Services</span>
 
-            <h1>
-              Product Development That Turns{" "}
-              <span>Ideas Into Products People Can Use</span>
-            </h1>
+                <h1>
+                  Product Development That Turns{" "}
+                  <span>Ideas Into Products People Can Use</span>
+                </h1>
 
-            <p className="pd-lead">
-              Great product development is not simply about writing code. It is
-              about turning a validated problem into a usable product, building
-              the right foundation, and continuously improving it as real users
-              interact with it.
-            </p>
+                <p className="pd-lead">
+                  Great product development is not simply about writing code. It is
+                  about turning a validated problem into a usable product, building
+                  the right foundation, and continuously improving it as real users
+                  interact with it.
+                </p>
 
-            <div className="pd-buttons">
-              <Link href="/contact" className="pd-btn pd-btn-primary">
-                Talk to Product Partner
-              </Link>
+                <div className="pd-buttons">
+                  <Link href="/contact" className="pd-btn pd-btn-primary">
+                    Talk to Product Partner
+                  </Link>
+                </div>
+              </div>
+              <img
+                src="/images/hero/product_development.png"
+                alt="Product Development"
+                className="pd-hero__art"
+              />
             </div>
           </div>
         </section>

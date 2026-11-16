@@ -6,7 +6,7 @@ import { ArrowRight } from "@/components/icons";
 
 type Status = "idle" | "loading" | "success" | "error";
 
-export function ContactForm() {
+export function ContactForm({ tone = "dark" }: { tone?: "dark" | "light" }) {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
   const [formKey, setFormKey] = useState(0);
@@ -49,6 +49,15 @@ export function ContactForm() {
     }
   }
 
+  const light = tone === "light";
+  const labelClass = light
+    ? "mb-2 block text-[13px] font-medium text-[#45433f]"
+    : "mb-2 block text-[13px] font-medium text-white/70";
+  const fieldClass = light
+    ? "w-full rounded-[14px] border border-[rgba(14,14,14,0.12)] bg-white px-4 text-[15px] text-[#0e0e0e] outline-none placeholder:text-[#8a8883] focus:border-[#ff5a1f]"
+    : "w-full rounded-[10px] border border-white/15 bg-white/5 px-4 text-[15px] text-white outline-none placeholder:text-white/35 focus:border-accent";
+  const inputClass = `${fieldClass} ${light ? "h-[52px]" : "h-12"}`;
+
   return (
     <form
       key={formKey}
@@ -56,81 +65,75 @@ export function ContactForm() {
       onSubmit={handleSubmit}
     >
       <label className="block sm:col-span-1">
-        <span className="mb-2 block text-[13px] font-medium text-white/70">
-          First name*
-        </span>
+        <span className={labelClass}>First name*</span>
         <input
           name="firstName"
           type="text"
           placeholder="First name"
           required
-          className="h-12 w-full rounded-[10px] border border-white/15 bg-white/5 px-4 text-[15px] text-white outline-none placeholder:text-white/35 focus:border-accent"
+          className={inputClass}
         />
       </label>
       <label className="block sm:col-span-1">
-        <span className="mb-2 block text-[13px] font-medium text-white/70">
-          Last name*
-        </span>
+        <span className={labelClass}>Last name*</span>
         <input
           name="lastName"
           type="text"
           placeholder="Last name"
           required
-          className="h-12 w-full rounded-[10px] border border-white/15 bg-white/5 px-4 text-[15px] text-white outline-none placeholder:text-white/35 focus:border-accent"
+          className={inputClass}
         />
       </label>
       <label className="block sm:col-span-1">
-        <span className="mb-2 block text-[13px] font-medium text-white/70">
-          Email*
-        </span>
+        <span className={labelClass}>Email*</span>
         <input
           name="email"
           type="email"
           placeholder="you@company.com"
           required
-          className="h-12 w-full rounded-[10px] border border-white/15 bg-white/5 px-4 text-[15px] text-white outline-none placeholder:text-white/35 focus:border-accent"
+          className={inputClass}
         />
       </label>
       <label className="block sm:col-span-1">
-        <span className="mb-2 block text-[13px] font-medium text-white/70">
-          Company name
-        </span>
+        <span className={labelClass}>Company name</span>
         <input
           name="company"
           type="text"
           placeholder="Company"
-          className="h-12 w-full rounded-[10px] border border-white/15 bg-white/5 px-4 text-[15px] text-white outline-none placeholder:text-white/35 focus:border-accent"
+          className={inputClass}
         />
       </label>
-      <PhoneField />
+      <PhoneField tone={tone} />
       <label className="block sm:col-span-2">
-        <span className="mb-2 block text-[13px] font-medium text-white/70">
-          How can we help?
-        </span>
+        <span className={labelClass}>How can we help?</span>
         <textarea
           name="message"
           rows={4}
           placeholder="Leave us a message..."
-          className="w-full resize-y rounded-[10px] border border-white/15 bg-white/5 px-4 py-3 text-[15px] text-white outline-none placeholder:text-white/35 focus:border-accent"
+          className={`${fieldClass} min-h-[110px] resize-y py-3`}
         />
       </label>
       <div className="sm:col-span-2">
         <button
           type="submit"
           disabled={status === "loading"}
-          className="inline-flex h-[48px] items-center gap-2 rounded-[10px] bg-accent px-7 text-[14px] font-semibold text-white transition-colors hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-60"
+          className={
+            light
+              ? "inline-flex h-14 items-center gap-2 rounded-full bg-[#ff5a1f] px-7 text-[16px] font-semibold text-[#0e0e0e] disabled:cursor-not-allowed disabled:opacity-60"
+              : "inline-flex h-[48px] items-center gap-2 rounded-[10px] bg-accent px-7 text-[14px] font-semibold text-white transition-colors hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-60"
+          }
         >
           {status === "loading" ? "Sending..." : "Submit"}
           <ArrowRight className="h-3.5 w-3.5" />
         </button>
 
         {status === "success" ? (
-          <p className="mt-3 text-[14px] text-emerald-400">
+          <p className={`mt-3 text-[14px] ${light ? "text-emerald-700" : "text-emerald-400"}`}>
             Thanks, your message was sent. We&apos;ll get back to you soon.
           </p>
         ) : null}
         {status === "error" ? (
-          <p className="mt-3 text-[14px] text-red-400">{error}</p>
+          <p className={`mt-3 text-[14px] ${light ? "text-red-600" : "text-red-400"}`}>{error}</p>
         ) : null}
       </div>
     </form>

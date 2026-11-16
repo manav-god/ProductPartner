@@ -1,591 +1,352 @@
+import { Inter, JetBrains_Mono } from "next/font/google";
 import Link from "next/link";
-import { ArrowRight } from "@/components/icons";
-import { ServiceFaqs } from "@/components/services/ServiceFaqs";
-import type { FaqItem } from "@/lib/page-faqs";
-import { PdIndustrySection } from "@/components/services/PdIndustrySection";
-import "@/app/(site)/product-development/product-development.css";
 
-export function ProductDevelopmentContent({ faqs }: { faqs: FaqItem[] }) {
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+});
+
+const jetbrains = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const quotes = [
+  "We have the idea. We need a first version real users can try.",
+  "We got quotes for a build, but nobody asked what it needs to prove.",
+  "Our product can’t keep up with what users need.",
+  "We want builders who question the spec when it matters.",
+];
+
+const builds = [
+  {
+    title: "Discovery and scope",
+    body: "Users, goals and what can wait, agreed before any build starts.",
+  },
+  {
+    title: "MVPs",
+    body: "A focused first version that real users can try.",
+    link: { label: "MVP App Development", href: "/contact" },
+  },
+  {
+    title: "Mobile apps",
+    body: "iOS and Android apps, native or cross-platform.",
+  },
+  {
+    title: "Web platforms",
+    body: "Web apps, dashboards and the sites around them.",
+  },
+  {
+    title: "Custom software",
+    body: "Integrations, admin tools and internal systems.",
+  },
+  {
+    title: "Feature releases",
+    body: "Ongoing improvements after launch, shipped in a steady rhythm.",
+  },
+];
+
+const steps = [
+  {
+    step: "Step 1",
+    title: "Discover",
+    body: "Who it’s for, what it has to prove, and what can wait.",
+    accent: true,
+  },
+  {
+    step: "Step 2",
+    title: "Scope",
+    body: "A clear plan, timeline and price before you commit.",
+  },
+  {
+    step: "Step 3",
+    title: "Build",
+    body: "Short cycles, with working software to review along the way.",
+  },
+  {
+    step: "Step 4",
+    title: "Launch and keep shipping",
+    body: "Get it live, then keep improving it with feature releases.",
+  },
+];
+
+const faqs = [
+  {
+    question: "Who owns the code?",
+    answer: "You do. 100% of the code and IP.",
+  },
+  {
+    question: "How long does an MVP take?",
+    answer: "A focused MVP is usually a few months. The scope sets the timeline.",
+  },
+  {
+    question: "What do you build with?",
+    answer: "The stack that fits the product. We agree it before the build starts.",
+  },
+  {
+    question: "What happens after launch?",
+    answer: "We stay on, and keep shipping feature releases in a steady rhythm.",
+  },
+];
+
+function BookCallLink({ className = "" }: { className?: string }) {
   return (
-    <div className="pd-page">
-      <main id="main-content">
-        {/* HERO */}
-        <section className="pd-hero">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
-            <div className="pd-hero__layout">
-              <div>
-                <span className="pd-eyebrow">Product Development Services</span>
+    <Link
+      href="/contact"
+      className={`inline-flex h-14 items-center gap-2.5 rounded-full bg-[#ff5a1f] px-7 text-[16px] font-semibold text-[#0e0e0e] transition-colors hover:bg-[#ff6a35] ${className}`}
+    >
+      Book a call
+    </Link>
+  );
+}
 
-                <h1>
-                  Product Development That Turns{" "}
-                  <span>Ideas Into Products People Can Use</span>
-                </h1>
-
-                <p className="pd-lead">
-                  Great product development is not simply about writing code. It is
-                  about turning a validated problem into a usable product, building
-                  the right foundation, and continuously improving it as real users
-                  interact with it.
-                </p>
-
-                <div className="pd-buttons">
-                  <Link href="/contact" className="pd-btn pd-btn-primary">
-                    Talk to Product Partner
-                  </Link>
-                </div>
-              </div>
-              <img
-                src="/images/hero/product_development.png"
-                alt="Product Development"
-                className="pd-hero__art"
-              />
+export function ProductDevelopmentContent() {
+  return (
+    <div className={`${inter.className} bg-white text-[#0e0e0e]`}>
+      <section className="canvas-dots">
+        <div className="mx-auto grid w-full max-w-[1240px] items-end gap-10 px-5 pt-16 pb-20 sm:px-8 lg:px-12 lg:pt-24 lg:pb-[112px] xl:grid-cols-[minmax(0,680px)_458px] xl:justify-between">
+          <div>
+            <p className={`${jetbrains.className} text-[13px] text-[#6a6864]`}>
+              <Link href="/#services" className="hover:text-[#0e0e0e]">
+                Services
+              </Link>
+              <span className="px-2">/</span>
+              Product Development
+            </p>
+            <h1 className="mt-4 max-w-[12ch] text-[40px] leading-[1.05] font-semibold tracking-[-0.05em] sm:max-w-none sm:text-[56px] xl:text-[76px] xl:leading-[82px] xl:tracking-[-3.6px]">
+              <span className="xl:block">Build what the</span>{" "}
+              <span className="xl:block">product needs.</span>{" "}
+              <span className="xl:block">
+                Nothing it doesn’t<span className="text-[#ff5a1f]">.</span>
+              </span>
+            </h1>
+            <p className="mt-6 max-w-[540px] text-[18px] leading-[33px] text-[#45433f] sm:text-[20px]">
+              MVPs, mobile apps, web platforms and custom software. We agree what the product has
+              to prove first, then build it to scale.
+            </p>
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              <BookCallLink />
+              <Link
+                href="/work/fitness-app"
+                className="inline-flex h-14 items-center justify-center rounded-full border border-[rgba(14,14,14,0.18)] bg-white px-7 text-[16px] font-semibold text-[#0e0e0e] transition-colors hover:bg-[#f6f5f2]"
+              >
+                Read a case study
+              </Link>
             </div>
           </div>
-        </section>
 
-        {/* DEFINITION */}
-        <section className="pd-section">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
-            <span className="pd-eyebrow">Product Development Explained</span>
-            <h2>What Is Product Development?</h2>
-
-            <ul className="pd-points" id="definition">
-              <li>
-                <ArrowRight className="pd-points__icon" />
-                <span>
-                  Product development is the process of turning a product
-                  opportunity or idea into a usable, tested, launched, and
-                  continuously improved product.
-                </span>
-              </li>
-              <li>
-                <ArrowRight className="pd-points__icon" />
-                <span>
-                  It can involve product discovery, validation, UX/UI design,
-                  prototyping, MVP development, software engineering, testing,
-                  deployment, analytics, and post-launch iteration.
-                </span>
-              </li>
-              <li>
-                <ArrowRight className="pd-points__icon" />
-                <span>
-                  Effective product development connects business goals,
-                  customer needs, design, technology, and execution so teams can
-                  build products with a clear purpose instead of simply building
-                  more features.
-                </span>
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        {/* SERVICES */}
-        <section className="pd-section" id="services">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
-            <span className="pd-eyebrow">Our Services</span>
-            <h2>Product Development Services From Idea to Launch</h2>
-            <p>
-              Product development should reduce uncertainty before increasing
-              complexity. Our approach connects discovery, design, engineering,
-              testing, launch, and iteration around the product you actually need
-              to build.
-            </p>
-
-            <div className="pd-service-grid">
-              {[
-                {
-                  label: "Discovery",
-                  title: "Product Discovery & Validation",
-                  description:
-                    "Start with the problem, users, business objectives, and technical realities before committing to a large build. The goal is simple: create enough clarity to know what should be built before significant development resources are committed.",
-                  tags: [
-                    "Product discovery",
-                    "Customer problem validation",
-                    "Market research",
-                    "Technical feasibility",
-                    "Product requirements",
-                    "MVP scope definition",
-                  ],
-                  icon: (
-                    <svg viewBox="0 0 24 24" fill="none">
-                      <circle
-                        cx="11"
-                        cy="11"
-                        r="6.5"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                      />
-                      <path
-                        d="M16.5 16.5 20 20"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                      />
-                      <circle cx="9" cy="10" r="1" fill="#FF5900" />
-                      <circle cx="12.5" cy="9.5" r="1" fill="#FF5900" />
-                      <circle cx="11" cy="13" r="1" fill="#FF5900" />
-                      <path
-                        d="M9 10l3.5-.5M12.5 9.5l-1.5 3.5"
-                        stroke="#FF5900"
-                        strokeWidth="1.2"
-                      />
-                    </svg>
-                  ),
-                },
-                {
-                  label: "MVP",
-                  title: "MVP Product Development",
-                  description:
-                    "Build a focused first version that tests the core product value without unnecessarily expanding scope. A strong MVP should be small enough to validate, but useful enough to generate meaningful feedback from real users.",
-                  tags: [
-                    "MVP strategy",
-                    "Feature prioritization",
-                    "Prototype development",
-                    "Web MVP development",
-                    "Mobile MVP development",
-                    "SaaS MVP development",
-                  ],
-                  icon: (
-                    <svg viewBox="0 0 24 24" fill="none">
-                      <rect
-                        x="4"
-                        y="5"
-                        width="16"
-                        height="14"
-                        rx="2"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                      />
-                      <path
-                        d="M8 15h8M8 11h5"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                      />
-                      <circle cx="16.5" cy="8.5" r="1" fill="#FF5900" />
-                      <circle cx="18.2" cy="10.5" r="1" fill="#FF5900" />
-                      <circle cx="15.8" cy="11.5" r="1" fill="#FF5900" />
-                      <path
-                        d="M16.5 8.5l1.7 2M16.5 8.5l-.7 3"
-                        stroke="#FF5900"
-                        strokeWidth="1.2"
-                      />
-                    </svg>
-                  ),
-                },
-                {
-                  label: "Design",
-                  title: "Product Design & Prototyping",
-                  description:
-                    "Translate product requirements into user journeys, interfaces, prototypes, and experiences that can be tested before full development. Design is not decoration added after development. It is part of deciding how the product should work.",
-                  tags: [
-                    "User journeys",
-                    "Information architecture",
-                    "Wireframes",
-                    "Interactive prototypes",
-                    "UI design",
-                    "Design systems",
-                  ],
-                  icon: (
-                    <svg viewBox="0 0 24 24" fill="none">
-                      <path
-                        d="M4 18.5 14.5 8l2.5 2.5L6.5 21H4v-2.5Z"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        strokeLinejoin="round"
-                      />
-                      <path
-                        d="m13.5 9 2.5 2.5"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                      />
-                      <circle cx="17.5" cy="6.5" r="1" fill="#FF5900" />
-                      <circle cx="19.2" cy="8.5" r="1" fill="#FF5900" />
-                      <circle cx="16.8" cy="9.5" r="1" fill="#FF5900" />
-                      <path
-                        d="M17.5 6.5l1.7 2M17.5 6.5l-.7 3"
-                        stroke="#FF5900"
-                        strokeWidth="1.2"
-                      />
-                    </svg>
-                  ),
-                },
-                {
-                  label: "Engineering",
-                  title: "Product Engineering & Development",
-                  description:
-                    "Turn validated product requirements and designs into reliable digital products through structured engineering. We focus on building a technical foundation that can support the product beyond its first release.",
-                  tags: [
-                    "Frontend development",
-                    "Backend development",
-                    "API development",
-                    "Cloud infrastructure",
-                    "Third-party integrations",
-                    "Quality assurance",
-                  ],
-                  icon: (
-                    <svg viewBox="0 0 24 24" fill="none">
-                      <path
-                        d="M8 8 4.5 12 8 16M16 8l3.5 4L16 16"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                      <path
-                        d="m13.5 7-3 10"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                      />
-                      <circle cx="17.5" cy="7" r="1" fill="#FF5900" />
-                      <circle cx="19.2" cy="9" r="1" fill="#FF5900" />
-                      <circle cx="16.8" cy="10" r="1" fill="#FF5900" />
-                      <path
-                        d="M17.5 7l1.7 2M17.5 7l-.7 3"
-                        stroke="#FF5900"
-                        strokeWidth="1.2"
-                      />
-                    </svg>
-                  ),
-                },
-                {
-                  label: "Launch",
-                  title: "Product Launch & Deployment",
-                  description:
-                    "Prepare the product for real users with deployment, analytics, monitoring, and launch readiness.",
-                  tags: [
-                    "Production deployment",
-                    "Cloud configuration",
-                    "Analytics implementation",
-                    "Performance testing",
-                    "Launch readiness",
-                    "Monitoring",
-                  ],
-                  icon: (
-                    <svg viewBox="0 0 24 24" fill="none">
-                      <path
-                        d="M5 15.5c2.5-1 5-1.5 7-1.5s4.5.5 7 1.5"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                      />
-                      <path
-                        d="M12 4v10M12 4l3.5 3.5M12 4 8.5 7.5"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                      <circle cx="16.5" cy="7" r="1" fill="#FF5900" />
-                      <circle cx="18.2" cy="9" r="1" fill="#FF5900" />
-                      <circle cx="15.8" cy="10" r="1" fill="#FF5900" />
-                      <path
-                        d="M16.5 7l1.7 2M16.5 7l-.7 3"
-                        stroke="#FF5900"
-                        strokeWidth="1.2"
-                      />
-                    </svg>
-                  ),
-                },
-                {
-                  label: "Growth",
-                  title: "Post-Launch Product Development",
-                  description:
-                    "Product development does not stop when the product launches. Real usage creates new information about what should happen next.",
-                  tags: [
-                    "User feedback analysis",
-                    "Feature iteration",
-                    "Performance improvements",
-                    "Product analytics",
-                    "Architecture improvements",
-                    "Product scaling",
-                  ],
-                  icon: (
-                    <svg viewBox="0 0 24 24" fill="none">
-                      <path
-                        d="M4 16.5 9 11l3.5 3.5L20 7"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                      <path
-                        d="M15 7h5v5"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                      <circle cx="10.5" cy="9" r="1" fill="#FF5900" />
-                      <circle cx="12.2" cy="7" r="1" fill="#FF5900" />
-                      <circle cx="9.8" cy="6.5" r="1" fill="#FF5900" />
-                      <path
-                        d="M10.5 9l1.7-2M10.5 9l-.7-2.5"
-                        stroke="#FF5900"
-                        strokeWidth="1.2"
-                      />
-                    </svg>
-                  ),
-                },
-              ].map((service) => (
-                <article key={service.title} className="pd-service-card">
-                  <div className="pd-service-card__header">
-                    <span className="pd-service-card__icon" aria-hidden>
-                      {service.icon}
-                    </span>
-                    <span className="pd-service-card__divider" aria-hidden />
-                    <span className="pd-service-card__label">{service.label}</span>
-                  </div>
-                  <h3 className="pd-service-card__title">{service.title}</h3>
-                  <p className="pd-service-card__desc">{service.description}</p>
-                  <div className="pd-service-card__tags">
-                    {service.tags.map((tag) => (
-                      <span key={tag} className="pd-service-card__tag">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </article>
+          <div className="rounded-[22px] bg-white p-6 shadow-[0_18px_20px_rgba(20,16,12,0.08)]">
+            <div className="flex items-center justify-between">
+              <p className="text-[15px] font-semibold">Build plan</p>
+              <p className={`${jetbrains.className} text-[12px] text-[#6a6864]`}>MVP</p>
+            </div>
+            <ul className="mt-4 space-y-3">
+              {["Discovery and scope", "Design and core flows"].map((item) => (
+                <li
+                  key={item}
+                  className="flex h-11 items-center gap-3 rounded-xl bg-[#f6f5f2] px-3.5 text-[14px]"
+                >
+                  <span className="grid size-5 shrink-0 place-items-center rounded-[10px] bg-[#0e0e0e]">
+                    <img
+                      src="/images/icons/build-plan-check.svg"
+                      alt=""
+                      width={11}
+                      height={11}
+                    />
+                  </span>
+                  {item}
+                </li>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* B2B */}
-        <section className="pd-section pd-dark" id="b2b">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
-            <span className="pd-eyebrow">B2B Product Development</span>
-            <h2>B2B Product Development Services</h2>
-            <p>
-              B2B products often have multiple user groups, complex workflows,
-              integrations, security requirements, and longer decision cycles.
-              Product development needs to account for those realities from the
-              beginning.
-            </p>
-
-            <div className="pd-grid">
-              <div className="pd-card">
-                <h3>B2B SaaS Product Development</h3>
-                <p>
-                  Build SaaS products around real customer workflows, scalable
-                  architecture, integrations, and measurable product outcomes.
-                </p>
-              </div>
-              <div className="pd-card">
-                <h3>Enterprise Product Development</h3>
-                <p>
-                  Develop digital products that account for complex workflows,
-                  stakeholders, security, integrations, and operational
-                  requirements.
-                </p>
-              </div>
-              <div className="pd-card">
-                <h3>AI Product Development</h3>
-                <p>
-                  Integrate AI capabilities such as intelligent search,
-                  automation, recommendations, assistants, or analysis where they
-                  provide meaningful product value.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <PdIndustrySection />
-
-        {/* DIFFERENTIATION */}
-        <section className="pd-section pd-missing">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
-            <span className="pd-eyebrow">Our Product Development Approach</span>
-            <h2>What Makes Our Product Development Approach Different?</h2>
-            <p>
-              Product development becomes expensive when teams move from an
-              unclear idea directly into a large build. We create decision points
-              throughout the process so teams can learn before complexity
-              compounds.
-            </p>
-
-            <div className="pd-grid">
-              <div className="pd-card">
-                <h3>Are We Building the Right Thing?</h3>
-                <p>
-                  Before development expands, we clarify the customer problem,
-                  product opportunity, and expected outcome.
-                </p>
-              </div>
-              <div className="pd-card">
-                <h3>What Should Be Built First?</h3>
-                <p>
-                  We separate essential product value from features that can wait
-                  for later releases.
-                </p>
-              </div>
-              <div className="pd-card">
-                <h3>Can the Product Grow From Here?</h3>
-                <p>
-                  Architecture, UX, integrations, analytics, and technical
-                  decisions should consider what happens after the first release.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* MISSING ANGLE */}
-        <section className="pd-section">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
-            <span className="pd-eyebrow">Beyond Development</span>
-            <h2>Product Development Is More Than Building Features</h2>
-            <p>
-              Many product development projects focus heavily on features,
-              frameworks, and delivery timelines. But shipping more software does
-              not automatically create a better product.
-            </p>
-
-            <h3 id="product-development-debt">
-              The Cost of Product Development Debt
-            </h3>
-            <p>
-              <dfn>
-                <strong>Product development debt</strong>
-              </dfn>{" "}
-              happens when rushed product decisions, unclear requirements, weak
-              architecture, fragmented systems, and short-term fixes accumulate
-              and make future development harder.
-            </p>
-
-            <div className="pd-grid">
-              <div className="pd-card">
-                <h3>Common Symptoms</h3>
-                <ul>
-                  <li>Constant feature rework</li>
-                  <li>Unclear requirements</li>
-                  <li>Slow releases</li>
-                  <li>Growing technical complexity</li>
-                </ul>
-              </div>
-              <div className="pd-card">
-                <h3>What It Creates</h3>
-                <p>
-                  Teams spend more time fixing previous decisions and less time
-                  creating meaningful improvements for users.
-                </p>
-              </div>
-              <div className="pd-card">
-                <h3>The Better Approach</h3>
-                <p>
-                  Product Partner connects product decisions, design,
-                  engineering, testing, analytics, and feedback so development
-                  can evolve instead of constantly restart.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* FRAMEWORK */}
-        <section className="pd-section">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
-            <span className="pd-eyebrow">Product Partner Framework</span>
-            <h2>Our Product Development Framework</h2>
-            <p>
-              Our product development framework connects product thinking with
-              design and engineering, moving from uncertainty toward a working
-              product and continuous improvement.
-            </p>
-
-            <div className="pd-framework">
-              <div className="pd-step">
-                <div className="pd-step-number">01 DISCOVER</div>
-                <h3>Understand</h3>
-                <p>
-                  Understand the customer problem, users, market, business
-                  objectives, and technical context.
-                </p>
-              </div>
-              <div className="pd-step">
-                <div className="pd-step-number">02 DEFINE</div>
-                <h3>Scope</h3>
-                <p>
-                  Define product requirements, core workflows, success criteria,
-                  MVP scope, and priorities.
-                </p>
-              </div>
-              <div className="pd-step">
-                <div className="pd-step-number">03 DESIGN</div>
-                <h3>Experience</h3>
-                <p>
-                  Translate requirements into user journeys, wireframes,
-                  prototypes, and product interfaces.
-                </p>
-              </div>
-              <div className="pd-step">
-                <div className="pd-step-number">04 DEVELOP</div>
-                <h3>Build</h3>
-                <p>
-                  Engineer the product through frontend, backend, APIs,
-                  integrations, testing, and deployment.
-                </p>
-              </div>
-              <div className="pd-step">
-                <div className="pd-step-number">05 LAUNCH</div>
-                <h3>Release</h3>
-                <p>
-                  Deploy the product, establish analytics and monitoring, and put
-                  the product in front of users.
-                </p>
-              </div>
-              <div className="pd-step">
-                <div className="pd-step-number">06 LEARN &amp; SCALE</div>
-                <h3>Improve</h3>
-                <p>
-                  Use product data and user feedback to prioritize improvements,
-                  strengthen the product, and scale what works.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* WHY PRODUCT PARTNER */}
-        <section className="pd-section">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
-            <span className="pd-eyebrow">Why Product Partner</span>
-            <h2>
-              Product Development That Connects Strategy With Technology
-            </h2>
-            <p>
-              Product Partner works at the intersection of product strategy,
-              design, technology, engineering, and growth.
-            </p>
-            <p>
-              Instead of treating development as an isolated coding exercise, we
-              connect the product problem with the experience, technology,
-              release, and learning required to create a product that can evolve.
-              That same discipline carries through our{" "}
-              <Link href="/#services">product management</Link> and{" "}
-              <Link href="/#services">product marketing</Link> work, deciding
-              what to build, then how it&apos;s positioned once it ships.
-            </p>
-            <ul>
-              <li>Turn product ideas into buildable opportunities</li>
-              <li>
-                Validate product concepts before large development investments
+              <li className="flex h-[46px] items-center gap-3 rounded-xl border border-[#ff5a1f] px-3.5 text-[14px] font-semibold">
+                <span className="grid size-5 shrink-0 place-items-center rounded-[10px] border-2 border-[#ff5a1f]">
+                  <span className="size-2 rounded-[4px] bg-[#ff5a1f]" />
+                </span>
+                Build
+                <span
+                  className={`${jetbrains.className} ml-auto text-[11px] font-normal text-[#6a6864]`}
+                >
+                  in progress
+                </span>
               </li>
-              <li>Define focused MVPs</li>
-              <li>Design usable product experiences</li>
-              <li>Build web, mobile, SaaS, and digital products</li>
-              <li>Connect product development with measurable outcomes</li>
+              <li className="flex h-[46px] items-center gap-3 rounded-xl border border-dashed border-[rgba(14,14,14,0.2)] px-3.5 text-[14px] text-[#6a6864]">
+                <span className="size-5 shrink-0 rounded-[10px] border-2 border-[rgba(14,14,14,0.25)]" />
+                Launch
+              </li>
             </ul>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <ServiceFaqs
-          heading="Frequently Asked Questions About Product Development"
-          faqs={faqs}
-        />
-      </main>
+      <section className="bg-white">
+        <div className="mx-auto w-full max-w-[1240px] px-5 pt-20 pb-8 sm:px-8 lg:px-12 lg:pt-32">
+          <p className={`${jetbrains.className} text-[13px] text-[#6a6864]`}>Is this for you?</p>
+          <h2 className="mt-3 max-w-[12ch] text-[36px] leading-[1.08] font-semibold tracking-[-0.045em] sm:text-[48px] lg:max-w-[14ch] lg:text-[56px] lg:leading-[62px]">
+            Usually, one of these sounds familiar.
+          </h2>
+          <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:mt-14 lg:grid-cols-4">
+            {quotes.map((quote) => (
+              <li
+                key={quote}
+                className="rounded-[22px] bg-[#f6f5f2] px-7 py-7 text-[16px] leading-[1.55]"
+              >
+                “{quote}”
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="bg-white">
+        <div className="mx-auto w-full max-w-[1240px] px-5 pt-16 pb-20 sm:px-8 lg:px-12 lg:pt-20 lg:pb-[88px]">
+          <p className={`${jetbrains.className} text-[13px] text-[#6a6864]`}>What we build</p>
+          <h2 className="mt-3 max-w-[12ch] text-[36px] leading-[1.08] font-semibold tracking-[-0.045em] sm:text-[48px] lg:text-[56px] lg:leading-[62px]">
+            From first version to steady releases.
+          </h2>
+          <ul className="mt-12 grid gap-4 lg:mt-14 lg:grid-cols-3">
+            {builds.map((item) => (
+              <li key={item.title} className="rounded-[22px] bg-[#f6f5f2] px-7 py-7">
+                <h3 className="text-[22px] font-semibold tracking-[-0.03em]">{item.title}</h3>
+                <p className="mt-3 max-w-[32ch] text-[15px] leading-[1.6] text-[#45433f]">
+                  {item.body}
+                </p>
+                {item.link ? (
+                  <Link
+                    href={item.link.href}
+                    className="mt-5 inline-flex items-center gap-2 text-[15px] font-semibold text-[#ff5a1f]"
+                  >
+                    {item.link.label}
+                    <span aria-hidden="true">→</span>
+                  </Link>
+                ) : null}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="bg-[#0e0e0e] text-[#f4f3ef]">
+        <div className="mx-auto w-full max-w-[1240px] px-5 py-20 sm:px-8 lg:px-12 lg:py-32">
+          <p className="text-[12px] font-semibold tracking-[0.14em] text-[#a3a19c] uppercase">
+            How it works
+          </p>
+          <h2 className="mt-3 text-[36px] leading-[1.1] font-semibold tracking-[-0.05em] sm:text-[48px] lg:text-[52px] lg:leading-[57px] lg:tracking-[-2.52px]">
+            Questions first. Then code<span className="text-[#ff5a1f]">.</span>
+          </h2>
+          <ol className="mt-12 grid list-none gap-5 md:grid-cols-2 lg:mt-[52px] lg:grid-cols-4 [&:hover>li:not(:hover)]:border-transparent">
+            {steps.map((item) => (
+              <li
+                key={item.step}
+                className={`rounded-[22px] border-t-[3px] bg-[#1a1918] p-7 transition-[border-color] duration-300 ease-out hover:border-[#ff5a1f] ${
+                  item.accent ? "border-[#ff5a1f]" : "border-transparent"
+                }`}
+              >
+                <p className={`${jetbrains.className} text-[12px] text-[#a3a19c]`}>{item.step}</p>
+                <h3 className="mt-3 text-[24px] leading-[1.15] font-semibold tracking-[-0.03em]">
+                  {item.title}
+                </h3>
+                <p className="mt-3.5 text-[14.5px] leading-[1.7] text-[#b9b7b2]">{item.body}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/*
+      <section className="bg-white">
+        <div className="mx-auto grid w-full max-w-[1240px] gap-6 px-5 py-20 sm:px-8 lg:grid-cols-[minmax(0,630px)_minmax(0,490px)] lg:justify-between lg:px-12 lg:py-32">
+          <Link
+            href="/work/fitness-app"
+            className="flex min-h-[320px] flex-col rounded-[24px] bg-[#f4f3ef] p-8 lg:min-h-[360px] lg:p-12"
+          >
+            <span className="inline-flex h-7 w-fit items-center rounded-full bg-white px-3 text-[13px] text-[#0e0e0e]">
+              Health &amp; Fitness · iOS &amp; AI
+            </span>
+            <p className="mt-8 text-[72px] leading-none font-semibold tracking-[-0.05em] lg:text-[92px]">
+              +40%
+            </p>
+            <p className="mt-4 text-[20px] font-semibold tracking-[-0.02em] lg:text-[22px]">
+              AI Fitness Platform: challenge engagement
+            </p>
+            <p className="mt-4 text-[16px] font-semibold text-[#ff5a1f]">
+              Read the case study <span aria-hidden="true">→</span>
+            </p>
+          </Link>
+          <figure className="flex min-h-[320px] flex-col justify-between rounded-[24px] bg-[#f6f5f2] p-8 lg:min-h-[360px] lg:p-10">
+            <blockquote className="text-[26px] leading-[1.35] font-semibold tracking-[-0.03em] lg:text-[28px]">
+              “He built our multiplayer mobile game MVP from scratch, handling complex real-time
+              features perfectly.”
+            </blockquote>
+            <figcaption className="mt-10 flex items-baseline gap-3 text-[15px]">
+              <span className="font-semibold">Nikodem Rafal</span>
+              <span className="text-[#6a6864]">CEO, Dared</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      */}
+
+      <section className="bg-[#f4f3ef]">
+        <div className="mx-auto w-full max-w-[1240px] px-5 py-20 sm:px-8 lg:px-12 lg:py-32">
+          <p className={`${jetbrains.className} text-[13px] text-[#6a6864]`}>
+            Two ways to build with us
+          </p>
+          <h2 className="mt-3 text-[36px] leading-[1.1] font-semibold tracking-[-0.045em] sm:text-[48px] lg:text-[52px]">
+            Pick the one that fits where you are.
+          </h2>
+          <div className="mt-12 grid gap-5 lg:mt-14 lg:grid-cols-2">
+            <article className="rounded-[22px] bg-white px-8 py-10 lg:px-10">
+              <p className={`${jetbrains.className} text-[13px] text-[#6a6864]`}>Build</p>
+              <h3 className="mt-4 text-[28px] font-semibold tracking-[-0.03em] lg:text-[32px]">
+                Fixed scope, fixed price
+              </h3>
+              <p className="mt-4 max-w-[46ch] text-[16px] leading-[1.6] text-[#45433f]">
+                A clear scope and timeline agreed upfront. You own 100% of the code and IP.
+              </p>
+            </article>
+            <article className="rounded-[22px] bg-white px-8 py-10 lg:px-10">
+              <p className={`${jetbrains.className} text-[13px] text-[#6a6864]`}>Partner</p>
+              <h3 className="mt-4 text-[28px] font-semibold tracking-[-0.03em] lg:text-[32px]">
+                Cash plus equity
+              </h3>
+              <p className="mt-4 max-w-[46ch] text-[16px] leading-[1.6] text-[#45433f]">
+                For a small number of startups each year, we build as a partner, for a mix of cash
+                and equity.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white">
+        <div className="mx-auto grid w-full max-w-[1240px] gap-10 px-5 py-16 sm:px-8 lg:grid-cols-[minmax(0,420px)_minmax(0,594px)] lg:justify-between lg:px-12 lg:py-12">
+          <h2 className="max-w-[10ch] text-[40px] leading-[1.05] font-semibold tracking-[-0.045em] sm:text-[48px] lg:text-[52px]">
+            Questions founders ask.
+          </h2>
+          <div>
+            {faqs.map((faq, index) => (
+              <details
+                key={faq.question}
+                open={index === 0}
+                className="border-b border-[rgba(14,14,14,0.1)] py-6"
+              >
+                <summary className="cursor-pointer list-none text-[18px] font-semibold tracking-[-0.02em] sm:text-[20px] [&::-webkit-details-marker]:hidden">
+                  {faq.question}
+                </summary>
+                <p className="mt-3 max-w-[40ch] text-[15px] leading-6 text-[#45433f]">{faq.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white">
+        <div className="mx-auto flex w-full max-w-[1240px] flex-col gap-8 border-t border-[rgba(14,14,14,0.1)] px-5 py-20 sm:px-8 lg:flex-row lg:items-end lg:justify-between lg:px-12 lg:py-[118px]">
+          <h2 className="max-w-[691px] text-[40px] leading-[1.05] font-semibold tracking-[-0.05em] sm:text-[56px] lg:text-[72px]">
+            Building something? Let’s connect.
+          </h2>
+          <BookCallLink className="shrink-0" />
+        </div>
+      </section>
     </div>
   );
 }

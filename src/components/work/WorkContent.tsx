@@ -2,11 +2,12 @@ import Link from "next/link";
 import { CaseStudyCard } from "@/components/work/CaseStudyCard";
 import { getPublishedCaseStudies } from "@/lib/get-case-studies";
 import "@/app/(site)/product-development/product-development.css";
+import "@/app/(site)/work/work.css";
 
 export async function WorkContent() {
   const caseStudies = await getPublishedCaseStudies();
   return (
-    <div className="pd-page">
+    <div className="pd-page work-page">
       <main id="main-content">
         <section className="pd-hero">
           <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">

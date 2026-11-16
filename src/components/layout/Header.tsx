@@ -4,29 +4,29 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useId, useState } from "react";
 import { SiteLogo } from "@/components/SiteLogo";
-import {
-  ArrowRight,
-  ChevronDown,
-  CloseIcon,
-  MenuIcon,
-} from "@/components/icons";
+import { ChevronDown, CloseIcon, MenuIcon } from "@/components/icons";
 import { primaryNav, type NavItem, type NavLink } from "@/lib/navigation";
 
 function GetInTouchButton({
   className = "",
   onClick,
+  onDark = false,
 }: {
   className?: string;
   onClick?: () => void;
+  onDark?: boolean;
 }) {
   return (
     <Link
       href="/contact"
       onClick={onClick}
-      className={`inline-flex h-10 items-center gap-2 rounded-[10px] bg-accent px-6 text-[14px] font-semibold text-white transition-colors hover:bg-accent-hover ${className}`}
+      className={`inline-flex h-11 items-center rounded-full px-5 text-[15px] font-semibold transition-colors ${
+        onDark
+          ? "bg-white text-[#0e0e0e] hover:bg-[#f4f3ef]"
+          : "bg-[#0e0e0e] text-white hover:bg-[#2a2826]"
+      } ${className}`}
     >
       Get in touch
-      <ArrowRight className="h-3.5 w-3.5" />
     </Link>
   );
 }
@@ -47,14 +47,14 @@ function DesktopDropdown({ item }: { item: NavItem }) {
     >
       <button
         type="button"
-        className="inline-flex h-full items-center gap-1.5 px-3.5 text-[15px] font-semibold text-white transition-colors hover:text-white/70"
+        className="inline-flex h-11 items-center gap-1.5 text-[15px] font-medium text-inherit transition-colors hover:opacity-60"
         aria-haspopup="true"
         aria-expanded={open}
         onClick={() => setOpen((value) => !value)}
       >
         {item.label}
         <ChevronDown
-          className={`h-2.5 w-2.5 text-accent transition-transform duration-200 ${
+          className={`h-2.5 w-2.5 opacity-45 transition-transform duration-200 ${
             open ? "rotate-180" : ""
           }`}
         />
@@ -67,7 +67,7 @@ function DesktopDropdown({ item }: { item: NavItem }) {
             : "pointer-events-none invisible opacity-0"
         }`}
       >
-        <div className="overflow-hidden rounded-[14px] border border-white/10 bg-[#111] shadow-[0_12px_40px_rgba(0,0,0,0.45)]">
+        <div className="overflow-hidden rounded-[14px] border border-[rgba(14,14,14,0.08)] bg-white shadow-[0_12px_40px_rgba(20,16,12,0.08)]">
           <ul className="py-2">
             {item.children?.map((child) => (
               <li key={child.href + child.label}>
@@ -95,13 +95,11 @@ function DropdownLink({
         onClick?.();
         (document.activeElement as HTMLElement | null)?.blur();
       }}
-      className="group/item block px-5 py-3 transition-colors hover:bg-white/5"
+      className="group/item block px-5 py-3 transition-colors hover:bg-[#f4f3ef]"
     >
-      <span className="block text-[15px] font-semibold text-white">
-        {child.label}
-      </span>
+      <span className="block text-[15px] font-semibold text-[#0e0e0e]">{child.label}</span>
       {child.description ? (
-        <span className="mt-0.5 block text-[13px] leading-snug text-white/55">
+        <span className="mt-0.5 block text-[13px] leading-snug text-[#6a6864]">
           {child.description}
         </span>
       ) : null}
@@ -133,12 +131,12 @@ export function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#111111]">
-      <div className="mx-auto flex h-[68px] w-full max-w-[1300px] items-center justify-between px-5 md:px-8 lg:px-[40px]">
-        <SiteLogo className="h-full" withWordmark />
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-[rgba(14,14,14,0.08)] bg-white text-[#0e0e0e]">
+      <div className="relative mx-auto flex h-[72px] w-full max-w-[1500px] items-center justify-between gap-3 px-5 sm:px-8 lg:px-12">
+        <SiteLogo withWordmark tone="ink" compact />
 
-        <div className="hidden h-full items-center gap-1 lg:flex">
-          <nav className="flex h-full items-center" aria-label="Primary">
+        <div className="hidden items-center gap-5 lg:flex xl:gap-7">
+          <nav className="flex items-center gap-5 xl:gap-7" aria-label="Primary">
             {primaryNav.map((item) =>
               item.children ? (
                 <DesktopDropdown key={item.label} item={item} />
@@ -146,7 +144,7 @@ export function Header() {
                 <Link
                   key={item.label}
                   href={item.href || "/"}
-                  className="inline-flex h-full items-center px-3.5 text-[15px] font-semibold text-white transition-colors hover:text-white/70"
+                  className="inline-flex items-center text-[15px] font-medium transition-colors hover:text-[#0e0e0e]/60"
                 >
                   {item.label}
                 </Link>
@@ -154,14 +152,14 @@ export function Header() {
             )}
           </nav>
 
-          <div className="ml-3 flex h-full items-center">
+          <div className="flex items-center">
             <GetInTouchButton />
           </div>
         </div>
 
         <button
           type="button"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-md text-white lg:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-full text-inherit lg:hidden"
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileOpen}
           aria-controls={panelId}
@@ -174,12 +172,9 @@ export function Header() {
       {mobileOpen ? (
         <div
           id={panelId}
-          className="fixed inset-x-0 bottom-0 top-[68px] z-40 overflow-y-auto border-t border-white/10 bg-[#111111] lg:hidden"
+          className="absolute inset-x-4 top-[calc(100%+8px)] z-40 max-h-[calc(100vh-120px)] overflow-y-auto rounded-3xl border border-[rgba(14,14,14,0.08)] bg-white shadow-[0_10px_30px_rgba(20,16,12,0.06)] sm:inset-x-6 lg:hidden"
         >
-          <nav
-            className="mx-auto flex max-w-[1300px] flex-col px-5 py-4 md:px-8 lg:px-[40px]"
-            aria-label="Mobile"
-          >
+          <nav className="flex flex-col px-5 py-3" aria-label="Mobile">
             {primaryNav.map((item) => {
               if (!item.children) {
                 return (
@@ -187,7 +182,7 @@ export function Header() {
                     key={item.label}
                     href={item.href || "/"}
                     onClick={closeMobile}
-                    className="border-b border-white/10 py-4 text-[17px] font-semibold text-white"
+                    className="border-b border-[rgba(14,14,14,0.08)] py-4 text-[17px] font-semibold text-[#0e0e0e]"
                   >
                     {item.label}
                   </Link>
@@ -197,20 +192,18 @@ export function Header() {
               const isOpen = openSection === item.label;
 
               return (
-                <div key={item.label} className="border-b border-white/10">
+                <div key={item.label} className="border-b border-[rgba(14,14,14,0.08)]">
                   <button
                     type="button"
-                    className="flex w-full items-center justify-between py-4 text-left text-[17px] font-semibold text-white"
+                    className="flex w-full items-center justify-between py-4 text-left text-[17px] font-semibold text-[#0e0e0e]"
                     aria-expanded={isOpen}
                     onClick={() =>
-                      setOpenSection((current) =>
-                        current === item.label ? null : item.label,
-                      )
+                      setOpenSection((current) => (current === item.label ? null : item.label))
                     }
                   >
                     {item.label}
                     <ChevronDown
-                      className={`h-3 w-3 text-accent transition-transform ${
+                      className={`h-3 w-3 text-[#0e0e0e]/45 transition-transform ${
                         isOpen ? "rotate-180" : ""
                       }`}
                     />
@@ -229,11 +222,8 @@ export function Header() {
               );
             })}
 
-            <div className="pt-6 pb-10">
-              <GetInTouchButton
-                className="w-full justify-center"
-                onClick={closeMobile}
-              />
+            <div className="pt-6 pb-6">
+              <GetInTouchButton className="w-full justify-center" onClick={closeMobile} />
             </div>
           </nav>
         </div>

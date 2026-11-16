@@ -1,63 +1,86 @@
+import { Inter, JetBrains_Mono } from "next/font/google";
 import Link from "next/link";
-import { waysToWork } from "@/lib/ways-to-work";
+import { waysToWork, type WayToWork } from "@/lib/ways-to-work";
 
-const serviceHrefs: Record<string, string> = {
-  development: "/product-development",
-  leadership: "/product-management",
-  marketing: "/product-marketing",
-};
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+});
+
+const jetbrains = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: "400",
+});
+
+function ServiceMark({ icon }: { icon: WayToWork["icon"] }) {
+  return (
+    <span className="grid size-10 place-items-center rounded-[12px] bg-white" aria-hidden="true">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={icon} alt="" className="size-7" />
+    </span>
+  );
+}
 
 export function WaysToWorkSection() {
   return (
     <section
       id="services"
-      className="scroll-mt-[68px] bg-[#111111] py-16 md:py-20 lg:py-24"
       aria-labelledby="ways-to-work-heading"
+      className={`${inter.className} scroll-mt-[120px] bg-white text-[#0e0e0e]`}
     >
-      <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
-        <div className="max-w-2xl">
-          <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-white/55">
-            Our Services
-          </p>
-          <h2
-            id="ways-to-work-heading"
-            className="mt-4 text-[32px] font-semibold leading-none tracking-tight text-white sm:text-[40px] md:text-[48px]"
-          >
-            Three ways to work together.
-            <span
-              className="mt-4 block h-[4px] w-[36px] bg-accent"
-              aria-hidden
-            />
-          </h2>
-          <p className="mt-5 max-w-xl text-[16px] leading-7 text-white/65">
-            Most partners start with one and grow into the others.
+      <div className="mx-auto flex w-full max-w-[1240px] flex-col gap-9 px-5 pt-0 pb-20 sm:px-8 md:gap-12 lg:px-12 lg:pb-[140px]">
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between lg:gap-12">
+          <div className="flex max-w-[640px] flex-col gap-[18px]">
+            <p className="text-[12px] font-semibold tracking-[0.14em] text-[#5e5c58] uppercase">
+              What we do
+            </p>
+            <h2
+              id="ways-to-work-heading"
+              className="text-[36px] leading-[1.02] font-semibold tracking-[-0.045em] text-balance sm:text-[48px] lg:text-[60px]"
+            >
+              Three ways to work together<span className="text-[#ff5a1f]">.</span>
+            </h2>
+          </div>
+          <p className="max-w-[380px] text-[18px] leading-[1.55] text-[#45433f]">
+            Not sure which one you need? That’s what the first call is for.
           </p>
         </div>
 
-        <div className="mt-10 grid gap-4 md:mt-14 md:grid-cols-3">
-          {waysToWork.map((way) => {
-            const href = serviceHrefs[way.id] ?? "/#services";
-            return (
+        <div className="grid items-stretch gap-5 lg:grid-cols-3">
+          {waysToWork.map((way) => (
+            <article
+              key={way.id}
+              className="flex flex-col gap-[18px] rounded-[26px] bg-[#f6f5f2] p-7 sm:p-9"
+            >
+              <ServiceMark icon={way.icon} />
+              <h3 className="text-[28px] leading-[1.1] font-semibold tracking-[-0.03em]">
+                {way.title}
+              </h3>
+              <p className="text-[17px] leading-[1.55] text-[#45433f]">{way.description}</p>
+              <p className={`${jetbrains.className} mt-1.5 text-[12px] text-[#6a6864]`}>
+                What’s included
+              </p>
+              <ul className="flex flex-wrap gap-2">
+                {way.includes.map((item) => (
+                  <li
+                    key={item}
+                    className="rounded-full bg-white px-3.5 py-2 text-[14px] leading-none"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
               <Link
-                key={way.id}
-                href={href}
-                className="group flex flex-col rounded-2xl border border-white/15 bg-white/[0.04] p-6 transition duration-300 hover:-translate-y-1 hover:border-accent md:p-8"
+                href={way.href}
+                className="mt-auto inline-flex min-h-11 items-center gap-2 text-[16px] font-semibold"
               >
-                <p className="font-mono text-[12px] tracking-[0.2em] text-white/45 transition-colors group-hover:text-accent">
-                  {way.number}
-                </p>
-                <h3 className="mt-8 text-[26px] font-semibold leading-none tracking-tight text-white sm:text-[30px]">
-                  {way.title}
-                </h3>
-                <p className="mt-4 text-[15px] italic leading-6 text-white/55">
-                  {way.tagline}
-                </p>
-                <p className="mt-5 text-[14px] leading-7 text-white/75">
-                  {way.description}
-                </p>
+                Learn more
+                <span className="text-[#ff5a1f]" aria-hidden="true">
+                  →
+                </span>
               </Link>
-            );
-          })}
+            </article>
+          ))}
         </div>
       </div>
     </section>

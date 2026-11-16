@@ -274,7 +274,7 @@ export default async function ProductMarketingPage() {
   return (
     <>
       <JsonLd data={data} />
-      <ProductMarketingContent faqs={seo.faqs} />
+      <ProductMarketingContent />
     </>
   );
 }

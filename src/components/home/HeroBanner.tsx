@@ -1,178 +1,182 @@
-import Image from "next/image";
+import { Caveat, Inter, JetBrains_Mono } from "next/font/google";
 import Link from "next/link";
 import { heroContent } from "@/lib/hero";
-import { HeroLogoMark } from "@/components/home/HeroLogoMark";
 
-function ArrowUpRight({ className = "" }: { className?: string }) {
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+});
+
+const caveat = Caveat({
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const jetbrains = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: "400",
+});
+
+function StageLabel({ children }: { children: string }) {
   return (
-    <svg
-      viewBox="0 0 16 16"
-      fill="none"
-      aria-hidden="true"
-      className={className}
-    >
-      <path
-        d="M4 12L12 4M12 4H6.5M12 4V9.5"
-        stroke="currentColor"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
+    <p className={`${jetbrains.className} text-[12px] leading-none text-[#6a6864]`}>
+      {children}
+    </p>
   );
 }
 
-function BriefcaseIcon({ className = "" }: { className?: string }) {
+function IdeaCard() {
   return (
-    <svg
-      viewBox="0 0 20 20"
-      fill="none"
-      aria-hidden="true"
-      className={className}
-    >
-      <path
-        d="M6.5 6V4.75A1.75 1.75 0 0 1 8.25 3h3.5A1.75 1.75 0 0 1 13.5 4.75V6M3.5 6.5h13v8.25A1.75 1.75 0 0 1 14.75 16.5h-9.5A1.75 1.75 0 0 1 3.5 14.75V6.5Z"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M3.5 9.5h13"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        strokeLinecap="round"
-      />
-    </svg>
+    <div className="flex w-[236px] justify-center">
+      <div
+        className={`${caveat.className} relative h-[236px] w-[236px] -rotate-2 rounded-[6px] bg-[#ffe4d4] shadow-[0px_14px_15px_rgba(20,16,12,0.08)]`}
+      >
+        <p className="absolute top-[23px] left-[22px] text-[32px] leading-[35.2px] text-[#2a2826]">
+          What problem
+          <br />
+          are we actually
+          <br />
+          solving?
+        </p>
+        <p className="absolute top-[182px] left-[22px] text-[22px] leading-none text-[#6a6864]">
+          who is it for…
+        </p>
+      </div>
+    </div>
   );
 }
+
+function WireframeCard() {
+  return (
+    <div className="relative h-[300px] w-[236px] rounded-[18px] border border-dashed border-[rgba(14,14,14,0.28)] bg-white">
+      <span className="absolute top-[21px] left-[21px] h-8 w-8 rounded-[16px] border border-[rgba(14,14,14,0.3)]" />
+      <span className="absolute top-[31px] left-[63px] h-2.5 w-[152px] rounded-[5px] bg-[#e7e5e0]" />
+      <span className="absolute top-[65px] left-[21px] h-[92px] w-[194px] rounded-[10px] border border-[rgba(14,14,14,0.18)]" />
+      <span className="absolute top-[169px] left-[21px] h-2.5 w-[155px] rounded-[5px] bg-[#e7e5e0]" />
+      <span className="absolute top-[191px] left-[21px] h-2.5 w-[116px] rounded-[5px] bg-[#e7e5e0]" />
+      <span className="absolute top-[213px] left-[21px] h-2.5 w-[136px] rounded-[5px] bg-[#e7e5e0]" />
+      <span className="absolute bottom-5 left-[21px] h-10 w-[194px] rounded-full border border-[rgba(14,14,14,0.3)]" />
+    </div>
+  );
+}
+
+function BuildCard() {
+  return (
+    <div className="relative h-[320px] w-[236px] rounded-[22px] bg-[#0e0e0e] shadow-[0px_20px_20px_rgba(20,16,12,0.16)]">
+      <span className="absolute top-[25px] left-[18px] h-2 w-[46px] rounded-[4px] bg-[#3a3936]" />
+      <span className="absolute top-[18px] right-[18px] h-[22px] w-[22px] rounded-[11px] bg-[#2a2927]" />
+      <p className="absolute top-[57px] left-[18px] text-[20.3px] leading-[24.2px] font-semibold tracking-[-0.66px] text-[#f4f3ef]">
+        This week
+      </p>
+      <span className="absolute top-[94px] left-[18px] h-11 w-[200px] rounded-[12px] bg-[#1e1d1c]" />
+      <span className="absolute top-[146px] left-[18px] h-11 w-[200px] rounded-[12px] bg-[#1e1d1c]" />
+      <span className="absolute top-[198px] left-[18px] h-11 w-[200px] rounded-[12px] bg-[#1e1d1c]" />
+      <span className="absolute bottom-[18px] left-[18px] h-11 w-[200px] rounded-full bg-[#ff5a1f]" />
+    </div>
+  );
+}
+
+function LiveChart() {
+  return (
+    <div className="absolute top-[103px] left-[23px] h-[90px] w-[190px]">
+      <img
+        src="/images/hero/live-chart-baseline.svg"
+        alt=""
+        width={186}
+        height={1}
+        className="absolute top-[88px] left-[2px] h-px w-[186px] max-w-none"
+      />
+      <img
+        src="/images/hero/live-chart-line.svg"
+        alt=""
+        width={188.5}
+        height={76.5}
+        className="absolute top-[8px] left-[2px] h-[76.5px] w-[188.5px] max-w-none"
+      />
+      <img
+        src="/images/hero/live-chart-dot.svg"
+        alt=""
+        width={10}
+        height={10}
+        className="absolute top-[3px] left-[183px] size-[10px] max-w-none"
+      />
+    </div>
+  );
+}
+
+function LiveCard() {
+  return (
+    <div className="relative h-[236px] w-[236px] rounded-[18px] border border-[rgba(14,14,14,0.08)] bg-white shadow-[0px_14px_15px_rgba(20,16,12,0.08)]">
+      <span className="absolute top-[23px] left-[23px] inline-flex h-7 items-center gap-2 rounded-full bg-[#f4f3ef] pr-3 pl-3">
+        <span className="size-2 rounded-[4px] bg-[#ff5a1f]" />
+        <span className="text-[12.1px] leading-none font-semibold text-[#0e0e0e]">
+          Shipped
+        </span>
+      </span>
+      <p className="absolute top-[65px] left-[23px] text-[18.3px] leading-none font-semibold tracking-[-0.4px] text-[#0e0e0e]">
+        First users
+      </p>
+      <LiveChart />
+    </div>
+  );
+}
+
+const stages = [
+  { label: "01 · Idea", offset: "xl:mt-[24px]", card: <IdeaCard /> },
+  { label: "02 · Wireframe", offset: "xl:mt-0", card: <WireframeCard /> },
+  { label: "03 · Build", offset: "xl:mt-[36px]", card: <BuildCard /> },
+  { label: "04 · Live", offset: "xl:mt-[8px]", card: <LiveCard /> },
+];
 
 export function HeroBanner() {
-  const {
-    eyebrow,
-    titleLine1,
-    titleLine2,
-    description,
-    primaryCta,
-    secondaryCta,
-    trustedLabel,
-    trustedHighlight,
-    trustedClients,
-  } = heroContent;
+  const { eyebrow, titleLead, titleTail, description, primaryCta, secondaryCta } =
+    heroContent;
 
   return (
     <section
-      className="relative overflow-x-clip overflow-y-hidden bg-[#111111]"
       aria-label="Highlights"
+      className={`${inter.className} canvas-dots text-[#0e0e0e]`}
     >
-      <div className="relative z-10 mx-auto w-full max-w-[1300px] px-5 pb-16 pt-20 md:px-8 md:pb-24 md:pt-28 lg:px-[40px] lg:pb-[120px] lg:pt-[120px]">
-        {/* Runner sits inside the 1300px content width */}
-        <div
-          className="pointer-events-none absolute inset-y-0 right-5 z-0 hidden select-none lg:block md:right-8 lg:right-[40px]"
-          aria-hidden
-        >
-          <div className="absolute top-1/2 right-0 -translate-y-[calc(50%+1.5rem)] xl:-translate-y-[calc(50%+2rem)]">
-            <HeroLogoMark />
-          </div>
+      <div className="mx-auto flex w-full max-w-[1180px] flex-col items-center px-5 pt-14 pb-20 sm:px-8 sm:pt-16 lg:px-10 lg:pt-[88px] lg:pb-28">
+        <p className="inline-flex h-[35px] items-center rounded-full border border-[rgba(14,14,14,0.18)] bg-white px-[17px] text-center text-[11.3px] font-semibold tracking-[1.68px] text-[#0e0e0e] uppercase">
+          {eyebrow}
+        </p>
+
+        <h1 className="mt-6 max-w-[860px] text-center text-[40px] leading-[1.06] font-semibold tracking-[-0.045em] text-[#0e0e0e] sm:mt-7 sm:text-[56px] lg:text-[72px] lg:tracking-[-3.2px] xl:text-[88.5px] xl:leading-[94px] xl:tracking-[-4.608px]">
+          {titleLead}
+          <br />
+          {titleTail}<span className="text-[#ff5a1f]">.</span>
+        </h1>
+
+        <p className="mt-5 max-w-[484px] text-center text-[17px] leading-[28px] text-[#45433f] sm:mt-6 sm:text-[19.6px] sm:leading-[33px]">
+          {description}
+        </p>
+
+        <div className="mt-8 flex flex-col items-center gap-3 sm:mt-8 sm:flex-row sm:gap-3">
+          <Link
+            href={primaryCta.href}
+            className="inline-flex h-14 items-center justify-center gap-2.5 rounded-full bg-[#ff5a1f] px-7 text-[15.7px] font-semibold text-[#0e0e0e] transition-colors hover:bg-[#f04e14]"
+          >
+            {primaryCta.label}
+          </Link>
+          <Link
+            href={secondaryCta.href}
+            className="inline-flex h-14 items-center justify-center rounded-full border border-[rgba(14,14,14,0.18)] bg-white px-7 text-[15.8px] font-semibold text-[#0e0e0e] transition-colors hover:bg-[#f4f3ef]"
+          >
+            {secondaryCta.label}
+          </Link>
         </div>
 
-        <div className="relative z-10 max-w-[720px] lg:max-w-[760px]">
-          <p className="text-[14px] font-semibold uppercase tracking-[0.14em] text-accent sm:text-[16px] sm:tracking-[0.14em]">
-            {eyebrow}
-          </p>
-
-          <h1 className="relative mt-4 pb-4 text-[34px] font-semibold leading-[1.15] tracking-[-0.03em] text-white sm:mt-5 sm:text-[44px] sm:leading-[1.15] md:text-[54px] md:leading-[62px] md:tracking-[-2px]">
-            {titleLine1}
-            <br />
-            {titleLine2}
-            <span
-              className="absolute bottom-0 left-0 block h-[4px] w-[106px] bg-accent"
-              aria-hidden
-            />
-          </h1>
-
-          <p className="mt-5 max-w-[640px] text-[18px] leading-7 text-white/90 sm:mt-6 sm:text-[19px] sm:leading-7">
-            {description}
-          </p>
-
-          <div className="mt-7 flex translate-y-[3px] flex-col items-start gap-4 sm:mt-8 sm:flex-row sm:items-center sm:gap-4">
-            <Link
-              href={primaryCta.href}
-              className="inline-flex h-[48px] items-center gap-3.5 rounded-lg border border-white/90 bg-[#1a1a1a]/80 px-4 text-[14px] font-semibold text-white transition-colors hover:border-accent hover:text-accent"
+        <div className="mt-16 grid w-full justify-items-center gap-x-6 gap-y-10 sm:grid-cols-2 xl:mt-24 xl:flex xl:items-start xl:justify-between xl:gap-6">
+          {stages.map((stage) => (
+            <div
+              key={stage.label}
+              className={`flex flex-col items-start gap-2 ${stage.offset}`}
             >
-              {primaryCta.label}
-              <ArrowUpRight className="h-4 w-4" />
-            </Link>
-            <Link
-              href={secondaryCta.href}
-              className="inline-flex h-[48px] items-center gap-3.5 px-1 text-[14px] font-semibold text-white transition-colors hover:text-accent sm:px-3"
-            >
-              {secondaryCta.label}
-              <BriefcaseIcon className="h-5 w-5" />
-            </Link>
-          </div>
-        </div>
-
-        {/* Trusted-by bar */}
-        <div className="mt-10 w-full max-w-full translate-y-[6px] overflow-hidden rounded-[14px] border border-white bg-white/[0.035] px-5 py-4 md:mt-12 lg:mt-14 lg:flex lg:w-fit lg:items-center lg:gap-5 lg:px-6 lg:py-[14px]">
-          <p className="shrink-0 border-white/25 pr-0 text-[15px] leading-[1.35] text-white lg:border-r lg:pr-5 lg:text-[16px]">
-            {trustedLabel}
-            {trustedHighlight ? (
-              <>
-                {" "}
-                <strong className="font-semibold">{trustedHighlight}</strong>
-              </>
-            ) : null}
-          </p>
-
-          {/* Desktop only: static logos */}
-          <div className="mt-4 hidden flex-wrap items-center gap-x-5 gap-y-3 sm:gap-x-6 lg:mt-0 lg:flex lg:flex-nowrap lg:gap-x-7">
-            {trustedClients.map((client) => (
-              <Link
-                key={client.id}
-                href={client.href}
-                className="group relative flex h-11 w-[88px] shrink-0 items-center justify-center opacity-90 transition-opacity hover:opacity-100 sm:h-12 sm:w-[100px]"
-              >
-                <Image
-                  src={client.src}
-                  alt={client.alt}
-                  fill
-                  sizes="100px"
-                  unoptimized
-                  className="object-contain bg-transparent"
-                  style={{
-                    transform: `scale(${client.scale ?? 1})`,
-                  }}
-                />
-              </Link>
-            ))}
-          </div>
-
-          {/* Mobile + tablet: auto logo slider */}
-          <div className="partner-marquee group/partner mt-4 -mx-5 overflow-hidden lg:hidden">
-            <div className="partner-marquee__track flex w-max items-center gap-8 px-5">
-              {[...trustedClients, ...trustedClients].map((client, index) => (
-                <Link
-                  key={`${client.id}-${index}`}
-                  href={client.href}
-                  className="relative flex h-11 w-[88px] shrink-0 items-center justify-center opacity-90"
-                  tabIndex={index >= trustedClients.length ? -1 : undefined}
-                  aria-hidden={index >= trustedClients.length ? true : undefined}
-                >
-                  <Image
-                    src={client.src}
-                    alt={index >= trustedClients.length ? "" : client.alt}
-                    fill
-                    sizes="88px"
-                    unoptimized
-                    className="object-contain bg-transparent"
-                    style={{
-                      transform: `scale(${client.scale ?? 1})`,
-                    }}
-                  />
-                </Link>
-              ))}
+              <StageLabel>{stage.label}</StageLabel>
+              {stage.card}
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

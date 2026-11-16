@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { AboutSection } from "@/components/home/AboutSection";
+import { FounderNoteSection } from "@/components/home/FounderNoteSection";
 import { HeroBanner } from "@/components/home/HeroBanner";
-import { PortfolioSection } from "@/components/home/PortfolioSection";
+import { HowWeWorkSection } from "@/components/home/HowWeWorkSection";
+import { ServiceTicker } from "@/components/home/ServiceTicker";
+// import { PortfolioSection } from "@/components/home/PortfolioSection";
+import { ProblemSection } from "@/components/home/ProblemSection";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { WaysToWorkSection } from "@/components/home/WaysToWorkSection";
 import { resolvePageSeo, withAdminSeo } from "@/lib/page-seo";
@@ -35,10 +38,13 @@ export default async function Home() {
         })}
       />
       <HeroBanner />
+      <ServiceTicker />
+      <ProblemSection />
       <WaysToWorkSection />
-      <PortfolioSection />
-      <AboutSection />
+      <HowWeWorkSection />
+      {/* <PortfolioSection /> */}
       <TestimonialsSection />
+      <FounderNoteSection />
     </>
   );
 }

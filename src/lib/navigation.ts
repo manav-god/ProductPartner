@@ -48,7 +48,7 @@ export const primaryNav: NavItem[] = [
     href: "/work",
   },
   {
-    label: "Blog",
+    label: "Blogs",
     href: "/blog",
   },
   // Temporarily hidden — About page
@@ -59,21 +59,21 @@ export const primaryNav: NavItem[] = [
 ];
 
 export const footerServices = [
-  { label: "Product Development", href: "/product-development" },
   { label: "Fractional Product Leadership", href: "/product-management" },
-  { label: "Product Marketing", href: "/product-marketing" },
+  { label: "Product Marketing & Positioning", href: "/product-marketing" },
+  { label: "Product Development", href: "/product-development" },
 ];
 
 export const footerCompany = [
   // Temporarily hidden — About page
   // { label: "About Product Partner", href: "/about" },
   { label: "Our work", href: "/work" },
-  { label: "Blog", href: "/blog" },
+  { label: "Blogs", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
 
 export const socialLinks = [
-  { label: "LinkedIn", href: "https://www.linkedin.com" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/manavvshah/" },
   { label: "X", href: "https://x.com" },
   { label: "Instagram", href: "https://www.instagram.com" },
 ];

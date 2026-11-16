@@ -1,105 +1,84 @@
+import { Inter } from "next/font/google";
 import Link from "next/link";
 import { SiteLogo } from "@/components/SiteLogo";
 import { FooterContact } from "@/components/layout/FooterContact";
-import {
-  InstagramIcon,
-  LinkedInIcon,
-  XIcon,
-} from "@/components/icons";
-import {
-  footerCompany,
-  footerServices,
-  socialLinks,
-} from "@/lib/navigation";
+import { footerCompany, footerServices, socialLinks } from "@/lib/navigation";
 
-const socialIconMap = {
-  LinkedIn: LinkedInIcon,
-  X: XIcon,
-  Instagram: InstagramIcon,
-} as const;
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+});
+
+function FooterColumn({
+  title,
+  links,
+}: {
+  title: string;
+  links: { label: string; href: string }[];
+}) {
+  return (
+    <nav aria-label={title}>
+      <h2 className="text-[12px] font-semibold tracking-[0.14em] text-[#6a6864] uppercase">
+        {title}
+      </h2>
+      <ul className="mt-4 space-y-5">
+        {links.map((link) => (
+          <li key={link.label}>
+            <Link href={link.href} className="text-[14px] leading-none text-[#0e0e0e]">
+              {link.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+}
 
 export function Footer() {
   return (
-    <footer className="mt-auto bg-[#111111] text-white">
+    <footer className={`${inter.className} mt-auto bg-white text-[#0e0e0e]`}>
       <FooterContact />
 
-      <div className="border-t border-white/20">
-        <div className="mx-auto grid max-w-[1300px] gap-10 px-5 py-12 md:px-8 lg:grid-cols-[1.1fr_1fr_1fr] lg:gap-12 lg:px-[40px]">
+      <div className="border-t border-[rgba(14,14,14,0.1)]">
+      <div className="mx-auto w-full max-w-[1500px] px-5 pt-14 sm:px-8 lg:px-12">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[minmax(0,1fr)_240px_160px_160px] lg:gap-x-10">
           <div>
-            <SiteLogo />
-            <div className="mt-6 flex items-center gap-5">
-              {socialLinks.map((social) => {
-                const Icon = socialIconMap[social.label as keyof typeof socialIconMap];
-                return (
+            <SiteLogo compact withWordmark />
+            <p className="mt-3 text-[15px] leading-6 text-[#45433f]">
+              The partner you wish you’d started with.
+            </p>
+          </div>
+          <FooterColumn title="Services" links={footerServices} />
+          <FooterColumn title="Company" links={footerCompany} />
+          <nav aria-label="Follow">
+            <h2 className="text-[12px] font-semibold tracking-[0.14em] text-[#6a6864] uppercase">
+              Follow
+            </h2>
+            <ul className="mt-4 space-y-5">
+              {socialLinks.map((link) => (
+                <li key={link.label}>
                   <a
-                    key={social.label}
-                    href={social.href}
+                    href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={social.label}
-                    className="inline-flex shrink-0 items-center justify-center text-white/80 transition-colors hover:text-accent"
+                    className="text-[14px] leading-none text-[#0e0e0e]"
                   >
-                    <Icon className="h-5 w-5" />
+                    {link.label}
                   </a>
-                );
-              })}
-            </div>
-          </div>
-
-          <nav aria-labelledby="footer-services-heading">
-            <h2
-              id="footer-services-heading"
-              className="text-[15px] font-bold text-white"
-            >
-              Services
-            </h2>
-            <ul className="mt-5 space-y-3">
-              {footerServices.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-[14px] text-white/60 transition-colors hover:text-white"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-
-          <nav aria-labelledby="footer-company-heading">
-            <h2
-              id="footer-company-heading"
-              className="text-[15px] font-bold text-white"
-            >
-              Company
-            </h2>
-            <ul className="mt-5 space-y-3">
-              {footerCompany.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-[14px] text-white/60 transition-colors hover:text-white"
-                  >
-                    {link.label}
-                  </Link>
                 </li>
               ))}
             </ul>
           </nav>
         </div>
 
-        <div className="border-t border-white/15">
-          <div className="mx-auto flex max-w-[1300px] flex-col gap-3 px-5 py-6 text-[13px] text-white/50 md:flex-row md:items-center md:justify-between md:px-8 lg:px-[40px]">
-            <p>© {new Date().getFullYear()} Product Partner. All rights reserved.</p>
-            <div className="flex gap-5">
-              <Link href="/privacy" className="hover:text-white">
-                Privacy
-              </Link>
-              <Link href="/terms" className="hover:text-white">
-                Terms
-              </Link>
-            </div>
+      </div>
+      </div>
+      <div className="mt-12 border-t border-[rgba(14,14,14,0.1)]">
+        <div className="mx-auto flex w-full max-w-[1500px] flex-col gap-3 px-5 py-6 text-[13px] text-[#5e5c58] sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-12">
+          <p>People work with people. © {new Date().getFullYear()} Product Partner</p>
+          <div className="flex gap-6">
+            <Link href="/privacy">Privacy</Link>
+            <Link href="/terms">Terms</Link>
           </div>
         </div>
       </div>

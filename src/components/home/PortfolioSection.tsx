@@ -1,52 +1,120 @@
+import { Inter, JetBrains_Mono } from "next/font/google";
 import Link from "next/link";
-import { ArrowRight } from "@/components/icons";
-import { CaseStudyCard } from "@/components/work/CaseStudyCard";
-import { getPublishedCaseStudies } from "@/lib/get-case-studies";
 
-export async function PortfolioSection() {
-  const caseStudies = await getPublishedCaseStudies();
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+});
+
+const jetbrains = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const projects = [
+  {
+    href: "/work/fitness-app",
+    title: "AI Fitness Platform",
+    description:
+      "Live camera rep counting turned workouts into multiplayer challenges. Count on-device. Compete live.",
+    tags: ["Health & Fitness", "iOS & AI"],
+    panel: "stat" as const,
+  },
+  {
+    href: "/work/ai-image-video-generation-platform",
+    title: "AI Platform",
+    description:
+      "Image and video generation unified across mobile, API, admin and cloud.",
+    tags: ["AI / Consumer", "Full Stack"],
+    panel: "statement" as const,
+  },
+];
+
+export function PortfolioSection() {
   return (
     <section
       id="work"
-      className="scroll-mt-[68px] bg-[#111111] py-[70px] md:py-[100px]"
       aria-labelledby="portfolio-heading"
+      className={`${inter.className} scroll-mt-[120px] bg-white text-[#0e0e0e]`}
     >
-      <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
-        <div className="mb-10 max-w-3xl md:mb-12">
-          <h2
-            id="portfolio-heading"
-            className="text-[28px] font-semibold leading-tight tracking-tight text-white md:text-[36px]"
-          >
-            Product Partnerships That Deliver Results
-            <span
-              className="mt-3 block h-[4px] w-[36px] bg-accent"
-              aria-hidden
-            />
-          </h2>
-        </div>
-
-        <div className="grid grid-cols-1 gap-[30px] md:grid-cols-2 lg:grid-cols-3">
-          {caseStudies.map((study) => (
-            <CaseStudyCard key={study.id} study={study} />
-          ))}
-        </div>
-
-        <div className="mt-12 flex flex-col items-start justify-between gap-6 border-t border-white/15 pt-10 md:flex-row md:items-center">
-          <div>
-            <p className="text-[18px] font-semibold text-white">
-              Proven work. Measurable outcomes.
+      <div className="mx-auto flex w-full max-w-[1240px] flex-col px-5 py-20 sm:px-8 md:py-28 lg:px-12 lg:py-[140px]">
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between lg:gap-12">
+          <div className="flex max-w-[720px] flex-col gap-3">
+            <p className="text-[12px] font-semibold tracking-[0.14em] text-[#5e5c58] uppercase">
+              Selected work
             </p>
-            <p className="mt-1 text-[16px] text-white/70">
-              See how we deliver on complex, high-impact initiatives.
-            </p>
+            <h2
+              id="portfolio-heading"
+              className="text-[36px] leading-[1.1] font-semibold tracking-[-0.05em] text-balance sm:text-[48px] lg:text-[56px]"
+            >
+              Partnerships that shipped<span className="text-[#ff5a1f]">.</span>
+            </h2>
           </div>
           <Link
             href="/work"
-            className="inline-flex h-[48px] cursor-pointer items-center gap-2 rounded-[10px] bg-accent px-7 text-[14px] font-semibold text-white transition-colors hover:bg-accent-hover"
+            className="inline-flex min-h-11 items-center gap-2 text-[16px] font-semibold"
           >
             View all work
-            <ArrowRight className="h-3.5 w-3.5" />
+            <span className="text-[#ff5a1f]" aria-hidden="true">
+              →
+            </span>
           </Link>
+        </div>
+
+        <div className="mt-12 grid gap-6 lg:mt-14 lg:grid-cols-2">
+          {projects.map((project) => (
+            <article key={project.href}>
+              <Link href={project.href} className="group block">
+                {project.panel === "stat" ? (
+                  <div className="relative flex aspect-[560/350] flex-col justify-between overflow-hidden rounded-[24px] bg-[#f4f3ef] p-7">
+                    <span
+                      className="absolute top-[38%] left-1/2 h-8 w-16 -translate-x-1/2 rounded-full bg-[#0e0e0e]/10 blur-md"
+                      aria-hidden="true"
+                    />
+                    <p className={`${jetbrains.className} text-[12px] text-[#6a6864]`}>
+                      [ project image ]
+                    </p>
+                    <div>
+                      <p className="text-[64px] leading-none font-semibold tracking-[-0.054em] sm:text-[80px] lg:text-[96px]">
+                        +40%
+                      </p>
+                      <p className={`${jetbrains.className} mt-2 text-[13px] text-[#45433f]`}>
+                        challenge engagement
+                      </p>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="flex aspect-[560/350] flex-col justify-between overflow-hidden rounded-[24px] bg-[#0e0e0e] p-7 text-[#f4f3ef]">
+                    <p className={`${jetbrains.className} text-[12px] text-[#8a8883]`}>
+                      [ project image ]
+                    </p>
+                    <p className="text-[40px] leading-[1.06] font-semibold tracking-[-0.05em] sm:text-[52px] lg:text-[60px]">
+                      Create once.
+                      <br />
+                      Route anywhere.
+                    </p>
+                  </div>
+                )}
+
+                <ul className="mt-[18px] flex list-none flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <li
+                      key={tag}
+                      className="rounded-full bg-[#f4f3ef] px-3 py-1.5 text-[12px] leading-none"
+                    >
+                      {tag}
+                    </li>
+                  ))}
+                </ul>
+                <h3 className="mt-4 text-[24px] leading-[1.2] font-semibold tracking-[-0.03em]">
+                  {project.title}
+                </h3>
+                <p className="mt-3 max-w-[56ch] text-[15px] leading-[1.67] text-[#45433f]">
+                  {project.description}
+                </p>
+              </Link>
+            </article>
+          ))}
         </div>
       </div>
     </section>

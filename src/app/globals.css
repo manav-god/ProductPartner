@@ -69,6 +69,14 @@ a[aria-disabled="true"],
   color: var(--foreground);
 }
 
+/* Dots stay with the section. Fixed attachment leaves headings painted
+   on top of whatever scrolls past. */
+.canvas-dots {
+  background-color: #f4f3ef;
+  background-image: radial-gradient(rgba(14, 14, 14, 0.13) 1px, transparent 1.3px);
+  background-size: 22px 22px;
+}
+
 @keyframes hero-progress {
   from {
     width: 0%;
@@ -238,10 +246,28 @@ a[aria-disabled="true"],
   }
 }
 
+.service-ticker__track {
+  animation: service-ticker 48s linear infinite;
+}
+
+.service-ticker:hover .service-ticker__track {
+  animation-play-state: paused;
+}
+
+@keyframes service-ticker {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .tech-marquee__track--left,
   .tech-marquee__track--right,
-  .partner-marquee__track {
+  .partner-marquee__track,
+  .service-ticker__track {
     animation: none;
   }
 }
@@ -312,4 +338,40 @@ a[aria-disabled="true"],
 .phone-field .PhoneInputCountrySelect option {
   color: #111;
   background: #fff;
+}
+
+.phone-field--light {
+  height: 52px;
+  border-radius: 14px;
+  border-color: rgba(14, 14, 14, 0.12);
+  background: #fff;
+}
+
+.phone-field--light:focus-within {
+  border-color: #ff5a1f;
+}
+
+.phone-field--light .PhoneInputCountry {
+  border-right-color: rgba(14, 14, 14, 0.12);
+}
+
+.phone-field--light .PhoneInputCountryIcon {
+  border-color: rgba(14, 14, 14, 0.12);
+}
+
+.phone-field--light .PhoneInputCountrySelect {
+  color: #0e0e0e;
+}
+
+.phone-field--light .PhoneInputCountrySelectArrow {
+  color: #45433f;
+  border-color: #45433f;
+}
+
+.phone-field--light .PhoneInputInput {
+  color: #0e0e0e !important;
+}
+
+.phone-field--light .PhoneInputInput::placeholder {
+  color: #8a8883;
 }

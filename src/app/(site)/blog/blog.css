@@ -1,7 +1,7 @@
 .blog-page {
   width: 100%;
-  background: #111111;
-  color: #ffffff;
+  background: #ffffff;
+  color: #0e0e0e;
 }
 
 .blog-hero {
@@ -37,7 +37,7 @@
   font-weight: 500;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(14, 14, 14, 0.55);
 }
 
 .blog-page h1 {
@@ -47,7 +47,7 @@
   font-weight: 600;
   line-height: 1.15;
   letter-spacing: -0.03em;
-  color: #ffffff;
+  color: #0e0e0e;
   overflow-wrap: break-word;
 }
 
@@ -78,7 +78,7 @@
   margin: 16px 0 0;
   font-size: 16px;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(14, 14, 14, 0.7);
   overflow-wrap: break-word;
 }
 
@@ -124,9 +124,9 @@
   min-height: 100%;
   flex-direction: column;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(14, 14, 14, 0.12);
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.04);
+  background: #f6f5f2;
   text-decoration: none;
   transition:
     border-color 0.2s ease,
@@ -143,7 +143,7 @@
 }
 
 .blog-card-media {
-  background: #1a1a1a;
+  background: #f4f3ef;
 }
 
 .blog-card-media img {
@@ -178,7 +178,7 @@
   font-weight: 600;
   line-height: 1.35;
   letter-spacing: -0.02em;
-  color: #ffffff;
+  color: #0e0e0e;
   overflow-wrap: break-word;
 }
 
@@ -192,7 +192,7 @@
   margin: 12px 0 0;
   font-size: 16px;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(14, 14, 14, 0.75);
 }
 
 .blog-card-more {
@@ -212,7 +212,7 @@
   padding: 28px 0 96px;
   font-size: 16px;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(14, 14, 14, 0.7);
 }
 
 .blog-back {
@@ -228,7 +228,7 @@
 }
 
 .blog-back:hover {
-  color: #ffffff;
+  color: #0e0e0e;
 }
 
 .blog-article {
@@ -253,7 +253,7 @@
   margin: 18px 0 0;
   font-size: 15px;
   line-height: 1.5;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(14, 14, 14, 0.55);
 }
 
 .blog-dek {
@@ -261,7 +261,7 @@
   margin: 16px 0 0;
   font-size: 16px;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(14, 14, 14, 0.75);
   overflow-wrap: break-word;
 }
 
@@ -285,7 +285,7 @@
   height: auto;
   margin-top: 24px;
   border-radius: 12px;
-  background: #1a1a1a;
+  background: #f4f3ef;
   object-fit: contain;
 }
 
@@ -334,7 +334,7 @@
 }
 
 .blog-contents {
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid rgba(14, 14, 14, 0.12);
   padding-top: 18px;
 }
 
@@ -351,7 +351,7 @@
   margin: 0 0 12px;
   font-size: 14px;
   font-weight: 600;
-  color: #ffffff;
+  color: #0e0e0e;
 }
 
 .blog-contents ol {
@@ -368,8 +368,8 @@
 .blog-contents a {
   display: block;
   padding: 8px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.72);
+  border-top: 1px solid rgba(14, 14, 14, 0.08);
+  color: rgba(14, 14, 14, 0.72);
   font-size: 15px;
   line-height: 1.45;
   text-decoration: none;
@@ -378,7 +378,7 @@
 
 .blog-contents a::before {
   content: counter(contents) ". ";
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(14, 14, 14, 0.45);
 }
 
 .blog-contents a:hover {
@@ -396,7 +396,7 @@
   margin: 0 0 16px;
   font-size: 16px;
   line-height: 1.75;
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(14, 14, 14, 0.78);
   overflow-wrap: break-word;
 }
 
@@ -413,7 +413,7 @@
   font-weight: 600;
   line-height: 1.25;
   letter-spacing: -0.02em;
-  color: #ffffff;
+  color: #0e0e0e;
   scroll-margin-top: 110px;
 }
 
@@ -449,7 +449,7 @@
 }
 
 .blog-prose strong {
-  color: #ffffff;
+  color: #0e0e0e;
   font-weight: 600;
 }
 
@@ -460,7 +460,7 @@
 }
 
 .blog-prose blockquote p {
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(14, 14, 14, 0.88);
 }
 
 .blog-prose .lexical-table-container {
@@ -485,7 +485,7 @@
 
 .blog-prose .lexical-table th,
 .blog-prose .lexical-table td {
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(14, 14, 14, 0.12);
   padding: 10px 12px;
   text-align: left;
   vertical-align: top;
@@ -499,9 +499,9 @@
 }
 
 .blog-prose .lexical-table th {
-  color: #ffffff;
+  color: #0e0e0e;
   font-weight: 600;
-  background: rgba(255, 255, 255, 0.06);
+  background: #f6f5f2;
 }
 
 .blog-prose .lexical-table p {

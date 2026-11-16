@@ -253,7 +253,7 @@ export default async function ProductManagementPage() {
   return (
     <>
       <JsonLd data={data} />
-      <ProductManagementContent faqs={seo.faqs} />
+      <ProductManagementContent />
     </>
   );
 }

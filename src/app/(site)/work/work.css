@@ -1,0 +1,32 @@
+/* Our work — same layout, on white */
+
+.work-page.pd-page,
+.work-page .pd-hero,
+.work-page .pd-section {
+  background: #ffffff;
+  color: #0e0e0e;
+}
+
+.work-page .pd-eyebrow {
+  color: rgba(14, 14, 14, 0.55);
+}
+
+.work-page.pd-page h1 {
+  color: #0e0e0e;
+}
+
+.work-page .pd-hero h1 span {
+  color: rgba(14, 14, 14, 0.55);
+}
+
+.work-page .pd-lead {
+  color: rgba(14, 14, 14, 0.7) !important;
+}
+
+.work-page .pd-section p {
+  color: rgba(14, 14, 14, 0.75);
+}
+
+.work-page .pd-section .font-medium {
+  color: #0e0e0e;
+}

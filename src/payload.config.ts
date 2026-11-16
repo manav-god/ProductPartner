@@ -56,10 +56,13 @@ export default buildConfig({
     outputFile: path.resolve(dirname, "payload-types.ts"),
   },
   db: postgresAdapter({
+    push: false,
     pool: {
       connectionString: databaseUri(),
-      max: process.env.VERCEL ? 3 : 4,
+      max: 2,
+      idleTimeoutMillis: 10000,
       connectionTimeoutMillis: 8000,
+      query_timeout: 8000,
       ssl: { rejectUnauthorized: false },
     },
   }),

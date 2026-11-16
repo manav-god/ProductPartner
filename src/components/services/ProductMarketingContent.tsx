@@ -1,498 +1,295 @@
+import { Inter, JetBrains_Mono } from "next/font/google";
 import Link from "next/link";
-import { ArrowRight } from "@/components/icons";
-import { ServiceFaqs } from "@/components/services/ServiceFaqs";
-import { PmIndustrySection } from "@/components/services/PmIndustrySection";
-import type { FaqItem } from "@/lib/page-faqs";
-import "@/app/(site)/product-development/product-development.css";
 
-const services = [
-  {
-    label: "Positioning",
-    title: "Product Positioning & Messaging",
-    description:
-      "Clarify your product's value proposition and turn complicated features into messaging customers can understand. The goal is simple: make it easy for buyers to understand what the product does, why it matters, and why they should choose it now.",
-    tags: [
-      "Product positioning",
-      "Messaging frameworks",
-      "Value propositions",
-      "ICP and buyer research",
-      "Competitive analysis",
-      "Sales enablement messaging",
-    ],
-  },
-  {
-    label: "GTM",
-    title: "Go-to-Market Strategy",
-    description:
-      "A successful launch needs more than a launch date. Go-to-market strategy connects research, positioning, and messaging into a clear direction, market research, channels, content, and launch sequencing in one coherent plan.",
-    tags: [
-      "Launch planning",
-      "Market research",
-      "Channel strategy",
-      "Content planning",
-      "Conversion opportunities",
-      "Launch sequencing",
-    ],
-  },
-  {
-    label: "Search",
-    title: "SEO, AEO & GEO for Product Discovery",
-    description:
-      "Customers increasingly discover products through AI-powered search, answer engines, and generative platforms, not just traditional search results. The objective is to make the product understandable and referenceable across the search ecosystem.",
-    tags: [
-      "SEO for organic search",
-      "AEO for answer engines",
-      "GEO for generative search",
-      "AI-search content strategy",
-      "Topic and entity optimization",
-      "Product-led organic growth",
-    ],
-  },
-  {
-    label: "Intelligence",
-    title: "Competitive & Market Intelligence",
-    description:
-      "Turn scattered competitor information into messaging your sales team can actually use and defend with confidence.",
-    tags: [
-      "Competitor positioning audits",
-      "Sales battlecards",
-      "Market landscape mapping",
-      "Pricing and packaging context",
-      "Win/loss insight",
-      "Category definition",
-    ],
-  },
-  {
-    label: "Demand",
-    title: "Demand Generation & Content",
-    description:
-      "Build content and campaigns on the same positioning and evidence used everywhere else, not a separate marketing narrative.",
-    tags: [
-      "Content strategy",
-      "Campaign messaging",
-      "Landing pages",
-      "Case studies and proof points",
-      "Lifecycle messaging",
-      "Sales enablement assets",
-    ],
-  },
-  {
-    label: "Growth",
-    title: "Post-Launch Growth & Iteration",
-    description:
-      "Product marketing does not stop when the product launches. Customer objections change, competitors reposition, and search behavior evolves.",
-    tags: [
-      "Positioning refreshes",
-      "Messaging testing",
-      "Search visibility monitoring",
-      "Competitive re-assessment",
-      "Content gap analysis",
-      "Product-led growth iteration",
-    ],
-  },
-] as const;
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+});
 
-function ServiceIcon({ index }: { index: number }) {
-  const icons = [
-    <svg key="0" viewBox="0 0 24 24" fill="none">
-      <path
-        d="M12 3.5 14.2 9l5.8.5-4.4 3.8 1.4 5.7L12 16.2 6.9 19l1.4-5.7L4 9.5 9.8 9 12 3.5Z"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinejoin="round"
-      />
-      <circle cx="17" cy="6" r="1" fill="#FF5900" />
-      <circle cx="18.5" cy="8" r="1" fill="#FF5900" />
-      <circle cx="16" cy="9" r="1" fill="#FF5900" />
-    </svg>,
-    <svg key="1" viewBox="0 0 24 24" fill="none">
-      <path
-        d="M4 16.5 9 11l3.5 3.5L20 7"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M15 7h5v5"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <circle cx="10" cy="9" r="1" fill="#FF5900" />
-      <circle cx="12" cy="7" r="1" fill="#FF5900" />
-      <circle cx="9.5" cy="6.5" r="1" fill="#FF5900" />
-    </svg>,
-    <svg key="2" viewBox="0 0 24 24" fill="none">
-      <circle cx="11" cy="11" r="6.5" stroke="currentColor" strokeWidth="1.5" />
-      <path
-        d="M16.5 16.5 20 20"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-      <circle cx="9" cy="10" r="1" fill="#FF5900" />
-      <circle cx="12.5" cy="9.5" r="1" fill="#FF5900" />
-      <circle cx="11" cy="13" r="1" fill="#FF5900" />
-    </svg>,
-    <svg key="3" viewBox="0 0 24 24" fill="none">
-      <path
-        d="M4 18.5V5.5h7.5v13M11.5 12H20M16 8.5 19.5 12 16 15.5"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <circle cx="17.5" cy="6" r="1" fill="#FF5900" />
-      <circle cx="19" cy="8" r="1" fill="#FF5900" />
-      <circle cx="16.5" cy="9" r="1" fill="#FF5900" />
-    </svg>,
-    <svg key="4" viewBox="0 0 24 24" fill="none">
-      <path
-        d="M5 7.5h14M5 12h14M5 16.5h9"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-      <circle cx="17" cy="7" r="1" fill="#FF5900" />
-      <circle cx="18.5" cy="9" r="1" fill="#FF5900" />
-      <circle cx="16" cy="10" r="1" fill="#FF5900" />
-    </svg>,
-    <svg key="5" viewBox="0 0 24 24" fill="none">
-      <path
-        d="M12 4v10M12 4l3.5 3.5M12 4 8.5 7.5M5 15.5c2.5-1 5-1.5 7-1.5s4.5.5 7 1.5"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <circle cx="16.5" cy="7" r="1" fill="#FF5900" />
-      <circle cx="18" cy="9" r="1" fill="#FF5900" />
-      <circle cx="15.5" cy="10" r="1" fill="#FF5900" />
-    </svg>,
-  ];
-  return icons[index] ?? icons[0];
+const jetbrains = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const quotes = [
+  "People who try it like it. Too few find it.",
+  "We struggle to explain what we do in one sentence.",
+  "Buyers ask AI assistants for recommendations, and we’re not in the answer.",
+  "We’ve tried content, but it never turned into leads.",
+];
+
+const included = [
+  {
+    title: "Positioning",
+    body: "Who it’s for, what it replaces and why it wins, in the words your buyers use.",
+  },
+  {
+    title: "Messaging",
+    body: "Homepage, pitch and sales copy that all say the same clear thing.",
+  },
+  {
+    title: "B2B content",
+    body: "Articles and pages that answer the questions your buyers already ask.",
+  },
+  {
+    title: "SEO",
+    body: "Technical foundations and pages that rank for the searches that matter.",
+  },
+  {
+    title: "AI search visibility",
+    body: "Clear, citable content so AI answers mention you when buyers ask (AEO / GEO).",
+  },
+  {
+    title: "Monthly review",
+    body: "What’s working, what isn’t, and what we do next.",
+  },
+];
+
+const steps = [
+  {
+    step: "Step 1",
+    title: "Understand",
+    body: "Your customers, your competitors, and how buyers search for what you do.",
+    accent: true,
+  },
+  {
+    step: "Step 2",
+    title: "Position",
+    body: "One clear story about who it’s for and why it’s different.",
+  },
+  {
+    step: "Step 3",
+    title: "Publish",
+    body: "Pages and content built for search and AI answers.",
+  },
+  {
+    step: "Step 4",
+    title: "Measure and grow",
+    body: "Track what brings leads, and do more of it every month.",
+  },
+];
+
+const faqs = [
+  {
+    question: "What is AEO and GEO?",
+    answer:
+      "Answer engine and generative engine optimisation. In plain words: making sure AI assistants can find, understand and recommend your product when buyers ask.",
+  },
+  {
+    question: "Do you work with consumer products?",
+    answer: "Not yet. We work with B2B products for now.",
+  },
+  {
+    question: "How long before we see results?",
+    answer: "The first inbound leads can show up within a month. It depends on where you start.",
+  },
+  {
+    question: "Do you write the content?",
+    answer: "Yes. We write the pages and articles, then review them with you every month.",
+  },
+];
+
+function BookCallLink({ className = "" }: { className?: string }) {
+  return (
+    <Link
+      href="/contact"
+      className={`inline-flex h-14 items-center gap-2.5 rounded-full bg-[#ff5a1f] px-7 text-[16px] font-semibold text-[#0e0e0e] transition-colors hover:bg-[#ff6a35] ${className}`}
+    >
+      Book a call
+    </Link>
+  );
 }
 
-export function ProductMarketingContent({ faqs }: { faqs: FaqItem[] }) {
+export function ProductMarketingContent() {
   return (
-    <div className="pd-page">
-      <main id="main-content">
-        <section className="pd-hero">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
-            <div className="pd-hero__layout">
-              <div>
-                <span className="pd-eyebrow">Product Marketing Services</span>
-                <h1>
-                  Product Marketing That Turns{" "}
-                  <span>Products Into Growth Stories</span>
-                </h1>
-                <p className="pd-lead">
-                  Great products do not always sell themselves. Buyers need to
-                  understand what your product does, why it matters, and why they
-                  should choose it now. That is where product marketing comes in.
-                </p>
-                <div className="pd-buttons">
-                  <Link href="/contact" className="pd-btn pd-btn-primary">
-                    Talk to Product Partner
-                  </Link>
-                </div>
-              </div>
-              <img
-                src="/images/hero/product_marketing.png"
-                alt="Product Marketing"
-                className="pd-hero__art"
-              />
+    <div className={`${inter.className} bg-white text-[#0e0e0e]`}>
+      <section className="canvas-dots">
+        <div className="mx-auto grid w-full max-w-[1240px] items-end gap-10 px-5 pt-16 pb-20 sm:px-8 lg:px-12 lg:pt-24 lg:pb-[112px] xl:grid-cols-[minmax(0,680px)_458px] xl:justify-between">
+          <div>
+            <p className={`${jetbrains.className} text-[13px] text-[#6a6864]`}>
+              <Link href="/#services" className="hover:text-[#0e0e0e]">
+                Services
+              </Link>
+              <span className="px-2">/</span>
+              Product Marketing &amp; Positioning
+            </p>
+            <h1 className="mt-4 max-w-[11ch] text-[40px] leading-[1.05] font-semibold tracking-[-0.05em] sm:max-w-[14ch] sm:text-[56px] xl:max-w-none xl:text-[76px] xl:leading-[82px] xl:tracking-[-3.6px]">
+              <span className="xl:block">Get found by</span>{" "}
+              <span className="xl:block">the people you</span>{" "}
+              <span className="xl:block">
+                built it for<span className="text-[#ff5a1f]">.</span>
+              </span>
+            </h1>
+            <p className="mt-6 max-w-[547px] text-[18px] leading-[33px] text-[#45433f] sm:text-[20px]">
+              Positioning, B2B content, and visibility in search and AI answers. For products that
+              work, but aren’t being found or understood yet.
+            </p>
+            <div className="mt-7 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
+              <BookCallLink />
+              <p className="inline-flex h-10 items-center rounded-full border border-[rgba(14,14,14,0.12)] bg-white px-4 text-[14px] text-[#45433f]">
+                B2B products only, for now
+              </p>
             </div>
           </div>
-        </section>
 
-        <section className="pd-section">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
-            <span className="pd-eyebrow">Product Marketing Explained</span>
-            <h2>What Is Product Marketing?</h2>
-            <ul className="pd-points" id="definition">
-              <li>
-                <ArrowRight className="pd-points__icon" />
-                <span>
-                  Product marketing is the discipline of positioning, messaging,
-                  launching, promoting, and growing a product based on customer
-                  needs and market opportunities.
-                </span>
+          <div className="rounded-[22px] bg-white p-6 shadow-[0_18px_20px_rgba(20,16,12,0.08)]">
+            <div className="flex justify-end">
+              <p className="rounded-2xl bg-[#f6f5f2] px-4 py-3 text-[14px] leading-snug">
+                What’s the best tool for [your category]?
+              </p>
+            </div>
+            <div className="mt-5 flex gap-3">
+              <span className="size-[30px] shrink-0 rounded-full bg-[#0e0e0e]" />
+              <div className="flex flex-1 flex-col justify-center gap-2 pt-1">
+                <span className="h-2.5 w-[92%] rounded-full bg-[#eceae6]" />
+                <span className="h-2.5 w-[80%] rounded-full bg-[#eceae6]" />
+              </div>
+            </div>
+            <p className="mt-3 pl-[42px] text-[14px] leading-6 text-[#0e0e0e]">
+              A strong option is{" "}
+              <span className="rounded-md bg-[#f6f5f2] px-1.5 py-0.5 font-semibold">
+                Your product
+              </span>, built for teams like yours.
+            </p>
+            <span className="mt-3 ml-[42px] block h-2.5 w-[62%] rounded-full bg-[#eceae6]" />
+            <p className="mt-3 ml-[42px] inline-flex h-6 items-center gap-2 rounded-full bg-[#f6f5f2] px-3 text-[12px] text-[#6a6864]">
+              <span className="size-1.5 rounded-full bg-[#ff5a1f]" />
+              source: yourproduct.com
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white">
+        <div className="mx-auto w-full max-w-[1240px] px-5 pt-20 pb-8 sm:px-8 lg:px-12 lg:pt-32">
+          <p className={`${jetbrains.className} text-[13px] text-[#6a6864]`}>Is this for you?</p>
+          <h2 className="mt-3 max-w-[12ch] text-[36px] leading-[1.08] font-semibold tracking-[-0.045em] sm:text-[48px] lg:max-w-[14ch] lg:text-[56px] lg:leading-[62px]">
+            Usually, one of these sounds familiar.
+          </h2>
+          <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:mt-14 lg:grid-cols-4">
+            {quotes.map((quote) => (
+              <li
+                key={quote}
+                className="rounded-[22px] bg-[#f6f5f2] px-7 py-7 text-[16px] leading-[1.55]"
+              >
+                “{quote}”
               </li>
-              <li>
-                <ArrowRight className="pd-points__icon" />
-                <span>
-                  It can involve product positioning, messaging, value
-                  propositions, ICP and buyer research, competitive analysis,
-                  go-to-market planning, SEO, AEO, GEO, and demand generation.
-                </span>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="bg-white">
+        <div className="mx-auto w-full max-w-[1240px] px-5 pt-16 pb-20 sm:px-8 lg:px-12 lg:pt-20 lg:pb-[88px]">
+          <p className={`${jetbrains.className} text-[13px] text-[#6a6864]`}>What’s included</p>
+          <h2 className="mt-3 max-w-[14ch] text-[36px] leading-[1.08] font-semibold tracking-[-0.045em] sm:text-[48px] lg:max-w-[16ch] lg:text-[56px] lg:leading-[62px]">
+            One clear story, everywhere buyers look.
+          </h2>
+          <ul className="mt-12 grid gap-4 lg:mt-14 lg:grid-cols-3">
+            {included.map((item) => (
+              <li key={item.title} className="rounded-[22px] bg-[#f6f5f2] px-7 py-7">
+                <h3 className="text-[22px] font-semibold tracking-[-0.03em]">{item.title}</h3>
+                <p className="mt-3 max-w-[34ch] text-[15px] leading-[1.6] text-[#45433f]">
+                  {item.body}
+                </p>
               </li>
-              <li>
-                <ArrowRight className="pd-points__icon" />
-                <span>
-                  Effective product marketing connects the product, the market,
-                  and the buyer so sales, marketing, product, and leadership
-                  teams share one clear story about who the product is for, what
-                  makes it different, and how it creates value.
-                </span>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="bg-[#0e0e0e] text-[#f4f3ef]">
+        <div className="mx-auto w-full max-w-[1240px] px-5 py-20 sm:px-8 lg:px-12 lg:py-32">
+          <p className="text-[12px] font-semibold tracking-[0.14em] text-[#a3a19c] uppercase">
+            How it works
+          </p>
+          <h2 className="mt-3 max-w-[16ch] text-[36px] leading-[1.1] font-semibold tracking-[-0.05em] sm:text-[48px] lg:max-w-none lg:text-[52px] lg:leading-[57px] lg:tracking-[-2.52px]">
+            Set up once, then keep it running<span className="text-[#ff5a1f]">.</span>
+          </h2>
+          <ol className="mt-12 grid list-none gap-5 md:grid-cols-2 lg:mt-[52px] lg:grid-cols-4 [&:hover>li:not(:hover)]:border-transparent">
+            {steps.map((item) => (
+              <li
+                key={item.step}
+                className={`rounded-[22px] border-t-[3px] bg-[#1a1918] p-7 transition-[border-color] duration-300 ease-out hover:border-[#ff5a1f] ${
+                  item.accent ? "border-[#ff5a1f]" : "border-transparent"
+                }`}
+              >
+                <p className={`${jetbrains.className} text-[12px] text-[#a3a19c]`}>{item.step}</p>
+                <h3 className="mt-3 text-[24px] leading-[1.15] font-semibold tracking-[-0.03em]">
+                  {item.title}
+                </h3>
+                <p className="mt-3.5 text-[14.5px] leading-[1.7] text-[#b9b7b2]">{item.body}</p>
               </li>
-            </ul>
-          </div>
-        </section>
+            ))}
+          </ol>
+        </div>
+      </section>
 
-        <section className="pd-section" id="services">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
-            <span className="pd-eyebrow">Our Services</span>
-            <h2>Product Marketing Services From Positioning to Growth</h2>
-            <p>
-              Product marketing should reduce ambiguity before increasing spend.
-              Our approach connects positioning, messaging, go-to-market
-              planning, search, and demand generation around the product you
-              actually need to sell.
+      {/*
+      <section className="bg-white">
+        <div className="mx-auto grid w-full max-w-[1240px] gap-6 px-5 py-20 sm:px-8 lg:grid-cols-2 lg:px-12 lg:py-32">
+          <div className="flex min-h-[280px] flex-col justify-end rounded-[24px] bg-[#f4f3ef] p-8 lg:min-h-[320px] lg:p-12">
+            <p className="text-[72px] leading-none font-semibold tracking-[-0.05em] lg:text-[120px]">
+              2 deals
             </p>
-
-            <div className="pd-service-grid">
-              {services.map((service, index) => (
-                <article key={service.title} className="pd-service-card">
-                  <div className="pd-service-card__header">
-                    <span className="pd-service-card__icon" aria-hidden>
-                      <ServiceIcon index={index} />
-                    </span>
-                    <span className="pd-service-card__divider" aria-hidden />
-                    <span className="pd-service-card__label">
-                      {service.label}
-                    </span>
-                  </div>
-                  <h3 className="pd-service-card__title">{service.title}</h3>
-                  <p className="pd-service-card__desc">{service.description}</p>
-                  <div className="pd-service-card__tags">
-                    {service.tags.map((tag) => (
-                      <span key={tag} className="pd-service-card__tag">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </article>
-              ))}
-            </div>
+            <p className="mt-4 text-[15px] text-[#45433f]">closed from inbound, within a month</p>
           </div>
-        </section>
-
-        <section className="pd-section pd-dark" id="b2b">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
-            <span className="pd-eyebrow">B2B Product Marketing</span>
-            <h2>B2B Product Marketing Services</h2>
-            <p>
-              B2B products often have longer buying cycles, multiple
-              decision-makers, technical requirements, and complicated value
-              propositions. Product marketing needs to account for those
-              realities from the beginning.
+          <article className="flex min-h-[280px] flex-col rounded-[24px] bg-[#f6f5f2] p-8 lg:min-h-[320px] lg:p-10">
+            <span className="inline-flex h-7 w-fit items-center rounded-full bg-white px-3 text-[13px]">
+              AI / Sports · Product marketing
+            </span>
+            <h3 className="mt-5 text-[26px] font-semibold tracking-[-0.03em]">AI coaching app</h3>
+            <p className="mt-3 max-w-[42ch] text-[16px] leading-[1.55] text-[#45433f]">
+              Our SEO and AI search work brought in the product’s first inbound leads. Two of them
+              closed within a month.
             </p>
-            <div className="pd-grid">
-              <div className="pd-card">
-                <h3>B2B SaaS Product Marketing</h3>
-                <p>
-                  Position SaaS products around real buyer workflows, technical
-                  evaluation criteria, and measurable business outcomes.
-                </p>
-              </div>
-              <div className="pd-card">
-                <h3>Enterprise Product Marketing</h3>
-                <p>
-                  Develop messaging that accounts for multiple stakeholders,
-                  procurement processes, security requirements, and long
-                  consideration cycles.
-                </p>
-              </div>
-              <div className="pd-card">
-                <h3>AI Product Marketing</h3>
-                <p>
-                  Communicate AI capabilities such as automation, intelligent
-                  search, or recommendations in language buyers and evaluators
-                  actually trust.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+            <Link href="/work" className="mt-auto pt-8 text-[16px] font-semibold text-[#ff5a1f]">
+              See more work <span aria-hidden="true">→</span>
+            </Link>
+          </article>
+        </div>
+      </section>
+      */}
 
-        <PmIndustrySection />
-
-        <section className="pd-section pd-missing">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
-            <span className="pd-eyebrow">Our Product Marketing Approach</span>
-            <h2>What Makes Our Product Marketing Approach Different?</h2>
-            <p>
-              Many product marketing programs stop at positioning or launch
-              planning. We connect product strategy with discoverability and
-              evidence throughout the process.
+      <section className="bg-[#f4f3ef]">
+        <div className="mx-auto grid w-full max-w-[1240px] gap-10 px-5 py-20 sm:px-8 lg:grid-cols-[minmax(0,480px)_minmax(0,594px)] lg:justify-between lg:px-12 lg:py-32">
+          <div>
+            <p className={`${jetbrains.className} text-[13px] text-[#6a6864]`}>
+              How we work together
             </p>
-            <div className="pd-grid">
-              <div className="pd-card">
-                <h3>What Questions Are Buyers Asking?</h3>
-                <p>
-                  Before we write messaging, we clarify what buyers actually
-                  want to know before they choose a product.
-                </p>
-              </div>
-              <div className="pd-card">
-                <h3>What Does Search Understand About the Product?</h3>
-                <p>
-                  We check what Google and AI systems already associate with the
-                  product and category before optimizing further.
-                </p>
-              </div>
-              <div className="pd-card">
-                <h3>Which Content Creates Demand Before Sales Is Involved?</h3>
-                <p>
-                  Positioning, content, and search decisions should consider the
-                  buyer&apos;s full journey, not just the sales conversation.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="pd-section">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
-            <span className="pd-eyebrow">Beyond Launch</span>
-            <h2>Product Marketing Is More Than a Launch Plan</h2>
-            <p>
-              Many product marketing projects focus heavily on launch messaging
-              and campaign timelines. But shipping more content does not
-              automatically create durable positioning.
-            </p>
-            <h3>The Cost of Product Marketing Debt</h3>
-            <p>
-              Product marketing debt happens when outdated claims, inconsistent
-              terminology, changing customer objections, and new competitors
-              accumulate and make messaging harder to trust.
-            </p>
-            <div className="pd-grid">
-              <div className="pd-card">
-                <h3>Common Symptoms</h3>
-                <ul>
-                  <li>Outdated claims</li>
-                  <li>Inconsistent terminology</li>
-                  <li>Stale competitive comparisons</li>
-                  <li>Declining search visibility</li>
-                </ul>
-              </div>
-              <div className="pd-card">
-                <h3>What It Creates</h3>
-                <p>
-                  Teams spend more time defending old claims and less time
-                  creating messaging that reflects where the product and market
-                  actually are.
-                </p>
-              </div>
-              <div className="pd-card">
-                <h3>The Better Approach</h3>
-                <p>
-                  Product Partner connects positioning, content, competitive
-                  intelligence, and search performance so messaging can evolve
-                  instead of quietly going stale.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="pd-section">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
-            <span className="pd-eyebrow">Product Partner Framework</span>
-            <h2>Our Product Marketing Framework</h2>
-            <p>
-              Our product marketing framework connects product thinking with
-              positioning and content, moving from ambiguity toward a message
-              buyers and search systems can trust.
-            </p>
-            <div className="pd-framework">
-              {[
-                {
-                  num: "01 RESEARCH",
-                  title: "Understand",
-                  desc: "Understand the customer problem, buyer, market, and competitive landscape.",
-                },
-                {
-                  num: "02 POSITION",
-                  title: "Define",
-                  desc: "Define positioning, value proposition, ICP, and category context.",
-                },
-                {
-                  num: "03 MESSAGE",
-                  title: "Translate",
-                  desc: "Translate positioning into messaging, content, and sales enablement language.",
-                },
-                {
-                  num: "04 LAUNCH",
-                  title: "Activate",
-                  desc: "Activate go-to-market channels, content, and campaigns around the message.",
-                },
-                {
-                  num: "05 OPTIMIZE",
-                  title: "Discover",
-                  desc: "Optimize content for SEO, AEO, and GEO so it performs across search and AI systems.",
-                },
-                {
-                  num: "06 LEARN & SCALE",
-                  title: "Improve",
-                  desc: "Use performance data and buyer feedback to refresh positioning and scale what works.",
-                },
-              ].map((step) => (
-                <div key={step.num} className="pd-step">
-                  <div className="pd-step-number">{step.num}</div>
-                  <h3>{step.title}</h3>
-                  <p>{step.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="pd-section">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
-            <span className="pd-eyebrow">Why Product Partner</span>
-            <h2>
-              Product Marketing That Connects Strategy With Discoverability
+            <h2 className="mt-4 max-w-[12ch] text-[36px] leading-[1.08] font-semibold tracking-[-0.045em] sm:text-[44px] lg:text-[48px]">
+              A setup phase, then a monthly engine.
             </h2>
-            <p>
-              Product Partner works at the intersection of product marketing,
-              search, content, and growth.
+            <p className="mt-6 max-w-[42ch] text-[16px] leading-[1.65] text-[#45433f]">
+              We start by getting the positioning and foundations right. Then content and visibility
+              work runs every month, reviewed together.
             </p>
-            <p>
-              Instead of treating product marketing as an isolated campaign, we
-              connect the product story with the research, content, and search
-              performance required to help it grow. That same discipline carries
-              through our{" "}
-              <Link href="/product-development">product development</Link> work,
-              building the right product, then telling its story well.
-            </p>
-            <ul className="pd-points">
-              {[
-                "Turn product positioning into messaging buyers understand",
-                "Validate messaging before large campaign investments",
-                "Define focused go-to-market plans",
-                "Create content that performs in search and AI answers",
-                "Build positioning for web, mobile, SaaS, and digital products",
-                "Connect product marketing with measurable demand",
-              ].map((item) => (
-                <li key={item}>
-                  <ArrowRight className="pd-points__icon" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
           </div>
-        </section>
+          <div>
+            {faqs.map((faq, index) => (
+              <details
+                key={faq.question}
+                open={index === 0}
+                className="border-b border-[rgba(14,14,14,0.1)] py-6"
+              >
+                <summary className="cursor-pointer list-none text-[18px] font-semibold tracking-[-0.02em] sm:text-[20px] [&::-webkit-details-marker]:hidden">
+                  {faq.question}
+                </summary>
+                <p className="mt-3 max-w-[58ch] text-[15px] leading-6 text-[#45433f]">{faq.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
 
-        <ServiceFaqs
-          heading="Frequently Asked Questions About Product Marketing"
-          faqs={faqs}
-        />
-      </main>
+      <section className="bg-white">
+        <div className="mx-auto flex w-full max-w-[1240px] flex-col gap-8 border-t border-[rgba(14,14,14,0.1)] px-5 py-20 sm:px-8 lg:flex-row lg:items-end lg:justify-between lg:px-12 lg:py-[118px]">
+          <h2 className="max-w-[691px] text-[40px] leading-[1.05] font-semibold tracking-[-0.05em] sm:text-[56px] lg:text-[72px]">
+            Building something? Let’s connect.
+          </h2>
+          <BookCallLink className="shrink-0" />
+        </div>
+      </section>
     </div>
   );
 }

@@ -217,13 +217,13 @@
 /* Mobile: sticky horizontal section nav under header */
 .cs-toc-sticky {
   position: sticky;
-  top: 68px;
+  top: 96px;
   z-index: 20;
 }
 
 @media (min-width: 1024px) {
   .cs-toc-sticky {
-    top: 84px;
+    top: 96px;
     z-index: 10;
   }
 }

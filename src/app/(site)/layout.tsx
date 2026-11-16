@@ -69,9 +69,9 @@ export default function SiteLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-[#111111] text-white">
+      <body suppressHydrationWarning className="flex min-h-full flex-col bg-[#111111] text-white">
         <Header />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 pt-[72px]">{children}</main>
         <Footer />
       </body>
     </html>

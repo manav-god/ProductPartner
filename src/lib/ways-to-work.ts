@@ -1,34 +1,56 @@
 export type WayToWork = {
   id: string;
-  number: string;
   title: string;
-  tagline: string;
   description: string;
+  href: string;
+  icon: string;
+  includes: string[];
 };
 
 export const waysToWork: WayToWork[] = [
   {
-    id: "development",
-    number: "01",
-    title: "Product Development Partner",
-    tagline: "We build what should exist, not just what's in the brief",
-    description:
-      "MVPs, custom apps, web platforms. Before anything gets built we work out who it's for, what it has to prove, and what can wait. You get working software and the reasoning behind every decision inside it.",
-  },
-  {
     id: "leadership",
-    number: "02",
     title: "Fractional Product Leadership",
-    tagline: "Product thinking on the inside, not advice from the outside",
     description:
-      "We step in as your Chief Product Officer, product officer or advisor. Sitting with your CTO, giving the roadmap a spine, fixing where users drop off, working on retention and enhancement, helping the team ship with less noise. We do the thinking and stay accountable for the doing.",
+      "For founders and teams who need fractional product leadership, without a full-time hire.",
+    href: "/product-management",
+    icon: "/images/icons/leadership.svg",
+    includes: [
+      "Roadmap and priorities",
+      "Retention and drop-off",
+      "Feature growth",
+      "Delivery rhythm",
+    ],
   },
   {
     id: "marketing",
-    number: "03",
-    title: "Product Marketing Development",
-    tagline: "Found by the people who are looking for product",
+    title: "Product Marketing & Positioning",
     description:
-      "Search has changed. Buyers now ask AI before they ask Google, and both need something real to point at. We build the content, the positioning and the technical foundation that gets you into those answers. B2B only. Everything above is built on how business buyers actually search.",
+      "For products that work, but aren’t being found or understood yet.",
+    href: "/product-marketing",
+    icon: "/images/icons/productmarketing.svg",
+    includes: [
+      "Positioning",
+      "Messaging",
+      "B2B content",
+      "SEO",
+      "AI search visibility (AEO / GEO)",
+    ],
+  },
+  {
+    id: "development",
+    title: "Product Development",
+    description:
+      "For founders ready to build, and teams that need to build faster.",
+    href: "/product-development",
+    icon: "/images/icons/productdevelopment.svg",
+    includes: [
+      "Discovery and scope",
+      "MVPs",
+      "Mobile apps",
+      "Web platforms",
+      "Custom software",
+      "Feature releases",
+    ],
   },
 ];

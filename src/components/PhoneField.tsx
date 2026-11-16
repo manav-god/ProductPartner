@@ -8,7 +8,7 @@ import {
 import PhoneInput, { type Value } from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 
-export function PhoneField() {
+export function PhoneField({ tone = "dark" }: { tone?: "dark" | "light" }) {
   const [value, setValue] = useState<Value>();
   const [country, setCountry] = useState<CountryCode>("US");
 
@@ -28,7 +28,9 @@ export function PhoneField() {
 
   return (
     <label className="block sm:col-span-2">
-      <span className="mb-2 block text-[13px] font-medium text-white/70">
+      <span
+        className={`mb-2 block text-[13px] font-medium ${tone === "light" ? "text-[#45433f]" : "text-white/70"}`}
+      >
         Phone number
       </span>
       <PhoneInput
@@ -43,10 +45,12 @@ export function PhoneField() {
         value={value}
         onChange={handleChange}
         placeholder="Enter phone number"
-        className="phone-field"
+        className={tone === "light" ? "phone-field phone-field--light" : "phone-field"}
         numberInputProps={{
           className:
-            "PhoneInputInput h-12 w-full bg-transparent text-[15px] text-white outline-none placeholder:text-white/35",
+            tone === "light"
+              ? "PhoneInputInput h-12 w-full bg-transparent text-[15px] text-[#0e0e0e] outline-none placeholder:text-[#8a8883]"
+              : "PhoneInputInput h-12 w-full bg-transparent text-[15px] text-white outline-none placeholder:text-white/35",
           inputMode: "numeric",
         }}
       />

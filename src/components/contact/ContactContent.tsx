@@ -25,7 +25,7 @@ export function ContactContent() {
                 </ul>
               </div>
               <div className="contact-layout__form">
-                <ContactForm />
+                <ContactForm tone="light" />
               </div>
             </div>
           </div>

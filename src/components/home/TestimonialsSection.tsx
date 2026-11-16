@@ -1,75 +1,89 @@
-import { testimonials, type Testimonial } from "@/lib/testimonials";
+import { Inter } from "next/font/google";
 
-function Stars() {
-  return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
-      src="/images/testimonials/stars.webp"
-      alt=""
-      width={92}
-      height={16}
-      className="mb-4 h-[16px] w-[92px]"
-      aria-hidden
-    />
-  );
-}
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+});
 
-function QuoteTile({ item }: { item: Testimonial }) {
-  return (
-    <article className="mb-5 rounded-[10px] border border-white/10 bg-white/[0.04] p-5">
-      <Stars />
-      <div className="mb-[1.6em] text-[16px] font-medium leading-[28px] text-white [&_p]:mb-[1.6em] [&_p:last-child]:mb-0 [&_strong]:font-bold">
-        {item.quote}
-      </div>
-      <p className="border-t border-white/15 pt-5 text-[16px] font-medium leading-[28px] text-white">
-        {item.name ? (
-          <>
-            <strong className="font-bold">{item.name}</strong>
-            {" | "}
-          </>
-        ) : null}
-        {item.role}
-      </p>
-    </article>
-  );
-}
+const clientLogos = [
+  { src: "/images/clientlogo/trimmed/clubeduelz.png", alt: "Club Duelz" },
+  { src: "/images/clientlogo/trimmed/mediawise.png", alt: "Mediawise" },
+  { src: "/images/clientlogo/trimmed/statepharm.png", alt: "Statepharm" },
+  { src: "/images/clientlogo/trimmed/logo4.png", alt: "Client logo" },
+  { src: "/images/clientlogo/trimmed/logo5-clear.png", alt: "Client logo" },
+  { src: "/images/clientlogo/trimmed/dared.png", alt: "Dared" },
+];
+
+const quotes = [
+  {
+    quote: "“Manav was a highly diligent and dedicated partner to us.”",
+    name: "Steve",
+    role: "CEO, PD",
+  },
+  {
+    quote: "“They brought a strong combination of strategic insight and execution.”",
+    name: "Dawn M Price",
+    role: "Sr Industry Engagement Manager, GSIC",
+  },
+  {
+    quote:
+      "“He built our multiplayer mobile game MVP from scratch, handling complex real-time features perfectly.”",
+    name: "Nikodem Rafal",
+    role: "CEO, Dared",
+  },
+];
 
 export function TestimonialsSection() {
-  const [first, ...rest] = testimonials;
-  const col2 = rest.slice(0, 2);
-  const col3 = rest.slice(2);
-
   return (
     <section
       id="testimonials"
-      className="bg-[#111111]"
       aria-labelledby="testimonials-heading"
+      className={`${inter.className} scroll-mt-[120px] border-t border-[rgba(14,14,14,0.1)] bg-white text-[#0e0e0e]`}
     >
-      <div className="mx-auto flex w-full max-w-[1300px] flex-col justify-between gap-0 px-5 py-[90px] md:px-8 lg:flex-row lg:px-5">
-        <div className="w-full lg:w-[32%]">
-          <div className="mb-5 flex flex-col items-center rounded-[10px] p-5 text-center">
-            <p className="mb-[30px] rounded-lg border border-white/15 px-[15px] py-[5px] text-[12px] font-semibold leading-[28px] text-white/60">
-              Testimonials
-            </p>
-            <h3
-              id="testimonials-heading"
-              className="text-[28px] font-extrabold leading-[1.25] tracking-tight text-white md:text-[30px] md:leading-[34px]"
-            >
-              What our clients say about us
-            </h3>
-          </div>
-          {first ? <QuoteTile item={first} /> : null}
-        </div>
+      <div className="mx-auto flex w-full max-w-[1240px] flex-col items-center px-5 py-20 text-center sm:px-8 md:py-28 lg:px-12 lg:py-[140px]">
+        <p className="text-[12px] font-semibold tracking-[0.14em] text-[#5e5c58] uppercase">
+          What partners say
+        </p>
+        <h2
+          id="testimonials-heading"
+          className="mt-6 max-w-[720px] text-[32px] leading-[1.25] font-medium tracking-[-0.038em] sm:text-[40px] lg:text-[46px]"
+        >
+          <span className="lg:block">“I’ve worked with product leaders</span>{" "}
+          <span className="lg:block">twice Manav’s age. He catches</span>{" "}
+          <span className="lg:block">things most of them miss.”</span>
+        </h2>
+        <p className="mt-8 text-[16px]">
+          <span className="font-semibold">Vraj D</span>{" "}
+          <span className="text-[14px] text-[#5e5c58]">Founder, Club Duelz</span>
+        </p>
 
-        <div className="w-full lg:w-[32%]">
-          {col2.map((item) => (
-            <QuoteTile key={item.id} item={item} />
+        <div className="mt-16 grid w-full gap-5 text-left lg:grid-cols-3">
+          {quotes.map((item) => (
+            <figure
+              key={item.name}
+              className="flex min-h-[239px] flex-col rounded-[24px] bg-[#f6f5f2] p-[30px]"
+            >
+              <blockquote className="text-[18px] leading-7 font-medium tracking-[-0.3px]">
+                {item.quote}
+              </blockquote>
+              <figcaption className="mt-auto pt-6">
+                <p className="text-[15px] font-semibold">{item.name}</p>
+                <p className="mt-1 text-[13px] text-[#5e5c58]">{item.role}</p>
+              </figcaption>
+            </figure>
           ))}
         </div>
 
-        <div className="w-full lg:w-[32%]">
-          {col3.map((item) => (
-            <QuoteTile key={item.id} item={item} />
+        <div className="mt-16 flex flex-wrap items-center justify-center gap-x-5 gap-y-4">
+          <p className="mr-3 text-[12px] text-[#5e5c58]">Teams we’ve worked with</p>
+          {clientLogos.map((logo) => (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              key={logo.src}
+              src={logo.src}
+              alt={logo.alt}
+              className="h-11 w-auto"
+            />
           ))}
         </div>
       </div>

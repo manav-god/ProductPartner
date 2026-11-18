@@ -71,7 +71,7 @@ export function FlIndustrySection() {
       id="sports-ecommerce"
       aria-labelledby="fl-fp-heading"
     >
-      <div className="mx-auto w-full max-w-[1300px] px-5 py-14 md:px-8 md:py-16 lg:px-[40px] lg:py-[72px]">
+      <div className="mx-auto w-full max-w-[1400px] p-[50px]">
         <h2 id="fl-fp-heading" className="pd-fp-heading">
           Product Management for Sports &amp; Ecommerce
           <span className="pd-fp-heading__rule" aria-hidden />

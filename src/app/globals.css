@@ -29,6 +29,24 @@
 
 html {
   color-scheme: dark;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(94, 92, 88, 0.55) transparent;
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background: rgba(94, 92, 88, 0.55);
+  background-clip: padding-box;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 body {
@@ -67,6 +85,199 @@ a[aria-disabled="true"],
 ::selection {
   background: color-mix(in srgb, var(--accent) 22%, white);
   color: var(--foreground);
+}
+
+/* Custom cursor: black on white and orange, white on black. */
+html.has-custom-cursor,
+html.has-custom-cursor * {
+  cursor: none !important;
+}
+
+.custom-cursor {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.custom-cursor.is-visible {
+  opacity: 1;
+}
+
+.custom-cursor-dot,
+.custom-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  translate: -50% -50%;
+  transition:
+    width 0.25s,
+    height 0.25s,
+    background-color 0.2s,
+    border-color 0.2s;
+}
+
+.custom-cursor.is-on-light .custom-cursor-dot {
+  width: 6px;
+  height: 6px;
+  background: #111111;
+  z-index: 2;
+}
+
+.custom-cursor.is-on-light .custom-cursor-ring {
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid #111111;
+  background: transparent;
+  z-index: 1;
+}
+
+.custom-cursor.is-on-light.is-hovering .custom-cursor-ring {
+  width: 56px;
+  height: 56px;
+  background-color: rgba(18, 18, 18, 0.06);
+}
+
+.custom-cursor.is-on-dark .custom-cursor-dot {
+  width: 6px;
+  height: 6px;
+  background: #ffffff;
+  z-index: 2;
+}
+
+.custom-cursor.is-on-dark .custom-cursor-ring {
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid #ffffff;
+  background: transparent;
+  z-index: 1;
+}
+
+.custom-cursor.is-on-dark.is-hovering .custom-cursor-ring {
+  width: 56px;
+  height: 56px;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.custom-cursor.is-hovering .custom-cursor-dot {
+  width: 4px;
+  height: 4px;
+}
+
+/* Reusable fill button. The border stays on the button itself so the
+   stroke is a complete pill. The hover color sweeps inside that border. */
+.fill-btn {
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
+  border: 1px solid var(--fill-border);
+  background-color: var(--fill-rest);
+  background-image: linear-gradient(var(--fill-hover), var(--fill-hover));
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 0% 100%;
+  background-clip: padding-box;
+  transition:
+    background-size 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fill-btn:hover,
+.fill-btn:focus-visible {
+  background-size: 100% 100%;
+  border-color: var(--fill-border-hover);
+}
+
+.fill-btn:disabled,
+.fill-btn:disabled:hover,
+.fill-btn:disabled:focus-visible {
+  background-size: 0% 100%;
+  border-color: var(--fill-border);
+}
+
+.fill-btn__face {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: inherit;
+}
+
+.fill-btn__face-hover {
+  position: absolute;
+  inset: 0;
+  color: var(--fill-ink);
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fill-btn:hover .fill-btn__face-hover,
+.fill-btn:focus-visible .fill-btn__face-hover {
+  clip-path: inset(0 0 0 0);
+}
+
+.fill-btn:disabled .fill-btn__face-hover,
+.fill-btn:disabled:hover .fill-btn__face-hover {
+  clip-path: inset(0 100% 0 0);
+}
+
+.fill-btn-black-white {
+  color: #fff;
+  --fill-rest: #0e0e0e;
+  --fill-hover: #fff;
+  --fill-ink: #0e0e0e;
+  --fill-border: #0e0e0e;
+  --fill-border-hover: rgba(14, 14, 14, 0.28);
+}
+
+.fill-btn-white-orange {
+  color: #0e0e0e;
+  --fill-rest: #fff;
+  --fill-hover: #ff5a1f;
+  --fill-ink: #0e0e0e;
+  --fill-border: rgba(14, 14, 14, 0.28);
+  --fill-border-hover: #ff5a1f;
+}
+
+.fill-btn-orange-white {
+  color: #0e0e0e;
+  --fill-rest: #ff5a1f;
+  --fill-hover: #fff;
+  --fill-ink: #0e0e0e;
+  --fill-border: #ff5a1f;
+  --fill-border-hover: rgba(14, 14, 14, 0.28);
+}
+
+.fill-btn-white-black {
+  color: #0e0e0e;
+  --fill-rest: #fff;
+  --fill-hover: #0e0e0e;
+  --fill-ink: #fff;
+  --fill-border: rgba(14, 14, 14, 0.28);
+  --fill-border-hover: #0e0e0e;
+}
+
+.fill-btn-black-orange {
+  color: #fff;
+  --fill-rest: #0e0e0e;
+  --fill-hover: #ff5a1f;
+  --fill-ink: #0e0e0e;
+  --fill-border: #0e0e0e;
+  --fill-border-hover: #ff5a1f;
+}
+
+.fill-btn-orange-black {
+  color: #0e0e0e;
+  --fill-rest: #ff5a1f;
+  --fill-hover: #0e0e0e;
+  --fill-ink: #fff;
+  --fill-border: #ff5a1f;
+  --fill-border-hover: #0e0e0e;
 }
 
 /* Dots stay with the section. Fixed attachment leaves headings painted
@@ -374,4 +585,32 @@ a[aria-disabled="true"],
 
 .phone-field--light .PhoneInputInput::placeholder {
   color: #8a8883;
+}
+
+/* Mobile and tablet navigation drawer */
+.nav-drawer {
+  box-shadow: -28px 0 56px rgba(14, 14, 14, 0.08);
+  transition-property: translate, transform;
+  transition-duration: 560ms;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.nav-drawer__icon-line {
+  transition-property: translate, rotate, scale, opacity;
+  transition-duration: 320ms;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.nav-drawer__item {
+  transition-property: translate, opacity;
+  transition-duration: 480ms;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-drawer,
+  .nav-drawer__icon-line,
+  .nav-drawer__item {
+    transition: none;
+  }
 }

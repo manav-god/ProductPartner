@@ -1,6 +1,6 @@
 /* Product Development page — visual styles only.
    Layout width/padding comes from homepage Tailwind shell:
-   mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]
+   mx-auto w-full max-w-[1400px] px-5 md:px-8 lg:px-[40px]
 */
 
 .pd-page {
@@ -21,7 +21,7 @@
 }
 
 .pd-section {
-  padding: 64px 0;
+  padding: 0;
   background: #111111;
 }
 
@@ -80,17 +80,6 @@
   color: rgba(37, 36, 37, 0.65) !important;
 }
 
-@media (min-width: 768px) {
-  .pd-section {
-    padding: 80px 0;
-  }
-}
-
-@media (min-width: 1024px) {
-  .pd-section {
-    padding: 96px 0;
-  }
-}
 
 .pd-eyebrow {
   display: inline-block;
@@ -147,7 +136,7 @@
 }
 
 .pd-hero {
-  padding: 80px 0 72px;
+  padding: 0;
   background: #111111;
 }
 
@@ -178,11 +167,6 @@
   }
 }
 
-@media (min-width: 768px) {
-  .pd-hero {
-    padding: 112px 0 96px;
-  }
-}
 
 .pd-hero h1 span {
   color: rgba(255, 255, 255, 0.55);
@@ -209,38 +193,57 @@
 }
 
 .pd-btn {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-height: 48px;
   padding: 12px 28px;
   border-radius: 10px;
+  border: 1px solid var(--pd-border);
+  background-color: var(--pd-rest);
+  background-image: linear-gradient(var(--pd-hover), var(--pd-hover));
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 0% 100%;
+  background-clip: padding-box;
   text-decoration: none !important;
   font-size: 14px;
   font-weight: 600;
-  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease,
+  transition:
+    background-size 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.25s ease,
+    color 0.25s ease,
     transform 0.2s ease;
 }
 
+.pd-btn:hover {
+  background-size: 100% 100%;
+  border-color: var(--pd-border-hover);
+}
+
 .pd-btn-primary {
-  background: #ff5900;
   color: #ffffff !important;
-  border: none;
+  --pd-rest: #ff5900;
+  --pd-hover: #0e0e0e;
+  --pd-border: #ff5900;
+  --pd-border-hover: #0e0e0e;
 }
 
 .pd-btn-primary:hover {
-  background: #e65000;
+  color: #ffffff !important;
 }
 
 .pd-btn-secondary {
-  border: 1px solid rgba(255, 255, 255, 0.9);
   color: #ffffff !important;
-  background: rgba(26, 26, 26, 0.8);
+  --pd-rest: rgba(26, 26, 26, 0.8);
+  --pd-hover: #ff5900;
+  --pd-border: rgba(255, 255, 255, 0.9);
+  --pd-border-hover: #ff5900;
 }
 
 .pd-btn-secondary:hover {
-  border-color: #ff5900;
-  color: #ff5900 !important;
+  color: #0e0e0e !important;
 }
 
 .pd-btn:hover {
@@ -796,7 +799,7 @@
 
 .pd-cta {
   text-align: center;
-  padding: 80px 0 96px;
+  padding: 0;
   background: #111111;
   color: #ffffff;
 }
@@ -817,13 +820,14 @@
 }
 
 .pd-cta .pd-btn-secondary {
-  background: #ff5900;
   color: #ffffff !important;
-  border: none;
+  --pd-rest: #ff5900;
+  --pd-hover: #0e0e0e;
+  --pd-border: #ff5900;
+  --pd-border-hover: #0e0e0e;
 }
 
 .pd-cta .pd-btn-secondary:hover {
-  background: #e65000;
   color: #ffffff !important;
 }
 
@@ -950,7 +954,7 @@
 
 @media (max-width: 800px) {
   .pd-section {
-    padding: 56px 0;
+    padding: 0;
   }
 
   .pd-page h1 {

@@ -1,5 +1,5 @@
 import { Caveat, Inter, JetBrains_Mono } from "next/font/google";
-import Link from "next/link";
+import { FillButton } from "@/components/FillButton";
 import { heroContent } from "@/lib/hero";
 
 const inter = Inter({
@@ -137,37 +137,40 @@ export function HeroBanner() {
       aria-label="Highlights"
       className={`${inter.className} canvas-dots text-[#0e0e0e]`}
     >
-      <div className="mx-auto flex w-full max-w-[1180px] flex-col items-center px-5 pt-14 pb-20 sm:px-8 sm:pt-16 lg:px-10 lg:pt-[88px] lg:pb-28">
-        <p className="inline-flex h-[35px] items-center rounded-full border border-[rgba(14,14,14,0.18)] bg-white px-[17px] text-center text-[11.3px] font-semibold tracking-[1.68px] text-[#0e0e0e] uppercase">
+      <div className="mx-auto flex min-h-[calc(100dvh-72px)] w-full max-w-[1400px] flex-col items-center justify-center px-5 py-[50px] sm:p-[50px]">
+        <p className="inline-flex max-w-full items-center justify-center rounded-full border border-[rgba(14,14,14,0.18)] bg-white px-4 py-2.5 text-center text-[11px] leading-[1.4] font-semibold tracking-[0.12em] text-[#0e0e0e] uppercase sm:h-[35px] sm:px-[17px] sm:py-0 sm:text-[11.3px] sm:leading-none sm:tracking-[1.68px]">
           {eyebrow}
         </p>
 
-        <h1 className="mt-6 max-w-[860px] text-center text-[40px] leading-[1.06] font-semibold tracking-[-0.045em] text-[#0e0e0e] sm:mt-7 sm:text-[56px] lg:text-[72px] lg:tracking-[-3.2px] xl:text-[88.5px] xl:leading-[94px] xl:tracking-[-4.608px]">
+        <h1 className="mt-6 max-w-[860px] text-center text-[34px] leading-[1.1] font-semibold tracking-[-0.045em] text-[#0e0e0e] sm:mt-7 sm:text-[56px] sm:leading-[1.06] lg:text-[72px] lg:tracking-[-3.2px] xl:text-[88.5px] xl:leading-[94px] xl:tracking-[-4.608px]">
           {titleLead}
           <br />
           {titleTail}<span className="text-[#ff5a1f]">.</span>
         </h1>
 
-        <p className="mt-5 max-w-[484px] text-center text-[17px] leading-[28px] text-[#45433f] sm:mt-6 sm:text-[19.6px] sm:leading-[33px]">
+        <p className="mt-4 max-w-[484px] text-center text-[16px] leading-6 text-[#45433f] sm:mt-6 sm:text-[19.6px] sm:leading-[33px]">
           {description}
         </p>
 
-        <div className="mt-8 flex flex-col items-center gap-3 sm:mt-8 sm:flex-row sm:gap-3">
-          <Link
+        <div className="mt-7 flex flex-row flex-wrap items-center justify-center gap-2 sm:mt-8 sm:gap-3">
+          <FillButton
             href={primaryCta.href}
-            className="inline-flex h-14 items-center justify-center gap-2.5 rounded-full bg-[#ff5a1f] px-7 text-[15.7px] font-semibold text-[#0e0e0e] transition-colors hover:bg-[#f04e14]"
+            variant="orange-white"
+            className="h-11 gap-2 rounded-full px-4 text-[14px] whitespace-nowrap sm:h-14 sm:gap-2.5 sm:px-7 sm:text-[15.7px]"
           >
             {primaryCta.label}
-          </Link>
-          <Link
+          </FillButton>
+          <FillButton
             href={secondaryCta.href}
-            className="inline-flex h-14 items-center justify-center rounded-full border border-[rgba(14,14,14,0.18)] bg-white px-7 text-[15.8px] font-semibold text-[#0e0e0e] transition-colors hover:bg-[#f4f3ef]"
+            variant="white-orange"
+            className="h-11 rounded-full px-4 text-[14px] whitespace-nowrap sm:h-14 sm:px-7 sm:text-[15.8px]"
           >
             {secondaryCta.label}
-          </Link>
+          </FillButton>
         </div>
+      </div>
 
-        <div className="mt-16 grid w-full justify-items-center gap-x-6 gap-y-10 sm:grid-cols-2 xl:mt-24 xl:flex xl:items-start xl:justify-between xl:gap-6">
+      <div className="mx-auto grid w-full max-w-[1400px] justify-items-center gap-x-6 gap-y-10 px-[50px] pb-[50px] sm:grid-cols-2 xl:flex xl:items-start xl:justify-between xl:gap-6">
           {stages.map((stage) => (
             <div
               key={stage.label}
@@ -177,7 +180,6 @@ export function HeroBanner() {
               {stage.card}
             </div>
           ))}
-        </div>
       </div>
     </section>
   );

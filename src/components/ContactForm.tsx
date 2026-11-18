@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { FillButton } from "@/components/FillButton";
 import { PhoneField } from "@/components/PhoneField";
 import { ArrowRight } from "@/components/icons";
 
@@ -114,18 +115,19 @@ export function ContactForm({ tone = "dark" }: { tone?: "dark" | "light" }) {
         />
       </label>
       <div className="sm:col-span-2">
-        <button
+        <FillButton
           type="submit"
           disabled={status === "loading"}
+          variant="orange-white"
           className={
             light
-              ? "inline-flex h-14 items-center gap-2 rounded-full bg-[#ff5a1f] px-7 text-[16px] font-semibold text-[#0e0e0e] disabled:cursor-not-allowed disabled:opacity-60"
-              : "inline-flex h-[48px] items-center gap-2 rounded-[10px] bg-accent px-7 text-[14px] font-semibold text-white transition-colors hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-60"
+              ? "h-14 gap-2 rounded-full px-7 text-[16px] disabled:cursor-not-allowed disabled:opacity-60"
+              : "h-[48px] gap-2 rounded-[10px] px-7 text-[14px] disabled:cursor-not-allowed disabled:opacity-60"
           }
         >
           {status === "loading" ? "Sending..." : "Submit"}
           <ArrowRight className="h-3.5 w-3.5" />
-        </button>
+        </FillButton>
 
         {status === "success" ? (
           <p className={`mt-3 text-[14px] ${light ? "text-emerald-700" : "text-emerald-400"}`}>

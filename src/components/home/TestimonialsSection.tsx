@@ -40,7 +40,7 @@ export function TestimonialsSection() {
       aria-labelledby="testimonials-heading"
       className={`${inter.className} scroll-mt-[120px] border-t border-[rgba(14,14,14,0.1)] bg-white text-[#0e0e0e]`}
     >
-      <div className="mx-auto flex w-full max-w-[1240px] flex-col items-center px-5 py-20 text-center sm:px-8 md:py-28 lg:px-12 lg:py-[140px]">
+      <div className="mx-auto flex w-full max-w-[1400px] flex-col items-center px-5 py-[50px] text-center sm:p-[50px]">
         <p className="text-[12px] font-semibold tracking-[0.14em] text-[#5e5c58] uppercase">
           What partners say
         </p>
@@ -74,17 +74,34 @@ export function TestimonialsSection() {
           ))}
         </div>
 
-        <div className="mt-16 flex flex-wrap items-center justify-center gap-x-5 gap-y-4">
-          <p className="mr-3 text-[12px] text-[#5e5c58]">Teams we’ve worked with</p>
-          {clientLogos.map((logo) => (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
-              key={logo.src}
-              src={logo.src}
-              alt={logo.alt}
-              className="h-11 w-auto"
-            />
-          ))}
+        <div className="mt-16 w-full">
+          <p className="mb-4 text-[12px] text-[#5e5c58] sm:hidden">Teams we’ve worked with</p>
+          <div className="group/partner w-full overflow-hidden sm:hidden">
+            <div className="partner-marquee__track flex w-max items-center gap-x-5">
+              {[...clientLogos, ...clientLogos].map((logo, index) => (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  key={`${logo.src}-${index}`}
+                  src={logo.src}
+                  alt={index < clientLogos.length ? logo.alt : ""}
+                  aria-hidden={index >= clientLogos.length ? true : undefined}
+                  className="h-11 w-auto shrink-0"
+                />
+              ))}
+            </div>
+          </div>
+          <div className="hidden flex-wrap items-center justify-center gap-x-5 gap-y-4 sm:flex">
+            <p className="mr-3 text-[12px] text-[#5e5c58]">Teams we’ve worked with</p>
+            {clientLogos.map((logo) => (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                key={logo.src}
+                src={logo.src}
+                alt={logo.alt}
+                className="h-11 w-auto"
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

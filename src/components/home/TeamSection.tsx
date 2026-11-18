@@ -38,13 +38,13 @@ export function TeamSection() {
   return (
     <section
       id="team"
-      className="overflow-hidden py-16 md:py-20"
+      className="overflow-hidden"
       style={{
         background: "linear-gradient(180deg, #ffffff 0%, #edf0f3 100%)",
       }}
       aria-labelledby="team-heading"
     >
-      <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
+      <div className="mx-auto w-full max-w-[1400px] p-[50px]">
         <div className="mb-10 max-w-2xl md:mb-14">
           <p className="text-[15px] font-medium text-[#252425]/70">
             Leadership &amp; key experts

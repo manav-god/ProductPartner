@@ -37,7 +37,7 @@ export function PortfolioSection() {
       aria-labelledby="portfolio-heading"
       className={`${inter.className} scroll-mt-[120px] bg-white text-[#0e0e0e]`}
     >
-      <div className="mx-auto flex w-full max-w-[1240px] flex-col px-5 py-20 sm:px-8 md:py-28 lg:px-12 lg:py-[140px]">
+      <div className="mx-auto flex w-full max-w-[1400px] flex-col p-[50px]">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between lg:gap-12">
           <div className="flex max-w-[720px] flex-col gap-3">
             <p className="text-[12px] font-semibold tracking-[0.14em] text-[#5e5c58] uppercase">

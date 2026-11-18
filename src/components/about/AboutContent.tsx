@@ -348,7 +348,7 @@ export function AboutContent() {
       <main id="main-content">
         {/* HERO */}
         <section className="pd-hero about-hero" aria-labelledby="hero-title">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
+          <div className="mx-auto w-full max-w-[1400px] p-[50px]">
             <div className="about-hero__grid">
               <div>
                 <h1 id="hero-title">
@@ -412,7 +412,7 @@ export function AboutContent() {
 
         {/* PROOF */}
         <section className="about-proof" aria-label="Track record">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
+          <div className="mx-auto w-full max-w-[1400px] p-[50px]">
             <div className="about-proof__grid">
               {proof.map((item) => (
                 <div key={item.label} className="about-proof__item">
@@ -426,7 +426,7 @@ export function AboutContent() {
 
         {/* CHAPTER 1 — ARJUN */}
         <section className="pd-section" id="chapter-1" aria-labelledby="ch1-title">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
+          <div className="mx-auto w-full max-w-[1400px] p-[50px]">
             <div className="about-story">
               <div>
                 <p className="about-chapter-mark">
@@ -460,7 +460,7 @@ export function AboutContent() {
 
         {/* CHAPTER 2 — MANAV */}
         <section className="pd-section" aria-labelledby="ch2-title">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
+          <div className="mx-auto w-full max-w-[1400px] p-[50px]">
             <div className="about-story about-story--flip">
               <div>
                 <p className="about-chapter-mark">
@@ -516,7 +516,7 @@ export function AboutContent() {
           className="pd-section pd-dark about-gap"
           aria-labelledby="ch3-title"
         >
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
+          <div className="mx-auto w-full max-w-[1400px] p-[50px]">
             <div className="about-story">
               <div>
                 <p className="about-chapter-mark">
@@ -548,7 +548,7 @@ export function AboutContent() {
 
         {/* HOW WE CLOSE IT */}
         <section className="pd-section" aria-labelledby="how-title">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
+          <div className="mx-auto w-full max-w-[1400px] p-[50px]">
             <div className="about-how-head">
               <h2 id="how-title">How we close the gap.</h2>
               <p className="pd-lead">
@@ -572,7 +572,7 @@ export function AboutContent() {
 
         {/* TERMS */}
         <section className="pd-section" aria-labelledby="terms-title">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
+          <div className="mx-auto w-full max-w-[1400px] p-[50px]">
             <div className="about-terms">
               <svg
                 className="about-terms__icon"
@@ -613,7 +613,7 @@ export function AboutContent() {
 
         {/* CTA */}
         <section className="pd-section" aria-labelledby="cta-title">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
+          <div className="mx-auto w-full max-w-[1400px] p-[50px]">
             <div className="about-cta">
               <div>
                 <p className="about-cta__status">

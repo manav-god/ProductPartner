@@ -27,7 +27,7 @@ export async function BlogIndex() {
   return (
     <div className="blog-page">
       <section className="blog-hero">
-        <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
+        <div className="mx-auto w-full max-w-[1400px] px-5 py-[50px] sm:p-[50px]">
           <span className="blog-eyebrow">Blog</span>
           <h1>What we&apos;re building and learning</h1>
           <p className="blog-lead">
@@ -37,7 +37,7 @@ export async function BlogIndex() {
         </div>
       </section>
 
-      <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
+      <div className="mx-auto w-full max-w-[1400px] px-5 py-[50px] sm:p-[50px]">
         {posts.length === 0 ? (
           <p className="blog-empty">
             No posts yet. Publish one from the admin and it will show up here.

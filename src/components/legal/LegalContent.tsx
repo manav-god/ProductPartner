@@ -25,7 +25,7 @@ export function LegalContent({
     <div className="pd-page legal-page">
       <main id="main-content">
         <section className="pd-hero">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
+          <div className="mx-auto w-full max-w-[1400px] p-[50px]">
             <span className="pd-eyebrow">{eyebrow}</span>
             <h1>{title}</h1>
             <p className="pd-lead">{intro}</p>
@@ -34,7 +34,7 @@ export function LegalContent({
         </section>
 
         <section className="pd-section">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
+          <div className="mx-auto w-full max-w-[1400px] p-[50px]">
             <div className="legal-body">
               {sections.map((section) => (
                 <article key={section.title} className="legal-section">

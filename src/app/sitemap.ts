@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getPublishedCaseStudies } from "@/lib/get-case-studies";
+import { offeringPages } from "@/lib/offering-pages";
 import { getPublishedPosts } from "@/lib/posts";
 
 const siteUrl = "https://productpartner.net";
@@ -34,6 +35,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly",
       priority: 0.9,
     },
+    ...offeringPages.map((page) => ({
+      url: `${siteUrl}/${page.slug}/`,
+      lastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
     {
       url: `${siteUrl}/product-marketing/`,
       lastModified,

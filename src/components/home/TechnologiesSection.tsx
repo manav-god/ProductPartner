@@ -49,13 +49,13 @@ export function TechnologiesSection() {
   return (
     <section
       id="technologies"
-      className="overflow-hidden py-16 md:py-[92px]"
+      className="overflow-hidden"
       style={{
         background: "linear-gradient(180deg, #ffffff 0%, #edf0f3 100%)",
       }}
       aria-labelledby="technologies-heading"
     >
-      <div className="mx-auto w-full max-w-[1280px] px-5 md:px-8 lg:px-[40px]">
+      <div className="mx-auto w-full max-w-[1400px] p-[50px]">
         <div className="max-w-[720px]">
           <h2
             id="technologies-heading"

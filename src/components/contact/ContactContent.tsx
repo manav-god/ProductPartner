@@ -7,7 +7,7 @@ export function ContactContent() {
     <div className="pd-page contact-page">
       <main id="main-content">
         <section className="pd-section" id="contact-form">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
+          <div className="mx-auto w-full max-w-[1400px] px-5 py-[50px] sm:p-[50px]">
             <div className="contact-layout">
               <div className="contact-layout__intro">
                 <span className="pd-eyebrow">Start a conversation</span>

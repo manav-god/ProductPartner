@@ -17,9 +17,22 @@
 
 .contact-layout {
   display: grid;
-  gap: 40px;
+  gap: 32px;
   width: 100%;
   align-items: start;
+}
+
+@media (min-width: 640px) {
+  .contact-layout {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 639px) {
+  .contact-page.pd-page h2 {
+    font-size: 32px;
+    line-height: 1.12;
+  }
 }
 
 @media (min-width: 1024px) {

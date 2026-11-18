@@ -7,6 +7,8 @@ type SiteLogoProps = {
   /** light = white wordmark on the dark bar. ink = dark wordmark on the pill. */
   tone?: "light" | "ink";
   compact?: boolean;
+  /** Orange period after the wordmark. Off in the footer. */
+  period?: boolean;
 };
 
 export function SiteLogo({
@@ -14,6 +16,7 @@ export function SiteLogo({
   withWordmark = false,
   tone = "light",
   compact = false,
+  period = true,
 }: SiteLogoProps) {
   return (
     <Link
@@ -52,7 +55,7 @@ export function SiteLogo({
           }
         >
           Product Partner
-          {compact ? <span className="text-[#ff5a1f]">.</span> : null}
+          {compact && period ? <span className="text-[#ff5a1f]">.</span> : null}
         </span>
       ) : null}
     </Link>

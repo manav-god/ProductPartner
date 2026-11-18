@@ -8,15 +8,9 @@
 }
 
 .cs-hero {
-  padding: 72px 0 40px;
+  padding: 0;
   background: #111111;
   overflow-x: clip;
-}
-
-@media (min-width: 768px) {
-  .cs-hero {
-    padding: 104px 0 72px;
-  }
 }
 
 .cs-hero__grid {
@@ -161,21 +155,9 @@
 }
 
 .cs-body {
-  padding: 28px 0 56px;
+  padding: 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   background: #111111;
-}
-
-@media (min-width: 768px) {
-  .cs-body {
-    padding: 40px 0 72px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .cs-body {
-    padding: 48px 0 96px;
-  }
 }
 
 .cs-layout {

@@ -11,7 +11,7 @@ export function ServiceFaqs({
 
   return (
     <section className="pd-section">
-      <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
+      <div className="mx-auto w-full max-w-[1400px] p-[50px]">
         <span className="pd-eyebrow">Frequently Asked Questions</span>
         <h2>{heading}</h2>
         <div className="pd-faq">

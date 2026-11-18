@@ -1,0 +1,2969 @@
+[
+  {
+    "slug": "ai-development",
+    "title": "AI Development Company | AI That Ships, Not Just Demos",
+    "description": "AI development built around measurable business value, not novelty. Custom AI, LLM apps, automation. Fixed scope. Book a free product workshop.",
+    "name": "AI Development",
+    "image": "/images/services/ai-development.png",
+    "imageAlt": "AI Development Built Around Measurable Business Value",
+    "heading": "AI Development Built Around Measurable Business Value",
+    "lede": "Adding an LLM to a product is easy. Making it actually improve a business outcome is the hard part. We approach AI development by first identifying where AI creates measurable value, then building the LLM application development work to deliver it.",
+    "facts": [
+      {
+        "value": "Fixed scope",
+        "label": "Agreed price and timeline upfront"
+      },
+      {
+        "value": "Direct access",
+        "label": "You work with senior engineers, not account managers"
+      },
+      {
+        "value": "Built for outcomes",
+        "label": "AI scoped to a measurable business result"
+      },
+      {
+        "value": "100% yours",
+        "label": "Full code and IP ownership"
+      }
+    ],
+    "quick": "AI development is the process of designing and building AI-powered features or products, including generative AI development, LLM application development, and workflow automation, scoped around a specific business outcome rather than added to a product as a novelty. It includes evaluating whether AI is the right approach at all, then building and integrating the parts that are.",
+    "pain": {
+      "heading": "AI Development Is Not Just About Adding an LLM to an Existing Workflow",
+      "paragraphs": [
+        "It's now easy to bolt a chatbot or a generative feature onto an existing product. It's much harder to know whether that's where AI actually creates value, or whether it's solving a problem nobody had.",
+        "A typical AI development company will build the AI feature you ask for. The more valuable work is identifying where AI genuinely improves an outcome, and being honest when it doesn't."
+      ],
+      "points": [
+        "Adding AI to a workflow doesn't automatically make it better",
+        "Novel AI features can distract from the workflow that actually needs fixing",
+        "A build-to-spec vendor won't tell you when AI isn't the right tool",
+        "Data quality issues surface fast once AI depends on that data",
+        "A senior AI engineer is hard to justify as a full-time hire for one feature"
+      ]
+    },
+    "build": {
+      "heading": "What We Can Build Into Your AI Product",
+      "intro": "Every AI application development engagement is organized around the outcome AI needs to improve, not a generic model list.",
+      "cards": [
+        {
+          "title": "LLM-Powered Features",
+          "points": [
+            "Generative AI features inside your product",
+            "Retrieval-augmented and context-aware responses"
+          ],
+          "link": {
+            "label": "LLM application approach",
+            "href": "/ai-development"
+          }
+        },
+        {
+          "title": "Workflow Automation",
+          "points": [
+            "Automating repetitive manual tasks",
+            "Human-in-the-loop where accuracy matters"
+          ],
+          "link": {
+            "label": "Custom Software Development",
+            "href": "/custom-software-development"
+          }
+        },
+        {
+          "title": "Intelligent Search",
+          "points": [
+            "Search that understands intent, not just keywords"
+          ],
+          "link": {
+            "label": "Data Engineering",
+            "href": "/data-engineering"
+          }
+        },
+        {
+          "title": "AI Integrations",
+          "points": [
+            "Connecting AI into your existing product and data",
+            "API-based model integration"
+          ],
+          "link": {
+            "label": "Web Application Development",
+            "href": "/web-application-development"
+          }
+        },
+        {
+          "title": "Custom AI Systems",
+          "points": [
+            "Purpose-built AI systems beyond off-the-shelf tools"
+          ],
+          "link": {
+            "label": "MVP App Development",
+            "href": "/mvp-app-development"
+          }
+        }
+      ]
+    },
+    "scope": {
+      "heading": "What Should AI Actually Do in Your Product?",
+      "intro": "Rather than starting from what AI can do, we work through the decisions that determine where it should be used:",
+      "decisions": [
+        "What specific outcome should this AI feature improve?",
+        "Is the underlying data reliable enough for AI to depend on?",
+        "Where does a human need to stay in the loop for accuracy or trust?",
+        "What would success actually look like, measurably, after launch?",
+        "Is AI the right tool here, or would simpler automation solve it?"
+      ],
+      "calloutTitle": "We'll tell you when AI isn't the answer",
+      "calloutBody": "If you're exploring an AI idea, this is exactly what you need most: an honest read on where AI helps, and where it's just novelty."
+    },
+    "different": {
+      "heading": "Not a Generic AI Feature Shop",
+      "intro": "Our differentiation isn't only AI engineering, it's the judgment about where AI actually belongs.",
+      "items": [
+        {
+          "title": "Outcome decisions before model choice",
+          "body": "We define what success looks like before choosing a model or approach."
+        },
+        {
+          "title": "Senior AI engineering, without a full-time hire",
+          "body": "Custom AI development sits inside a wider fractional engineering capability."
+        },
+        {
+          "title": "You work directly with the people building it",
+          "body": "No account-manager layer between you and the engineers on your AI feature."
+        },
+        {
+          "title": "Built for what happens after launch",
+          "body": "Your AI feature is designed to be monitored and improved, not just shipped once."
+        },
+        {
+          "title": "You own the code and IP",
+          "body": "Everything we build belongs to you outright, with no ongoing dependency on us."
+        }
+      ]
+    },
+    "who": {
+      "heading": "Who We Build AI Products For",
+      "people": [
+        {
+          "quote": "We know AI is relevant to us, but not exactly where to use it.",
+          "title": "Company exploring where AI fits"
+        },
+        {
+          "quote": "We want to automate a manual, repetitive process.",
+          "title": "Business seeking workflow automation"
+        },
+        {
+          "quote": "We can build, but nobody owns the AI product decisions.",
+          "title": "Funded startup with a technical team"
+        },
+        {
+          "quote": "Our AI feature works in a demo but isn't used in production.",
+          "title": "Team with an AI feature that hasn't landed"
+        },
+        {
+          "quote": "We want to add intelligent search or recommendations to our product.",
+          "title": "Product team improving search or discovery"
+        },
+        {
+          "quote": "We need to know if our data is even ready for AI.",
+          "title": "Business evaluating AI readiness"
+        }
+      ]
+    },
+    "process": {
+      "heading": "From AI Idea to Working Feature",
+      "steps": [
+        {
+          "title": "Free 45-minute product workshop",
+          "body": "We pull apart the problem, users and commercial objective behind your AI feature."
+        },
+        {
+          "title": "Scope and proposal",
+          "body": "You get a fixed scope, timeline and cost, or a fractional engineering leadership arrangement."
+        },
+        {
+          "title": "Build or embed",
+          "body": "Regular contact with senior engineers and working software throughout, not just at the end."
+        },
+        {
+          "title": "Handover or continue",
+          "body": "You own everything, with the option to continue with engineering leadership or ongoing development."
+        }
+      ]
+    },
+    "deliverables": {
+      "heading": "What You Get With AI Development",
+      "rows": [
+        {
+          "item": "AI feature build",
+          "value": "Get a working AI feature integrated into your product"
+        },
+        {
+          "item": "Outcome definition",
+          "value": "Know what the AI feature is meant to improve, and how you'll measure it"
+        },
+        {
+          "item": "Fixed scope and timeline",
+          "value": "Reduce uncertainty around the build"
+        },
+        {
+          "item": "Direct access to engineers",
+          "value": "Speak directly to the people doing the work"
+        },
+        {
+          "item": "Full code and IP ownership",
+          "value": "Retain ownership of the AI feature outright"
+        },
+        {
+          "item": "Post-build option",
+          "value": "Continue with engineering leadership or ongoing development if needed"
+        }
+      ]
+    },
+    "why": {
+      "heading": "Why Companies Choose a Product Partner for AI",
+      "reasons": [
+        "We challenge the brief when the brief needs challenging.",
+        "We'll tell you when AI isn't the right tool for the problem.",
+        "We combine outcome thinking and engineering under one roof.",
+        "We work directly with the people who own the problem.",
+        "We build for monitoring and improvement, not just a launch demo.",
+        "We take on a limited number of clients at a time."
+      ]
+    },
+    "angle": {
+      "heading": "A Question Most AI Development Companies Skip",
+      "intro": "A common question that gets overlooked is where AI actually creates measurable value in a product, rather than simply adding novelty that doesn't change an outcome.",
+      "items": [
+        {
+          "title": "Where does AI create measurable value rather than novelty?",
+          "body": "A generative feature that impresses in a demo but changes no metric isn't worth maintaining. Value should be defined before the model is chosen."
+        },
+        {
+          "title": "Is the data actually ready for this?",
+          "body": "AI features expose data quality problems fast. It's worth checking the underlying data before committing to a feature that depends on it."
+        },
+        {
+          "title": "What happens when the model is wrong?",
+          "body": "Every AI feature will be wrong sometimes. Deciding how the product handles that, silently, visibly, or with a human fallback, is a design decision, not an afterthought."
+        }
+      ]
+    },
+    "after": {
+      "heading": "What Happens After the AI Feature Ships?",
+      "paths": [
+        {
+          "title": "Continue building",
+          "body": "Extend the AI feature to more workflows with the same team."
+        },
+        {
+          "title": "Add engineering leadership",
+          "body": "Bring us on as fractional AI engineering leadership as usage grows."
+        },
+        {
+          "title": "Monitor and improve",
+          "body": "Set up ongoing evaluation as real usage reveals edge cases."
+        }
+      ]
+    },
+    "snapshot": {
+      "heading": "AI Development at a Glance",
+      "definition": "AI development covers generative AI development, LLM application development, and AI-driven workflow automation, scoped around a specific, measurable business outcome. The discipline includes deciding where AI genuinely helps and where it doesn't, since AI integration only creates value when it's tied to an outcome the business can measure after launch.",
+      "rows": [
+        {
+          "item": "Typical MVP timeframe",
+          "value": "3–4 weeks for a first working AI feature, once scope is fixed"
+        },
+        {
+          "item": "Entry point",
+          "value": "A free 45-minute product workshop"
+        },
+        {
+          "item": "Who scopes the work",
+          "value": "Product stakeholders and senior AI engineers"
+        },
+        {
+          "item": "AI development cost",
+          "value": "Scoped and fixed after the workshop, based on complexity and data readiness"
+        },
+        {
+          "item": "Code and IP ownership",
+          "value": "Fully owned by the client on delivery"
+        },
+        {
+          "item": "After launch",
+          "value": "Continue building, add engineering leadership, or move into monitoring and improvement"
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "question": "How much does AI development cost?",
+        "answer": "Cost depends on the complexity of the feature, data readiness and integration requirements. We scope it in the free product workshop so you get a fixed price and timeline."
+      },
+      {
+        "question": "How long does it take to build an AI feature?",
+        "answer": "A first working feature typically takes 3 to 4 weeks once scope is agreed. Data quality issues can extend that if they need to be addressed first."
+      },
+      {
+        "question": "Can you work with our existing technical team?",
+        "answer": "Yes. We can embed as fractional AI engineering leadership, or build a defined feature independently."
+      },
+      {
+        "question": "Do we own the code and IP?",
+        "answer": "Yes. You retain full ownership of the AI feature and its code once it's delivered."
+      },
+      {
+        "question": "Is our data ready for AI?",
+        "answer": "We assess this as part of scoping. If it isn't, we'll say so and outline what needs to happen first, rather than building on unreliable data."
+      },
+      {
+        "question": "Can you integrate AI into our existing product?",
+        "answer": "Yes. AI integration into an existing product and data is a common starting point, not just new product builds."
+      },
+      {
+        "question": "What happens after the AI feature is built?",
+        "answer": "You can run with it yourself, continue building with us, add fractional engineering leadership, or move into ongoing monitoring and improvement."
+      }
+    ],
+    "close": {
+      "heading": "Have an AI Idea? Let's Work Out Where It Actually Helps.",
+      "body": "Bring us the problem, not just the AI idea. The workshop is where we work out whether AI is the right tool, and what to build first if it is."
+    }
+  },
+  {
+    "slug": "cloud-engineering",
+    "title": "Cloud Engineering Company | Right-Sized Cloud Architecture",
+    "description": "Cloud engineering built for the scale you actually need, not the complexity you don't. AWS, Azure, GCP. Book a free product workshop.",
+    "name": "Cloud Engineering",
+    "image": "/images/services/cloud-engineering.png",
+    "imageAlt": "Cloud Engineering Built for the Scale You Actually Need",
+    "heading": "Cloud Engineering Built for the Scale You Actually Need",
+    "lede": "Enterprise-grade cloud architecture on day one is often solving a scaling problem you don't have yet. We approach cloud engineering by matching infrastructure to your actual usage, then building the cloud architecture that can grow with you.",
+    "facts": [
+      {
+        "value": "Fixed scope",
+        "label": "Agreed price and timeline upfront"
+      },
+      {
+        "value": "Direct access",
+        "label": "You work with senior engineers, not account managers"
+      },
+      {
+        "value": "Right-sized",
+        "label": "Infrastructure matched to real usage, not worst-case scale"
+      },
+      {
+        "value": "100% yours",
+        "label": "Full infrastructure and code ownership"
+      }
+    ],
+    "quick": "Cloud engineering is the process of designing, building and managing the infrastructure that runs a software product on a cloud provider such as AWS, Azure, or Google Cloud. It covers cloud architecture, deployment and scaling setup, and cloud migration when moving an existing system, scoped to the level of complexity a business actually needs.",
+    "pain": {
+      "heading": "Cloud Engineering Is Not Just About Moving Servers to AWS",
+      "paragraphs": [
+        "Migrating to the cloud is often treated as a lift-and-shift exercise. But the architecture decisions made during that move determine your costs and reliability for years afterward.",
+        "A typical cloud engineering company will build the infrastructure you specify, sometimes over-engineered for scale you don't have yet. The more valuable work is right-sizing it to your actual usage, with room to grow."
+      ],
+      "points": [
+        "Enterprise-scale architecture on day one often solves a problem you don't have",
+        "Cloud costs are easy to underestimate once real usage starts",
+        "A build-to-spec vendor will build the complexity you ask for, needed or not",
+        "Security and compliance requirements are expensive to retrofit later",
+        "A senior cloud architect is hard to justify as a full-time hire pre-scale"
+      ]
+    },
+    "build": {
+      "heading": "What We Can Build Into Your Cloud Infrastructure",
+      "intro": "Every cloud engineering services engagement is organized around the reliability and cost outcomes your business needs, not a generic tooling list.",
+      "cards": [
+        {
+          "title": "Cloud Architecture",
+          "points": [
+            "Infrastructure design matched to real usage",
+            "AWS, Azure, or Google Cloud engineering"
+          ],
+          "link": {
+            "label": "architecture approach",
+            "href": "/cloud-engineering"
+          }
+        },
+        {
+          "title": "Cloud Migration",
+          "points": [
+            "Moving existing systems without disrupting operations",
+            "Legacy infrastructure modernization"
+          ],
+          "link": {
+            "label": "Custom Software Development",
+            "href": "/custom-software-development"
+          }
+        },
+        {
+          "title": "DevOps & CI/CD",
+          "points": [
+            "Automated deployment pipelines",
+            "Faster, safer releases"
+          ],
+          "link": {
+            "label": "Web Application Development",
+            "href": "/web-application-development"
+          }
+        },
+        {
+          "title": "Cloud Scalability",
+          "points": [
+            "Infrastructure that grows with real demand",
+            "Cost-aware scaling decisions"
+          ],
+          "link": {
+            "label": "SaaS Platform Development",
+            "href": "/saas-platform-development"
+          }
+        },
+        {
+          "title": "Cloud Security",
+          "points": [
+            "Secure-by-default infrastructure setup"
+          ],
+          "link": {
+            "label": "Data Engineering",
+            "href": "/data-engineering"
+          }
+        }
+      ]
+    },
+    "scope": {
+      "heading": "What Cloud Architecture Does Your Product Actually Need?",
+      "intro": "Rather than defaulting to enterprise-scale infrastructure, we work through the decisions that determine what you actually need:",
+      "decisions": [
+        "What's your actual expected usage in the next 12 months, not the best case?",
+        "Which parts of the infrastructure genuinely need to scale independently?",
+        "What compliance or security requirements are non-negotiable now?",
+        "Where can managed services replace infrastructure you'd otherwise maintain yourself?",
+        "What should be built now to avoid an expensive re-architecture later?"
+      ],
+      "calloutTitle": "We help you avoid paying for complexity you don't need",
+      "calloutBody": "If you're scoping cloud infrastructure, this is exactly what you need most: someone to tell you what scale you don't need yet."
+    },
+    "different": {
+      "heading": "Not a Generic Cloud Consultancy",
+      "intro": "Our differentiation isn't only cloud engineering, it's the judgment about how much infrastructure you actually need.",
+      "items": [
+        {
+          "title": "Usage decisions before architecture",
+          "body": "We size infrastructure to your real usage, not worst-case scale, before the build starts."
+        },
+        {
+          "title": "Senior cloud engineering, without a full-time hire",
+          "body": "Cloud engineering services sit inside a wider fractional engineering capability."
+        },
+        {
+          "title": "You work directly with the people building it",
+          "body": "No account-manager layer between you and the engineers on your infrastructure."
+        },
+        {
+          "title": "Built for what happens after launch",
+          "body": "Your infrastructure is designed to scale when you need it to, not before."
+        },
+        {
+          "title": "You own the infrastructure and code",
+          "body": "Everything we build belongs to you outright, with no ongoing dependency on us."
+        }
+      ]
+    },
+    "who": {
+      "heading": "Who We Build Cloud Infrastructure For",
+      "people": [
+        {
+          "quote": "Our cloud bill is growing faster than our usage.",
+          "title": "Company with rising, unpredictable cloud costs"
+        },
+        {
+          "quote": "We need to migrate off an aging system without downtime.",
+          "title": "Business needing cloud migration"
+        },
+        {
+          "quote": "We can build, but nobody owns the infrastructure architecture.",
+          "title": "Funded startup with a technical team"
+        },
+        {
+          "quote": "We need to meet security or compliance requirements we don't currently have.",
+          "title": "Team needing cloud security and compliance"
+        },
+        {
+          "quote": "Our infrastructure works but deployments are slow and risky.",
+          "title": "Product team needing DevOps and CI/CD"
+        },
+        {
+          "quote": "We're not sure if we need multi-region or just better basics.",
+          "title": "Business unsure what scale it actually needs"
+        }
+      ]
+    },
+    "process": {
+      "heading": "From Infrastructure Problem to Right-Sized Cloud",
+      "steps": [
+        {
+          "title": "Free 45-minute product workshop",
+          "body": "We pull apart the problem, users and commercial objective behind your cloud infrastructure."
+        },
+        {
+          "title": "Scope and proposal",
+          "body": "You get a fixed scope, timeline and cost, or a fractional engineering leadership arrangement."
+        },
+        {
+          "title": "Build or embed",
+          "body": "Regular contact with senior engineers and working software throughout, not just at the end."
+        },
+        {
+          "title": "Handover or continue",
+          "body": "You own everything, with the option to continue with engineering leadership or ongoing development."
+        }
+      ]
+    },
+    "deliverables": {
+      "heading": "What You Get With Cloud Engineering",
+      "rows": [
+        {
+          "item": "Infrastructure build",
+          "value": "Get cloud infrastructure matched to your real usage"
+        },
+        {
+          "item": "Architecture thinking",
+          "value": "Avoid paying for scale and complexity you don't need yet"
+        },
+        {
+          "item": "Fixed scope and timeline",
+          "value": "Reduce uncertainty around the build"
+        },
+        {
+          "item": "Direct access to engineers",
+          "value": "Speak directly to the people doing the work"
+        },
+        {
+          "item": "Full ownership",
+          "value": "Retain ownership of the infrastructure and code outright"
+        },
+        {
+          "item": "Post-build option",
+          "value": "Continue with engineering leadership or ongoing management if needed"
+        }
+      ]
+    },
+    "why": {
+      "heading": "Why Companies Choose a Product Partner for Cloud Engineering",
+      "reasons": [
+        "We challenge the brief when the brief needs challenging.",
+        "We help decide what scale you don't need yet, as much as what you do.",
+        "We combine cost-aware architecture and engineering under one roof.",
+        "We work directly with the people who own the infrastructure.",
+        "We build for the scale you'll actually reach, not the best case.",
+        "We take on a limited number of clients at a time."
+      ]
+    },
+    "angle": {
+      "heading": "A Question Most Cloud Engineering Companies Skip",
+      "intro": "A common question that gets overlooked is whether a business is paying for cloud complexity it doesn't actually need yet, rather than the reliability it does need.",
+      "items": [
+        {
+          "title": "Are you paying for complexity you don't need yet?",
+          "body": "Multi-region, auto-scaling, enterprise-grade setups solve problems that only exist at a certain scale. It's worth confirming you're at that scale before building for it."
+        },
+        {
+          "title": "Is downtime actually the risk, or is cost?",
+          "body": "Some products need five-nines reliability, others need low cost and simplicity far more. The architecture should follow which one actually matters here."
+        },
+        {
+          "title": "Who owns this infrastructure after it's built?",
+          "body": "Cloud infrastructure needs an owner for security patches and cost management after launch. Deciding who that is changes how it should be documented and automated."
+        }
+      ]
+    },
+    "after": {
+      "heading": "What Happens After the Cloud Infrastructure Is Built?",
+      "paths": [
+        {
+          "title": "Continue building",
+          "body": "Extend the infrastructure as usage and requirements grow with the same team."
+        },
+        {
+          "title": "Add engineering leadership",
+          "body": "Bring us on as fractional cloud engineering leadership on an ongoing basis."
+        },
+        {
+          "title": "Optimize costs",
+          "body": "Revisit the architecture periodically as real usage patterns become clear."
+        }
+      ]
+    },
+    "snapshot": {
+      "heading": "Cloud Engineering at a Glance",
+      "definition": "Cloud engineering covers cloud architecture, cloud migration, and cloud-native development on providers such as AWS, Azure, and Google Cloud. The discipline is about matching infrastructure complexity to actual usage, since over-built cloud scalability and under-built DevOps practices are both common, costly mistakes that right-sizing during scoping is meant to avoid.",
+      "rows": [
+        {
+          "item": "Typical build timeframe",
+          "value": "3–4 weeks for a first right-sized environment, once scope is fixed"
+        },
+        {
+          "item": "Entry point",
+          "value": "A free 45-minute product workshop"
+        },
+        {
+          "item": "Who scopes the work",
+          "value": "Technical stakeholders and senior cloud engineers"
+        },
+        {
+          "item": "Cloud engineering cost",
+          "value": "Scoped and fixed after the workshop, based on scale and compliance needs"
+        },
+        {
+          "item": "Infrastructure ownership",
+          "value": "Fully owned by the client on delivery"
+        },
+        {
+          "item": "After launch",
+          "value": "Continue building, add engineering leadership, or optimize costs over time"
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "question": "How much does cloud engineering cost?",
+        "answer": "Cost depends on scale, compliance requirements, and whether it's a new build or a migration. We scope it in the free product workshop so you get a fixed price and timeline."
+      },
+      {
+        "question": "How long does cloud infrastructure take to set up?",
+        "answer": "An initial right-sized environment typically takes 3 to 4 weeks once scope is agreed. Migrations from legacy systems can take longer depending on complexity."
+      },
+      {
+        "question": "Can you work with our existing technical team?",
+        "answer": "Yes. We can embed as fractional cloud engineering leadership, or handle a defined piece of the infrastructure independently."
+      },
+      {
+        "question": "Do we own the infrastructure and code?",
+        "answer": "Yes. You retain full ownership once it's delivered, with no ongoing dependency on us."
+      },
+      {
+        "question": "Which cloud provider should we use?",
+        "answer": "It depends on your existing tools, team familiarity and compliance needs. We help you decide during the workshop rather than defaulting to one provider."
+      },
+      {
+        "question": "Can you migrate us without downtime?",
+        "answer": "Migrations are planned to minimize disruption, and the approach is scoped based on your system's specific constraints."
+      },
+      {
+        "question": "What happens after the cloud infrastructure is built?",
+        "answer": "You can run with it yourself, continue building with us, add fractional engineering leadership, or revisit the architecture as usage grows."
+      }
+    ],
+    "close": {
+      "heading": "Have a Cloud Infrastructure Challenge? Let's Work Out the Right First Step.",
+      "body": "Bring us the system as it runs today, including the parts that worry you. The workshop is where we work out what to build or fix first."
+    }
+  },
+  {
+    "slug": "custom-software-development",
+    "title": "Custom Software Development Company | Built Around Workflow",
+    "description": "Custom software built to remove manual steps, not encode them into a screen. Fixed scope, direct founder access. Book a free product workshop.",
+    "name": "Custom Software Development",
+    "image": "/images/services/custom-software-development.png",
+    "imageAlt": "Custom Software Development Built Around How Your Business Actually Works",
+    "heading": "Custom Software Development Built Around How Your Business Actually Works",
+    "lede": "Off-the-shelf software forces your business to adapt to it. We approach custom software development the other way around, understanding how your business actually operates, then building the system that fits it.",
+    "facts": [
+      {
+        "value": "Fixed scope",
+        "label": "Agreed price and timeline upfront"
+      },
+      {
+        "value": "Direct access",
+        "label": "You work with senior engineers, not account managers"
+      },
+      {
+        "value": "Built to fit",
+        "label": "Software shaped around your process, not a template"
+      },
+      {
+        "value": "100% yours",
+        "label": "Full code and IP ownership"
+      }
+    ],
+    "quick": "Custom software development is the process of designing and building software specific to one business's processes, rather than configuring an off-the-shelf product to approximate them. It's typically used when existing tools force awkward workarounds, or when a process is specific enough to a business that no generic product fits it well.",
+    "pain": {
+      "heading": "Custom Software Is Not Just About Replacing a Spreadsheet",
+      "paragraphs": [
+        "Most custom software requests start with a spreadsheet or a workaround that's stopped scaling. But rebuilding the same workaround in software just gives you a more expensive version of the same limitation.",
+        "A typical custom software development company will build exactly what you describe. The more valuable work is understanding which parts of the current process are genuinely necessary, and which are just habits."
+      ],
+      "points": [
+        "The current workaround often includes steps nobody actually needs anymore",
+        "Off-the-shelf tools force your process to bend around their limitations",
+        "A build-to-spec agency won't question a request that copies a bad habit",
+        "Integration with existing systems is easy to underscope early on",
+        "A senior software architect is hard to justify as a full-time hire for one system"
+      ]
+    },
+    "build": {
+      "heading": "What We Can Build Into Your Custom Software",
+      "intro": "Every custom software development services engagement is organized around the business outcome, not a generic technology list.",
+      "cards": [
+        {
+          "title": "Business Process Software",
+          "points": [
+            "Operations and workflow automation",
+            "Approval and review systems"
+          ],
+          "link": {
+            "label": "process automation approach",
+            "href": "/custom-software-development"
+          }
+        },
+        {
+          "title": "Custom Business Applications",
+          "points": [
+            "Purpose-built tools for a specific team",
+            "Replacing spreadsheets and manual tracking"
+          ],
+          "link": {
+            "label": "Web Application Development",
+            "href": "/web-application-development"
+          }
+        },
+        {
+          "title": "Software Integration",
+          "points": [
+            "Connecting existing systems and data",
+            "API-first architecture"
+          ],
+          "link": {
+            "label": "AI Development",
+            "href": "/ai-development"
+          }
+        },
+        {
+          "title": "Software Modernization",
+          "points": [
+            "Rebuilding aging or fragile systems",
+            "Migrating without disrupting operations"
+          ],
+          "link": {
+            "label": "Cloud Engineering",
+            "href": "/cloud-engineering"
+          }
+        },
+        {
+          "title": "Internal Platforms",
+          "points": [
+            "Multi-team internal software"
+          ],
+          "link": {
+            "label": "SaaS Platform Development",
+            "href": "/saas-platform-development"
+          }
+        }
+      ]
+    },
+    "scope": {
+      "heading": "What Should Actually Be in Your First Custom Software Release?",
+      "intro": "Rather than replicating the current process step for step, we work through the decisions that determine what should actually be built:",
+      "decisions": [
+        "Which steps in the current process are genuinely necessary?",
+        "Which manual steps are only there because no better tool exists yet?",
+        "What data lives in disconnected spreadsheets or tools today?",
+        "What integrations does day-one usage actually require?",
+        "What should be designed now to avoid an expensive rebuild later?"
+      ],
+      "calloutTitle": "We help you decide what to simplify",
+      "calloutBody": "If you're replacing a manual process with custom software, this is exactly what you need most: someone to question the steps you've stopped noticing."
+    },
+    "different": {
+      "heading": "Not a Build-to-Spec Software Development Agency",
+      "intro": "Our differentiation isn't only engineering capability, it's the process thinking behind it.",
+      "items": [
+        {
+          "title": "Process decisions before code",
+          "body": "We map how the business actually works before the build starts."
+        },
+        {
+          "title": "Senior engineering, without a full-time hire",
+          "body": "Bespoke software development sits inside a wider fractional engineering capability."
+        },
+        {
+          "title": "You work directly with the people building it",
+          "body": "No account-manager layer between you and the engineers on your system."
+        },
+        {
+          "title": "Built for what happens after launch",
+          "body": "Your software is designed to be maintained and extended, not just delivered once."
+        },
+        {
+          "title": "You own the code and IP",
+          "body": "Everything we build belongs to you outright, with no ongoing dependency on us."
+        }
+      ]
+    },
+    "who": {
+      "heading": "Who We Build Custom Software For",
+      "people": [
+        {
+          "quote": "We're running a critical process on spreadsheets and it's starting to break.",
+          "title": "Business outgrowing manual processes"
+        },
+        {
+          "quote": "No off-the-shelf tool fits how we actually operate.",
+          "title": "Company with a process too specific for generic software"
+        },
+        {
+          "quote": "We can build, but nobody owns the architecture for this system.",
+          "title": "Funded company with a technical team"
+        },
+        {
+          "quote": "Our existing system is old, fragile, and hard to change safely.",
+          "title": "Business needing software modernization"
+        },
+        {
+          "quote": "We need several existing tools to talk to each other properly.",
+          "title": "Team needing system integration"
+        },
+        {
+          "quote": "We need internal software that several teams will rely on daily.",
+          "title": "Organization building an internal platform"
+        }
+      ]
+    },
+    "process": {
+      "heading": "From Business Process to Working Software",
+      "steps": [
+        {
+          "title": "Free 45-minute product workshop",
+          "body": "We pull apart the problem, users and commercial objective behind your custom software."
+        },
+        {
+          "title": "Scope and proposal",
+          "body": "You get a fixed scope, timeline and cost, or a fractional engineering leadership arrangement."
+        },
+        {
+          "title": "Build or embed",
+          "body": "Regular contact with senior engineers and working software throughout, not just at the end."
+        },
+        {
+          "title": "Handover or continue",
+          "body": "You own everything, with the option to continue with engineering leadership or ongoing development."
+        }
+      ]
+    },
+    "deliverables": {
+      "heading": "What You Get With Custom Software Development",
+      "rows": [
+        {
+          "item": "Custom software build",
+          "value": "Get software that fits how your business actually works"
+        },
+        {
+          "item": "Process thinking",
+          "value": "Remove unnecessary steps before expensive development"
+        },
+        {
+          "item": "Fixed scope and timeline",
+          "value": "Reduce uncertainty around the build"
+        },
+        {
+          "item": "Direct access to engineers",
+          "value": "Speak directly to the people doing the work"
+        },
+        {
+          "item": "Full code and IP ownership",
+          "value": "Retain ownership of the software outright"
+        },
+        {
+          "item": "Post-build option",
+          "value": "Continue with engineering leadership or ongoing development if needed"
+        }
+      ]
+    },
+    "why": {
+      "heading": "Why Companies Choose a Product Partner for Custom Software",
+      "reasons": [
+        "We challenge the brief when the brief needs challenging.",
+        "We help decide what not to build, as much as what to build.",
+        "We combine process thinking and engineering under one roof.",
+        "We work directly with the people who own the problem.",
+        "We build for maintenance and change, not just delivery day.",
+        "We take on a limited number of clients at a time."
+      ]
+    },
+    "angle": {
+      "heading": "A Question Most Custom Software Development Companies Skip",
+      "intro": "A common question that gets overlooked is whether a custom build is replicating a genuinely necessary process, or just formalizing a workaround nobody has questioned in years.",
+      "items": [
+        {
+          "title": "Is this process necessary, or just familiar?",
+          "body": "Long-standing manual steps often exist because nothing better was available, not because they're required. Custom software is a chance to remove them, not encode them."
+        },
+        {
+          "title": "Will this still fit in two years?",
+          "body": "Custom software built tightly around today's process can become as rigid as the off-the-shelf tool it replaced. Some flexibility should be designed in deliberately."
+        },
+        {
+          "title": "Who maintains this after launch?",
+          "body": "Custom software needs an owner after delivery. Deciding who that is, internally or through us, changes how the system should be documented and built."
+        }
+      ]
+    },
+    "after": {
+      "heading": "What Happens After the Custom Software Ships?",
+      "paths": [
+        {
+          "title": "Continue building",
+          "body": "Move from the first release into the full system with the same team."
+        },
+        {
+          "title": "Add engineering leadership",
+          "body": "Bring us on as fractional engineering leadership as the system grows."
+        },
+        {
+          "title": "Modernize further",
+          "body": "Extend the same approach to other legacy processes or systems."
+        }
+      ]
+    },
+    "snapshot": {
+      "heading": "Custom Software Development at a Glance",
+      "definition": "Custom software development is the process of building software specific to one business's workflow, distinct from configuring off-the-shelf or generic products. It's typically chosen for business software development when a process is specific enough that no existing product fits well, or when software modernization is needed to replace a fragile legacy system without disrupting operations.",
+      "rows": [
+        {
+          "item": "Typical MVP timeframe",
+          "value": "3–4 weeks for a first working release, once scope is fixed"
+        },
+        {
+          "item": "Entry point",
+          "value": "A free 45-minute product workshop"
+        },
+        {
+          "item": "Who scopes the release",
+          "value": "Business stakeholders and senior engineers"
+        },
+        {
+          "item": "Custom software development cost",
+          "value": "Scoped and fixed after the workshop, based on complexity and integrations"
+        },
+        {
+          "item": "Code and IP ownership",
+          "value": "Fully owned by the client on delivery"
+        },
+        {
+          "item": "After launch",
+          "value": "Continue building, add engineering leadership, or modernize further"
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "question": "How much does custom software development cost?",
+        "answer": "Cost depends on process complexity, integrations, number of users and security requirements. We scope it in the free product workshop so you get a fixed price and timeline."
+      },
+      {
+        "question": "How long does custom software development take?",
+        "answer": "A first working release typically takes 3 to 4 weeks once scope is agreed. More complex integrations can extend that."
+      },
+      {
+        "question": "Can you work with our existing technical team?",
+        "answer": "Yes. We can embed as fractional engineering leadership, or build a defined piece of the system independently."
+      },
+      {
+        "question": "Do we own the code and IP?",
+        "answer": "Yes. You retain full ownership of the codebase and intellectual property once it's delivered."
+      },
+      {
+        "question": "Can you integrate with our existing systems?",
+        "answer": "Yes. Integration with existing tools and data sources is typically part of scoping, not an afterthought."
+      },
+      {
+        "question": "Can you modernize an existing system instead of building new?",
+        "answer": "Yes. We can review an existing system, identify what's safe to keep, and scope a modernization path."
+      },
+      {
+        "question": "What happens after the custom software is built?",
+        "answer": "You can run with it yourself, continue building with us, add fractional engineering leadership, or modernize other systems."
+      }
+    ],
+    "close": {
+      "heading": "Have a Custom Software Challenge? Let's Work Out the Right First Step.",
+      "body": "Bring us the process as it actually runs today, workarounds included. The workshop is where we work out what to build first."
+    }
+  },
+  {
+    "slug": "data-engineering",
+    "title": "Data Engineering Company | Trust Your Data Before Scaling It",
+    "description": "Data engineering that earns trust in your data before you build more analytics or AI on top of it. Fixed scope. Book a free product workshop.",
+    "name": "Data Engineering",
+    "image": "/images/services/data-engineering.png",
+    "imageAlt": "Data Engineering Built to Make Your Data Trustworthy, Not Just Bigger",
+    "heading": "Data Engineering Built to Make Your Data Trustworthy, Not Just Bigger",
+    "lede": "More dashboards don't fix untrustworthy data. We approach data engineering by first making sure the data feeding your reports and models is accurate and consistent, then building the data pipeline development your business can actually rely on.",
+    "facts": [
+      {
+        "value": "Fixed scope",
+        "label": "Agreed price and timeline upfront"
+      },
+      {
+        "value": "Direct access",
+        "label": "You work with senior engineers, not account managers"
+      },
+      {
+        "value": "Built to be trusted",
+        "label": "Pipelines designed for accuracy, not just volume"
+      },
+      {
+        "value": "100% yours",
+        "label": "Full code and infrastructure ownership"
+      }
+    ],
+    "quick": "Data engineering is the process of building the pipelines, storage and infrastructure that move data from its source systems into a form that's reliable enough to report on or build products with. It covers ETL development, data warehouse development, and the integration work needed to make data from multiple sources trustworthy and usable.",
+    "pain": {
+      "heading": "Data Problems Are Rarely Solved by Adding Another Dashboard",
+      "paragraphs": [
+        "When a report looks wrong, the instinct is often to build a better dashboard. But if the underlying data is inconsistent or untrustworthy, a better dashboard just displays the same problem more clearly.",
+        "A typical data engineering company will build the pipeline you ask for. The more valuable work is figuring out where the data actually breaks down before more of the business starts depending on it."
+      ],
+      "points": [
+        "A new dashboard on top of bad data just makes the problem more visible",
+        "Data from different source systems rarely agrees without deliberate work",
+        "A build-to-spec vendor will build the pipeline you ask for, not the one you need",
+        "Fixing broken data trust later is far more disruptive than getting it right early",
+        "A senior data architect is hard to justify as a full-time hire before the volume justifies it"
+      ]
+    },
+    "build": {
+      "heading": "What We Can Build Into Your Data Infrastructure",
+      "intro": "Every data engineering services engagement is organized around the decisions your business needs to trust, not a generic tooling list.",
+      "cards": [
+        {
+          "title": "Data Pipelines",
+          "points": [
+            "ETL and ELT pipeline development",
+            "Scheduled and event-driven processing"
+          ],
+          "link": {
+            "label": "pipeline approach",
+            "href": "/data-engineering"
+          }
+        },
+        {
+          "title": "Data Warehouses & Lakes",
+          "points": [
+            "Data warehouse development",
+            "Data lake architecture for raw and structured data"
+          ],
+          "link": {
+            "label": "Cloud Engineering",
+            "href": "/cloud-engineering"
+          }
+        },
+        {
+          "title": "Data Integration",
+          "points": [
+            "Bringing multiple source systems together",
+            "Consistent definitions across teams"
+          ],
+          "link": {
+            "label": "Custom Software Development",
+            "href": "/custom-software-development"
+          }
+        },
+        {
+          "title": "Analytics Foundations",
+          "points": [
+            "Reliable, well-modeled data for reporting",
+            "Analytics engineering support"
+          ],
+          "link": {
+            "label": "AI Development",
+            "href": "/ai-development"
+          }
+        },
+        {
+          "title": "Real-Time Processing",
+          "points": [
+            "Real-time data processing where it's genuinely needed"
+          ],
+          "link": {
+            "label": "real-time approach",
+            "href": "/data-engineering"
+          }
+        }
+      ]
+    },
+    "scope": {
+      "heading": "What Data Infrastructure Do You Actually Need?",
+      "intro": "Rather than building every pipeline at once, we work through the decisions that determine what's actually needed first:",
+      "decisions": [
+        "Which decisions in the business actually depend on this data?",
+        "Where does the data currently disagree across systems, and why?",
+        "Does this need real-time processing, or is daily or hourly enough?",
+        "What's the minimum trustworthy foundation before adding more sources?",
+        "What should be documented now so the next engineer can trust it too?"
+      ],
+      "calloutTitle": "We help you decide what's actually needed",
+      "calloutBody": "If you're scoping data infrastructure, this is exactly what you need most: someone to tell you what can wait until the foundation is trustworthy."
+    },
+    "different": {
+      "heading": "Not a Generic Data Tooling Vendor",
+      "intro": "Our differentiation isn't only pipeline engineering, it's the judgment about what data actually needs to be trusted first.",
+      "items": [
+        {
+          "title": "Trust decisions before tooling",
+          "body": "We identify where data breaks down before adding more infrastructure on top of it."
+        },
+        {
+          "title": "Senior data engineering, without a full-time hire",
+          "body": "Data engineering services sit inside a wider fractional engineering capability."
+        },
+        {
+          "title": "You work directly with the people building it",
+          "body": "No account-manager layer between you and the engineers on your pipelines."
+        },
+        {
+          "title": "Built for what happens after the foundation is set",
+          "body": "Your infrastructure is designed to support more sources and more analytics, not just one report."
+        },
+        {
+          "title": "You own the infrastructure and code",
+          "body": "Everything we build belongs to you outright, with no ongoing dependency on us."
+        }
+      ]
+    },
+    "who": {
+      "heading": "Who We Build Data Infrastructure For",
+      "people": [
+        {
+          "quote": "Our reports don't agree with each other and we don't know why.",
+          "title": "Company with inconsistent reporting"
+        },
+        {
+          "quote": "We're growing fast and our current data setup won't hold up.",
+          "title": "Business outgrowing manual data processes"
+        },
+        {
+          "quote": "We can build, but nobody owns the data architecture.",
+          "title": "Funded startup with a technical team"
+        },
+        {
+          "quote": "We want to build AI or analytics features but don't trust our data yet.",
+          "title": "Team preparing for AI or advanced analytics"
+        },
+        {
+          "quote": "We have data scattered across multiple tools and systems.",
+          "title": "Organization with disconnected data sources"
+        },
+        {
+          "quote": "We need real-time visibility into something we currently see once a day.",
+          "title": "Business needing real-time data processing"
+        }
+      ]
+    },
+    "process": {
+      "heading": "From Data Problem to Trustworthy Infrastructure",
+      "steps": [
+        {
+          "title": "Free 45-minute product workshop",
+          "body": "We pull apart the problem, users and commercial objective behind your data infrastructure."
+        },
+        {
+          "title": "Scope and proposal",
+          "body": "You get a fixed scope, timeline and cost, or a fractional engineering leadership arrangement."
+        },
+        {
+          "title": "Build or embed",
+          "body": "Regular contact with senior engineers and working software throughout, not just at the end."
+        },
+        {
+          "title": "Handover or continue",
+          "body": "You own everything, with the option to continue with engineering leadership or ongoing development."
+        }
+      ]
+    },
+    "deliverables": {
+      "heading": "What You Get With Data Engineering",
+      "rows": [
+        {
+          "item": "Pipeline and infrastructure build",
+          "value": "Get data flowing reliably from source to destination"
+        },
+        {
+          "item": "Data trust assessment",
+          "value": "Understand where and why data currently disagrees"
+        },
+        {
+          "item": "Fixed scope and timeline",
+          "value": "Reduce uncertainty around the build"
+        },
+        {
+          "item": "Direct access to engineers",
+          "value": "Speak directly to the people doing the work"
+        },
+        {
+          "item": "Full ownership",
+          "value": "Retain ownership of the infrastructure and code outright"
+        },
+        {
+          "item": "Post-build option",
+          "value": "Continue with engineering leadership or ongoing development if needed"
+        }
+      ]
+    },
+    "why": {
+      "heading": "Why Companies Choose a Product Partner for Data Engineering",
+      "reasons": [
+        "We challenge the brief when the brief needs challenging.",
+        "We help decide what's not needed yet, as much as what is.",
+        "We combine data trust thinking and engineering under one roof.",
+        "We work directly with the people who own the problem.",
+        "We build foundations meant to support more analytics later.",
+        "We take on a limited number of clients at a time."
+      ]
+    },
+    "angle": {
+      "heading": "A Question Most Data Engineering Companies Skip",
+      "intro": "A common question that gets overlooked is whether the business can actually trust the data it already has, before investing in more analytics on top of it.",
+      "items": [
+        {
+          "title": "Can the business trust the data before building more analytics?",
+          "body": "More dashboards on unreliable data erode trust faster than they build it. Fixing the foundation first is usually the higher-leverage move."
+        },
+        {
+          "title": "Does this actually need real-time processing?",
+          "body": "Real-time infrastructure is more complex and costly to maintain. It's worth confirming the business decision actually requires it before building for it."
+        },
+        {
+          "title": "Who owns the definitions across teams?",
+          "body": "Different teams often define the same metric differently. Data engineering can't fix a disagreement that's actually organizational, not technical."
+        }
+      ]
+    },
+    "after": {
+      "heading": "What Happens After the Data Infrastructure Is Built?",
+      "paths": [
+        {
+          "title": "Continue building",
+          "body": "Extend the pipeline to more sources and use cases with the same team."
+        },
+        {
+          "title": "Add engineering leadership",
+          "body": "Bring us on as fractional data engineering leadership as needs grow."
+        },
+        {
+          "title": "Build on top of it",
+          "body": "Move into analytics, reporting, or AI features once the foundation is trustworthy."
+        }
+      ]
+    },
+    "snapshot": {
+      "heading": "Data Engineering at a Glance",
+      "definition": "Data engineering covers data pipeline development, data warehouse development, and data integration, the infrastructure work that moves data from source systems into a trustworthy, usable form. It's the foundation that analytics engineering and AI features depend on, and the value comes from establishing trust in the data before building more on top of it.",
+      "rows": [
+        {
+          "item": "Typical foundation timeframe",
+          "value": "3–4 weeks for a first trustworthy pipeline, once scope is fixed"
+        },
+        {
+          "item": "Entry point",
+          "value": "A free 45-minute product workshop"
+        },
+        {
+          "item": "Who scopes the work",
+          "value": "Data stakeholders and senior data engineers"
+        },
+        {
+          "item": "Data engineering cost",
+          "value": "Scoped and fixed after the workshop, based on sources and complexity"
+        },
+        {
+          "item": "Infrastructure ownership",
+          "value": "Fully owned by the client on delivery"
+        },
+        {
+          "item": "After the foundation is set",
+          "value": "Continue building, add engineering leadership, or move into analytics and AI"
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "question": "How much does data engineering cost?",
+        "answer": "Cost depends on the number of data sources, integration complexity and whether real-time processing is required. We scope it in the free product workshop so you get a fixed price and timeline."
+      },
+      {
+        "question": "How long does it take to build a data pipeline?",
+        "answer": "An initial trustworthy pipeline typically takes 3 to 4 weeks once scope is agreed. More sources or real-time requirements can extend that."
+      },
+      {
+        "question": "Can you work with our existing technical team?",
+        "answer": "Yes. We can embed as fractional data engineering leadership, or build a defined piece of the infrastructure independently."
+      },
+      {
+        "question": "Do we own the infrastructure and code?",
+        "answer": "Yes. You retain full ownership once it's delivered, with no ongoing dependency on us."
+      },
+      {
+        "question": "Can you fix our existing data instead of starting over?",
+        "answer": "Yes. We can assess where existing pipelines or data break down and scope a fix rather than a full rebuild."
+      },
+      {
+        "question": "Do we need real-time data processing?",
+        "answer": "Not always. We help you determine whether a real-time system is actually required, or whether scheduled processing meets the need."
+      },
+      {
+        "question": "What happens after the data infrastructure is built?",
+        "answer": "You can run with it yourself, continue building with us, add fractional engineering leadership, or move into analytics and AI."
+      }
+    ],
+    "close": {
+      "heading": "Have a Data Challenge? Let's Work Out the Right First Step.",
+      "body": "Bring us the reports that don't agree, or the process running on exports and manual joins. The workshop is where we work out what to fix first."
+    }
+  },
+  {
+    "slug": "mobile-app-development",
+    "title": "Mobile App Development Company | iOS & Android, Fixed Scope",
+    "description": "Mobile app development built around how people actually use their phones. iOS, Android, fixed scope, direct founder access. Book a free workshop.",
+    "name": "Mobile App Development",
+    "image": "/images/services/mobile-app-development.png",
+    "imageAlt": "Mobile App Development Built Around How People Actually Use Their Phones",
+    "heading": "Mobile App Development Built Around How People Actually Use Their Phones",
+    "lede": "A phone is not a small desktop screen. We approach mobile app development around real phone behavior, one-handed use, short sessions, notifications, so your app earns a place on someone's home screen.",
+    "facts": [
+      {
+        "value": "Fixed scope",
+        "label": "Agreed price and timeline upfront"
+      },
+      {
+        "value": "Direct access",
+        "label": "You work with senior engineers, not account managers"
+      },
+      {
+        "value": "iOS & Android",
+        "label": "Native or cross-platform, matched to your audience"
+      },
+      {
+        "value": "100% yours",
+        "label": "Full code and IP ownership"
+      }
+    ],
+    "quick": "Mobile app development is the process of designing and building a native or cross-platform application for iOS and Android, built around how people actually use their phones rather than a shrunk-down desktop workflow. It covers the interface, the underlying app architecture, and the backend the app depends on.",
+    "pain": {
+      "heading": "Building a Mobile App Is Not Just About Creating Screens for iOS and Android",
+      "paragraphs": [
+        "A mobile app isn't a smaller version of your website. Screen size, one-handed use, interruptions and short sessions all change what the right first workflow looks like.",
+        "A typical mobile app development company will turn a spec into screens. The harder work is deciding which one workflow deserves to be frictionless enough that someone opens the app again tomorrow."
+      ],
+      "points": [
+        "A desktop workflow rarely translates directly to a phone screen",
+        "Session length and interruptions change what a first-run experience should do",
+        "iOS and Android have different conventions, not just different code",
+        "The wrong platform choice, native versus cross-platform, is expensive to reverse",
+        "A senior mobile product lead is hard to justify as a full-time hire pre-launch"
+      ]
+    },
+    "build": {
+      "heading": "What We Can Build Into Your Mobile App",
+      "intro": "Every mobile application development engagement is organized around the outcome your users need, not a generic feature list.",
+      "cards": [
+        {
+          "title": "iOS App Development",
+          "points": [
+            "Native or cross-platform iOS build",
+            "App Store submission support"
+          ],
+          "link": {
+            "label": "iOS approach",
+            "href": "/mobile-app-development"
+          }
+        },
+        {
+          "title": "Android App Development",
+          "points": [
+            "Native or cross-platform Android build",
+            "Play Store submission support"
+          ],
+          "link": {
+            "label": "Android approach",
+            "href": "/mobile-app-development"
+          }
+        },
+        {
+          "title": "Cross-Platform Builds",
+          "points": [
+            "One codebase for both platforms where it fits",
+            "Faster iteration for early-stage products"
+          ],
+          "link": {
+            "label": "MVP App Development",
+            "href": "/mvp-app-development"
+          }
+        },
+        {
+          "title": "App Backend & APIs",
+          "points": [
+            "The backend your app depends on",
+            "Sync, offline support, push notifications"
+          ],
+          "link": {
+            "label": "Web Application Development",
+            "href": "/web-application-development"
+          }
+        },
+        {
+          "title": "Third-Party Integrations",
+          "points": [
+            "Payments, auth, analytics, messaging"
+          ],
+          "link": {
+            "label": "Custom Software Development",
+            "href": "/custom-software-development"
+          }
+        }
+      ]
+    },
+    "scope": {
+      "heading": "What Should Actually Be in Your First Mobile Release?",
+      "intro": "Rather than a generic screen list, we work through the decisions that determine what your first release should include:",
+      "decisions": [
+        "What's the one task someone opens the app to do?",
+        "Should you launch on one platform first or both at once?",
+        "What needs to work offline or with a poor connection?",
+        "Which notifications actually earn a place on someone's lock screen?",
+        "What can be simplified now to avoid an expensive rebuild later?"
+      ],
+      "calloutTitle": "We help you decide what to cut",
+      "calloutBody": "If you're a founder with a mobile app idea and a budget, this is exactly what you need most: someone to tell you what doesn't belong in v1."
+    },
+    "different": {
+      "heading": "Not a Build-to-Spec Mobile App Agency",
+      "intro": "Our differentiation isn't only engineering capability, it's the product judgment behind it.",
+      "items": [
+        {
+          "title": "Product decisions before code",
+          "body": "We think through user behavior, platform conventions and retention before the build starts."
+        },
+        {
+          "title": "Senior mobile engineering, without a full-time hire",
+          "body": "Custom mobile app development sits inside a wider fractional engineering capability."
+        },
+        {
+          "title": "Founders work directly with founders",
+          "body": "No account-manager layer between you and the people building your app."
+        },
+        {
+          "title": "Built for what happens after launch",
+          "body": "Your app is designed to support updates and growth, not just a store listing."
+        },
+        {
+          "title": "You own the code and IP",
+          "body": "Everything we build belongs to you outright, with no ongoing dependency on us."
+        }
+      ]
+    },
+    "who": {
+      "heading": "Who We Build Mobile Apps For",
+      "people": [
+        {
+          "quote": "I have a mobile product idea and need to know what belongs in version one.",
+          "title": "Founder with a mobile app idea"
+        },
+        {
+          "quote": "Our product is web-only and customers keep asking for a mobile app.",
+          "title": "Web product expanding to mobile"
+        },
+        {
+          "quote": "We can build, but nobody owns the mobile product experience.",
+          "title": "Funded startup with a technical team"
+        },
+        {
+          "quote": "Our app has downloads but poor retention after the first session.",
+          "title": "Existing app with weak retention"
+        },
+        {
+          "quote": "We need one app that works well on both iOS and Android.",
+          "title": "Team choosing between native and cross-platform"
+        },
+        {
+          "quote": "We need a customer-facing app to sit alongside our internal tools.",
+          "title": "Business adding a customer-facing app"
+        }
+      ]
+    },
+    "process": {
+      "heading": "From Mobile App Idea to Working Product",
+      "steps": [
+        {
+          "title": "Free 45-minute product workshop",
+          "body": "We pull apart the problem, users and commercial objective behind your mobile app."
+        },
+        {
+          "title": "Scope and proposal",
+          "body": "You get a fixed scope, timeline and cost, or a fractional engineering leadership arrangement."
+        },
+        {
+          "title": "Build or embed",
+          "body": "Regular contact with senior engineers and working software throughout, not just at the end."
+        },
+        {
+          "title": "Handover or continue",
+          "body": "You own everything, with the option to continue with engineering leadership or ongoing development."
+        }
+      ]
+    },
+    "deliverables": {
+      "heading": "What You Get With Mobile App Development",
+      "rows": [
+        {
+          "item": "Mobile app build",
+          "value": "Get a working app in front of real users"
+        },
+        {
+          "item": "Product thinking",
+          "value": "Make key UX and platform decisions before expensive development"
+        },
+        {
+          "item": "Fixed scope and timeline",
+          "value": "Reduce uncertainty around the build"
+        },
+        {
+          "item": "Direct access to engineers",
+          "value": "Speak directly to the people doing the work"
+        },
+        {
+          "item": "Full code and IP ownership",
+          "value": "Retain ownership of the app outright"
+        },
+        {
+          "item": "Post-build option",
+          "value": "Continue with product leadership or ongoing development if needed"
+        }
+      ]
+    },
+    "why": {
+      "heading": "Why Companies Choose a Product Partner for Mobile",
+      "reasons": [
+        "We challenge the brief when the brief needs challenging.",
+        "We help decide what not to build, as much as what to build.",
+        "We combine product thinking and engineering under one roof.",
+        "We work directly with founders, start to finish.",
+        "We build for updates and growth, not just launch day.",
+        "We take on a limited number of clients at a time."
+      ]
+    },
+    "angle": {
+      "heading": "A Question Most Mobile App Development Companies Skip",
+      "intro": "A common question that gets overlooked is whether the product was actually designed as a mobile experience, or simply shrunk down from a desktop workflow.",
+      "items": [
+        {
+          "title": "Is this a mobile product or a shrunk-down desktop workflow?",
+          "body": "Forms, tables and dense dashboards that work on a laptop often fail on a phone. The workflow may need to be redesigned, not just resized."
+        },
+        {
+          "title": "What happens in the first 30 seconds?",
+          "body": "Mobile users decide fast whether to keep an app. The first-run experience deserves as much attention as the core feature."
+        },
+        {
+          "title": "Does the app need to work with no connection?",
+          "body": "Transit, venues and rural areas all break connectivity. Deciding what works offline early avoids a painful retrofit."
+        }
+      ]
+    },
+    "after": {
+      "heading": "What Happens After the Mobile App Ships?",
+      "paths": [
+        {
+          "title": "Continue building",
+          "body": "Move from the first release into the full roadmap with the same team."
+        },
+        {
+          "title": "Add product leadership",
+          "body": "Bring us on as fractional product leadership as the app grows."
+        },
+        {
+          "title": "Build the growth engine",
+          "body": "Move into app store optimization, content, and acquisition campaigns."
+        }
+      ]
+    },
+    "snapshot": {
+      "heading": "Mobile App Development at a Glance",
+      "definition": "Mobile app development covers iOS app development, Android app development, and cross-platform app development, the process of building a native or shared-codebase application designed around real phone usage. It follows the same MVP minimum viable product approach as any product build, launch the smallest version that proves the core workflow, with platform and offline decisions made deliberately rather than by default.",
+      "rows": [
+        {
+          "item": "Typical MVP timeframe",
+          "value": "3–4 weeks for a first release, once scope is fixed"
+        },
+        {
+          "item": "Entry point",
+          "value": "A free 45-minute product workshop"
+        },
+        {
+          "item": "Native vs. cross-platform",
+          "value": "Decided based on audience, budget and long-term plans"
+        },
+        {
+          "item": "Mobile app development cost",
+          "value": "Scoped and fixed after the workshop, based on platforms and integrations"
+        },
+        {
+          "item": "Code and IP ownership",
+          "value": "Fully owned by the client on delivery"
+        },
+        {
+          "item": "After launch",
+          "value": "Continue building, add product leadership, or move into growth"
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "question": "How much does mobile app development cost?",
+        "answer": "Cost depends on scope, platform choice, integrations and design complexity. We scope it in the free product workshop so you get a fixed price and timeline rather than a generic estimate."
+      },
+      {
+        "question": "Should we build native or cross-platform?",
+        "answer": "It depends on your audience, budget and performance needs. We help you decide during the workshop rather than defaulting to one approach."
+      },
+      {
+        "question": "How long does mobile app development take?",
+        "answer": "A first release typically takes 3 to 4 weeks once scope is agreed. More complex integrations or platform requirements can extend that."
+      },
+      {
+        "question": "Can you work with an existing technical team?",
+        "answer": "Yes. We can embed as fractional product and engineering leadership, or build a defined piece of the app independently."
+      },
+      {
+        "question": "Do we own the code and IP?",
+        "answer": "Yes. You retain full ownership of the codebase and intellectual property once it's delivered."
+      },
+      {
+        "question": "Can you improve an existing app instead of building a new one?",
+        "answer": "Yes. We can review an existing app, identify where retention or usability is breaking down, and scope the fix."
+      },
+      {
+        "question": "What happens after the mobile app is built?",
+        "answer": "You can run with it yourself, continue building with us, add fractional product leadership, or move into growth."
+      }
+    ],
+    "close": {
+      "heading": "Have a Mobile App Idea? Let's Work Out What to Build First.",
+      "body": "Bring the idea as it is, unscoped, a rough sketch, a competitor you like. The workshop is where we work out what your first release should include."
+    }
+  },
+  {
+    "slug": "mvp-app-development",
+    "title": "MVP App Development Company | Fixed Scope, 3-4 Weeks",
+    "description": "Turn your app idea into a working MVP in 3-4 weeks. Product thinking before code, fixed scope, direct founder access. Book a free product workshop.",
+    "name": "MVP App Development",
+    "image": "/images/services/mvp-app-development.png",
+    "imageAlt": "MVP App Development Built on Product Thinking Before Code",
+    "heading": "MVP App Development Built on Product Thinking Before Code",
+    "lede": "The real risk with an MVP app development project isn't the build, it's shipping the wrong version one. We combine MVP product development judgment with hands-on engineering, so your MVP proves the business, not just the tech.",
+    "facts": [
+      {
+        "value": "3–4 weeks",
+        "label": "Typical MVP timeframe"
+      },
+      {
+        "value": "Direct access",
+        "label": "You work with founders, not account managers"
+      },
+      {
+        "value": "Fixed scope",
+        "label": "Agreed price and timeline upfront"
+      },
+      {
+        "value": "100% yours",
+        "label": "Full code and IP ownership"
+      }
+    ],
+    "quick": "MVP app development is the process of scoping, designing and building the first working version of a product, with just enough features to test the core idea with real users. It follows the MVP minimum viable product principle, prove the business assumption before committing to the full build, and typically ships in 3–4 weeks once scope is fixed.",
+    "pain": {
+      "heading": "Building an MVP Is Not Just About Building the App",
+      "paragraphs": [
+        "You know what you want built. What's harder to know, before any users touch it, is exactly what belongs in version one.",
+        "A typical MVP development company builds whatever you specify, even if the spec cuts the wrong features. That gives you an MVP that works but proves nothing, and rebuilding it later costs far more than getting v1 right the first time."
+      ],
+      "points": [
+        "You know what you want built, not necessarily what should ship first",
+        "A build-to-spec agency implements the brief, it doesn't challenge it",
+        "The wrong feature cuts create an MVP that works but doesn't sell",
+        "Rebuilding a mis-scoped MVP is expensive and slows you down",
+        "A full-time senior product hire is hard to justify pre-validation"
+      ]
+    },
+    "build": {
+      "heading": "What We Can Build Into Your MVP",
+      "intro": "Every MVP development services engagement is organized around what your first users need to do, not a generic technology list.",
+      "cards": [
+        {
+          "title": "Core Workflow",
+          "points": [
+            "The one job the MVP must do",
+            "End-to-end user flow",
+            "No unnecessary configuration"
+          ],
+          "link": {
+            "label": "MVP scoping approach",
+            "href": "/mvp-app-development"
+          }
+        },
+        {
+          "title": "Mobile or Web Front End",
+          "points": [
+            "iOS, Android, or responsive web",
+            "Built for the audience you're testing with"
+          ],
+          "link": {
+            "label": "Mobile App Development",
+            "href": "/mobile-app-development"
+          }
+        },
+        {
+          "title": "Minimum Viable Backend",
+          "points": [
+            "Just enough data model to run the flow",
+            "Room to extend without a rebuild"
+          ],
+          "link": {
+            "label": "Web Application Development",
+            "href": "/web-application-development"
+          }
+        },
+        {
+          "title": "Early Integrations",
+          "points": [
+            "Payments, auth, or a key third-party tool",
+            "Only what v1 truly needs"
+          ],
+          "link": {
+            "label": "Custom Software Development",
+            "href": "/custom-software-development"
+          }
+        },
+        {
+          "title": "Basic Usage Tracking",
+          "points": [
+            "Enough analytics to learn from real users"
+          ],
+          "link": {
+            "label": "Data Engineering",
+            "href": "/data-engineering"
+          }
+        }
+      ]
+    },
+    "scope": {
+      "heading": "What Should Actually Be in Your MVP?",
+      "intro": "Rather than a generic feature list, we work through the decisions that determine what v1 should include:",
+      "decisions": [
+        "What does the first user need to accomplish?",
+        "Which single workflow validates the business?",
+        "Which features can genuinely wait until after launch?",
+        "What needs to be tested with real users, not assumed?",
+        "What should be designed now to avoid an expensive rebuild later?"
+      ],
+      "calloutTitle": "We help you decide what to cut",
+      "calloutBody": "If you're a non-technical founder with an idea and a budget, this is exactly what you need most: someone to tell you what doesn't belong in v1."
+    },
+    "different": {
+      "heading": "Not a Build-to-Spec App Agency",
+      "intro": "Our differentiation isn't only engineering capability, it's the partner mindset behind it.",
+      "items": [
+        {
+          "title": "Product decisions before code",
+          "body": "We think through users, UX, retention and priorities before the build starts."
+        },
+        {
+          "title": "Senior product judgment, without a full-time hire",
+          "body": "Startup MVP development sits inside a wider fractional product capability."
+        },
+        {
+          "title": "Founders work directly with founders",
+          "body": "No account-manager layer between you and the people actually building your product."
+        },
+        {
+          "title": "Built for what happens after launch",
+          "body": "Your MVP is the start of the product's life, not a disposable prototype."
+        },
+        {
+          "title": "You own the code and IP",
+          "body": "Everything we build belongs to you outright, with no ongoing dependency on us."
+        }
+      ]
+    },
+    "who": {
+      "heading": "Who We Build MVPs For",
+      "people": [
+        {
+          "quote": "I know the problem. I need someone to help turn it into the right first product.",
+          "title": "Founder with an idea and no spec"
+        },
+        {
+          "quote": "We're still managing too much manually and need a product around our operations.",
+          "title": "Business going digital"
+        },
+        {
+          "quote": "We can build, but nobody owns product direction.",
+          "title": "Funded startup with a technical team"
+        },
+        {
+          "quote": "We have users, but the product isn't working as well as it should.",
+          "title": "Existing product with poor retention"
+        },
+        {
+          "quote": "We need to validate demand before we commit to a full build.",
+          "title": "Team testing a new business line"
+        },
+        {
+          "quote": "We need a working demo to raise or to sell into a first customer.",
+          "title": "Founder preparing to raise or pitch"
+        }
+      ]
+    },
+    "process": {
+      "heading": "From Product Idea to Working MVP",
+      "steps": [
+        {
+          "title": "Free 45-minute product workshop",
+          "body": "We pull apart the problem, users and commercial objective behind your MVP."
+        },
+        {
+          "title": "Scope and proposal",
+          "body": "You get a fixed scope, timeline and cost, or a fractional engineering leadership arrangement."
+        },
+        {
+          "title": "Build or embed",
+          "body": "Regular contact with senior engineers and working software throughout, not just at the end."
+        },
+        {
+          "title": "Handover or continue",
+          "body": "You own everything, with the option to continue with engineering leadership or ongoing development."
+        }
+      ]
+    },
+    "deliverables": {
+      "heading": "What You Get With MVP App Development",
+      "rows": [
+        {
+          "item": "MVP product build",
+          "value": "Get the first version into users' hands"
+        },
+        {
+          "item": "Product thinking",
+          "value": "Make the key decisions before expensive development"
+        },
+        {
+          "item": "Fixed scope and timeline",
+          "value": "Reduce uncertainty around the build"
+        },
+        {
+          "item": "Direct founder access",
+          "value": "Speak directly to the people doing the work"
+        },
+        {
+          "item": "Full code and IP ownership",
+          "value": "Retain ownership of the product outright"
+        },
+        {
+          "item": "Post-build option",
+          "value": "Continue with product leadership or marketing if needed"
+        }
+      ]
+    },
+    "why": {
+      "heading": "Why Founders Choose a Product Partner",
+      "reasons": [
+        "We challenge the brief when the brief needs challenging.",
+        "We help decide what not to build, as much as what to build.",
+        "We combine product thinking and engineering under one roof.",
+        "We work directly with founders, start to finish.",
+        "We build for the next stage, not just launch day.",
+        "We take on a limited number of clients at a time."
+      ]
+    },
+    "angle": {
+      "heading": "A Question Most MVP Development Services Skip",
+      "intro": "A common question that gets overlooked before scoping starts is what assumption the MVP actually needs to validate, not just what it needs to include.",
+      "items": [
+        {
+          "title": "What assumption does the MVP need to validate?",
+          "body": "Every MVP is a test of something, that people want this, that they'll pay, that the workflow works. Naming that assumption changes what belongs in v1."
+        },
+        {
+          "title": "What would make you kill the idea?",
+          "body": "A useful MVP defines failure conditions up front, not just success metrics, so a negative result is still a fast, cheap answer."
+        },
+        {
+          "title": "Who is the very first user, specifically?",
+          "body": "'Early adopters' isn't specific enough to design for. A named first user changes onboarding, defaults and even the core flow."
+        }
+      ]
+    },
+    "after": {
+      "heading": "What Happens After the MVP?",
+      "paths": [
+        {
+          "title": "Continue building",
+          "body": "Move from MVP into the full product, with the same team that built v1."
+        },
+        {
+          "title": "Add product leadership",
+          "body": "Bring us on as fractional product leadership as the product grows."
+        },
+        {
+          "title": "Build the growth engine",
+          "body": "Move into product marketing, SEO, AEO/GEO, content and campaigns."
+        }
+      ]
+    },
+    "snapshot": {
+      "heading": "MVP App Development at a Glance",
+      "definition": "MVP app development is custom MVP development applied to a specific product idea: the smallest version that can be tested with real users before committing to a full build. It's the standard first step in MVP product development for startups and existing businesses alike, and the value comes from what gets deliberately left out of v1, not just what gets included.",
+      "rows": [
+        {
+          "item": "Typical MVP timeframe",
+          "value": "3–4 weeks, once scope is fixed"
+        },
+        {
+          "item": "Entry point",
+          "value": "A free 45-minute product workshop"
+        },
+        {
+          "item": "Who scopes the MVP",
+          "value": "Founders and product leads, not a generic account team"
+        },
+        {
+          "item": "MVP app development cost",
+          "value": "Scoped and fixed after the workshop, not a generic day-rate estimate"
+        },
+        {
+          "item": "Code and IP ownership",
+          "value": "Fully owned by the client on delivery"
+        },
+        {
+          "item": "After launch",
+          "value": "Continue building, add product leadership, or move into growth"
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "question": "How long does it take to build an MVP?",
+        "answer": "Most MVPs take 3 to 4 weeks once scope is agreed. That timeframe comes out of the product workshop, not a guess."
+      },
+      {
+        "question": "How do you decide what features belong in an MVP?",
+        "answer": "We start from what the first user needs to do and which single workflow validates the business. Everything else waits until after launch."
+      },
+      {
+        "question": "Can you build an MVP from just an idea?",
+        "answer": "Yes. Most founders start with a rough idea rather than a finished spec. The workshop turns that idea into something buildable."
+      },
+      {
+        "question": "Do I own the code and IP for my MVP?",
+        "answer": "Yes, outright, once the MVP is delivered. No licensing model, no ongoing dependency on us."
+      },
+      {
+        "question": "How much does MVP app development cost?",
+        "answer": "There's no fixed number. Cost depends on scope, and scope is set in the free workshop before you commit to anything, so you get a fixed price and timeline."
+      },
+      {
+        "question": "Can you work from an existing product or codebase?",
+        "answer": "Yes. We can review what exists, identify what's worth keeping, and scope the MVP work around it rather than starting from zero."
+      },
+      {
+        "question": "What happens after the MVP is built?",
+        "answer": "Run with it yourself, continue building with us, add fractional product leadership, or move into product marketing and growth."
+      }
+    ],
+    "close": {
+      "heading": "Have a Product Idea? Let's Work Out What the MVP Should Be.",
+      "body": "Bring the idea as it is, unscoped, half a spec on a notes app. The workshop is where we work out what v1 should include."
+    }
+  },
+  {
+    "slug": "saas-platform-development",
+    "title": "SaaS Platform Development Company | Built to Retain, Not Just Onboard",
+    "description": "SaaS platforms designed around recurring revenue economics, not just a login screen. Fixed scope, direct founder access. Book a workshop.",
+    "name": "SaaS Platform Development",
+    "image": "/images/services/saas-platform-development.png",
+    "imageAlt": "SaaS Platform Development Built Around Your Product Goals",
+    "heading": "SaaS Platform Development Built Around Your Product Goals",
+    "lede": "Turning an idea into a SaaS product means more than putting features behind a login. We combine SaaS product development thinking with hands-on engineering, so your platform is built around retention and revenue from day one.",
+    "facts": [
+      {
+        "value": "Fixed scope",
+        "label": "Agreed price and timeline upfront"
+      },
+      {
+        "value": "Direct access",
+        "label": "You work with senior engineers, not account managers"
+      },
+      {
+        "value": "Built for retention",
+        "label": "Architecture decisions made with churn in mind"
+      },
+      {
+        "value": "100% yours",
+        "label": "Full code and IP ownership"
+      }
+    ],
+    "quick": "SaaS platform development is the process of designing, architecting and building a multi-tenant software product that customers access on a subscription basis. It covers the application itself, the underlying SaaS architecture, billing and account structure, and the integrations customers expect, built to support recurring usage rather than a one-time purchase.",
+    "pain": {
+      "heading": "Building a SaaS Platform Is Not Just About Putting Features Behind a Login",
+      "paragraphs": [
+        "Most SaaS ideas start as a list of features. But a feature list doesn't tell you whether the product will retain a paying customer past month one, or whether your SaaS architecture will hold up once you have real accounts and real data in it.",
+        "A generic SaaS development company will build whatever you specify. The harder, more valuable work is deciding what a first release needs to prove about usage and retention before you invest in the rest of the roadmap."
+      ],
+      "points": [
+        "You know the product idea, not necessarily the retention mechanic",
+        "Multi-tenant data and account structure decisions are expensive to unwind later",
+        "A build-to-spec agency won't challenge a brief that skips core SaaS mechanics",
+        "Billing, permissions and onboarding are easy to underscope early on",
+        "A senior SaaS architect is hard to justify as a full-time hire pre-revenue"
+      ]
+    },
+    "build": {
+      "heading": "What We Can Build Into Your SaaS Platform",
+      "intro": "Every SaaS platform development engagement is organized around the outcome your business needs, not a generic technology list.",
+      "cards": [
+        {
+          "title": "Multi-Tenant Architecture",
+          "points": [
+            "Account and workspace structure",
+            "Role-based permissions",
+            "Tenant data isolation"
+          ],
+          "link": {
+            "label": "architecture approach",
+            "href": "/saas-platform-development"
+          }
+        },
+        {
+          "title": "Billing & Subscriptions",
+          "points": [
+            "Plan and pricing structure",
+            "Usage-based or seat-based billing",
+            "Upgrade and downgrade flows"
+          ],
+          "link": {
+            "label": "billing approach",
+            "href": "/saas-platform-development"
+          }
+        },
+        {
+          "title": "Core Product Workflows",
+          "points": [
+            "The workflow customers pay for",
+            "Onboarding and activation",
+            "In-app configuration"
+          ],
+          "link": {
+            "label": "MVP App Development",
+            "href": "/mvp-app-development"
+          }
+        },
+        {
+          "title": "B2B Integrations",
+          "points": [
+            "API and webhook design",
+            "Third-party tool connections",
+            "Data import and export"
+          ],
+          "link": {
+            "label": "Custom Software Development",
+            "href": "/custom-software-development"
+          }
+        },
+        {
+          "title": "Analytics & Admin Tooling",
+          "points": [
+            "Usage and adoption visibility",
+            "Internal admin dashboards"
+          ],
+          "link": {
+            "label": "Data Engineering",
+            "href": "/data-engineering"
+          }
+        }
+      ]
+    },
+    "scope": {
+      "heading": "What Should Actually Be in Your First SaaS Release?",
+      "intro": "Instead of a generic feature list, we work through the decisions that determine what your first release should include:",
+      "decisions": [
+        "What single workflow does a paying customer need on day one?",
+        "Which account and permission structure will you still be using in a year?",
+        "What can be manual or semi-automated at launch without hurting retention?",
+        "Which integrations are must-haves versus nice-to-haves for early customers?",
+        "What billing model actually matches how customers want to buy?"
+      ],
+      "calloutTitle": "We help you decide what to cut",
+      "calloutBody": "If you're a founder with a SaaS idea and a budget, the highest-value thing we do is tell you what doesn't belong in the first release."
+    },
+    "different": {
+      "heading": "Not a Build-to-Spec SaaS App Agency",
+      "intro": "Our differentiation isn't only engineering capability, it's the product judgment behind it.",
+      "items": [
+        {
+          "title": "Product decisions before code",
+          "body": "We think through account structure, permissions and retention before the build starts."
+        },
+        {
+          "title": "Senior engineering, without a full-time hire",
+          "body": "Custom SaaS development sits inside a wider fractional engineering capability."
+        },
+        {
+          "title": "Founders work directly with founders",
+          "body": "No account-manager layer between you and the people building your platform."
+        },
+        {
+          "title": "Built for what happens after launch",
+          "body": "Your SaaS platform is designed to support the next 12 months of customers, not just the demo."
+        },
+        {
+          "title": "You own the code and IP",
+          "body": "Everything we build belongs to you outright, with no ongoing dependency on us."
+        }
+      ]
+    },
+    "who": {
+      "heading": "Who We Build SaaS Platforms For",
+      "people": [
+        {
+          "quote": "I know the problem. I need someone to help turn it into a sellable SaaS product.",
+          "title": "Founder launching a SaaS product"
+        },
+        {
+          "quote": "We run this as spreadsheets and email today and want to turn it into software we can sell.",
+          "title": "Company building a new SaaS offering"
+        },
+        {
+          "quote": "We're replacing manual processes for our B2B customers with a proper platform.",
+          "title": "B2B company replacing manual processes"
+        },
+        {
+          "quote": "We can build, but nobody owns the product and retention side.",
+          "title": "Funded startup with a technical team"
+        },
+        {
+          "quote": "Our SaaS product has users, but churn is higher than it should be.",
+          "title": "Existing SaaS product needing modernization"
+        },
+        {
+          "quote": "We need a version customers can actually onboard themselves into.",
+          "title": "Team moving from services to a self-serve product"
+        }
+      ]
+    },
+    "process": {
+      "heading": "From SaaS Idea to Working Platform",
+      "steps": [
+        {
+          "title": "Free 45-minute product workshop",
+          "body": "We pull apart the problem, users and commercial objective behind your SaaS platform."
+        },
+        {
+          "title": "Scope and proposal",
+          "body": "You get a fixed scope, timeline and cost, or a fractional engineering leadership arrangement."
+        },
+        {
+          "title": "Build or embed",
+          "body": "Regular contact with senior engineers and working software throughout, not just at the end."
+        },
+        {
+          "title": "Handover or continue",
+          "body": "You own everything, with the option to continue with engineering leadership or ongoing development."
+        }
+      ]
+    },
+    "deliverables": {
+      "heading": "What You Get With SaaS Platform Development",
+      "rows": [
+        {
+          "item": "Platform build",
+          "value": "Get a working, sellable version of your SaaS product"
+        },
+        {
+          "item": "Product thinking",
+          "value": "Make key retention and pricing decisions before expensive development"
+        },
+        {
+          "item": "Fixed scope and timeline",
+          "value": "Reduce uncertainty around the build"
+        },
+        {
+          "item": "Direct access to engineers",
+          "value": "Speak directly to the people doing the work"
+        },
+        {
+          "item": "Full code and IP ownership",
+          "value": "Retain ownership of the platform outright"
+        },
+        {
+          "item": "Post-build option",
+          "value": "Continue with engineering leadership or ongoing development if needed"
+        }
+      ]
+    },
+    "why": {
+      "heading": "Why Companies Choose a Product Partner for SaaS",
+      "reasons": [
+        "We challenge the brief when the brief needs challenging.",
+        "We help decide what not to build, as much as what to build.",
+        "We combine product thinking and engineering under one roof.",
+        "We work directly with founders, start to finish.",
+        "We build for the next stage of customers, not just launch day.",
+        "We take on a limited number of clients at a time."
+      ]
+    },
+    "angle": {
+      "heading": "A Question Most SaaS Development Companies Skip",
+      "intro": "A common question that gets overlooked in early SaaS builds is whether the product is actually designed for the economics of recurring revenue, not just the workflow itself.",
+      "items": [
+        {
+          "title": "Is it designed to retain, not just onboard?",
+          "body": "A great first session means little if nothing brings the customer back in week two. Retention has to be designed into the core workflow, not bolted on after launch."
+        },
+        {
+          "title": "Does the account model match how you'll actually sell?",
+          "body": "Seat-based, usage-based and flat pricing each require different data models. Choosing late means expensive rework."
+        },
+        {
+          "title": "Can support answer questions without engineering?",
+          "body": "Admin tooling and visibility into customer usage often get cut from v1, then become the first thing your team needs once you have real accounts."
+        }
+      ]
+    },
+    "after": {
+      "heading": "What Happens After the SaaS Platform Ships?",
+      "paths": [
+        {
+          "title": "Continue building",
+          "body": "Move from the first release into the full roadmap with the same team."
+        },
+        {
+          "title": "Add engineering leadership",
+          "body": "Bring us on as fractional engineering leadership as the platform scales."
+        },
+        {
+          "title": "Build the growth engine",
+          "body": "For B2B SaaS, move into product marketing, SEO, AEO/GEO, content and campaigns."
+        }
+      ]
+    },
+    "snapshot": {
+      "heading": "SaaS Platform Development at a Glance",
+      "definition": "SaaS platform development is the process of building a subscription software product with multi-tenant architecture, billing, and account management built in from the start. It follows the same MVP minimum viable product principle as any product build, prove the core workflow with real customers, but the account structure, permissions and billing model need to be right earlier than in most other software products because they're expensive to change once customers are on them.",
+      "rows": [
+        {
+          "item": "Typical MVP timeframe",
+          "value": "3–4 weeks for a first release, once scope is fixed"
+        },
+        {
+          "item": "Entry point",
+          "value": "A free 45-minute product workshop"
+        },
+        {
+          "item": "Who scopes the release",
+          "value": "Founders and senior engineers, not a generic account team"
+        },
+        {
+          "item": "SaaS platform development cost",
+          "value": "Scoped and fixed after the workshop, based on features and integrations"
+        },
+        {
+          "item": "Code and IP ownership",
+          "value": "Fully owned by the client on delivery"
+        },
+        {
+          "item": "After launch",
+          "value": "Continue building, add engineering leadership, or move into growth"
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "question": "How much does SaaS platform development cost?",
+        "answer": "Cost depends on scope, the number of integrations, account complexity and billing requirements. Rather than quoting a generic number, we scope it in the free product workshop so you get a fixed price and timeline."
+      },
+      {
+        "question": "How long does it take to build a SaaS MVP?",
+        "answer": "A first release typically takes 3 to 4 weeks once scope is agreed. More complex account structures or integrations can extend that, which is defined during scoping."
+      },
+      {
+        "question": "Can you work with an existing technical team?",
+        "answer": "Yes. We can embed alongside your engineers as fractional product and engineering leadership, or build a defined piece of the platform independently."
+      },
+      {
+        "question": "Do we own the code and IP?",
+        "answer": "Yes. You retain full ownership of the codebase and intellectual property once it's delivered, with no ongoing dependency on us."
+      },
+      {
+        "question": "Can you help if our SaaS product already has churn issues?",
+        "answer": "Yes. We can review the existing product, identify where the retention mechanic is breaking down, and recommend or build the fix."
+      },
+      {
+        "question": "What billing model should we use?",
+        "answer": "It depends on how your customers think about value, seats, usage, or a flat fee. We help you choose during the product workshop rather than defaulting to one model."
+      },
+      {
+        "question": "What happens after the SaaS platform is built?",
+        "answer": "You can run with it yourself, continue building with us, add fractional engineering leadership, or move into growth and marketing."
+      }
+    ],
+    "close": {
+      "heading": "Have a SaaS Product Idea? Let's Work Out What to Build First.",
+      "body": "Bring the idea as it is, unscoped, half a spec on a notes app. The workshop is where we work out what your first release should include."
+    }
+  },
+  {
+    "slug": "sports-mvp-app-development",
+    "title": "Sports MVP App Development Company | Fixed Scope, 3-4 Weeks",
+    "description": "Turn your sports app idea into a working MVP in 3-4 weeks. Free 45-minute product workshop, fixed scope, direct founder access, and full code ownership.",
+    "name": "Sports MVP App Development",
+    "image": "/images/services/sports-mvp-app-development.png",
+    "imageAlt": "Sports MVP App Development, Built on Product Thinking Before Code",
+    "heading": "Sports MVP App Development, Built on Product Thinking Before Code",
+    "lede": "The real risk with a sports MVP isn't the build, it's shipping the wrong version one. We pair senior product judgment with hands-on engineering, so your sports MVP proves the business, not just the tech.",
+    "facts": [
+      {
+        "value": "3–4 weeks",
+        "label": "Typical MVP timeframe"
+      },
+      {
+        "value": "Direct access",
+        "label": "You work with founders, not account managers"
+      },
+      {
+        "value": "Fixed scope",
+        "label": "Agreed price and timeline upfront"
+      },
+      {
+        "value": "100% yours",
+        "label": "Full code and IP ownership"
+      }
+    ],
+    "quick": "Sports MVP app development is the process of scoping, designing and building the first working version of a sports product, such as a league platform, fan engagement app or streaming experience, with just enough features to test with real users and validate the business before committing to a full build. A working sports MVP typically ships in 3–4 weeks once scope is fixed.",
+    "pain": {
+      "heading": "Building a Sports MVP Is Not Just About Building the App",
+      "paragraphs": [
+        "You know the problem you're solving in sport. What's harder to know, before any users touch it, is exactly what belongs in version one.",
+        "A typical sports app development company builds whatever you specify, even if the spec cuts the wrong features. That gives you an MVP that technically works but proves nothing, and rebuilding it later costs far more than getting v1 right the first time."
+      ],
+      "points": [
+        "You know what you want built, not necessarily what should ship first",
+        "A build-to-spec agency implements the brief, it doesn't challenge it",
+        "The wrong feature cuts create an MVP that works but doesn't sell",
+        "Rebuilding a mis-scoped MVP is expensive and slows you down",
+        "A full-time senior product hire is hard to justify pre-validation"
+      ]
+    },
+    "build": {
+      "heading": "What We Can Build Into a Sports MVP",
+      "intro": "Every sports MVP development engagement is organised around the outcome you need, not a generic technology checklist.",
+      "cards": [
+        {
+          "title": "League & Competition Management",
+          "points": [
+            "League operations",
+            "Fixtures and results",
+            "Tournament operations",
+            "Competition workflows"
+          ],
+          "link": null
+        },
+        {
+          "title": "Fan Engagement",
+          "points": [
+            "Fan-facing experiences",
+            "Engagement features",
+            "Digital interaction around competitions"
+          ],
+          "link": null
+        },
+        {
+          "title": "Sports Streaming",
+          "points": [
+            "Streaming-related product experiences",
+            "Supporting digital workflows around content"
+          ],
+          "link": null
+        },
+        {
+          "title": "Academy & Organisation Platforms",
+          "points": [
+            "Digitalising academy operations",
+            "Member and user experiences",
+            "Internal operational workflows"
+          ],
+          "link": null
+        },
+        {
+          "title": "Custom Sports Products",
+          "points": [],
+          "link": null
+        }
+      ]
+    },
+    "scope": {
+      "heading": "What Should Actually Be in Your Sports MVP?",
+      "intro": "Rather than a generic feature list, we work through the decisions that actually determine what v1 should include:",
+      "decisions": [
+        "What does the first user need to accomplish?",
+        "Which single workflow validates the business?",
+        "Which features can genuinely wait until after launch?",
+        "What needs to be tested with real users, not assumed?",
+        "What should be designed now to avoid an expensive rebuild later?"
+      ],
+      "calloutTitle": "We help you decide what to cut",
+      "calloutBody": "If you're a non-technical founder with an idea and a budget, this is exactly what you need most: someone to tell you what doesn't belong in v1."
+    },
+    "different": {
+      "heading": "Not a Build-to-Spec Sports App Agency",
+      "intro": "Our differentiation isn't only engineering capability, it's the partner mindset behind it.",
+      "items": [
+        {
+          "title": "Product decisions before code",
+          "body": "We think through users, UX, retention and priorities before the build starts."
+        },
+        {
+          "title": "Senior product judgment, without a full-time hire",
+          "body": "Sports MVP development sits inside a wider fractional product capability, senior thinking without the senior salary."
+        },
+        {
+          "title": "Founders work directly with founders",
+          "body": "No account-manager layer between you and the people actually building your product."
+        },
+        {
+          "title": "Built for what happens after launch",
+          "body": "Your MVP is the start of the product's life, not a disposable prototype."
+        },
+        {
+          "title": "You own the code and IP",
+          "body": "Everything we build belongs to you outright, with no ongoing dependency on us."
+        }
+      ]
+    },
+    "who": {
+      "heading": "Who We Build Sports MVPs For",
+      "people": [
+        {
+          "quote": "I know the problem. I need someone to help turn it into the right first product.",
+          "title": "Sports-tech founder with an idea"
+        },
+        {
+          "quote": "We're still managing too much manually and need a product around our operations.",
+          "title": "Sports organisation going digital"
+        },
+        {
+          "quote": "We need a better digital experience for running and engaging around competitions.",
+          "title": "League or competition operator"
+        },
+        {
+          "quote": "We need to bring parts of our operation and user experience into one product.",
+          "title": "Academy"
+        },
+        {
+          "quote": "We can build, but nobody owns product direction.",
+          "title": "Funded sports startup with a technical team"
+        },
+        {
+          "quote": "We have users, but the product isn't working as well as it should.",
+          "title": "Existing product with poor retention"
+        }
+      ]
+    },
+    "process": {
+      "heading": "From Sports Product Idea to Working MVP",
+      "steps": [
+        {
+          "title": "Free 45-minute product workshop",
+          "body": "We pull apart the idea, users and commercial objective together."
+        },
+        {
+          "title": "Scope and proposal",
+          "body": "You get a fixed scope, timeline and cost, or a fractional leadership arrangement."
+        },
+        {
+          "title": "Build or embed",
+          "body": "Weekly founder contact and working software throughout, not just at the end."
+        },
+        {
+          "title": "Handover or continue",
+          "body": "You own everything, with the option to continue with product leadership or marketing."
+        }
+      ]
+    },
+    "deliverables": {
+      "heading": "What You Get With a Sports MVP",
+      "rows": [
+        {
+          "item": "MVP product build",
+          "value": "Get the first version into users' hands"
+        },
+        {
+          "item": "Product thinking",
+          "value": "Make the key decisions before expensive development"
+        },
+        {
+          "item": "Fixed scope and timeline",
+          "value": "Reduce uncertainty around the build"
+        },
+        {
+          "item": "Direct founder access",
+          "value": "Speak directly to the people doing the work"
+        },
+        {
+          "item": "Full code and IP ownership",
+          "value": "Retain ownership of the product outright"
+        },
+        {
+          "item": "Post-build option",
+          "value": "Continue with product leadership or marketing if needed"
+        }
+      ]
+    },
+    "why": {
+      "heading": "Why Sports Companies Choose a Product Partner",
+      "reasons": [
+        "We challenge the brief when the brief needs challenging.",
+        "We help decide what not to build, as much as what to build.",
+        "We combine product thinking and engineering under one roof.",
+        "We work directly with founders, start to finish.",
+        "We build for the next stage, not just launch day.",
+        "We take on a limited number of clients at a time."
+      ]
+    },
+    "angle": {
+      "heading": "The Sports MVP Constraint Most Sports App Development Companies Ignore",
+      "intro": "Most sports MVP development services talk tech stack and timeline. Fewer talk about the constraints unique to sport that quietly decide whether an MVP actually gets adopted.",
+      "items": [
+        {
+          "title": "Your season doesn't wait",
+          "body": "Miss the start of a season and a league or academy MVP waits months for its next real test. We scope around your competition calendar, not a generic sprint."
+        },
+        {
+          "title": "Live play has no tolerance for downtime",
+          "body": "Fixtures, scores and streaming are used in real time, with no second chance. That reliability has to be designed into v1, not patched in later."
+        },
+        {
+          "title": "Adoption depends on more than one user type",
+          "body": "Coaches, parents, officials, fans and sponsors all need value early, or the product stalls no matter how well it's built."
+        }
+      ]
+    },
+    "after": {
+      "heading": "What Happens After the MVP?",
+      "paths": [
+        {
+          "title": "Continue building",
+          "body": "Move from MVP into the full product, with the same team that built v1."
+        },
+        {
+          "title": "Add product leadership",
+          "body": "Bring us on as fractional product leadership as the product grows."
+        },
+        {
+          "title": "Build the growth engine",
+          "body": "For B2B sports products, move into product marketing, SEO, AEO/GEO, content and campaigns."
+        }
+      ]
+    },
+    "snapshot": {
+      "heading": "Sports MVP Development at a Glance",
+      "definition": "Sports MVP app development is custom MVP app development applied to sport: league tools, fan apps, streaming products and academy platforms. It follows the same MVP minimum viable product principle as any MVP product development engagement, build the smallest version that proves the idea, but sport-specific factors like season timing and live play shape what goes into it.",
+      "rows": [
+        {
+          "item": "Typical MVP timeframe",
+          "value": "3–4 weeks, once scope is fixed"
+        },
+        {
+          "item": "Entry point",
+          "value": "A free 45-minute product workshop"
+        },
+        {
+          "item": "Who scopes the MVP",
+          "value": "Founders and product leads, not a generic account team"
+        },
+        {
+          "item": "Sports MVP development cost",
+          "value": "Scoped and fixed after the workshop, not a generic day-rate estimate"
+        },
+        {
+          "item": "Code and IP ownership",
+          "value": "Fully owned by the client on delivery"
+        },
+        {
+          "item": "After launch",
+          "value": "Continue building, add fractional product leadership, or move into growth"
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "question": "How long does it take to build a sports MVP?",
+        "answer": "Most sports MVPs take 3 to 4 weeks once scope is agreed. That timeframe comes out of the product workshop, not a guess."
+      },
+      {
+        "question": "How do you decide what features belong in a sports MVP?",
+        "answer": "We start from what the first user needs to do and which single workflow validates the business. Everything else waits until after launch."
+      },
+      {
+        "question": "Can you build a sports MVP from just an idea?",
+        "answer": "Yes. Most founders start with a rough idea rather than a finished spec. The workshop turns that idea into something buildable."
+      },
+      {
+        "question": "Do I own the code and IP for my sports MVP?",
+        "answer": "Yes, outright, once the MVP is delivered. No licensing model, no ongoing dependency on us."
+      },
+      {
+        "question": "What happens after the sports MVP is built?",
+        "answer": "Run with it yourself, continue building with us, add fractional product leadership, or move into product marketing and growth."
+      },
+      {
+        "question": "How much does sports MVP app development cost?",
+        "answer": "There's no fixed number. Sports MVP development cost depends on scope, and scope is set in the free workshop before you commit to anything, so you get a fixed price and timeline, not an open-ended estimate."
+      }
+    ],
+    "close": {
+      "heading": "Have a Sports Product Idea? Let's Work Out What the MVP Should Be.",
+      "body": "Bring the idea as it is, unscoped, half a spec on a notes app. The workshop is where we work out what v1 should include."
+    }
+  },
+  {
+    "slug": "web-application-development",
+    "title": "Web Application Development Company | Beyond Digitized Forms",
+    "description": "Web applications built to remove steps from a process, not move them onto a screen. Fixed scope, direct founder access. Book a workshop.",
+    "name": "Web Application Development",
+    "image": "/images/services/web-application-development.png",
+    "imageAlt": "Web Application Development Built Around Real Workflows",
+    "heading": "Web Application Development Built Around Real Workflows",
+    "lede": "A web app that just digitizes a spreadsheet rarely gets adopted. We approach web application development around the actual workflow people follow today, then build the software that removes the friction in it.",
+    "facts": [
+      {
+        "value": "Fixed scope",
+        "label": "Agreed price and timeline upfront"
+      },
+      {
+        "value": "Direct access",
+        "label": "You work with senior engineers, not account managers"
+      },
+      {
+        "value": "Built to scale",
+        "label": "Architecture chosen for your real usage, not a demo"
+      },
+      {
+        "value": "100% yours",
+        "label": "Full code and IP ownership"
+      }
+    ],
+    "quick": "Web application development is the process of designing and building a browser-based software product, an internal tool, customer portal, or business application, built around a specific workflow rather than a generic website. It covers the interface, the application logic, and the backend and database the workflow depends on.",
+    "pain": {
+      "heading": "Building a Web Application Is Not Just About Digitizing a Process",
+      "paragraphs": [
+        "Turning a manual process into software isn't just about putting the same steps on a screen. If the underlying workflow is inefficient, digitizing it just makes an inefficient process faster to run.",
+        "A typical web application development company will build the screens you ask for. The more valuable work is understanding the workflow well enough to know which steps to remove, not just replicate."
+      ],
+      "points": [
+        "Digitizing a broken process just makes it a faster broken process",
+        "The real workflow often looks different from how it's described",
+        "A build-to-spec agency implements the request without questioning it",
+        "Data and permission structures are expensive to redesign once live",
+        "A senior product architect is hard to justify as a full-time hire on one internal tool"
+      ]
+    },
+    "build": {
+      "heading": "What We Can Build Into Your Web Application",
+      "intro": "Every web app development services engagement is organized around the workflow it needs to support, not a generic technology list.",
+      "cards": [
+        {
+          "title": "Customer-Facing Portals",
+          "points": [
+            "Self-serve customer experiences",
+            "Account and order management"
+          ],
+          "link": {
+            "label": "portal approach",
+            "href": "/web-application-development"
+          }
+        },
+        {
+          "title": "Internal Business Tools",
+          "points": [
+            "Operations and workflow tools",
+            "Approval and review processes"
+          ],
+          "link": {
+            "label": "Custom Software Development",
+            "href": "/custom-software-development"
+          }
+        },
+        {
+          "title": "Dashboards & Reporting",
+          "points": [
+            "Real-time visibility into the business",
+            "Role-based reporting views"
+          ],
+          "link": {
+            "label": "Data Engineering",
+            "href": "/data-engineering"
+          }
+        },
+        {
+          "title": "Enterprise Web Applications",
+          "points": [
+            "Multi-team, multi-permission systems",
+            "Built to scale with usage"
+          ],
+          "link": {
+            "label": "SaaS Platform Development",
+            "href": "/saas-platform-development"
+          }
+        },
+        {
+          "title": "System Integrations",
+          "points": [
+            "Connecting existing tools and data sources"
+          ],
+          "link": {
+            "label": "AI Development",
+            "href": "/ai-development"
+          }
+        }
+      ]
+    },
+    "scope": {
+      "heading": "What Should Actually Be in Your First Web App Release?",
+      "intro": "Rather than a generic screen list, we work through the decisions that determine what your first release should include:",
+      "decisions": [
+        "What's the one workflow this application needs to fix first?",
+        "Who are the different user roles, and what does each actually need to see?",
+        "Which manual steps can be removed instead of just moved onscreen?",
+        "What data structure will still make sense once usage grows?",
+        "What can be simplified now to avoid an expensive rebuild later?"
+      ],
+      "calloutTitle": "We help you decide what to cut",
+      "calloutBody": "If you're scoping a business web application and a budget, this is exactly what you need most: someone to tell you what doesn't belong in v1."
+    },
+    "different": {
+      "heading": "Not a Build-to-Spec Web Development Agency",
+      "intro": "Our differentiation isn't only engineering capability, it's the workflow thinking behind it.",
+      "items": [
+        {
+          "title": "Product decisions before code",
+          "body": "We map the real workflow and user roles before the build starts."
+        },
+        {
+          "title": "Senior engineering, without a full-time hire",
+          "body": "Custom web application development sits inside a wider fractional engineering capability."
+        },
+        {
+          "title": "Founders and stakeholders work directly with engineers",
+          "body": "No account-manager layer between you and the people building your application."
+        },
+        {
+          "title": "Built for what happens after launch",
+          "body": "Your application is designed to support more users and more workflows, not just the pilot."
+        },
+        {
+          "title": "You own the code and IP",
+          "body": "Everything we build belongs to you outright, with no ongoing dependency on us."
+        }
+      ]
+    },
+    "who": {
+      "heading": "Who We Build Web Applications For",
+      "people": [
+        {
+          "quote": "We're running this process on spreadsheets and it's starting to break.",
+          "title": "Business outgrowing spreadsheets"
+        },
+        {
+          "quote": "We need a self-serve portal for our customers or partners.",
+          "title": "Company building a customer portal"
+        },
+        {
+          "quote": "We can build, but nobody owns the workflow design.",
+          "title": "Funded startup with a technical team"
+        },
+        {
+          "quote": "We have an internal tool nobody actually likes using.",
+          "title": "Team replacing an unloved internal tool"
+        },
+        {
+          "quote": "We need different teams to see different views of the same data.",
+          "title": "Organization needing role-based access"
+        },
+        {
+          "quote": "We need to connect several existing tools into one workflow.",
+          "title": "Business consolidating disconnected tools"
+        }
+      ]
+    },
+    "process": {
+      "heading": "From Workflow Problem to Working Application",
+      "steps": [
+        {
+          "title": "Free 45-minute product workshop",
+          "body": "We pull apart the problem, users and commercial objective behind your web application."
+        },
+        {
+          "title": "Scope and proposal",
+          "body": "You get a fixed scope, timeline and cost, or a fractional engineering leadership arrangement."
+        },
+        {
+          "title": "Build or embed",
+          "body": "Regular contact with senior engineers and working software throughout, not just at the end."
+        },
+        {
+          "title": "Handover or continue",
+          "body": "You own everything, with the option to continue with engineering leadership or ongoing development."
+        }
+      ]
+    },
+    "deliverables": {
+      "heading": "What You Get With Web Application Development",
+      "rows": [
+        {
+          "item": "Web application build",
+          "value": "Get a working application your team or customers can use"
+        },
+        {
+          "item": "Workflow thinking",
+          "value": "Remove unnecessary steps before expensive development"
+        },
+        {
+          "item": "Fixed scope and timeline",
+          "value": "Reduce uncertainty around the build"
+        },
+        {
+          "item": "Direct access to engineers",
+          "value": "Speak directly to the people doing the work"
+        },
+        {
+          "item": "Full code and IP ownership",
+          "value": "Retain ownership of the application outright"
+        },
+        {
+          "item": "Post-build option",
+          "value": "Continue with engineering leadership or ongoing development if needed"
+        }
+      ]
+    },
+    "why": {
+      "heading": "Why Companies Choose a Product Partner for Web Apps",
+      "reasons": [
+        "We challenge the brief when the brief needs challenging.",
+        "We help decide what not to build, as much as what to build.",
+        "We combine workflow thinking and engineering under one roof.",
+        "We work directly with the people who own the problem.",
+        "We build for more users and more workflows, not just the pilot.",
+        "We take on a limited number of clients at a time."
+      ]
+    },
+    "angle": {
+      "heading": "A Question Most Web App Development Companies Skip",
+      "intro": "A common question that gets overlooked is whether the application is solving a workflow problem or simply digitizing an existing process, screen for screen.",
+      "items": [
+        {
+          "title": "Is this solving a workflow problem or just digitizing a process?",
+          "body": "Copying a manual process onto a screen keeps its inefficiencies. The workflow should be reviewed before it's rebuilt in software."
+        },
+        {
+          "title": "Who actually needs each view of the data?",
+          "body": "Building one dashboard for everyone often means it serves no one well. Role-based access should be designed early, not added later."
+        },
+        {
+          "title": "What happens when ten people use this instead of one?",
+          "body": "A tool built around a single user's habits often breaks down under shared, simultaneous use. Multi-user behavior deserves early attention."
+        }
+      ]
+    },
+    "after": {
+      "heading": "What Happens After the Web Application Ships?",
+      "paths": [
+        {
+          "title": "Continue building",
+          "body": "Move from the first release into the full roadmap with the same team."
+        },
+        {
+          "title": "Add engineering leadership",
+          "body": "Bring us on as fractional engineering leadership as usage grows."
+        },
+        {
+          "title": "Build the growth engine",
+          "body": "For customer-facing applications, move into product marketing and campaigns."
+        }
+      ]
+    },
+    "snapshot": {
+      "heading": "Web Application Development at a Glance",
+      "definition": "Web application development is the process of building browser-based software, from business web applications and internal tools to SaaS web applications and customer portals, built around a specific web application architecture and workflow. The goal is to remove steps from a process, not simply move them onto a screen, with the data model built to hold up as usage grows.",
+      "rows": [
+        {
+          "item": "Typical MVP timeframe",
+          "value": "3–4 weeks for a first release, once scope is fixed"
+        },
+        {
+          "item": "Entry point",
+          "value": "A free 45-minute product workshop"
+        },
+        {
+          "item": "Who scopes the release",
+          "value": "Founders or stakeholders and senior engineers"
+        },
+        {
+          "item": "Web application development cost",
+          "value": "Scoped and fixed after the workshop, based on workflow complexity"
+        },
+        {
+          "item": "Code and IP ownership",
+          "value": "Fully owned by the client on delivery"
+        },
+        {
+          "item": "After launch",
+          "value": "Continue building, add engineering leadership, or move into growth"
+        }
+      ]
+    },
+    "faqs": [
+      {
+        "question": "How much does web application development cost?",
+        "answer": "Cost depends on scope, the number of user roles, integrations and data complexity. We scope it in the free product workshop so you get a fixed price and timeline."
+      },
+      {
+        "question": "How long does it take to build a web application?",
+        "answer": "A first release typically takes 3 to 4 weeks once scope is agreed. More complex permission structures or integrations can extend that."
+      },
+      {
+        "question": "Can you work with an existing technical team?",
+        "answer": "Yes. We can embed as fractional engineering leadership, or build a defined piece of the application independently."
+      },
+      {
+        "question": "Do we own the code and IP?",
+        "answer": "Yes. You retain full ownership of the codebase and intellectual property once it's delivered."
+      },
+      {
+        "question": "Can you build on top of our existing systems?",
+        "answer": "Yes. We can integrate with your existing tools and data sources rather than requiring a full rebuild."
+      },
+      {
+        "question": "What if we're not sure what the application should include yet?",
+        "answer": "That's the most common starting point. The product workshop is designed to turn a rough workflow problem into a scoped first release."
+      },
+      {
+        "question": "What happens after the web application is built?",
+        "answer": "You can run with it yourself, continue building with us, add fractional engineering leadership, or move into growth."
+      }
+    ],
+    "close": {
+      "heading": "Have a Web App Challenge? Let's Work Out the Right First Step.",
+      "body": "Bring us the workflow as it is today, messy spreadsheets and all. The workshop is where we work out what the first release should include."
+    }
+  }
+]

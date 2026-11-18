@@ -10,7 +10,7 @@ export async function WorkContent() {
     <div className="pd-page work-page">
       <main id="main-content">
         <section className="pd-hero">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
+          <div className="mx-auto w-full max-w-[1400px] px-5 py-[50px] sm:p-[50px]">
             <span className="pd-eyebrow">Our work</span>
             <h1>
               Product partnerships that{" "}
@@ -29,7 +29,7 @@ export async function WorkContent() {
         </section>
 
         <section className="pd-section" id="case-studies">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
+          <div className="mx-auto w-full max-w-[1400px] px-5 py-[50px] sm:p-[50px]">
             <div className="grid grid-cols-1 gap-[30px] md:grid-cols-2 lg:grid-cols-3">
               {caseStudies.map((study) => (
                 <CaseStudyCard key={study.id} study={study} />

@@ -21,7 +21,7 @@ function FooterColumn({
       <h2 className="text-[12px] font-semibold tracking-[0.14em] text-[#6a6864] uppercase">
         {title}
       </h2>
-      <ul className="mt-4 space-y-5">
+      <ul className="mt-4 space-y-4 sm:space-y-5">
         {links.map((link) => (
           <li key={link.label}>
             <Link href={link.href} className="text-[14px] leading-none text-[#0e0e0e]">
@@ -40,10 +40,10 @@ export function Footer() {
       <FooterContact />
 
       <div className="border-t border-[rgba(14,14,14,0.1)]">
-      <div className="mx-auto w-full max-w-[1500px] px-5 pt-14 sm:px-8 lg:px-12">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[minmax(0,1fr)_240px_160px_160px] lg:gap-x-10">
+      <div className="mx-auto w-full max-w-[1500px] px-5 pt-10 sm:px-8 sm:pt-14 lg:px-12">
+        <div className="grid gap-8 sm:grid-cols-2 sm:gap-10 lg:grid-cols-[minmax(0,1fr)_240px_160px_160px] lg:gap-x-10">
           <div>
-            <SiteLogo compact withWordmark />
+            <SiteLogo compact withWordmark tone="ink" period={false} />
             <p className="mt-3 text-[15px] leading-6 text-[#45433f]">
               The partner you wish you’d started with.
             </p>
@@ -54,7 +54,7 @@ export function Footer() {
             <h2 className="text-[12px] font-semibold tracking-[0.14em] text-[#6a6864] uppercase">
               Follow
             </h2>
-            <ul className="mt-4 space-y-5">
+            <ul className="mt-4 space-y-4 sm:space-y-5">
               {socialLinks.map((link) => (
                 <li key={link.label}>
                   <a

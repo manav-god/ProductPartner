@@ -1,5 +1,7 @@
 import { Inter, JetBrains_Mono } from "next/font/google";
 import Link from "next/link";
+import { FillButton } from "@/components/FillButton";
+import { FaqList } from "@/components/services/SmoothFaq";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -20,29 +22,49 @@ const quotes = [
 
 const builds = [
   {
-    title: "Discovery and scope",
-    body: "Users, goals and what can wait, agreed before any build starts.",
-  },
-  {
     title: "MVPs",
     body: "A focused first version that real users can try.",
-    link: { label: "MVP App Development", href: "/contact" },
+    link: { label: "MVP App Development", href: "/mvp-app-development" },
   },
   {
     title: "Mobile apps",
     body: "iOS and Android apps, native or cross-platform.",
+    link: { label: "Mobile App Development", href: "/mobile-app-development" },
   },
   {
     title: "Web platforms",
     body: "Web apps, dashboards and the sites around them.",
+    link: { label: "Web Application Development", href: "/web-application-development" },
   },
   {
     title: "Custom software",
     body: "Integrations, admin tools and internal systems.",
+    link: { label: "Custom Software Development", href: "/custom-software-development" },
   },
   {
-    title: "Feature releases",
-    body: "Ongoing improvements after launch, shipped in a steady rhythm.",
+    title: "SaaS platforms",
+    body: "Products people come back to, not just sign up for.",
+    link: { label: "SaaS Platform Development", href: "/saas-platform-development" },
+  },
+  {
+    title: "Sports MVPs",
+    body: "A first sports product built to test the real fan or athlete workflow.",
+    link: { label: "Sports MVP App Development", href: "/sports-mvp-app-development" },
+  },
+  {
+    title: "Data engineering",
+    body: "Pipelines and models you can trust before you scale them.",
+    link: { label: "Data Engineering", href: "/data-engineering" },
+  },
+  {
+    title: "Cloud engineering",
+    body: "Infrastructure sized for the product you have, not a generic enterprise stack.",
+    link: { label: "Cloud Engineering", href: "/cloud-engineering" },
+  },
+  {
+    title: "AI development",
+    body: "AI features tied to a result you can measure, not a demo.",
+    link: { label: "AI Development", href: "/ai-development" },
   },
 ];
 
@@ -91,20 +113,21 @@ const faqs = [
 
 function BookCallLink({ className = "" }: { className?: string }) {
   return (
-    <Link
+    <FillButton
       href="/contact"
-      className={`inline-flex h-14 items-center gap-2.5 rounded-full bg-[#ff5a1f] px-7 text-[16px] font-semibold text-[#0e0e0e] transition-colors hover:bg-[#ff6a35] ${className}`}
+      variant="orange-white"
+      className={`h-11 gap-2 rounded-full px-4 text-[14px] whitespace-nowrap sm:h-14 sm:gap-2.5 sm:px-7 sm:text-[16px] ${className}`}
     >
       Book a call
-    </Link>
+    </FillButton>
   );
 }
 
 export function ProductDevelopmentContent() {
   return (
     <div className={`${inter.className} bg-white text-[#0e0e0e]`}>
-      <section className="canvas-dots">
-        <div className="mx-auto grid w-full max-w-[1240px] items-end gap-10 px-5 pt-16 pb-20 sm:px-8 lg:px-12 lg:pt-24 lg:pb-[112px] xl:grid-cols-[minmax(0,680px)_458px] xl:justify-between">
+      <section className="canvas-dots flex min-h-[calc(100dvh-72px)] flex-col">
+        <div className="mx-auto mt-auto grid w-full max-w-[1400px] items-end gap-8 px-5 py-[50px] sm:gap-10 sm:p-[50px] xl:grid-cols-[minmax(0,680px)_458px] xl:justify-between">
           <div>
             <p className={`${jetbrains.className} text-[13px] text-[#6a6864]`}>
               <Link href="/#services" className="hover:text-[#0e0e0e]">
@@ -113,25 +136,26 @@ export function ProductDevelopmentContent() {
               <span className="px-2">/</span>
               Product Development
             </p>
-            <h1 className="mt-4 max-w-[12ch] text-[40px] leading-[1.05] font-semibold tracking-[-0.05em] sm:max-w-none sm:text-[56px] xl:text-[76px] xl:leading-[82px] xl:tracking-[-3.6px]">
+            <h1 className="mt-4 text-[32px] leading-[1.12] font-semibold tracking-[-0.05em] sm:text-[56px] sm:leading-[1.05] xl:text-[76px] xl:leading-[82px] xl:tracking-[-3.6px]">
               <span className="xl:block">Build what the</span>{" "}
               <span className="xl:block">product needs.</span>{" "}
               <span className="xl:block">
                 Nothing it doesn’t<span className="text-[#ff5a1f]">.</span>
               </span>
             </h1>
-            <p className="mt-6 max-w-[540px] text-[18px] leading-[33px] text-[#45433f] sm:text-[20px]">
+            <p className="mt-4 max-w-[540px] text-[16px] leading-6 text-[#45433f] sm:mt-6 sm:text-[20px] sm:leading-[33px]">
               MVPs, mobile apps, web platforms and custom software. We agree what the product has
               to prove first, then build it to scale.
             </p>
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-7 flex flex-row flex-wrap items-center gap-2 sm:gap-3">
               <BookCallLink />
-              <Link
+              <FillButton
                 href="/work/fitness-app"
-                className="inline-flex h-14 items-center justify-center rounded-full border border-[rgba(14,14,14,0.18)] bg-white px-7 text-[16px] font-semibold text-[#0e0e0e] transition-colors hover:bg-[#f6f5f2]"
+                variant="white-orange"
+                className="h-11 rounded-full px-4 text-[14px] whitespace-nowrap sm:h-14 sm:px-7 sm:text-[16px]"
               >
                 Read a case study
-              </Link>
+              </FillButton>
             </div>
           </div>
 
@@ -178,12 +202,12 @@ export function ProductDevelopmentContent() {
       </section>
 
       <section className="bg-white">
-        <div className="mx-auto w-full max-w-[1240px] px-5 pt-20 pb-8 sm:px-8 lg:px-12 lg:pt-32">
+        <div className="mx-auto w-full max-w-[1400px] px-5 py-[50px] sm:p-[50px]">
           <p className={`${jetbrains.className} text-[13px] text-[#6a6864]`}>Is this for you?</p>
-          <h2 className="mt-3 max-w-[12ch] text-[36px] leading-[1.08] font-semibold tracking-[-0.045em] sm:text-[48px] lg:max-w-[14ch] lg:text-[56px] lg:leading-[62px]">
+          <h2 className="mt-3 text-[32px] leading-[1.12] font-semibold tracking-[-0.045em] sm:text-[48px] sm:leading-[1.08] lg:text-[56px] lg:leading-[62px]">
             Usually, one of these sounds familiar.
           </h2>
-          <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:mt-14 lg:grid-cols-4">
+          <ul className="mt-8 grid gap-4 sm:mt-12 sm:grid-cols-2 lg:mt-14 lg:grid-cols-4">
             {quotes.map((quote) => (
               <li
                 key={quote}
@@ -197,12 +221,12 @@ export function ProductDevelopmentContent() {
       </section>
 
       <section className="bg-white">
-        <div className="mx-auto w-full max-w-[1240px] px-5 pt-16 pb-20 sm:px-8 lg:px-12 lg:pt-20 lg:pb-[88px]">
+        <div className="mx-auto w-full max-w-[1400px] px-5 py-[50px] sm:p-[50px]">
           <p className={`${jetbrains.className} text-[13px] text-[#6a6864]`}>What we build</p>
-          <h2 className="mt-3 max-w-[12ch] text-[36px] leading-[1.08] font-semibold tracking-[-0.045em] sm:text-[48px] lg:text-[56px] lg:leading-[62px]">
+          <h2 className="mt-3 text-[32px] leading-[1.12] font-semibold tracking-[-0.045em] sm:text-[48px] sm:leading-[1.08] lg:text-[56px] lg:leading-[62px]">
             From first version to steady releases.
           </h2>
-          <ul className="mt-12 grid gap-4 lg:mt-14 lg:grid-cols-3">
+          <ul className="mt-8 grid gap-4 sm:mt-12 md:grid-cols-2 lg:mt-14 lg:grid-cols-3">
             {builds.map((item) => (
               <li key={item.title} className="rounded-[22px] bg-[#f6f5f2] px-7 py-7">
                 <h3 className="text-[22px] font-semibold tracking-[-0.03em]">{item.title}</h3>
@@ -212,9 +236,15 @@ export function ProductDevelopmentContent() {
                 {item.link ? (
                   <Link
                     href={item.link.href}
-                    className="mt-5 inline-flex items-center gap-2 text-[15px] font-semibold text-[#ff5a1f]"
+                    className="group/learn mt-5 inline-flex w-fit items-center gap-2 text-[15px] font-semibold text-[#ff5a1f]"
                   >
-                    {item.link.label}
+                    <span className="relative">
+                      {item.link.label}
+                      <span
+                        className="absolute -bottom-0.5 left-0 h-px w-full origin-left scale-x-0 bg-current transition-transform duration-300 ease-out group-hover/learn:scale-x-100"
+                        aria-hidden="true"
+                      />
+                    </span>
                     <span aria-hidden="true">→</span>
                   </Link>
                 ) : null}
@@ -225,14 +255,14 @@ export function ProductDevelopmentContent() {
       </section>
 
       <section className="bg-[#0e0e0e] text-[#f4f3ef]">
-        <div className="mx-auto w-full max-w-[1240px] px-5 py-20 sm:px-8 lg:px-12 lg:py-32">
+        <div className="mx-auto w-full max-w-[1400px] px-5 py-[50px] sm:p-[50px]">
           <p className="text-[12px] font-semibold tracking-[0.14em] text-[#a3a19c] uppercase">
             How it works
           </p>
-          <h2 className="mt-3 text-[36px] leading-[1.1] font-semibold tracking-[-0.05em] sm:text-[48px] lg:text-[52px] lg:leading-[57px] lg:tracking-[-2.52px]">
+          <h2 className="mt-3 text-[32px] leading-[1.12] font-semibold tracking-[-0.05em] sm:text-[48px] sm:leading-[1.1] lg:text-[52px] lg:leading-[57px] lg:tracking-[-2.52px]">
             Questions first. Then code<span className="text-[#ff5a1f]">.</span>
           </h2>
-          <ol className="mt-12 grid list-none gap-5 md:grid-cols-2 lg:mt-[52px] lg:grid-cols-4 [&:hover>li:not(:hover)]:border-transparent">
+          <ol className="mt-8 grid list-none gap-5 sm:mt-12 md:grid-cols-2 lg:mt-[52px] lg:grid-cols-4 [&:hover>li:not(:hover)]:border-transparent">
             {steps.map((item) => (
               <li
                 key={item.step}
@@ -253,7 +283,7 @@ export function ProductDevelopmentContent() {
 
       {/*
       <section className="bg-white">
-        <div className="mx-auto grid w-full max-w-[1240px] gap-6 px-5 py-20 sm:px-8 lg:grid-cols-[minmax(0,630px)_minmax(0,490px)] lg:justify-between lg:px-12 lg:py-32">
+        <div className="mx-auto grid w-full max-w-[1400px] gap-6 lg:grid-cols-[minmax(0,630px)_minmax(0,490px)] lg:justify-between p-[50px]">
           <Link
             href="/work/fitness-app"
             className="flex min-h-[320px] flex-col rounded-[24px] bg-[#f4f3ef] p-8 lg:min-h-[360px] lg:p-12"
@@ -286,26 +316,26 @@ export function ProductDevelopmentContent() {
       */}
 
       <section className="bg-[#f4f3ef]">
-        <div className="mx-auto w-full max-w-[1240px] px-5 py-20 sm:px-8 lg:px-12 lg:py-32">
+        <div className="mx-auto w-full max-w-[1400px] px-5 py-[50px] sm:p-[50px]">
           <p className={`${jetbrains.className} text-[13px] text-[#6a6864]`}>
             Two ways to build with us
           </p>
-          <h2 className="mt-3 text-[36px] leading-[1.1] font-semibold tracking-[-0.045em] sm:text-[48px] lg:text-[52px]">
+          <h2 className="mt-3 text-[32px] leading-[1.12] font-semibold tracking-[-0.045em] sm:text-[48px] sm:leading-[1.1] lg:text-[52px]">
             Pick the one that fits where you are.
           </h2>
-          <div className="mt-12 grid gap-5 lg:mt-14 lg:grid-cols-2">
-            <article className="rounded-[22px] bg-white px-8 py-10 lg:px-10">
+          <div className="mt-8 grid gap-5 sm:mt-12 md:grid-cols-2 lg:mt-14">
+            <article className="rounded-[22px] bg-white px-6 py-8 sm:px-8 sm:py-10 lg:px-10">
               <p className={`${jetbrains.className} text-[13px] text-[#6a6864]`}>Build</p>
-              <h3 className="mt-4 text-[28px] font-semibold tracking-[-0.03em] lg:text-[32px]">
+              <h3 className="mt-4 text-[24px] font-semibold tracking-[-0.03em] sm:text-[28px] lg:text-[32px]">
                 Fixed scope, fixed price
               </h3>
               <p className="mt-4 max-w-[46ch] text-[16px] leading-[1.6] text-[#45433f]">
                 A clear scope and timeline agreed upfront. You own 100% of the code and IP.
               </p>
             </article>
-            <article className="rounded-[22px] bg-white px-8 py-10 lg:px-10">
+            <article className="rounded-[22px] bg-white px-6 py-8 sm:px-8 sm:py-10 lg:px-10">
               <p className={`${jetbrains.className} text-[13px] text-[#6a6864]`}>Partner</p>
-              <h3 className="mt-4 text-[28px] font-semibold tracking-[-0.03em] lg:text-[32px]">
+              <h3 className="mt-4 text-[24px] font-semibold tracking-[-0.03em] sm:text-[28px] lg:text-[32px]">
                 Cash plus equity
               </h3>
               <p className="mt-4 max-w-[46ch] text-[16px] leading-[1.6] text-[#45433f]">
@@ -318,35 +348,29 @@ export function ProductDevelopmentContent() {
       </section>
 
       <section className="bg-white">
-        <div className="mx-auto grid w-full max-w-[1240px] gap-10 px-5 py-16 sm:px-8 lg:grid-cols-[minmax(0,420px)_minmax(0,594px)] lg:justify-between lg:px-12 lg:py-12">
-          <h2 className="max-w-[10ch] text-[40px] leading-[1.05] font-semibold tracking-[-0.045em] sm:text-[48px] lg:text-[52px]">
+        <div className="mx-auto grid w-full max-w-[1400px] gap-8 px-5 py-[50px] sm:gap-10 sm:p-[50px] lg:grid-cols-[minmax(0,420px)_minmax(0,594px)] lg:justify-between">
+          <h2 className="text-[32px] leading-[1.12] font-semibold tracking-[-0.045em] sm:text-[48px] sm:leading-[1.05] lg:text-[52px]">
             Questions founders ask.
           </h2>
           <div>
-            {faqs.map((faq, index) => (
-              <details
-                key={faq.question}
-                open={index === 0}
-                className="border-b border-[rgba(14,14,14,0.1)] py-6"
-              >
-                <summary className="cursor-pointer list-none text-[18px] font-semibold tracking-[-0.02em] sm:text-[20px] [&::-webkit-details-marker]:hidden">
-                  {faq.question}
-                </summary>
-                <p className="mt-3 max-w-[40ch] text-[15px] leading-6 text-[#45433f]">{faq.answer}</p>
-              </details>
-            ))}
+            <FaqList
+              faqs={faqs}
+              answerClassName="mt-3 max-w-[40ch] text-[15px] leading-6 text-[#45433f]"
+            />
           </div>
         </div>
       </section>
 
+      {/*
       <section className="bg-white">
-        <div className="mx-auto flex w-full max-w-[1240px] flex-col gap-8 border-t border-[rgba(14,14,14,0.1)] px-5 py-20 sm:px-8 lg:flex-row lg:items-end lg:justify-between lg:px-12 lg:py-[118px]">
-          <h2 className="max-w-[691px] text-[40px] leading-[1.05] font-semibold tracking-[-0.05em] sm:text-[56px] lg:text-[72px]">
+        <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-8 border-t border-[rgba(14,14,14,0.1)] lg:flex-row lg:items-end lg:justify-between p-[50px]">
+          <h2 className="text-[40px] leading-[1.05] font-semibold tracking-[-0.05em] sm:text-[56px] lg:text-[72px]">
             Building something? Let’s connect.
           </h2>
           <BookCallLink className="shrink-0" />
         </div>
       </section>
+      */}
     </div>
   );
 }

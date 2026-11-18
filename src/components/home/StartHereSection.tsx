@@ -201,7 +201,7 @@ export function StartHereSection() {
         aria-hidden
       />
 
-      <div className="relative mx-auto w-full max-w-[1300px] px-5 py-14 md:px-8 md:py-16 lg:px-[40px] lg:pb-[50px] lg:pt-16">
+      <div className="relative mx-auto w-full max-w-[1400px] p-[50px]">
         <h2
           id="start-here-heading"
           className="max-w-xl text-[28px] font-bold leading-[1.2] tracking-tight text-[#252425]"

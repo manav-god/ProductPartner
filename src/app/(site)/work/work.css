@@ -30,3 +30,20 @@
 .work-page .pd-section .font-medium {
   color: #0e0e0e;
 }
+
+.work-page .pd-section h3,
+.work-page .pd-section h3 span {
+  color: #0e0e0e;
+}
+
+@media (max-width: 639px) {
+  .work-page.pd-page h1 {
+    font-size: 32px;
+    line-height: 1.12;
+  }
+
+  .work-page .pd-lead {
+    font-size: 16px !important;
+    line-height: 1.5;
+  }
+}

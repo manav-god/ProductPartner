@@ -3,8 +3,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useId, useState } from "react";
+import { FillButton } from "@/components/FillButton";
 import { SiteLogo } from "@/components/SiteLogo";
-import { ChevronDown, CloseIcon, MenuIcon } from "@/components/icons";
+import { ChevronDown } from "@/components/icons";
 import { primaryNav, type NavItem, type NavLink } from "@/lib/navigation";
 
 function GetInTouchButton({
@@ -17,17 +18,14 @@ function GetInTouchButton({
   onDark?: boolean;
 }) {
   return (
-    <Link
+    <FillButton
       href="/contact"
       onClick={onClick}
-      className={`inline-flex h-11 items-center rounded-full px-5 text-[15px] font-semibold transition-colors ${
-        onDark
-          ? "bg-white text-[#0e0e0e] hover:bg-[#f4f3ef]"
-          : "bg-[#0e0e0e] text-white hover:bg-[#2a2826]"
-      } ${className}`}
+      variant={onDark ? "white-orange" : "black-white"}
+      className={`h-11 rounded-full px-5 text-[15px] ${className}`}
     >
       Get in touch
-    </Link>
+    </FillButton>
   );
 }
 
@@ -81,6 +79,28 @@ function DesktopDropdown({ item }: { item: NavItem }) {
   );
 }
 
+function MenuToggleIcon({ open }: { open: boolean }) {
+  return (
+    <span className="relative block h-4 w-[18px]" aria-hidden="true">
+      <span
+        className={`nav-drawer__icon-line absolute top-0 left-0 h-0.5 w-full rounded-full bg-current ${
+          open ? "translate-y-[7px] rotate-45" : ""
+        }`}
+      />
+      <span
+        className={`nav-drawer__icon-line absolute top-[7px] left-0 h-0.5 w-full rounded-full bg-current ${
+          open ? "scale-x-0 opacity-0" : ""
+        }`}
+      />
+      <span
+        className={`nav-drawer__icon-line absolute top-3.5 left-0 h-0.5 w-full rounded-full bg-current ${
+          open ? "-translate-y-[7px] -rotate-45" : ""
+        }`}
+      />
+    </span>
+  );
+}
+
 function DropdownLink({
   child,
   onClick,
@@ -119,9 +139,44 @@ export function Header() {
   }, [pathname]);
 
   useEffect(() => {
+    const desktop = window.matchMedia("(min-width: 1024px)");
+    function onChange() {
+      if (desktop.matches) {
+        setMobileOpen(false);
+        setOpenSection(null);
+      }
+    }
+    desktop.addEventListener("change", onChange);
+    return () => desktop.removeEventListener("change", onChange);
+  }, []);
+
+  useEffect(() => {
+    const background = document.querySelectorAll("main, footer");
     document.body.style.overflow = mobileOpen ? "hidden" : "";
+    background.forEach((element) => {
+      if (mobileOpen) element.setAttribute("inert", "");
+      else element.removeAttribute("inert");
+    });
+
+    if (!mobileOpen) {
+      return () => {
+        document.body.style.overflow = "";
+        background.forEach((element) => element.removeAttribute("inert"));
+      };
+    }
+
+    function onKey(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setMobileOpen(false);
+        setOpenSection(null);
+      }
+    }
+
+    window.addEventListener("keydown", onKey);
     return () => {
       document.body.style.overflow = "";
+      background.forEach((element) => element.removeAttribute("inert"));
+      window.removeEventListener("keydown", onKey);
     };
   }, [mobileOpen]);
 
@@ -132,7 +187,10 @@ export function Header() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-[rgba(14,14,14,0.08)] bg-white text-[#0e0e0e]">
-      <div className="relative mx-auto flex h-[72px] w-full max-w-[1500px] items-center justify-between gap-3 px-5 sm:px-8 lg:px-12">
+      <div
+        className="relative z-50 mx-auto flex h-[72px] w-full max-w-[1500px] items-center justify-between gap-3 px-5 sm:px-8 lg:px-12"
+        inert={mobileOpen}
+      >
         <SiteLogo withWordmark tone="ink" compact />
 
         <div className="hidden items-center gap-5 lg:flex xl:gap-7">
@@ -163,71 +221,116 @@ export function Header() {
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileOpen}
           aria-controls={panelId}
-          onClick={() => setMobileOpen((open) => !open)}
+          onClick={() => {
+            if (mobileOpen) closeMobile();
+            else setMobileOpen(true);
+          }}
         >
-          {mobileOpen ? <CloseIcon className="h-6 w-6" /> : <MenuIcon className="h-6 w-6" />}
+          <MenuToggleIcon open={mobileOpen} />
         </button>
       </div>
 
-      {mobileOpen ? (
-        <div
-          id={panelId}
-          className="absolute inset-x-4 top-[calc(100%+8px)] z-40 max-h-[calc(100vh-120px)] overflow-y-auto rounded-3xl border border-[rgba(14,14,14,0.08)] bg-white shadow-[0_10px_30px_rgba(20,16,12,0.06)] sm:inset-x-6 lg:hidden"
-        >
-          <nav className="flex flex-col px-5 py-3" aria-label="Mobile">
-            {primaryNav.map((item) => {
-              if (!item.children) {
-                return (
-                  <Link
-                    key={item.label}
-                    href={item.href || "/"}
-                    onClick={closeMobile}
-                    className="border-b border-[rgba(14,14,14,0.08)] py-4 text-[17px] font-semibold text-[#0e0e0e]"
-                  >
-                    {item.label}
-                  </Link>
-                );
-              }
-
-              const isOpen = openSection === item.label;
-
-              return (
-                <div key={item.label} className="border-b border-[rgba(14,14,14,0.08)]">
-                  <button
-                    type="button"
-                    className="flex w-full items-center justify-between py-4 text-left text-[17px] font-semibold text-[#0e0e0e]"
-                    aria-expanded={isOpen}
-                    onClick={() =>
-                      setOpenSection((current) => (current === item.label ? null : item.label))
-                    }
-                  >
-                    {item.label}
-                    <ChevronDown
-                      className={`h-3 w-3 text-[#0e0e0e]/45 transition-transform ${
-                        isOpen ? "rotate-180" : ""
-                      }`}
-                    />
-                  </button>
-
-                  {isOpen ? (
-                    <ul className="pb-4">
-                      {item.children.map((child) => (
-                        <li key={child.href + child.label}>
-                          <DropdownLink child={child} onClick={closeMobile} />
-                        </li>
-                      ))}
-                    </ul>
-                  ) : null}
-                </div>
-              );
-            })}
-
-            <div className="pt-6 pb-6">
-              <GetInTouchButton className="w-full justify-center" onClick={closeMobile} />
-            </div>
-          </nav>
+      <div
+        id={panelId}
+        className={`nav-drawer fixed inset-0 z-[60] flex flex-col overflow-y-auto overscroll-contain bg-white lg:hidden ${
+          mobileOpen ? "translate-x-0" : "pointer-events-none translate-x-full"
+        }`}
+        aria-hidden={!mobileOpen}
+        inert={!mobileOpen}
+      >
+        <div className="shrink-0 border-b border-[rgba(14,14,14,0.08)]">
+        <div className="mx-auto flex h-[72px] w-full max-w-[1500px] items-center justify-between gap-3 px-5 sm:px-8">
+          <div className="contents" onClick={closeMobile}>
+            <SiteLogo withWordmark tone="ink" compact />
+          </div>
+          <button
+            type="button"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full"
+            aria-label="Close menu"
+            onClick={closeMobile}
+          >
+            <MenuToggleIcon open />
+          </button>
         </div>
-      ) : null}
+        </div>
+        <nav
+          className="mx-auto flex w-full max-w-[1500px] flex-1 flex-col px-5 pt-2 pb-8 sm:px-8"
+          aria-label="Mobile"
+        >
+          {primaryNav.map((item, index) => {
+            const motionClass = `nav-drawer__item ${
+              mobileOpen ? "translate-x-0 opacity-100" : "translate-x-6 opacity-0"
+            }`;
+            const motionStyle = {
+              transitionDelay: mobileOpen ? `${90 + index * 50}ms` : "0ms",
+            };
+
+            if (!item.children) {
+              return (
+                <Link
+                  key={item.label}
+                  href={item.href || "/"}
+                  onClick={closeMobile}
+                  className={`${motionClass} border-b border-[rgba(14,14,14,0.08)] py-4 text-[18px] leading-none font-semibold tracking-[-0.02em] text-[#0e0e0e] sm:py-5 sm:text-[20px]`}
+                  style={motionStyle}
+                >
+                  {item.label}
+                </Link>
+              );
+            }
+
+            const isOpen = openSection === item.label;
+
+            return (
+              <div
+                key={item.label}
+                className={`${motionClass} border-b border-[rgba(14,14,14,0.08)]`}
+                style={motionStyle}
+              >
+                <button
+                  type="button"
+                  className="flex w-full items-center justify-between py-4 text-left text-[18px] leading-none font-semibold tracking-[-0.02em] text-[#0e0e0e] sm:py-5 sm:text-[20px]"
+                  aria-expanded={isOpen}
+                  onClick={() =>
+                    setOpenSection((current) => (current === item.label ? null : item.label))
+                  }
+                >
+                  {item.label}
+                  <ChevronDown
+                    className={`h-3 w-3 text-[#0e0e0e]/45 transition-transform duration-300 ease-out ${
+                      isOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+                <div
+                  className={`grid transition-[grid-template-rows] duration-300 ease-out ${
+                    isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                  }`}
+                  inert={!isOpen}
+                  aria-hidden={!isOpen}
+                >
+                  <ul className="overflow-hidden">
+                    {item.children.map((child) => (
+                      <li key={child.href + child.label}>
+                        <DropdownLink child={child} onClick={closeMobile} />
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            );
+          })}
+
+          <div
+            className={`nav-drawer__item mt-auto pt-10 ${
+              mobileOpen ? "translate-x-0 opacity-100" : "translate-x-6 opacity-0"
+            }`}
+            style={{ transitionDelay: mobileOpen ? `${90 + primaryNav.length * 50}ms` : "0ms" }}
+          >
+            <GetInTouchButton className="w-full justify-center" onClick={closeMobile} />
+          </div>
+        </nav>
+      </div>
     </header>
   );
 }

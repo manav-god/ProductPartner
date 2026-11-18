@@ -33,7 +33,7 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
 
         <h3 className="mb-[15px] text-[20px] font-semibold leading-8 tracking-tight text-[#0e0e0e] md:text-[22px]">
           {study.titleBefore}
-          <span className="text-accent">{study.titleHighlight}</span>
+          <span>{study.titleHighlight}</span>
           {study.titleAfter}
         </h3>
 

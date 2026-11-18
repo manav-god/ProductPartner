@@ -64,7 +64,7 @@ export function CaseStudyContent({ study }: { study: CaseStudy }) {
     <div className="pd-page cs-page">
       <main id="main-content">
         <section className="cs-hero">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
+          <div className="mx-auto w-full max-w-[1400px] px-5 py-[50px] sm:p-[50px]">
             <div className="cs-hero__grid">
               <div className="cs-hero__copy">
                 <p className="cs-role">{study.role}</p>
@@ -92,7 +92,7 @@ export function CaseStudyContent({ study }: { study: CaseStudy }) {
         </section>
 
         <section className="cs-body">
-          <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
+          <div className="mx-auto w-full max-w-[1400px] px-5 py-[50px] sm:p-[50px]">
             <div className="cs-layout">
               <aside className="cs-layout__toc">
                 <div className="cs-toc-sticky">

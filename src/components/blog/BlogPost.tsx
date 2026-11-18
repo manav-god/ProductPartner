@@ -47,7 +47,7 @@ export function BlogPostView({
   return (
     <article className="blog-page blog-article">
       <div className="blog-article-hero">
-        <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
+        <div className="mx-auto w-full max-w-[1400px] px-5 py-[50px] sm:p-[50px]">
           <Link href="/blog" className="blog-back">
             <ArrowRight className="h-3.5 w-3.5 rotate-180" />
             Blog

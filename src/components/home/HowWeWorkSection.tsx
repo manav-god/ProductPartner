@@ -47,15 +47,15 @@ export function HowWeWorkSection() {
       aria-labelledby="how-we-work-heading"
       className={`${inter.className} scroll-mt-[120px] bg-[#0e0e0e] text-[#f4f3ef]`}
     >
-      <div className="mx-auto flex w-full max-w-[1240px] flex-col px-5 py-20 sm:px-8 md:py-28 lg:px-12 lg:py-[140px]">
-        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between lg:gap-12">
+      <div className="mx-auto flex w-full max-w-[1400px] flex-col px-5 py-[50px] sm:p-[50px]">
+        <div className="flex flex-col gap-5 sm:gap-6 lg:flex-row lg:items-end lg:justify-between lg:gap-12">
           <div className="flex max-w-[560px] flex-col gap-3">
             <p className="text-[12px] font-semibold tracking-[0.14em] text-[#a3a19c] uppercase">
               How we work
             </p>
             <h2
               id="how-we-work-heading"
-              className="text-[36px] leading-[1.12] font-semibold tracking-[-0.05em] text-balance sm:text-[48px] lg:text-[56px]"
+              className="text-[32px] leading-[1.12] font-semibold tracking-[-0.05em] text-balance sm:text-[48px] lg:text-[56px]"
             >
               From first build to first{" "}
               <span className="lg:block">
@@ -63,7 +63,7 @@ export function HowWeWorkSection() {
               </span>
             </h2>
           </div>
-          <p className="max-w-[360px] text-[16px] leading-[1.72] text-[#a3a19c]">
+          <p className="max-w-[360px] text-[16px] leading-6 text-[#a3a19c] sm:leading-[1.72]">
             One partner through every stage, from the first build to growing the
             product.
           </p>

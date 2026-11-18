@@ -1,5 +1,7 @@
 import { Inter, JetBrains_Mono } from "next/font/google";
 import Link from "next/link";
+import { FillButton } from "@/components/FillButton";
+import { FaqList } from "@/components/services/SmoothFaq";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -98,20 +100,21 @@ const faqs = [
 
 function BookCallLink({ className = "" }: { className?: string }) {
   return (
-    <Link
+    <FillButton
       href="/contact"
-      className={`inline-flex h-14 items-center gap-2.5 rounded-full bg-[#ff5a1f] px-7 text-[16px] font-semibold text-[#0e0e0e] transition-colors hover:bg-[#ff6a35] ${className}`}
+      variant="orange-white"
+      className={`h-11 gap-2 rounded-full px-4 text-[14px] whitespace-nowrap sm:h-14 sm:gap-2.5 sm:px-7 sm:text-[16px] ${className}`}
     >
       Book a call
-    </Link>
+    </FillButton>
   );
 }
 
 export function ProductManagementContent() {
   return (
     <div className={`${inter.className} bg-white text-[#0e0e0e]`}>
-      <section className="canvas-dots">
-        <div className="mx-auto grid w-full max-w-[1240px] items-end gap-10 px-5 pt-16 pb-20 sm:px-8 lg:px-12 lg:pt-24 lg:pb-[112px] xl:grid-cols-[minmax(0,680px)_458px] xl:justify-between">
+      <section className="canvas-dots flex min-h-[calc(100dvh-72px)] flex-col">
+        <div className="mx-auto mt-auto grid w-full max-w-[1400px] items-end gap-8 px-5 py-[50px] sm:gap-10 sm:p-[50px] xl:grid-cols-[minmax(0,680px)_458px] xl:justify-between">
           <div>
             <p className={`${jetbrains.className} text-[13px] text-[#6a6864]`}>
               <Link href="/#services" className="hover:text-[#0e0e0e]">
@@ -120,24 +123,25 @@ export function ProductManagementContent() {
               <span className="px-2">/</span>
               Fractional Product Leadership
             </p>
-            <h1 className="mt-4 max-w-[12ch] text-[40px] leading-[1.05] font-semibold tracking-[-0.05em] sm:max-w-none sm:text-[56px] xl:text-[72px] xl:leading-[78px] xl:tracking-[-3.4px]">
+            <h1 className="mt-4 text-[32px] leading-[1.12] font-semibold tracking-[-0.05em] sm:text-[56px] sm:leading-[1.05] xl:text-[72px] xl:leading-[78px] xl:tracking-[-3.4px]">
               <span className="xl:block">Fractional product</span>{" "}
               <span className="xl:block">leadership, inside</span>{" "}
               <span className="xl:block">
                 your team<span className="text-[#ff5a1f]">.</span>
               </span>
             </h1>
-            <p className="mt-6 max-w-[533px] text-[18px] leading-[33px] text-[#45433f] sm:text-[20px]">
+            <p className="mt-4 max-w-[533px] text-[16px] leading-6 text-[#45433f] sm:mt-6 sm:text-[20px] sm:leading-[33px]">
               I work alongside your founders and engineers on what to build next, and why.
             </p>
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-7 flex flex-row flex-wrap items-center gap-2 sm:gap-3">
               <BookCallLink />
-              <Link
+              <FillButton
                 href="/work"
-                className="inline-flex h-14 items-center justify-center rounded-full border border-[rgba(14,14,14,0.18)] bg-white px-7 text-[16px] font-semibold text-[#0e0e0e] transition-colors hover:bg-[#f6f5f2]"
+                variant="white-orange"
+                className="h-11 rounded-full px-4 text-[14px] whitespace-nowrap sm:h-14 sm:px-7 sm:text-[16px]"
               >
                 See the work
-              </Link>
+              </FillButton>
             </div>
           </div>
 
@@ -163,12 +167,12 @@ export function ProductManagementContent() {
       </section>
 
       <section className="bg-white">
-        <div className="mx-auto w-full max-w-[1240px] px-5 pt-20 pb-8 sm:px-8 lg:px-12 lg:pt-32">
+        <div className="mx-auto w-full max-w-[1400px] px-5 py-[50px] sm:p-[50px]">
           <p className={`${jetbrains.className} text-[13px] text-[#6a6864]`}>Is this for you?</p>
-          <h2 className="mt-3 max-w-[12ch] text-[36px] leading-[1.08] font-semibold tracking-[-0.045em] sm:text-[48px] lg:max-w-[14ch] lg:text-[56px] lg:leading-[62px]">
+          <h2 className="mt-3 text-[32px] leading-[1.12] font-semibold tracking-[-0.045em] sm:text-[48px] sm:leading-[1.08] lg:text-[56px] lg:leading-[62px]">
             Usually, one of these sounds familiar.
           </h2>
-          <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:mt-14 lg:grid-cols-3">
+          <ul className="mt-8 grid gap-4 sm:mt-12 sm:grid-cols-2 lg:mt-14 lg:grid-cols-3">
             {quotes.map((quote) => (
               <li
                 key={quote}
@@ -182,12 +186,12 @@ export function ProductManagementContent() {
       </section>
 
       <section className="bg-white">
-        <div className="mx-auto w-full max-w-[1240px] px-5 pt-16 pb-20 sm:px-8 lg:px-12 lg:pt-20 lg:pb-[88px]">
+        <div className="mx-auto w-full max-w-[1400px] px-5 py-[50px] sm:p-[50px]">
           <p className={`${jetbrains.className} text-[13px] text-[#6a6864]`}>What’s included</p>
-          <h2 className="mt-3 text-[36px] leading-[1.08] font-semibold tracking-[-0.045em] sm:text-[48px] lg:text-[56px] lg:leading-[62px]">
+          <h2 className="mt-3 text-[32px] leading-[1.12] font-semibold tracking-[-0.045em] sm:text-[48px] sm:leading-[1.08] lg:text-[56px] lg:leading-[62px]">
             What I take care of.
           </h2>
-          <ul className="mt-12 grid gap-4 lg:mt-14 lg:grid-cols-3">
+          <ul className="mt-8 grid gap-4 sm:mt-12 md:grid-cols-2 lg:mt-14 lg:grid-cols-3">
             {included.map((item) => (
               <li key={item.title} className="rounded-[22px] bg-[#f6f5f2] px-7 py-7">
                 <h3 className="text-[22px] font-semibold tracking-[-0.03em]">{item.title}</h3>
@@ -201,14 +205,14 @@ export function ProductManagementContent() {
       </section>
 
       <section className="bg-[#0e0e0e] text-[#f4f3ef]">
-        <div className="mx-auto w-full max-w-[1240px] px-5 py-20 sm:px-8 lg:px-12 lg:py-32">
+        <div className="mx-auto w-full max-w-[1400px] px-5 py-[50px] sm:p-[50px]">
           <p className="text-[12px] font-semibold tracking-[0.14em] text-[#a3a19c] uppercase">
             How it works
           </p>
-          <h2 className="mt-3 text-[36px] leading-[1.1] font-semibold tracking-[-0.05em] sm:text-[48px] lg:text-[52px] lg:leading-[57px] lg:tracking-[-2.52px]">
+          <h2 className="mt-3 text-[32px] leading-[1.12] font-semibold tracking-[-0.05em] sm:text-[48px] sm:leading-[1.1] lg:text-[52px] lg:leading-[57px] lg:tracking-[-2.52px]">
             Inside your team, from week one<span className="text-[#ff5a1f]">.</span>
           </h2>
-          <ol className="mt-12 grid list-none gap-5 md:grid-cols-2 lg:mt-[52px] lg:grid-cols-4 [&:hover>li:not(:hover)]:border-transparent">
+          <ol className="mt-8 grid list-none gap-5 sm:mt-12 md:grid-cols-2 lg:mt-[52px] lg:grid-cols-4 [&:hover>li:not(:hover)]:border-transparent">
             {steps.map((item) => (
               <li
                 key={item.step}
@@ -229,7 +233,7 @@ export function ProductManagementContent() {
 
       {/*
       <section className="bg-white">
-        <div className="mx-auto grid w-full max-w-[1240px] gap-6 px-5 py-20 sm:px-8 lg:grid-cols-[minmax(0,630px)_minmax(0,490px)] lg:justify-between lg:px-12 lg:py-32">
+        <div className="mx-auto grid w-full max-w-[1400px] gap-6 lg:grid-cols-[minmax(0,630px)_minmax(0,490px)] lg:justify-between p-[50px]">
           <figure className="flex min-h-[280px] flex-col justify-between rounded-[24px] bg-[#f6f5f2] p-8 lg:min-h-[286px] lg:p-12">
             <blockquote className="max-w-[20ch] text-[28px] leading-[1.25] font-semibold tracking-[-0.03em] lg:text-[32px]">
               “I’ve worked with product leaders twice Manav’s age. He catches things most of them
@@ -260,10 +264,10 @@ export function ProductManagementContent() {
       */}
 
       <section className="bg-[#f4f3ef]">
-        <div className="mx-auto grid w-full max-w-[1240px] gap-10 px-5 py-20 sm:px-8 lg:grid-cols-[minmax(0,480px)_minmax(0,594px)] lg:justify-between lg:px-12 lg:py-32">
+        <div className="mx-auto grid w-full max-w-[1400px] gap-8 px-5 py-[50px] sm:gap-10 sm:p-[50px] lg:grid-cols-[minmax(0,480px)_minmax(0,594px)] lg:justify-between">
           <div>
             <p className={`${jetbrains.className} text-[13px] text-[#6a6864]`}>Working together</p>
-            <h2 className="mt-4 max-w-[12ch] text-[36px] leading-[1.08] font-semibold tracking-[-0.045em] sm:text-[44px] lg:text-[48px]">
+            <h2 className="mt-4 text-[32px] leading-[1.12] font-semibold tracking-[-0.045em] sm:text-[44px] sm:leading-[1.08] lg:text-[48px]">
               Ongoing, and shaped around you.
             </h2>
             <p className="mt-6 max-w-[42ch] text-[16px] leading-[1.65] text-[#45433f]">
@@ -272,30 +276,24 @@ export function ProductManagementContent() {
             </p>
           </div>
           <div>
-            {faqs.map((faq, index) => (
-              <details
-                key={faq.question}
-                open={index === 0}
-                className="border-b border-[rgba(14,14,14,0.1)] py-6"
-              >
-                <summary className="cursor-pointer list-none text-[18px] font-semibold tracking-[-0.02em] sm:text-[20px] [&::-webkit-details-marker]:hidden">
-                  {faq.question}
-                </summary>
-                <p className="mt-3 max-w-[52ch] text-[15px] leading-6 text-[#45433f]">{faq.answer}</p>
-              </details>
-            ))}
+            <FaqList
+              faqs={faqs}
+              answerClassName="mt-3 max-w-[52ch] text-[15px] leading-6 text-[#45433f]"
+            />
           </div>
         </div>
       </section>
 
+      {/*
       <section className="bg-white">
-        <div className="mx-auto flex w-full max-w-[1240px] flex-col gap-8 border-t border-[rgba(14,14,14,0.1)] px-5 py-20 sm:px-8 lg:flex-row lg:items-end lg:justify-between lg:px-12 lg:py-[118px]">
-          <h2 className="max-w-[691px] text-[40px] leading-[1.05] font-semibold tracking-[-0.05em] sm:text-[56px] lg:text-[72px]">
+        <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-8 border-t border-[rgba(14,14,14,0.1)] lg:flex-row lg:items-end lg:justify-between p-[50px]">
+          <h2 className="text-[40px] leading-[1.05] font-semibold tracking-[-0.05em] sm:text-[56px] lg:text-[72px]">
             Building something? Let’s connect.
           </h2>
           <BookCallLink className="shrink-0" />
         </div>
       </section>
+      */}
     </div>
   );
 }

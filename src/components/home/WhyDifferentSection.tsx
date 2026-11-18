@@ -26,10 +26,10 @@ export function WhyDifferentSection() {
   return (
     <section
       id="why-different"
-      className="bg-white py-[80px] md:py-[100px]"
+      className="bg-white"
       aria-labelledby="why-different-heading"
     >
-      <div className="mx-auto w-full max-w-[1300px] px-5 md:px-8 lg:px-[40px]">
+      <div className="mx-auto w-full max-w-[1400px] p-[50px]">
         <div className="mb-12 flex flex-col items-start gap-2 md:mb-16">
           <p className="text-[16px] font-medium leading-[22px] text-[#020202]">
             Why We&apos;re Different

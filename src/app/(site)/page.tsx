@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { FounderNoteSection } from "@/components/home/FounderNoteSection";
+// import { FounderNoteSection } from "@/components/home/FounderNoteSection";
 import { HeroBanner } from "@/components/home/HeroBanner";
 import { HowWeWorkSection } from "@/components/home/HowWeWorkSection";
 import { ServiceTicker } from "@/components/home/ServiceTicker";
@@ -44,7 +44,7 @@ export default async function Home() {
       <HowWeWorkSection />
       {/* <PortfolioSection /> */}
       <TestimonialsSection />
-      <FounderNoteSection />
+      {/* <FounderNoteSection /> */}
     </>
   );
 }

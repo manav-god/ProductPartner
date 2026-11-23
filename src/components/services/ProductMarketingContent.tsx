@@ -106,8 +106,8 @@ function BookCallLink({ className = "" }: { className?: string }) {
 export function ProductMarketingContent() {
   return (
     <div className={`${inter.className} bg-white text-[#0e0e0e]`}>
-      <section className="canvas-dots flex min-h-[calc(100dvh-72px)] flex-col">
-        <div className="mx-auto mt-auto grid w-full max-w-[1400px] items-end gap-8 px-5 py-[50px] sm:gap-10 sm:p-[50px] xl:grid-cols-[minmax(0,680px)_458px] xl:justify-between">
+      <section className="canvas-dots">
+        <div className="mx-auto grid w-full max-w-[1400px] items-end gap-8 px-5 py-[50px] sm:gap-10 sm:p-[50px] xl:grid-cols-[minmax(0,680px)_458px] xl:justify-between">
           <div>
             <p className={`${jetbrains.className} text-[13px] text-[#6a6864]`}>
               <Link href="/#services" className="hover:text-[#0e0e0e]">

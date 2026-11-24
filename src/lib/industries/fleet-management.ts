@@ -143,14 +143,6 @@ export const fleetManagement: IndustryPageData = {
       "Our portfolio demonstrates experience in building digital products, multi-user platforms, operational workflows and connected web experiences.",
     projects: [
       {
-        title: "Clubucket",
-        paragraphs: [
-          "A multi-tenant league management platform with separate spaces, administrative tools and applications for clubs, coaches and players.",
-        ],
-        footnote:
-          "Product Partner supported product leadership from roadmap through the onboarding of its first league.",
-      },
-      {
         title: "Century Sports",
         paragraphs: [
           "A US sports marketplace redesigned and developed using Next.js, Node.js and AWS. The project reported a 38% increase in visitor-to-lead conversion.",

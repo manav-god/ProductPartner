@@ -141,7 +141,6 @@ export const mentalHealthApp: IndustryPageData = {
     intro:
       "Product Partner has developed digital products across sports technology, marketplaces and AI-enabled applications.",
     projects: [
-      { title: "Clubucket", paragraphs: ["A multi-tenant platform for league management."] },
       { title: "Club Duelz", paragraphs: ["An AI-native sports platform."] },
       {
         title: "QB Pocket Coach AI",

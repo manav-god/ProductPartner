@@ -198,13 +198,6 @@ export const golfAppDevelopment: IndustryPageData = {
       "Our experience includes building and supporting sports platforms, league management products and digital experiences. While these projects are not presented as golf-specific deployments, they demonstrate relevant product capabilities for sports businesses.",
     projects: [
       {
-        title: "Clubucket — Multi-Tenant League Management Platform",
-        paragraphs: [
-          "A platform where each league operates in its own space, supported by administrative tools and apps for clubs, coaches and players. Product Partner led product work from roadmap and module sign-off to onboarding the first league.",
-          "Reported milestone: 8 weeks from kickoff to launch.",
-        ],
-      },
-      {
         title: "Liga D1 — League Website, App & Admin Console",
         paragraphs: [
           "A soccer league digital platform covering fixtures, scoring and team onboarding across a website, league app and administrative console.",

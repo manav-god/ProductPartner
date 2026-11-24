@@ -1,3 +1,6 @@
+import { notFound } from "next/navigation";
+
+/* Temporarily hidden — Industry pages (kept locally, not live)
 import type { Metadata } from "next";
 import { ConnectedIndustryPage } from "@/components/industries/ConnectedIndustryPage";
 import { clinicalDecisionSupport } from "@/lib/industries/clinical-decision-support";
@@ -13,4 +16,9 @@ export const revalidate = 60;
 
 export default function ClinicalDecisionSupportPage() {
   return <ConnectedIndustryPage page={clinicalDecisionSupport} path="/clinical-decision-support-software-development" />;
+}
+*/
+
+export default function Page() {
+  notFound();
 }

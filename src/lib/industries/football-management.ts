@@ -213,15 +213,6 @@ export const footballManagement: IndustryPageData = {
       "Our experience includes developing and supporting sports technology products across league management, marketplaces, team administration and AI-powered sports applications.",
     projects: [
       {
-        title: "Clubucket – Multi-Tenant League Management Platform",
-        paragraphs: [
-          "Clubucket is a multi-tenant league management platform where every league operates within its own dedicated environment.",
-          "The platform includes administrative tools and applications for clubs, coaches and players.",
-          "Our involvement includes product leadership, roadmap planning, module sign-off and onboarding its first league.",
-          "Project milestone: Multi-tenant platform delivered in 8 weeks from kickoff to launch.",
-        ],
-      },
-      {
         title: "Liga D1 – Soccer League Management Platform",
         paragraphs: [
           "We worked on streamlining Liga D1’s operations through a connected digital ecosystem.",
@@ -259,7 +250,7 @@ export const footballManagement: IndustryPageData = {
     ],
     close:
       "These projects provide experience across different sports technology use cases, including league operations, multi-tenant architecture, sports marketplaces and football coaching applications.",
-    note: "Portfolio accuracy note: Clubucket and Liga D1 are direct league and soccer experience. QB Pocket Coach AI is relevant American football coaching experience. Do not represent these projects as proof that Product Partner has already delivered every feature described on this page.",
+    note: "Portfolio accuracy note: Liga D1 is direct league and soccer experience. QB Pocket Coach AI is relevant American football coaching experience. Do not represent these projects as proof that Product Partner has already delivered every feature described on this page.",
   },
   why: {
     heading: "Why Choose Product Partner for Football Management Software Development?",

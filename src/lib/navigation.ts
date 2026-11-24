@@ -43,26 +43,27 @@ export const primaryNav: NavItem[] = [
       },
     ],
   },
-  {
-    label: "Industries",
-    children: [
-      {
-        label: "Sports Tech",
-        href: "/sports-tech",
-        description: "Software for leagues, clubs, teams and tournament organizers.",
-      },
-      {
-        label: "Healthcare Technology",
-        href: "/healthcare-technology",
-        description: "Software for clinical, patient and healthcare operations.",
-      },
-      {
-        label: "Logistics & Transportation Technology",
-        href: "/logistics-transportation-technology",
-        description: "Software for freight, fleets, warehouses and delivery.",
-      },
-    ],
-  },
+  // Temporarily hidden — Industry pages (kept locally, not live)
+  // {
+  //   label: "Industries",
+  //   children: [
+  //     {
+  //       label: "Sports Tech",
+  //       href: "/sports-tech",
+  //       description: "Software for leagues, clubs, teams and tournament organizers.",
+  //     },
+  //     {
+  //       label: "Healthcare",
+  //       href: "/healthcare-technology",
+  //       description: "Software for clinical, patient and healthcare operations.",
+  //     },
+  //     {
+  //       label: "Logistics & Transportation",
+  //       href: "/logistics-transportation-technology",
+  //       description: "Software for freight, fleets, warehouses and delivery.",
+  //     },
+  //   ],
+  // },
   {
     label: "Our work",
     href: "/work",
@@ -83,6 +84,13 @@ export const footerServices = [
   { label: "Product Marketing & Positioning", href: "/product-marketing" },
   { label: "Product Development", href: "/product-development" },
 ];
+
+// Temporarily hidden — Industry pages (kept locally, not live)
+// export const footerIndustries = [
+//   { label: "Sports Tech", href: "/sports-tech" },
+//   { label: "Healthcare", href: "/healthcare-technology" },
+//   { label: "Logistics & Transportation", href: "/logistics-transportation-technology" },
+// ];
 
 export const footerCompany = [
   // Temporarily hidden — About page

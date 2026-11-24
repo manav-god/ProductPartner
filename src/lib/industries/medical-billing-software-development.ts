@@ -359,15 +359,6 @@ export const medicalBillingSoftwareDevelopment: IndustryPageData = {
     ],
     projects: [
       {
-        title: "Clubucket — Multi-Tenant Management Platform",
-        paragraphs: [
-          "Clubucket is a multi-tenant platform where each league operates in its own space, supported by administrative tools and applications for clubs, coaches and players.",
-          "Product Partner supported product leadership from roadmap and module sign-off through onboarding the first league. The platform moved from kickoff to launch in eight weeks.",
-        ],
-        footnote:
-          "Relevant experience: Multi-tenant architecture, role-based access, administrative workflows and connected applications.",
-      },
-      {
         title: "Century Sports — US Sports Marketplace",
         paragraphs: [
           "Product Partner partnered with Century Sports, a US sports marketplace, to redesign its storefront from a custom design concept and build it using Next.js, Node.js and AWS.",

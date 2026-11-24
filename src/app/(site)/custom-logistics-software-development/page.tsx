@@ -1,3 +1,6 @@
+import { notFound } from "next/navigation";
+
+/* Temporarily hidden — Industry pages (kept locally, not live)
 import type { Metadata } from "next";
 import { ConnectedIndustryPage } from "@/components/industries/ConnectedIndustryPage";
 import { logisticsSoftware } from "@/lib/industries/logistics-software";
@@ -13,4 +16,9 @@ export const revalidate = 60;
 
 export default function CustomLogisticsSoftwarePage() {
   return <ConnectedIndustryPage page={logisticsSoftware} path="/custom-logistics-software-development" />;
+}
+*/
+
+export default function Page() {
+  notFound();
 }

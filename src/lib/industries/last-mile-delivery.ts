@@ -139,10 +139,6 @@ export const lastMileDelivery: IndustryPageData = {
       "Product Partner has developed custom digital products across marketplaces, multi-user platforms and AI-enabled applications.",
     projects: [
       {
-        title: "Clubucket",
-        paragraphs: ["A multi-tenant platform with separate spaces and administration tools for different leagues."],
-      },
-      {
         title: "Century Sports",
         paragraphs: ["A US sports marketplace rebuilt using Next.js, Node.js and AWS."],
       },

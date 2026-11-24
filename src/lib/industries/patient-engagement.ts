@@ -136,7 +136,6 @@ export const patientEngagement: IndustryPageData = {
     heading: "Relevant product experience",
     intro: "Product Partner has developed digital platforms across sports technology, marketplaces and AI-enabled products.",
     projects: [
-      { title: "Clubucket", paragraphs: ["A multi-tenant platform for league operations."] },
       { title: "Club Duelz", paragraphs: ["An AI-native sports platform."] },
       { title: "QB Pocket Coach AI", paragraphs: ["An application that evaluates quarterback performance from video clips."] },
     ],

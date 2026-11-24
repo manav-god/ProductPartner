@@ -146,13 +146,6 @@ export const routeOptimization: IndustryPageData = {
       "Our portfolio demonstrates experience in building multi-user platforms, operational workflows and digital products.",
     projects: [
       {
-        title: "Clubucket",
-        paragraphs: [
-          "A multi-tenant platform with separate league environments, administration tools and applications for clubs, coaches and players.",
-        ],
-        footnote: "Product Partner supported product leadership from roadmap through onboarding its first league.",
-      },
-      {
         title: "Liga D1",
         paragraphs: [
           "A soccer league platform combining a website, league app and admin console for fixtures, scoring and team onboarding.",

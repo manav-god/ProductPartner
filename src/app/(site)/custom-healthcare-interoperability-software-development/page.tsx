@@ -1,3 +1,6 @@
+import { notFound } from "next/navigation";
+
+/* Temporarily hidden — Industry pages (kept locally, not live)
 import type { Metadata } from "next";
 import { ConnectedIndustryPage } from "@/components/industries/ConnectedIndustryPage";
 import { healthcareInteroperability } from "@/lib/industries/healthcare-interoperability";
@@ -13,4 +16,9 @@ export const revalidate = 60;
 
 export default function CustomHealthcareInteroperabilityPage() {
   return <ConnectedIndustryPage page={healthcareInteroperability} path="/custom-healthcare-interoperability-software-development" />;
+}
+*/
+
+export default function Page() {
+  notFound();
 }

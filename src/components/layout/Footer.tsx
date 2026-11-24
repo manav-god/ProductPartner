@@ -49,6 +49,9 @@ export function Footer() {
             </p>
           </div>
           <FooterColumn title="Services" links={footerServices} />
+          {/* Temporarily hidden — Industry pages (kept locally, not live)
+          <FooterColumn title="Industries" links={footerIndustries} />
+          */}
           <FooterColumn title="Company" links={footerCompany} />
           <nav aria-label="Follow">
             <h2 className="text-[12px] font-semibold tracking-[0.14em] text-[#6a6864] uppercase">

@@ -138,7 +138,6 @@ export const laboratoryManagement: IndustryPageData = {
     intro:
       "Product Partner has developed digital products across sports technology, marketplaces and AI-enabled applications.",
     projects: [
-      { title: "Clubucket", paragraphs: ["A multi-tenant league management platform."] },
       { title: "Club Duelz", paragraphs: ["An AI-native sports platform."] },
       {
         title: "QB Pocket Coach AI",

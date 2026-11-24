@@ -201,9 +201,8 @@ export function SportsTechPage({
                 →
               </span>
               <span className="min-w-0 flex-1">
-                Our portfolio includes Clubucket, a multi-tenant league platform with dedicated league spaces and
-                tools for clubs, coaches, and players; Liga D1, a soccer league website, app, and admin console;
-                and Club Duelz, a multi-sport competition and fan engagement platform.
+                Our portfolio includes Liga D1, a soccer league website, app, and admin console, and Club Duelz, a
+                multi-sport competition and fan engagement platform.
               </span>
             </p>
             <p className="flex gap-4 text-[16px] leading-[1.7] text-[#45433f]">

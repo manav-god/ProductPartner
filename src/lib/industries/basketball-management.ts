@@ -209,14 +209,6 @@ export const basketballManagement: IndustryPageData = {
       "Our experience includes developing sports technology products across league management, multi-tenant platforms, sports marketplaces and AI-powered applications.",
     projects: [
       {
-        title: "Clubucket – Multi-Tenant League Management Platform",
-        paragraphs: [
-          "Clubucket is a multi-tenant platform where every league operates within its own dedicated environment, with administrative tools and applications for clubs, coaches and players.",
-          "Our involvement includes product leadership, roadmap planning, module sign-off and onboarding its first league.",
-          "Project milestone: Multi-tenant platform delivered in 8 weeks from kickoff to launch.",
-        ],
-      },
-      {
         title: "Liga D1 – Soccer League Digital Platform",
         paragraphs: [
           "We worked on streamlining Liga D1’s operations through a connected digital ecosystem consisting of a league website, league application and administrative console.",
@@ -253,7 +245,7 @@ export const basketballManagement: IndustryPageData = {
     ],
     close:
       "These projects demonstrate our experience in sports product development, league management architecture, multi-tenant platforms, digital marketplaces and sports analytics-related applications.",
-    note: "Portfolio accuracy note: The supplied portfolio does not identify a completed basketball-specific case study. Clubucket and Club Duelz demonstrate cross-sport platform capabilities, while Liga D1 demonstrates league operations experience. These should not be presented as completed basketball deployments.",
+    note: "Portfolio accuracy note: The supplied portfolio does not identify a completed basketball-specific case study. Club Duelz demonstrates cross-sport platform capabilities, while Liga D1 demonstrates league operations experience. These should not be presented as completed basketball deployments.",
   },
   why: {
     heading: "Why Choose Product Partner for Basketball Management Software Development?",
@@ -268,7 +260,7 @@ export const basketballManagement: IndustryPageData = {
       {
         title: "Experience with sports league platforms",
         paragraphs: [
-          "Our experience with Clubucket and Liga D1 provides a foundation in league management, team onboarding, administration and connected digital experiences.",
+          "Our experience with Liga D1 provides a foundation in league management, team onboarding, administration and connected digital experiences.",
         ],
       },
       {

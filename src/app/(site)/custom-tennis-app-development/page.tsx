@@ -1,3 +1,6 @@
+import { notFound } from "next/navigation";
+
+/* Temporarily hidden — Industry pages (kept locally, not live)
 import type { Metadata } from "next";
 import { ConnectedIndustryPage } from "@/components/industries/ConnectedIndustryPage";
 import { tennisAppDevelopment } from "@/lib/industries/tennis-app-development";
@@ -13,4 +16,9 @@ export const revalidate = 60;
 
 export default function CustomTennisAppDevelopmentPage() {
   return <ConnectedIndustryPage page={tennisAppDevelopment} path="/custom-tennis-app-development" />;
+}
+*/
+
+export default function Page() {
+  notFound();
 }

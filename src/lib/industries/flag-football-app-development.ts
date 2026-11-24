@@ -333,15 +333,6 @@ export const flagFootballAppDevelopment: IndustryPageData = {
     ],
     projects: [
       {
-        title: "Clubucket — Multi-Tenant League Management Platform",
-        paragraphs: [
-          "Clubucket is a multi-tenant league management platform where each league operates in its own space, supported by administrative tools and applications for clubs, coaches and players.",
-          "Product Partner supported product leadership from roadmap and module sign-off through onboarding the first league. The platform moved from kickoff to launch in eight weeks.",
-        ],
-        footnote:
-          "Relevant experience: Multi-tenant architecture, league workflows, role-based experiences and connected sports operations.",
-      },
-      {
         title: "Liga D1 — Soccer League Website, App and Admin Console",
         paragraphs: [
           "For Liga D1, Product Partner worked on a connected league experience spanning a website, league application and administrative console.",

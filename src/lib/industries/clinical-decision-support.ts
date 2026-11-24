@@ -136,10 +136,6 @@ export const clinicalDecisionSupport: IndustryPageData = {
       "Product Partner has worked on digital platforms across sports technology, marketplaces and AI-enabled products.",
     projects: [
       {
-        title: "Clubucket",
-        paragraphs: ["A multi-tenant league management platform."],
-      },
-      {
         title: "Club Duelz",
         paragraphs: ["An AI-native sports platform."],
       },

@@ -217,15 +217,6 @@ export const soccerAppDevelopment: IndustryPageData = {
         ],
       },
       {
-        title: "Clubucket – Multi-Tenant League Management Platform",
-        paragraphs: [
-          "Clubucket is a multi-tenant league management platform where every league operates in its own dedicated environment.",
-          "The platform includes administrative tools and applications for clubs, coaches and players.",
-          "Our involvement includes product leadership, roadmap planning, module sign-off and onboarding its first league.",
-          "Project milestone: Multi-tenant platform delivered in 8 weeks from kickoff to launch.",
-        ],
-      },
-      {
         title: "Century Sports – Sports Marketplace Development",
         paragraphs: [
           "We partnered with Century Sports, a US sports marketplace, to redesign its storefront from a custom design concept and develop it using Next.js, Node.js and AWS.",
@@ -255,7 +246,7 @@ export const soccerAppDevelopment: IndustryPageData = {
     ],
     close:
       "Together, these projects demonstrate experience across soccer league operations, multi-tenant sports software, digital marketplaces and sports coaching applications.",
-    note: "Portfolio accuracy note: Liga D1 is the direct soccer case study. Clubucket demonstrates broader league-management experience. Other projects demonstrate adjacent sports technology capabilities, not completed soccer-specific features.",
+    note: "Portfolio accuracy note: Liga D1 is the direct soccer case study. Other projects demonstrate adjacent sports technology capabilities, not completed soccer-specific features.",
   },
   why: {
     heading: "Why Choose Product Partner for Soccer App Development?",

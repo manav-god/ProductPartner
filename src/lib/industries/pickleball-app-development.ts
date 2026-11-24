@@ -234,13 +234,6 @@ export const pickleballAppDevelopment: IndustryPageData = {
       "Our experience includes building and supporting sports platforms, league management products and digital experiences. These projects demonstrate relevant product capabilities for pickleball businesses, although they are not presented as completed pickleball-specific deployments.",
     projects: [
       {
-        title: "Clubucket — Multi-Tenant League Management Platform",
-        paragraphs: [
-          "A platform where every league operates in its own space, supported by administrative tools and apps for clubs, coaches and players. Product Partner led product work from roadmap and module sign-off to onboarding the first league.",
-          "Reported milestone: 8 weeks from kickoff to launch.",
-        ],
-      },
-      {
         title: "Club Duelz — AI-Native Sports Platform",
         paragraphs: [
           "A platform built around competitions, broadcasts and fan feeds for any sport. Product Partner supports product advisory and SEO/AI search visibility.",

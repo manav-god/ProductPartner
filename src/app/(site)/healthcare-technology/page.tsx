@@ -1,3 +1,6 @@
+import { notFound } from "next/navigation";
+
+/* Temporarily hidden — Industry pages (kept locally, not live)
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { HealthcareTechPage } from "@/components/industries/HealthcareTechPage";
@@ -27,4 +30,9 @@ export default async function Page() {
       <HealthcareTechPage faqs={faqs} />
     </>
   );
+}
+*/
+
+export default function Page() {
+  notFound();
 }

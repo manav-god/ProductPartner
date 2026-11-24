@@ -112,10 +112,6 @@ export const healthcareInteroperability: IndustryPageData = {
     intro: "Product Partner’s portfolio includes multi-tenant platforms, administrative systems and custom web applications.",
     projects: [
       {
-        title: "Clubucket",
-        paragraphs: ["Multi-tenant platform with separate league environments and role-based applications."],
-      },
-      {
         title: "Century Sports",
         paragraphs: ["Custom US marketplace developed using Next.js, Node.js and AWS."],
       },

@@ -1,4 +1,5 @@
 import type { CollectionConfig } from "payload";
+import { faqPages } from "@/lib/faq-catalog";
 
 export const Faqs: CollectionConfig = {
   slug: "faqs",
@@ -10,7 +11,8 @@ export const Faqs: CollectionConfig = {
     group: "FAQs",
     useAsTitle: "title",
     defaultColumns: ["title", "page"],
-    description: "One box per page. Open a page to edit that page's questions.",
+    description:
+      "One set of questions per page that shows an FAQ section. Terms, privacy, contact, blog, and other pages without questions are not listed.",
   },
   access: {
     read: () => true,
@@ -29,11 +31,7 @@ export const Faqs: CollectionConfig = {
       type: "select",
       required: true,
       unique: true,
-      options: [
-        { label: "Product development", value: "/product-development" },
-        { label: "Product management", value: "/product-management" },
-        { label: "Product marketing", value: "/product-marketing" },
-      ],
+      options: faqPages.map((page) => ({ label: page.label, value: page.path })),
       admin: {
         position: "sidebar",
       },

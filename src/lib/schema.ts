@@ -50,6 +50,24 @@ export function faqEntities(faqs: FaqItem[]) {
   }));
 }
 
+export function faqPageGraph(path: string, faqs: FaqItem[]) {
+  if (!faqs.length) return null;
+  const url = pageUrl(path);
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "FAQPage",
+        "@id": `${url}#faq`,
+        url,
+        isPartOf: { "@id": `${siteUrl}/#website` },
+        mainEntity: faqEntities(faqs),
+      },
+    ],
+  };
+}
+
 export function applyAdminSchema<T extends GraphNode>(
   graph: T[],
   seo: { metaTitle: string; metaDescription: string; faqs: FaqItem[] },

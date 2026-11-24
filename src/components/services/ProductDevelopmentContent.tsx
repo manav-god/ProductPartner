@@ -92,24 +92,6 @@ const steps = [
   },
 ];
 
-const faqs = [
-  {
-    question: "Who owns the code?",
-    answer: "You do. 100% of the code and IP.",
-  },
-  {
-    question: "How long does an MVP take?",
-    answer: "A focused MVP is usually a few months. The scope sets the timeline.",
-  },
-  {
-    question: "What do you build with?",
-    answer: "The stack that fits the product. We agree it before the build starts.",
-  },
-  {
-    question: "What happens after launch?",
-    answer: "We stay on, and keep shipping feature releases in a steady rhythm.",
-  },
-];
 
 function BookCallLink({ className = "" }: { className?: string }) {
   return (
@@ -123,7 +105,11 @@ function BookCallLink({ className = "" }: { className?: string }) {
   );
 }
 
-export function ProductDevelopmentContent() {
+export function ProductDevelopmentContent({
+  faqs,
+}: {
+  faqs: { question: string; answer: string }[];
+}) {
   return (
     <div className={`${inter.className} bg-white text-[#0e0e0e]`}>
       <section className="canvas-dots">

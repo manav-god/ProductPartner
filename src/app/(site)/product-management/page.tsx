@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { ProductManagementContent } from "@/components/services/ProductManagementContent";
+import { faqPageByPath } from "@/lib/faq-catalog";
 import { resolvePageSeo, withAdminSeo } from "@/lib/page-seo";
+import { resolvePageFaqs } from "@/lib/resolve-faqs";
 import { applyAdminSchema } from "@/lib/schema";
 
 export const revalidate = 60;
@@ -245,15 +247,19 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function ProductManagementPage() {
   const seo = await resolvePageSeo("/product-management");
+  const faqs = await resolvePageFaqs(
+    "/product-management",
+    faqPageByPath("/product-management")?.items ?? [],
+  );
   const data = {
     ...jsonLd,
-    "@graph": applyAdminSchema(jsonLd["@graph"], seo),
+    "@graph": applyAdminSchema(jsonLd["@graph"], { ...seo, faqs }),
   };
 
   return (
     <>
       <JsonLd data={data} />
-      <ProductManagementContent />
+      <ProductManagementContent faqs={faqs} />
     </>
   );
 }

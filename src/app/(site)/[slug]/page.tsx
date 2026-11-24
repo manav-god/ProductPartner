@@ -3,6 +3,10 @@ import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { OfferingPage } from "@/components/services/OfferingPage";
 import { getOffering, offeringPages } from "@/lib/offering-pages";
+import { resolvePageFaqs } from "@/lib/resolve-faqs";
+import { faqPageGraph } from "@/lib/schema";
+
+export const revalidate = 60;
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -53,7 +57,10 @@ export default async function OfferingRoute({ params }: PageProps) {
   const page = getOffering(slug);
   if (!page) notFound();
 
-  const url = `https://productpartner.net/${page.slug}/`;
+  const path = `/${page.slug}`;
+  const url = `https://productpartner.net${path}/`;
+  const faqs = await resolvePageFaqs(path, page.faqs);
+  const faqSchema = faqPageGraph(path, faqs);
 
   return (
     <>
@@ -84,18 +91,11 @@ export default async function OfferingRoute({ params }: PageProps) {
                 },
               ],
             },
-            {
-              "@type": "FAQPage",
-              mainEntity: page.faqs.map((faq) => ({
-                "@type": "Question",
-                name: faq.question,
-                acceptedAnswer: { "@type": "Answer", text: faq.answer },
-              })),
-            },
+            ...(faqSchema ? faqSchema["@graph"] : []),
           ],
         }}
       />
-      <OfferingPage page={page} />
+      <OfferingPage page={{ ...page, faqs }} />
     </>
   );
 }

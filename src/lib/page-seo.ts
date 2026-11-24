@@ -33,10 +33,11 @@ export const resolvePageSeo = unstable_cache(
       });
       const set = faqResult.docs[0];
       const items = Array.isArray(set?.items) ? set.items : [];
-      faqs = items.flatMap((item) => {
+      const fromCms = items.flatMap((item) => {
         if (!item?.question || !item?.answer) return [];
         return [{ question: item.question, answer: item.answer }];
       });
+      if (fromCms.length) faqs = fromCms;
     } catch {
       faqs = fallback.faqs ?? [];
     }
@@ -50,11 +51,11 @@ export const resolvePageSeo = unstable_cache(
         faqs,
       };
     }
+
+    return { ...fallback, faqs };
   } catch {
     return { ...fallback, faqs: fallback.faqs ?? [] };
   }
-
-  return { ...fallback, faqs: fallback.faqs ?? [] };
   },
   ["page-seo"],
   { revalidate: 60 },

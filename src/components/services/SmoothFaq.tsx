@@ -24,7 +24,7 @@ function FaqRow({
         aria-expanded={open}
         aria-controls={panelId}
         onClick={onToggle}
-        className="w-full cursor-pointer bg-transparent text-left text-[18px] font-semibold tracking-[-0.02em] text-[#0e0e0e] sm:text-[20px]"
+        className="w-full cursor-pointer bg-transparent text-left text-[16px] font-semibold tracking-[-0.02em] break-words text-[#0e0e0e] sm:text-[20px]"
       >
         {question}
       </button>

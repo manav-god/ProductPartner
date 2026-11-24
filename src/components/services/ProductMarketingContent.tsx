@@ -71,25 +71,6 @@ const steps = [
   },
 ];
 
-const faqs = [
-  {
-    question: "What is AEO and GEO?",
-    answer:
-      "Answer engine and generative engine optimisation. In plain words: making sure AI assistants can find, understand and recommend your product when buyers ask.",
-  },
-  {
-    question: "Do you work with consumer products?",
-    answer: "Not yet. We work with B2B products for now.",
-  },
-  {
-    question: "How long before we see results?",
-    answer: "The first inbound leads can show up within a month. It depends on where you start.",
-  },
-  {
-    question: "Do you write the content?",
-    answer: "Yes. We write the pages and articles, then review them with you every month.",
-  },
-];
 
 function BookCallLink({ className = "" }: { className?: string }) {
   return (
@@ -103,7 +84,11 @@ function BookCallLink({ className = "" }: { className?: string }) {
   );
 }
 
-export function ProductMarketingContent() {
+export function ProductMarketingContent({
+  faqs,
+}: {
+  faqs: { question: string; answer: string }[];
+}) {
   return (
     <div className={`${inter.className} bg-white text-[#0e0e0e]`}>
       <section className="canvas-dots">

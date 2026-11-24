@@ -79,24 +79,6 @@ const roadmap = {
   Later: 2,
 };
 
-const faqs = [
-  {
-    question: "How is this different from hiring a product manager?",
-    answer: "You get product leadership from day one, without a full-time salary or a long search.",
-  },
-  {
-    question: "Do you work with our existing engineers?",
-    answer: "Yes. I work with the engineers you already have, next to your founders.",
-  },
-  {
-    question: "Can we start small?",
-    answer: "Yes. We can start with the roadmap and the next few releases, then grow from there.",
-  },
-  {
-    question: "Do you take equity?",
-    answer: "For the right early-stage startups, yes. A mix of cash and equity, agreed case by case.",
-  },
-];
 
 function BookCallLink({ className = "" }: { className?: string }) {
   return (
@@ -110,7 +92,11 @@ function BookCallLink({ className = "" }: { className?: string }) {
   );
 }
 
-export function ProductManagementContent() {
+export function ProductManagementContent({
+  faqs,
+}: {
+  faqs: { question: string; answer: string }[];
+}) {
   return (
     <div className={`${inter.className} bg-white text-[#0e0e0e]`}>
       <section className="canvas-dots">
